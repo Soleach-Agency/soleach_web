@@ -2,27 +2,36 @@ import type { ReactNode } from "react";
 import type { BlogBlock, BlogSection } from "@/lib/blog";
 
 /**
- * Renders markdown-style inline links — `[text](https://…)` — as anchors so
- * claims can cite their source in place. Everything else stays plain text.
+ * Renders markdown-style inline markup: links — `[text](https://…)` for sources
+ * and `[text](/tr/blog/…)` for internal links — plus `**bold**` emphasis.
+ * Internal links stay in the same tab. Everything else stays plain text.
  */
 export function renderInline(text: string): ReactNode[] {
   const parts: ReactNode[] = [];
-  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)|\*\*([^*]+)\*\*/g;
   let last = 0;
   let match: RegExpExecArray | null;
-  while ((match = linkRe.exec(text)) !== null) {
+  while ((match = re.exec(text)) !== null) {
     if (match.index > last) parts.push(text.slice(last, match.index));
-    parts.push(
-      <a
-        key={match.index}
-        href={match[2]}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:decoration-accent"
-      >
-        {match[1]}
-      </a>,
-    );
+    if (match[3] !== undefined) {
+      parts.push(
+        <strong key={match.index} className="font-semibold text-foreground">
+          {match[3]}
+        </strong>,
+      );
+    } else {
+      const external = match[2].startsWith("http");
+      parts.push(
+        <a
+          key={match.index}
+          href={match[2]}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          className="font-medium text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:decoration-accent"
+        >
+          {match[1]}
+        </a>,
+      );
+    }
     last = match.index + match[0].length;
   }
   if (last < text.length) parts.push(text.slice(last));
