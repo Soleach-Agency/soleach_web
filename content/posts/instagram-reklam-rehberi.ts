@@ -35,6 +35,10 @@ export const instagramReklamRehberi: BlogPost = {
                 "Profilini reklam trafiğine hazırla: bio, öne çıkanlar ve son gönderiler; reklamdan gelen ziyaretçinin göreceği ilk vitrindir.",
               ],
             },
+            {
+              type: "p",
+              text: "Bu listenin görünmeyen maddesi, reklamın indiği yer. En iyi kurulmuş kampanya bile dönüşmeyen bir mağazayı kurtarmaz; ürün sayfası, sepet ve ödeme adımındaki kararların satışa etkisi için [kozmetik markası için Shopify mağaza kurulumu rehberine](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) bakabilirsin.",
+            },
           ],
         },
         {
@@ -208,6 +212,10 @@ export const instagramReklamRehberi: BlogPost = {
                 "If you sell online, connect your product catalog: Meta lists adding products to a catalog and connecting a data source (the Pixel or Conversions API) as prerequisites for [Advantage+ catalogue ads](https://www.facebook.com/business/ads/meta-advantage-plus/catalog-ads/). Retargeting is one of that format's two audience options.",
                 "Prepare your profile for ad traffic: your bio, highlights and recent posts are the first storefront a visitor from an ad will see.",
               ],
+            },
+            {
+              type: "p",
+              text: "The unlisted item here is where the ad lands. Even the best-built campaign can't rescue a store that doesn't convert; for how product page, cart and checkout decisions affect sales, see the [Shopify store setup guide for cosmetics brands](/en/blog/shopify-store-setup-for-cosmetics-brands).",
             },
           ],
         },

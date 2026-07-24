@@ -5,6 +5,7 @@ import { capcutFontYuklemeHatasi } from "./capcut-font-yukleme-hatasi";
 import { ugcNedenDahaCokSatiyor } from "./ugc-neden-daha-cok-satiyor";
 import { studyoCekimineIhtiyacinizVarMi } from "./studyo-cekimine-ihtiyaciniz-var-mi";
 import { yapayZekaVideoReklamcilik } from "./yapay-zeka-video-reklamcilik";
+import { shopifyMagazaKurulumu } from "./shopify-magaza-kurulumu";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -14,4 +15,5 @@ export const posts: BlogPost[] = [
   ugcNedenDahaCokSatiyor,
   studyoCekimineIhtiyacinizVarMi,
   yapayZekaVideoReklamcilik,
+  shopifyMagazaKurulumu,
 ];

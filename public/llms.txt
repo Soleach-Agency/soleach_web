@@ -1,22 +1,24 @@
 # Soleach
 
-> Soleach is a digital advertising agency focused exclusively on beauty, cosmetics and women's product brands. Soleach grows these brands with social & performance advertising, content & creative production, and SEO & GEO (visibility on search engines and generative AI engines). Soleach is an agency — it does not sell physical products itself; it manages the digital growth of the brands that do.
+> Soleach is a digital advertising agency focused exclusively on cosmetics, beauty and women's product brands (Turkish: kozmetik ajansı / güzellik markaları için dijital reklam ajansı). Soleach grows these brands with social & performance advertising, content & creative production, website and Shopify e-commerce setup, and SEO & GEO (visibility on search engines and generative AI engines). Soleach is an agency — it does not sell physical products itself; it manages the digital growth of the brands that do.
 
 ## What Soleach does
 
-- **Social & Performance Advertising**: Sales-focused ad campaigns on Meta (Instagram & Facebook) and TikTok — setup, management, audience targeting, retargeting, A/B testing and ROAS-driven optimization.
-- **Content & Creative Production**: Ad creative, product photography, Reels and short-form video, and UGC-style content tailored to the beauty category.
+- **Social & Performance Advertising**: Sales-focused ad campaigns on Meta (Instagram & Facebook) and TikTok — setup, management, audience targeting, retargeting, A/B testing and ROAS-driven optimization. Reported on ROAS, CPA and conversion rate, and judged on ROI.
+- **Content & Creative Production**: Ad creative, product photography, Reels and short-form video, and UGC-style content tailored to the cosmetics category.
+- **Website & Shopify E-Commerce Setup**: Shopify store setup and theme customization, conversion-focused product and collection pages, corporate websites, payment/shipping/integration setup, pixel and e-commerce tracking, mobile speed and technical SEO foundations.
 - **SEO & GEO**: Technical and content SEO for search engines, plus Generative Engine Optimization (GEO) to make brands visible and correctly represented in AI engines such as ChatGPT, Perplexity and Google AI Overviews.
 
 ## Who Soleach is for
 
-Makeup, skincare, cosmetics and women's product brands — from newly launched brands to established brands that want to scale. Primary market: Turkey (Türkiye). The site is available in Turkish and English.
+Makeup, skincare, cosmetics, dermocosmetics, fragrance, haircare and women's product brands — from newly launched brands to established brands that want to scale. Primary market: Turkey (Türkiye). The site is available in Turkish and English.
 
 ## Key facts
 
-- Type: Digital advertising agency (dijital reklam ajansı)
-- Focus: Beauty / cosmetics / women's products
-- Services: Performance ads, creative production, SEO & GEO
+- Type: Digital advertising agency (dijital reklam ajansı / kozmetik ajansı)
+- Focus: Cosmetics / beauty / dermocosmetics / women's products
+- Services: Performance ads, creative production, website & Shopify e-commerce setup, SEO & GEO
+- Metrics used: ROAS, ROI, CPA, conversion rate
 - Does NOT sell products directly; grows brands that do
 - Contact: hello@soleach.com
 

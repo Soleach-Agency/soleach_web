@@ -25,7 +25,10 @@ export function ServicesOverview({
           subtitle={servicesIntro.subtitle}
         />
 
-        <Stagger className="mt-14 grid gap-6 md:grid-cols-3" stagger={0.12}>
+        <Stagger
+          className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          stagger={0.12}
+        >
           {dict.services.map((s) => (
             <StaggerItem key={s.key} className="h-full">
               <TiltCard className="h-full">

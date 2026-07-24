@@ -25,6 +25,14 @@ const paths: Record<ServiceContent["icon"], React.ReactNode> = {
       <path d="M11 8v6M8 11h6" />
     </>
   ),
+  // Storefront / website & Shopify e-commerce
+  store: (
+    <>
+      <path d="M3.2 9l1.5-4.4A2 2 0 0 1 6.6 3.2h10.8a2 2 0 0 1 1.9 1.4L20.8 9z" />
+      <path d="M4.5 9v10.2a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V9" />
+      <path d="M9.5 20.2v-5.4h5v5.4" />
+    </>
+  ),
 };
 
 export function ServiceIcon({

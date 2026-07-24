@@ -82,6 +82,11 @@ Teknik olarak: `content/posts/geo-rehberi.ts` dosyasını kopyala, doldur,
 yazılır (hreflang eşleri otomatik kurulur). Schema (BlogPosting + FAQPage +
 BreadcrumbList), sitemap ve meta etiketler **otomatik** üretilir.
 
+`npm run deploy` build + Pages deploy'dan sonra `scripts/indexnow.mjs`'i de
+çalıştırır: değişen sayfaları IndexNow'a (Bing, Yandex, Seznam, Naver, Yep)
+bildirir. Google IndexNow'ı desteklemez; oraya sitemap üzerinden ulaşır.
+Hangi sayfaların değiştiğini `indexnow-manifest.json` tutar — commit'le.
+
 | Alan | Kural |
 |---|---|
 | `slug` | ASCII, tire ile, 3-7 kelime, ana anahtar kelime içersin. TR ve EN ayrı. |

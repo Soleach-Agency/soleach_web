@@ -47,7 +47,14 @@ export function TextReveal({
             animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: delay + i * stagger, ease: EASE }}
           >
-            {word}
+            {/* The trailing space keeps words separable for text extractors:
+                AI crawlers strip tags without re-inserting whitespace, so
+                margin-only gaps collapse a headline into one unreadable token.
+                CSS trims this space at the end of the inline-block's line, so
+                the visual gap stays governed by the wrapper's `me-` margin.
+                The last word keeps it too — headlines split across several
+                TextReveal blocks would otherwise glue at the seam. */}
+            {`${word} `}
           </motion.span>
         </span>
       ))}

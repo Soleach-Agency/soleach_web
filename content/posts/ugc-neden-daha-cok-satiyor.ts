@@ -126,6 +126,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
                 "Sahte UGC (marka tarafından yazdırılmış, oyunculuk kokan içerik) hem yasal risk hem güven riski taşır; izleyici bunu kadraj kalitesinden değil dilden anlar.",
                 "Yorum ve kanıt gerektiren iddialarda (SPF koruma faktörü, dermatolojik test) kullanıcı ifadesi bilimsel kanıtın yerine geçmez.",
                 "UGC eskir: aynı yüzün aynı sahnesi yüksek frekansta tekrarladığında avantajı olan \"yeni ve gerçek\" hissi kaybolur.",
+                "Yapay zekâyla üretilen video da aynı inandırıcılık sınavına giriyor: nerede işe yaradığını, nerede geri teptiğini ve etiketleme yükümlülüğünü [ayrı bir yazıda](/tr/blog/yapay-zeka-ile-uretilen-videolar-reklamcilik) ele aldık.",
               ],
             },
           ],
@@ -135,7 +136,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "Hayır. Doğru soru \"hangisi\" değil, \"hangisi nerede\". Stüdyo çekimi markanın ne olduğunu bir karede kuran araçtır: ürün sayfası, kategori görselleri, marka kimliği, PR. UGC ise satın alma anındaki tereddüdü çözen araçtır: reklam kreatifi, ürün sayfasındaki sosyal kanıt bloğu, retargeting. Aynı bütçeyi tek bir formata yatırmak, iki farklı işi tek aletle yapmaya çalışmaktır.",
+              text: "Hayır. Doğru soru \"hangisi\" değil, \"hangisi nerede\". [Stüdyo çekimi](/tr/blog/studyo-cekimine-ihtiyaciniz-var-mi) markanın ne olduğunu bir karede kuran araçtır: ürün sayfası, kategori görselleri, marka kimliği, PR. UGC ise satın alma anındaki tereddüdü çözen araçtır: reklam kreatifi, ürün sayfasındaki sosyal kanıt bloğu, retargeting. Aynı bütçeyi tek bir formata yatırmak, iki farklı işi tek aletle yapmaya çalışmaktır.",
             },
             {
               type: "p",
@@ -353,6 +354,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
                 "Fake UGC (brand-scripted, visibly acted) carries both legal and trust risk; viewers detect it in the language, not the framing.",
                 "For claims requiring evidence (SPF factor, dermatological testing), a user statement is not a substitute for scientific proof.",
                 "UGC ages: at high frequency, the same face in the same scene loses the very \"new and real\" quality that gave it the advantage.",
+                "AI-generated video faces the same credibility test: we covered where it works, where it backfires and the disclosure obligations in [a separate post](/en/blog/ai-generated-video-in-advertising).",
               ],
             },
           ],
@@ -362,7 +364,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "No. The right question isn't \"which one\" but \"which one where\". Studio content establishes what the brand is in a single frame: product pages, category imagery, brand identity, PR. UGC resolves hesitation at the moment of purchase: ad creative, the social-proof block on the product page, retargeting. Putting the whole budget into one format is trying to do two jobs with one tool.",
+              text: "No. The right question isn't \"which one\" but \"which one where\". [Studio content](/en/blog/do-you-need-a-studio-photoshoot) establishes what the brand is in a single frame: product pages, category imagery, brand identity, PR. UGC resolves hesitation at the moment of purchase: ad creative, the social-proof block on the product page, retargeting. Putting the whole budget into one format is trying to do two jobs with one tool.",
             },
             {
               type: "p",

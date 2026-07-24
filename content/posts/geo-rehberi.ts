@@ -3,21 +3,21 @@ import type { BlogPost } from "@/lib/blog";
 export const geoRehberi: BlogPost = {
   id: "geo-rehberi",
   publishedAt: "2026-07-15",
-  updatedAt: "2026-07-20",
+  updatedAt: "2026-07-24",
   category: "seo-geo",
   locales: {
     tr: {
       slug: "geo-nedir-yapay-zeka-gorunurlugu-rehberi",
-      title: "GEO nedir? Güzellik markaları için yapay zekâ görünürlüğü rehberi",
-      metaTitle: "GEO Nedir? Güzellik Markaları için Yapay Zekâ Görünürlüğü | Soleach",
+      title: "GEO nedir? Kozmetik markaları için yapay zekâ görünürlüğü rehberi",
+      metaTitle: "GEO Nedir? Kozmetik Markaları için Yapay Zekâ Görünürlüğü | Soleach",
       metaDescription:
-        "GEO (Generative Engine Optimization) nedir, SEO'dan nasıl ayrılır ve güzellik markan ChatGPT ile Perplexity'de nasıl görünür olur? Kaynaklı rehber.",
+        "GEO (Generative Engine Optimization) nedir, SEO'dan nasıl ayrılır ve kozmetik markan ChatGPT ile Perplexity'de nasıl görünür olur? Kaynaklı rehber.",
       excerpt:
-        "Müşterin artık 'en iyi vegan fondöten hangisi' sorusunu Google'a değil, ChatGPT'ye de soruyor. GEO, markanın bu yanıtların içinde yer almasını sağlayan disiplin. Bu rehberde ne olduğunu ve nereden başlayacağını anlatıyoruz.",
+        "Müşterin artık 'en iyi vegan fondöten hangisi' sorusunu Google'a değil, ChatGPT'ye de soruyor. GEO, kozmetik markanın bu yanıtların içinde — ve doğru bilgiyle — yer almasını sağlayan disiplin. Bu rehberde ne olduğunu ve nereden başlayacağını anlatıyoruz.",
       intro: [
-        "Ürün araştırması değişiyor. İnsanlar 'hassas cilde uygun güneş kremi' ya da 'kalıcı ruj önerisi' gibi soruları yalnızca arama motorlarına değil; ChatGPT, Perplexity ve Google'ın yapay zekâ özetleri gibi araçlara da soruyor. Bu araçlar tek bir liste göstermek yerine doğrudan bir cevap yazıyor — ve o cevabın içinde hangi markaların anıldığı, yeni bir rekabet alanı.",
+        "Kozmetikte ürün araştırması değişiyor. İnsanlar 'hassas cilde uygun güneş kremi', 'niasinamid ile retinol birlikte kullanılır mı' ya da 'kalıcı ruj önerisi' gibi soruları yalnızca arama motorlarına değil; ChatGPT, Perplexity ve Google'ın yapay zekâ özetleri gibi araçlara da soruyor. Bu araçlar tek bir liste göstermek yerine doğrudan bir cevap yazıyor — ve o cevabın içinde hangi kozmetik markalarının anıldığı, yeni bir rekabet alanı.",
         "Bu kayma ölçülebilir hâle geldi. [Pew Research Center (2025)](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/), 900 ABD'li yetişkinin Mart 2025'teki gerçek tarayıcı verisini inceledi: yapay zekâ özeti çıkan aramalarda kullanıcılar geleneksel bir sonuca ziyaretlerin yalnızca %8'inde tıkladı; özet çıkmayan aramalarda bu oran %15'ti. Özetin içinde gösterilen kaynak bağlantılarına tıklama ise ziyaretlerin %1'inde kaldı. Veri ABD örneklemine ve tek bir aya ait; yine de yönü net: cevap kullanıcıya sayfaya hiç gitmeden ulaşıyor.",
-        "GEO (Generative Engine Optimization), markanın bu üretken yapay zekâ yanıtlarında doğru, güncel ve olumlu şekilde yer almasını hedefleyen çalışmaların bütünü. Bu yazıda GEO'nun ne olduğunu, klasik SEO'dan nasıl ayrıldığını ve bir güzellik markasının bugünden atabileceği somut adımları anlatıyoruz.",
+        "GEO (Generative Engine Optimization), markanın bu üretken yapay zekâ yanıtlarında doğru, güncel ve olumlu şekilde yer almasını hedefleyen çalışmaların bütünü. Bu yazıda GEO'nun ne olduğunu, klasik SEO'dan nasıl ayrıldığını ve bir kozmetik markasının bugünden atabileceği somut adımları anlatıyoruz.",
       ],
       sections: [
         {
@@ -112,15 +112,31 @@ export const geoRehberi: BlogPost = {
           ],
         },
         {
-          h2: "Güzellik kategorisinde GEO neden özellikle önemli?",
+          h2: "Kozmetik kategorisinde GEO neden özellikle önemli?",
           blocks: [
             {
               type: "p",
-              text: "Güzellik, tavsiyeyle dönen bir kategori. 'Hangi serum?', 'Bu içerik hamileyken kullanılır mı?', 'Akneli cilde hangi güneş kremi?' gibi sorular; kişisel, bağlama duyarlı ve tam da yapay zekâ asistanlarının iyi olduğu türden sorular. Kullanıcı davranışı bu araçlara kaydıkça, kategorideki keşif anlarının bir kısmı da oraya taşınıyor.",
+              text: "Kozmetik, tavsiyeyle dönen bir kategori. 'Hangi serum?', 'Bu içerik hamileyken kullanılır mı?', 'Akneli cilde hangi güneş kremi?' gibi sorular; kişisel, bağlama duyarlı ve tam da yapay zekâ asistanlarının iyi olduğu türden sorular. Kullanıcı davranışı bu araçlara kaydıkça, kategorideki keşif anlarının bir kısmı da oraya taşınıyor.",
             },
             {
               type: "p",
-              text: "Üstelik kategoride bilgi hassasiyeti yüksek: içerik listeleri, cilt tipi uyumu, hayvan deneyi ve vegan sertifikaları gibi konularda yanlış bilgi markaya zarar verir. Yapay zekâ motorlarının markan hakkında doğru bilgiye ulaşabilmesi, yalnızca görünürlük değil, aynı zamanda itibar meselesi.",
+              text: "Üstelik kozmetikte bilgi hassasiyeti yüksek: INCI içerik listeleri, cilt tipi uyumu, aktif bileşen etkileşimleri, hayvan deneyi ve vegan sertifikaları gibi konularda yanlış bilgi markaya doğrudan zarar verir. Yapay zekâ motorlarının markan hakkında doğru bilgiye ulaşabilmesi, yalnızca görünürlük değil, aynı zamanda itibar meselesi.",
+            },
+            {
+              type: "h3",
+              text: "Türkiye'de ekstra bir katman: sağlık beyanı sınırı",
+            },
+            {
+              type: "p",
+              text: "Kozmetikte GEO'nun az konuşulan tarafı burası. Türkiye'de kozmetik ürünlerin tanıtımında sağlık beyanı kullanmak serbest değil: [Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik](https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani) kapsamında bir kozmetik ürün için hastalığı tedavi ettiği, önlediği veya tedavisine yardımcı olduğu; fizyolojik fonksiyonları düzelttiği ya da farmakolojik, immünolojik, metabolik etki gösterdiği ifade edilemez.",
+            },
+            {
+              type: "p",
+              text: "Kendi sitende bu sınıra dikkat ediyor olabilirsin. Ama bir yapay zekâ motoru markan hakkında konuşurken yalnızca senin sitendeki metni kullanmıyor; forumları, pazaryeri açıklamalarını, bayi sayfalarını ve eski kampanya metinlerini de kullanıyor. Bu dağınık kaynaklardan markana tedavi edici bir iddia atfedilirse, ortaya çıkan cümle senin onaylamadığın bir cümle olur — ama kullanıcı onu senin markanın vaadi olarak okur.",
+            },
+            {
+              type: "p",
+              text: "Bu yüzden kozmetikte GEO'nun sorusu 'anılıyor muyum?' değil, 'ne diye anılıyorum?'. Ürünün ne yaptığını **ve ne yapmadığını** kendi sitende net, yasal sınırlar içinde ve makine tarafından okunabilir biçimde yazmak; motorların spekülasyon yapmasına bırakılan boşluğu kapatmanın en doğrudan yolu. Boş bırakılan her tanım, bir yerden doldurulur.",
             },
           ],
         },
@@ -133,6 +149,8 @@ export const geoRehberi: BlogPost = {
                 "Sitenin tüm önemli içeriği (özellikle SSS cevapları) JavaScript'e bağımlı olmadan, kaynak HTML'de görünür olsun.",
                 "Organization, Service/Product, FAQPage ve Article schema işaretlemelerini ekle; marka adı ve iletişim bilgilerini her kanalda aynı tut.",
                 "Gerçek müşteri sorularını topla (DM'ler, yorumlar, satış ekibine gelen sorular) ve her birine sitende açık, dürüst bir cevap sayfası/bölümü oluştur.",
+                "Kozmetiğe özel: her ürün için INCI içerik listesi, cilt tipi uyumu, kullanım sıklığı ve bilinen etkileşimleri metin olarak yayınla. Ürünün ne yapmadığını da yaz — sağlık beyanı sınırını aşmadan net konuşmak, hem mevzuat hem GEO açısından doğru olan. Bunların ürün sayfasında nasıl kurulacağını [Shopify mağaza kurulumu rehberinde](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) ayrıntılandırdık.",
+                "Markanı anlatan bilgiyi pazaryeri ve bayi sayfalarında da denetle. Yapay zekâ motorları o metinleri de okuyor; kendi siteni düzeltip eski kanalları unutmak çelişkili bir tablo bırakıyor.",
                 "robots.txt dosyanı bot bot ayır: görünürlüğü belirleyenler arama tarafındaki botlardır (OAI-SearchBot, Claude-SearchBot, PerplexityBot). GPTBot ve ClaudeBot ise sağlayıcıların kendi dokümantasyonuna göre model eğitimi için içerik topluyor — eğitime katılmak istemeyip yanıtlarda görünmek isteyen bir marka bu ikisini ayrı değerlendirebilir.",
                 "Kendi test rutinini kur: ayda bir, markanla ilgili 10-15 soruyu ChatGPT ve Perplexity'ye sor; nasıl anıldığını (ya da anılmadığını) not et ve içerik planını buna göre güncelle.",
               ],
@@ -160,6 +178,10 @@ export const geoRehberi: BlogPost = {
         {
           q: "GEO için ne kadar sürede sonuç beklemeliyim?",
           a: "Dürüst cevap: değişir ve garanti yok. Teknik düzeltmeler hızlı yapılır ama yapay zekâ motorlarının içeriği tarayıp yanıtlarına yansıtması zaman alır ve modelden modele farklılık gösterir. Bu yüzden GEO'yu kampanya değil, kalıcı bir altyapı yatırımı olarak ele alıyoruz.",
+        },
+        {
+          q: "Yapay zekâ kozmetik markam hakkında yanlış bilgi veriyorsa ne yapabilirim?",
+          a: "Motorların yanıtını doğrudan düzenleyemezsin; ama besledikleri kaynağı düzeltebilirsin. Önce yanlış bilginin nereden geldiğini ara (eski kampanya metni, pazaryeri açıklaması, bayi sayfası, forum). Sonra doğru bilgiyi kendi sitende net ve makine tarafından okunabilir biçimde yayınla, çelişkili kaynakları güncelle. Özellikle sağlık beyanı sınırını aşan bir iddia atfedildiyse bu, Türkiye'de sadece itibar değil mevzuat meselesi de olduğu için öncelikli ele alınmalı.",
         },
       ],
       sources: [
@@ -208,21 +230,33 @@ export const geoRehberi: BlogPost = {
           url: "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
           publisher: "Perplexity AI",
         },
+        {
+          label:
+            "Türkiye İlaç ve Tıbbi Cihaz Kurumu. Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik.",
+          url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
+          publisher: "T.C. Sağlık Bakanlığı — TİTCK",
+        },
       ],
-      tags: ["GEO", "SEO", "Yapay zekâ görünürlüğü", "İçerik stratejisi"],
+      tags: [
+        "GEO",
+        "SEO",
+        "Yapay zekâ görünürlüğü",
+        "Kozmetik pazarlaması",
+        "İçerik stratejisi",
+      ],
     },
     en: {
       slug: "what-is-geo-generative-engine-optimization-guide",
-      title: "What is GEO? An AI-visibility guide for beauty brands",
-      metaTitle: "What Is GEO? AI Visibility for Beauty Brands | Soleach",
+      title: "What is GEO? An AI-visibility guide for cosmetics brands",
+      metaTitle: "What Is GEO? AI Visibility for Cosmetics Brands | Soleach",
       metaDescription:
-        "What GEO (Generative Engine Optimization) is, how it differs from SEO, and how beauty brands become visible in ChatGPT and Perplexity. A sourced guide.",
+        "What GEO (Generative Engine Optimization) is, how it differs from SEO, and how cosmetics brands become visible in ChatGPT and Perplexity. A sourced guide.",
       excerpt:
-        "Your customer now asks 'what's the best vegan foundation' not only on Google but in ChatGPT too. GEO is the discipline of getting your brand into those answers. Here's what it is and where to start.",
+        "Your customer now asks 'what's the best vegan foundation' not only on Google but in ChatGPT too. GEO is the discipline of getting your cosmetics brand into those answers — with the right information. Here's what it is and where to start.",
       intro: [
-        "Product research is changing. People ask questions like 'sunscreen for sensitive skin' or 'a long-wear lipstick recommendation' not only to search engines, but to ChatGPT, Perplexity and Google's AI summaries. Instead of showing a list of links, these tools write an answer — and which brands appear inside that answer is a new competitive arena.",
+        "Product research in cosmetics is changing. People ask questions like 'sunscreen for sensitive skin', 'can I use niacinamide and retinol together' or 'a long-wear lipstick recommendation' not only to search engines, but to ChatGPT, Perplexity and Google's AI summaries. Instead of showing a list of links, these tools write an answer — and which cosmetics brands appear inside that answer is a new competitive arena.",
         "That shift is now measurable. [Pew Research Center (2025)](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) analysed the real browsing data of 900 U.S. adults during March 2025: on searches that produced an AI summary, users clicked a traditional result on just 8% of visits, against 15% on searches without one. Clicks on the sources cited inside the summary occurred on 1% of visits. The data covers a U.S. sample and a single month, but the direction is clear: the answer reaches the user without a visit to your page.",
-        "GEO (Generative Engine Optimization) is the set of practices that aims to get your brand mentioned accurately, currently and favorably in those generative AI answers. In this guide we cover what GEO is, how it differs from classic SEO, and the concrete steps a beauty brand can take today.",
+        "GEO (Generative Engine Optimization) is the set of practices that aims to get your brand mentioned accurately, currently and favorably in those generative AI answers. In this guide we cover what GEO is, how it differs from classic SEO, and the concrete steps a cosmetics brand can take today.",
       ],
       sections: [
         {
@@ -308,15 +342,31 @@ export const geoRehberi: BlogPost = {
           ],
         },
         {
-          h2: "Why does GEO matter especially in beauty?",
+          h2: "Why does GEO matter especially in cosmetics?",
           blocks: [
             {
               type: "p",
-              text: "Beauty runs on recommendations. 'Which serum?', 'Is this ingredient safe during pregnancy?', 'Which sunscreen for acne-prone skin?' — personal, context-sensitive questions that AI assistants happen to be good at. As user behavior shifts toward these tools, a share of the category's discovery moments moves with it.",
+              text: "Cosmetics runs on recommendations. 'Which serum?', 'Is this ingredient safe during pregnancy?', 'Which sunscreen for acne-prone skin?' — personal, context-sensitive questions that AI assistants happen to be good at. As user behavior shifts toward these tools, a share of the category's discovery moments moves with it.",
             },
             {
               type: "p",
-              text: "The category is also information-sensitive: ingredient lists, skin-type compatibility, animal testing and vegan certifications are areas where wrong information hurts a brand. Making sure AI engines can reach accurate information about you isn't just visibility — it's reputation.",
+              text: "The category is also information-sensitive: INCI ingredient lists, skin-type compatibility, active-ingredient interactions, animal testing and vegan certifications are areas where wrong information hurts a brand directly. Making sure AI engines can reach accurate information about you isn't just visibility — it's reputation.",
+            },
+            {
+              type: "h3",
+              text: "In Türkiye, an extra layer: the health-claim boundary",
+            },
+            {
+              type: "p",
+              text: "This is the least-discussed side of GEO in cosmetics. In Türkiye, health claims in cosmetics marketing are not a free-for-all: under the [Regulation on Health Claims of Products Sold with Health Claims](https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani), a cosmetic product may not be presented as treating, preventing or helping to treat a disease, as correcting physiological functions, or as producing pharmacological, immunological or metabolic effects.",
+            },
+            {
+              type: "p",
+              text: "You may well be respecting that boundary on your own site. But when an AI engine talks about your brand it doesn't only use your copy — it also uses forums, marketplace listings, reseller pages and old campaign text. If a therapeutic claim gets attributed to your brand from those scattered sources, the resulting sentence is one you never approved — and the reader takes it as your brand's promise.",
+            },
+            {
+              type: "p",
+              text: "So in cosmetics the GEO question isn't 'am I mentioned?' but 'what am I mentioned as?'. Writing what your product does **and does not do** on your own site — clearly, within the legal boundary, and in machine-readable form — is the most direct way to close the gap that engines would otherwise fill by inference. Every definition you leave blank gets filled from somewhere.",
             },
           ],
         },
@@ -329,6 +379,8 @@ export const geoRehberi: BlogPost = {
                 "Make sure all important site content (especially FAQ answers) is visible in the source HTML without depending on JavaScript.",
                 "Add Organization, Service/Product, FAQPage and Article schema markup; keep your brand name and contact details identical across every channel.",
                 "Collect real customer questions (DMs, comments, questions your sales side hears) and build a clear, honest answer for each on your site.",
+                "Cosmetics-specific: publish the INCI ingredient list, skin-type compatibility, usage frequency and known interactions as text for every product. Write what the product does not do as well — speaking precisely without crossing the health-claim boundary is the right call for both regulation and GEO. We cover how to build this into the product page in the [Shopify store setup guide](/en/blog/shopify-store-setup-for-cosmetics-brands).",
+                "Audit the copy describing your brand on marketplace and reseller pages too. AI engines read those as well; fixing your own site while leaving old channels stale leaves a contradictory picture.",
                 "Treat robots.txt bot by bot: visibility is driven by the search-side crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot). GPTBot and ClaudeBot, per their providers' own documentation, collect content for model training — a brand that wants to appear in answers without contributing to training can decide on those two separately.",
                 "Build a testing routine: once a month, ask ChatGPT and Perplexity 10–15 questions about your category and brand; note how you're mentioned (or not) and update your content plan accordingly.",
               ],
@@ -356,6 +408,10 @@ export const geoRehberi: BlogPost = {
         {
           q: "How long until GEO shows results?",
           a: "The honest answer: it varies, and there are no guarantees. Technical fixes are quick, but it takes time for AI engines to crawl content and reflect it in answers, and it differs from model to model. That's why we treat GEO as permanent infrastructure, not a campaign.",
+        },
+        {
+          q: "What can I do if AI gives wrong information about my cosmetics brand?",
+          a: "You can't edit the engines' answers directly, but you can fix what feeds them. First trace where the wrong information comes from (old campaign copy, a marketplace listing, a reseller page, a forum). Then publish the correct information on your own site clearly and in machine-readable form, and update the contradictory sources. If the attributed claim crosses the health-claim boundary, treat it as urgent — in Türkiye that's a regulatory matter, not just a reputational one.",
         },
       ],
       sources: [
@@ -404,8 +460,20 @@ export const geoRehberi: BlogPost = {
           url: "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
           publisher: "Perplexity AI",
         },
+        {
+          label:
+            "Turkish Medicines and Medical Devices Agency. Regulation on Health Claims of Products Sold with Health Claims (Sağlık Beyanı).",
+          url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
+          publisher: "Republic of Türkiye Ministry of Health — TİTCK",
+        },
       ],
-      tags: ["GEO", "SEO", "AI visibility", "Content strategy"],
+      tags: [
+        "GEO",
+        "SEO",
+        "AI visibility",
+        "Cosmetics marketing",
+        "Content strategy",
+      ],
     },
   },
 };
