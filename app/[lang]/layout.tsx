@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { HtmlLang } from "@/components/util/html-lang";
 import { JsonLd } from "@/components/seo/json-ld";
+import { WebMcp } from "@/components/seo/web-mcp";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { locales, isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
@@ -30,6 +31,7 @@ export default async function LocaleLayout({
       <ScrollProgress />
       <JsonLd data={organizationSchema(locale)} />
       <JsonLd data={websiteSchema(locale)} />
+      <WebMcp locale={locale} />
       <div className="flex min-h-screen flex-col">
         <Header locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>

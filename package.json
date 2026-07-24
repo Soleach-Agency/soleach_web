@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run agent-assets && next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
+    "agent-assets": "node scripts/agent-assets.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {

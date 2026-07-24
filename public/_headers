@@ -1,5 +1,16 @@
 /*
-  Link: </llms.txt>; rel="describedby"; type="text/plain", </sitemap.xml>; rel="sitemap"; type="application/xml", </tr/>; rel="alternate"; hreflang="tr", </en/>; rel="alternate"; hreflang="en", </tr/>; rel="alternate"; hreflang="x-default"
+  Link: </llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json", </sitemap.xml>; rel="sitemap"; type="application/xml", </tr>; rel="alternate"; hreflang="tr", </en>; rel="alternate"; hreflang="en", </tr>; rel="alternate"; hreflang="x-default"
+  Content-Signal: search=yes, ai-input=yes, ai-train=yes
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src https://docs.google.com https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com https://www.instagram.com https://www.tiktok.com; connect-src 'self'; form-action 'self' https://docs.google.com;
+
+/.well-known/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Access-Control-Allow-Origin: *
+
+/llms-full.txt
+  Access-Control-Allow-Origin: *

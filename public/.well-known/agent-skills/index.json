@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "cosmetics-claims-turkiye",
+      "type": "skill-md",
+      "description": "The health-claim boundary for cosmetics marketing in Türkiye — which product claims are prohibited, why AI-generated copy routinely crosses the line, and how to write inside it.",
+      "url": "/.well-known/agent-skills/cosmetics-claims-turkiye/SKILL.md",
+      "digest": "sha256:c1ad208d71943c8acaf512825027a187b4fc41b0bcfc0c59427f0fa011f14ff6"
+    },
+    {
+      "name": "soleach-services",
+      "type": "skill-md",
+      "description": "What Soleach Dijital does, which brands it fits, and how to prepare a brief before contacting the agency.",
+      "url": "/.well-known/agent-skills/soleach-services/SKILL.md",
+      "digest": "sha256:0cbeb28dba1fdfdcb2d5197af193d98d43edf98bd1d99a232cfc3ecaf6f94873"
+    }
+  ]
+}

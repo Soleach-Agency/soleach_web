@@ -1,0 +1,53 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://soleach.com/",
+      "describedby": [
+        {
+          "href": "https://soleach.com/llms.txt",
+          "type": "text/plain",
+          "title": "Structured summary of Soleach for AI agents"
+        },
+        {
+          "href": "https://soleach.com/llms-full.txt",
+          "type": "text/plain",
+          "title": "Full content corpus — every page and article as plain text"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://soleach.com/.well-known/agent-skills/index.json",
+          "type": "application/json",
+          "title": "Agent Skills discovery index (RFC v0.2.0)"
+        }
+      ],
+      "sitemap": [
+        {
+          "href": "https://soleach.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "XML sitemap — all pages, both locales, with hreflang"
+        }
+      ],
+      "alternate": [
+        {
+          "href": "https://soleach.com/tr",
+          "type": "text/html",
+          "hreflang": "tr",
+          "title": "Soleach — Türkçe"
+        },
+        {
+          "href": "https://soleach.com/en",
+          "type": "text/html",
+          "hreflang": "en",
+          "title": "Soleach — English"
+        }
+      ],
+      "author": [
+        {
+          "href": "mailto:hello@soleach.com",
+          "title": "Soleach Dijital Ajans"
+        }
+      ]
+    }
+  ]
+}
