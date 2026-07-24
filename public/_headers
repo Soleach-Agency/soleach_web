@@ -13,6 +13,10 @@
 /.well-known/api-catalog
   Content-Type: application/linkset+json
 
+# SEP-2127 defines its own media type; .json would otherwise win.
+/.well-known/mcp/server-card.json
+  Content-Type: application/mcp-server-card+json
+
 /llms.txt
   Access-Control-Allow-Origin: *
 

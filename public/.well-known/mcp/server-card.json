@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "com.soleach/content-search",
+  "title": "Soleach content search",
+  "description": "Search Soleach's guides on advertising, e-commerce and AI visibility for beauty brands.",
+  "version": "1.0.0",
+  "websiteUrl": "https://soleach.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://86818188-0323-457e-9182-859940cfba5c.search.ai.cloudflare.com/mcp"
+    }
+  ]
+}

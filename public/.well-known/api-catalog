@@ -19,6 +19,17 @@
           "href": "https://soleach.com/.well-known/agent-skills/index.json",
           "type": "application/json",
           "title": "Agent Skills discovery index (RFC v0.2.0)"
+        },
+        {
+          "href": "https://soleach.com/.well-known/mcp/server-card.json",
+          "type": "application/mcp-server-card+json",
+          "title": "MCP Server Card (SEP-2127) — semantic search over Soleach's content"
+        }
+      ],
+      "service": [
+        {
+          "href": "https://86818188-0323-457e-9182-859940cfba5c.search.ai.cloudflare.com/mcp",
+          "title": "MCP endpoint — streamable-http, rate limited, no authentication required"
         }
       ],
       "sitemap": [

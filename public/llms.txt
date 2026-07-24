@@ -22,6 +22,16 @@ Makeup, skincare, cosmetics, dermocosmetics, fragrance, haircare and women's pro
 - Does NOT sell products directly; grows brands that do
 - Contact: hello@soleach.com
 
+## For agents
+
+- **Full content corpus** (every page and article as plain text, one fetch): https://soleach.com/llms-full.txt
+- **MCP endpoint** (semantic + keyword search over all of the above, streamable-http, no auth, rate limited): https://86818188-0323-457e-9182-859940cfba5c.search.ai.cloudflare.com/mcp
+- **MCP Server Card**: https://soleach.com/.well-known/mcp/server-card.json
+- **Agent Skills index**: https://soleach.com/.well-known/agent-skills/index.json
+- **API catalog**: https://soleach.com/.well-known/api-catalog
+
+Soleach's content may be used for search, for answering questions in real time, and for training — see the `Content-Signal` directives in https://soleach.com/robots.txt.
+
 ## Pages
 
 - Home (TR): https://soleach.com/tr
