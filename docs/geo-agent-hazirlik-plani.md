@@ -3,10 +3,13 @@
 Cloudflare'in resmî tarayıcısı ([isitagentready.com](https://isitagentready.com/soleach.com))
 üzerinden 24 Temmuz 2026'da alınan taban ölçüm ve buradan çıkan iş listesi.
 
-> **Durum (24.07.2026): 21 → 71 / 100.** Faz 1, 3 ve 4 tamamlandı ve canlıda.
-> **Geriye tek uygulanabilir madde kaldı: Markdown for Agents** (panelden bir
-> toggle, +7 puan). DNSSEC gerekmedi — `_mcp._agents` kaydı yayına girince
-> DNS-AID kontrolü kendiliğinden geçti ve Discoverability 4/4 oldu.
+> **Durum (24.07.2026): 21 → 79 / 100 · Level 1 → Level 5 (Agent-Native).**
+> **Tamamlandı.** Discoverability 4/4, Content 1/1, Bot Access Control 2/2,
+> API/Auth/MCP 4/7. Kalan 3 kontrol (OAuth ×2 + auth.md) bilerek boş —
+> gerekçesi aşağıda. Bu, dürüst tavan.
+>
+> İki sürpriz: DNSSEC gerekmedi (`_mcp._agents` yayına girince DNS-AID geçti),
+> ve Markdown for Agents Free plan'de olmadığı için kendimiz yazdık.
 
 ## Taban ölçüm (24.07.2026, 17:51)
 
@@ -120,12 +123,45 @@ indeksleme sırasında kota aşımı ücret doğurabilir. Başlatmadan önce ona
 
 | Aşama | Geçen kontrol | Skor |
 | --- | --- | --- |
-| Taban | 3/14 | 21 |
-| Faz 1 + Faz 3 | 8/14 | 57 ✅ |
-| **+ Faz 4 (MCP) — şu anki durum** | **10/14** | **71** ✅ |
-| + Markdown for Agents (panel) | 11/14 | **78** ← kalan tek madde |
+| Taban | 3/14 | 21 · Level 1 |
+| Faz 1 + Faz 3 | 8/14 | 57 · Level 2 |
+| + Faz 4 (MCP) | 10/14 | 71 · Level 2 |
+| **+ Markdown müzakeresi — final** | **11/14** | **79 · Level 5 (Agent-Native)** ✅ |
 
 Kalan 3 kontrol (OAuth ×2 + auth.md) bilinçli olarak boş bırakılıyor.
+
+## Markdown müzakeresi — neden kendimiz yazdık
+
+Cloudflare'in **Markdown for Agents** özelliği Free plan'de yok: *"available to
+Pro, Business and Enterprise plans."* Pro $20/ay (yıllık) / $25/ay. Tek bir
+kontrol için bu para yerine aynı davranışı kendimiz ürettik.
+
+**Nasıl çalışıyor:** her sayfanın build-time üretilmiş bir `.md` ikizi var
+(`lib/markdown.ts` + altı `.md` route handler). `functions/_middleware.js`
+istemci `text/markdown` istediğinde ikizi servis ediyor.
+
+**Neden HTML'den çevirmekten iyi:** markdown tipli kaynaktan üretiliyor, yani
+hiçbir şeyin "DOM'un hangi kısmı içerikti" diye tahmin etmesi gerekmiyor.
+Çıktıda gerçek frontmatter, mutlak linkler ve korunmuş atıflar var.
+
+**Müzakere kuralları** (Cloudflare'in dokümante ettiğiyle birebir, hepsi test edildi):
+
+| `Accept` | Sonuç |
+| --- | --- |
+| `text/markdown` | Markdown |
+| `text/markdown, text/html;q=0.9` | Markdown |
+| `text/*` | Markdown |
+| `*/*` | HTML |
+| Tarayıcının varsayılan `Accept`'i | HTML |
+
+**Kazanç:** `/tr` → 159 KB HTML yerine 9,6 KB markdown. **%94 daha az bayt.**
+
+**Dikkat edilenler:** Pages Function eklemek mevcut kurulumu bozmadı —
+`_headers` (Link, Content-Signal, CSP), `_redirects` ve `.well-known`
+content-type'ları çalışmaya devam ediyor. `.md` ikizleri `_headers` üzerinden
+`noindex`, böylece kanonik HTML URL'leriyle yarışmıyorlar; middleware müzakere
+sırasında bu header'ı çıkarıyor. Keşif `Link` rel'leri siliniyor değil,
+üzerine ekleniyor.
 
 ## AI Search instance yapılandırması
 
@@ -172,29 +208,36 @@ chunk'ı 0.73 skorla getirdi.
 
 ---
 
-## Sıradaki adımlar — senin elini gerektirenler
+## Bakım notları
 
-Üçü de benim erişimimin dışında kaldı. Bağlı Cloudflare API token'ı DNS, Pages,
-Rulesets ve Workers'ı okuyup yazabiliyor ama **zone settings, cache purge ve
-DNSSEC uçlarına yetkisi yok** (`10000: Authentication error`).
+### Yeni sayfa eklerken
 
-### 1. Markdown for Agents'ı aç → +7 puan
+`.md` ikizi otomatik gelmiyor — yeni bir sayfa tipi eklersen `lib/markdown.ts`'e
+bir serileştirici ve `app/<yol>/index.md/route.ts` eklemek gerekiyor. Blog
+yazıları hariç: onlar `[slug]/index.md` üzerinden otomatik.
 
-Panel: zone `soleach.com` → **Settings** → **Markdown for Agents** → On.
+Middleware ikiz bulamazsa sessizce HTML'e düşüyor, yani unutmak bir şeyi
+bozmuyor — sadece o sayfa markdown vermiyor.
 
-Ajanlar `Accept: text/markdown` gönderdiğinde Cloudflare HTML'i uçuşta
-markdown'a çevirir. Ölçülen token tasarrufu %90+. Tek toggle, listedeki en iyi
-değer/emek oranı.
+### AI Search yeniden indeksleme
 
-Doğrulama:
+24 saatte bir otomatik. Elle tetiklemek için:
 
 ```bash
-curl -sI -H 'Accept: text/markdown' https://soleach.com/tr | grep -i content-type
+npx wrangler ai-search stats soleach
 ```
 
-`text/markdown` görmen lazım. Alternatif: **Zone Settings → Edit** yetkisi olan
-bir API token açarsan ben API'den hallederim
-(`PATCH /zones/{id}/settings/content_converter` → `{"value":"on"}`).
+### Token kısıtı
+
+Bağlı Cloudflare API token'ı DNS, Pages, Rulesets, Workers ve AI Search'ü
+okuyup yazabiliyor ama **zone settings, cache purge ve DNSSEC uçlarına
+yetkisi yok** (`10000: Authentication error`). Deploy sonrası kök dizindeki
+metin dosyaları edge cache yüzünden ~4 saat bayat kalabiliyor; gerçeği görmek
+için deployment'ın kendi adresinden çek:
+
+```bash
+curl https://soleach-web.pages.dev/robots.txt
+```
 
 ### 2. ~~DNSSEC~~ — gerekmedi
 
