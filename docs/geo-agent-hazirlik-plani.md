@@ -3,9 +3,10 @@
 Cloudflare'in resmî tarayıcısı ([isitagentready.com](https://isitagentready.com/soleach.com))
 üzerinden 24 Temmuz 2026'da alınan taban ölçüm ve buradan çıkan iş listesi.
 
-> **Durum (24.07.2026, 18:13): 21 → 57 / 100, Level 1 → Level 2 (Bot-Aware).**
-> Faz 1 ve Faz 3 tamamlandı ve canlıda. Kalan 3 madde aşağıda "Sıradaki adımlar"
-> başlığında — üçü de Cloudflare panelinden senin elini gerektiriyor.
+> **Durum (24.07.2026): 21 → 71 / 100.** Faz 1, 3 ve 4 tamamlandı ve canlıda.
+> **Geriye tek uygulanabilir madde kaldı: Markdown for Agents** (panelden bir
+> toggle, +7 puan). DNSSEC gerekmedi — `_mcp._agents` kaydı yayına girince
+> DNS-AID kontrolü kendiliğinden geçti ve Discoverability 4/4 oldu.
 
 ## Taban ölçüm (24.07.2026, 17:51)
 
@@ -120,12 +121,34 @@ indeksleme sırasında kota aşımı ücret doğurabilir. Başlatmadan önce ona
 | Aşama | Geçen kontrol | Skor |
 | --- | --- | --- |
 | Taban | 3/14 | 21 |
-| **Faz 1 + Faz 3 (yapıldı, canlıda)** | **8/14** | **57** ✅ |
-| + Markdown for Agents (panel) | 9/14 | 64 |
-| + DNSSEC (panel + registrar) | 10/14 | 71 |
-| + MCP Server Card (AI Search) | 11/14 | **79** |
+| Faz 1 + Faz 3 | 8/14 | 57 ✅ |
+| **+ Faz 4 (MCP) — şu anki durum** | **10/14** | **71** ✅ |
+| + Markdown for Agents (panel) | 11/14 | **78** ← kalan tek madde |
 
 Kalan 3 kontrol (OAuth ×2 + auth.md) bilinçli olarak boş bırakılıyor.
+
+## AI Search instance yapılandırması
+
+`soleach` · namespace `default` · 25 sayfa indeksli, 0 hata.
+
+MCP ucu: `https://86818188-0323-457e-9182-859940cfba5c.search.ai.cloudflare.com/mcp`
+
+Türkçe içerik için bilinçli seçimler:
+
+| Ayar | Değer | Neden |
+| --- | --- | --- |
+| `embedding_model` | `@cf/baai/bge-m3` | Çok dilli. `bge-*-en-v1.5` ailesi İngilizce-only, korpusun Türkçe yarısında kötü sonuç verirdi. Ayrıca en ucuzu (1075 neuron/M). |
+| `keyword_tokenizer` | `trigram` | Varsayılan `porter` İngilizce stemming. Trigram substring eşleşmesi Türkçe ekleri yakalıyor (kozmetik / kozmetikte / kozmetiğin). |
+| `index_method` | vector + keyword | Hibrit, RRF fusion. Anlam için vektör, marka/ürün adları için BM25. |
+| `content_selector` | `main` | Nav/footer gürültüsü indekse girmiyor. |
+| `sync_interval` | 86400 (24s) | Site nadiren değişiyor; gereksiz crawl ve neuron harcamıyor. |
+| `cache` | açık, 48s TTL | Tekrarlayan sorgular neuron harcamıyor. |
+| `rate_limit` | 20 istek/dk, sliding | Neuron bütçesini koruyor. |
+| `ai_search_model` | `@cf/meta/llama-3.1-8b-instruct-fp8` | Üretken yol için ucuz seçenek; asıl kullanılan yol retrieval. |
+
+Doğrulama (kart yazılmadan **önce** yapıldı): `initialize` → `tools/list` →
+`tools/call`. "kozmetik ürününde sağlık beyanı sınırı nedir" sorgusu doğru
+chunk'ı 0.73 skorla getirdi.
 
 ---
 
@@ -173,33 +196,23 @@ curl -sI -H 'Accept: text/markdown' https://soleach.com/tr | grep -i content-typ
 bir API token açarsan ben API'den hallederim
 (`PATCH /zones/{id}/settings/content_converter` → `{"value":"on"}`).
 
-### 2. DNSSEC'i aç → +7 puan
+### 2. ~~DNSSEC~~ — gerekmedi
 
-DNS-AID kaydı (`_index._agents.soleach.com`, SVCB) **oluşturuldu ve çözümleniyor.**
-Tarayıcı kaydı buluyor; tek eksik cevabın DNSSEC ile imzalanmamış olması
-(`AD: false`).
+`_index._agents` tek başınayken tarayıcı DNSSEC istiyordu. `_mcp._agents` kaydı
+da yayına girince kontrol geçti (`AD: true`) ve Discoverability 4/4 oldu.
+DNSSEC açmaya gerek kalmadı.
 
-Panel: zone → **DNS** → **Settings** → **DNSSEC** → Enable. Cloudflare bir DS
-kaydı üretir; onu **registrar'da** (domaini aldığın yerde) eklemen gerekiyor.
-DS eklenene kadar durum "pending" kalır — bu aşamada hiçbir şey bozulmaz.
+### 3. ~~AI Search~~ — yapıldı
 
-⚠️ Bunu ben denedim, izin katmanı bloklandı — DS kaydı yanlış girilirse domain
-çözümlenemez hale gelebildiği için makul bir blok. Registrar adımı zaten sende.
+Instance kuruldu, indekslendi, MCP ucu doğrulandı, server card yayında.
+Yapılandırma detayı yukarıda. Panelden ek bir işlem gerekmiyor —
+public endpoint ve rate limit API'den ayarlandı.
 
-### 3. (Opsiyonel) AI Search + NLWeb → gerçek MCP ucu → +7 puan
-
-`npx wrangler ai-search create soleach --type web-crawler --source soleach.com`
-ardından panelden NLWeb Worker'ı açmak, siteye gerçek bir `/mcp` ve `/ask` ucu
-kazandırır. Sonrasında ben `server-card.json`'ı ve DNS-AID `_mcp._agents`
-kaydını yazarım.
-
-⚠️ **Bunu bilerek başlatmadım.** AI Search Workers AI üzerinde çalışır; hesap
-Free plan'de ve indeksleme neuron kotasını aşarsa ücret doğar. Sürekli gider
-doğuran bir karar, senin onayın olmadan tetiklemek doğru olmaz.
-
-Not: Skor için MCP Server Card yazıp gerçek bir uç koymamak mümkün — ama
-ajanları var olmayan bir adrese yönlendirmiş oluruz. Kart, ancak uç gerçekten
-varsa yazılmalı.
+**Maliyet gerçeği:** Workers **Free** planında fatura yolu yok. Kota aşımı ücret
+değil **hata** üretiyor (Cloudflare: *"further operations will fail with an
+error"*). Ölçülen: tam re-index ~82 neuron = günlük 10.000 ücretsiz kotanın
+**%0,8'i**. AI Search'ün kendisi open beta'da ücretsiz; depolama, vektör
+indeksleme ve crawl dahil. Faturalanma başlamadan 30 gün önce duyurulacak.
 
 ---
 
