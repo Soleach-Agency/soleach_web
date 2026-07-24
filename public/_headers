@@ -9,6 +9,10 @@
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=3600
 
+# Extensionless, so Pages would otherwise guess application/octet-stream.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+
 /llms.txt
   Access-Control-Allow-Origin: *
 

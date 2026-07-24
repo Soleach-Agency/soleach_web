@@ -3,6 +3,10 @@
 Cloudflare'in resmî tarayıcısı ([isitagentready.com](https://isitagentready.com/soleach.com))
 üzerinden 24 Temmuz 2026'da alınan taban ölçüm ve buradan çıkan iş listesi.
 
+> **Durum (24.07.2026, 18:13): 21 → 57 / 100, Level 1 → Level 2 (Bot-Aware).**
+> Faz 1 ve Faz 3 tamamlandı ve canlıda. Kalan 3 madde aşağıda "Sıradaki adımlar"
+> başlığında — üçü de Cloudflare panelinden senin elini gerektiriyor.
+
 ## Taban ölçüm (24.07.2026, 17:51)
 
 **Skor: 21 / 100 — Level 1 (Basic Web Presence)**
@@ -115,14 +119,87 @@ indeksleme sırasında kota aşımı ücret doğurabilir. Başlatmadan önce ona
 
 | Aşama | Geçen kontrol | Skor |
 | --- | --- | --- |
-| Bugün | 3/14 | 21 |
-| + Link header (zaten canlı, yeniden tarama) | 4/14 | 29 |
-| + Faz 1 (Content Signals, Skills, API Catalog, WebMCP) | 8/14 | 57 |
-| + Faz 2 (Markdown for Agents) | 9/14 | 64 |
-| + Faz 3 (DNS-AID) | 10/14 | 71 |
-| + Faz 4 (MCP Server Card) | 11/14 | **79** |
+| Taban | 3/14 | 21 |
+| **Faz 1 + Faz 3 (yapıldı, canlıda)** | **8/14** | **57** ✅ |
+| + Markdown for Agents (panel) | 9/14 | 64 |
+| + DNSSEC (panel + registrar) | 10/14 | 71 |
+| + MCP Server Card (AI Search) | 11/14 | **79** |
 
 Kalan 3 kontrol (OAuth ×2 + auth.md) bilinçli olarak boş bırakılıyor.
+
+---
+
+## 24.07.2026 tarama sonucu (57/100)
+
+| Kontrol | Sonuç |
+| --- | --- |
+| robots.txt | ✅ geçerli format |
+| sitemap.xml | ✅ geçerli yapı |
+| Link headers | ✅ `describedby, api-catalog, service-desc, alternate` bulundu |
+| DNS-AID | ⚠️ **kayıt bulundu ama DNSSEC doğrulanmadı** |
+| Markdown negotiation | ❌ panelden açılmalı |
+| AI bot kuralları | ✅ 11 AI botu için kural bulundu |
+| Content Signals | ✅ robots.txt'te bulundu |
+| Web Bot Auth | ❌ (kapsam dışı, sayılmıyor) |
+| API Catalog | ✅ 1 API listelenmiş |
+| Agent Skills index | ✅ geçerli JSON |
+| WebMCP | ✅ **3 araç tespit edildi** (`imperative_api`) |
+| OAuth/OIDC · OAuth Protected Resource · auth.md | ❌ bilinçli atlandı |
+| MCP Server Card | ❌ Faz 4 bekliyor |
+
+---
+
+## Sıradaki adımlar — senin elini gerektirenler
+
+Üçü de benim erişimimin dışında kaldı. Bağlı Cloudflare API token'ı DNS, Pages,
+Rulesets ve Workers'ı okuyup yazabiliyor ama **zone settings, cache purge ve
+DNSSEC uçlarına yetkisi yok** (`10000: Authentication error`).
+
+### 1. Markdown for Agents'ı aç → +7 puan
+
+Panel: zone `soleach.com` → **Settings** → **Markdown for Agents** → On.
+
+Ajanlar `Accept: text/markdown` gönderdiğinde Cloudflare HTML'i uçuşta
+markdown'a çevirir. Ölçülen token tasarrufu %90+. Tek toggle, listedeki en iyi
+değer/emek oranı.
+
+Doğrulama:
+
+```bash
+curl -sI -H 'Accept: text/markdown' https://soleach.com/tr | grep -i content-type
+```
+
+`text/markdown` görmen lazım. Alternatif: **Zone Settings → Edit** yetkisi olan
+bir API token açarsan ben API'den hallederim
+(`PATCH /zones/{id}/settings/content_converter` → `{"value":"on"}`).
+
+### 2. DNSSEC'i aç → +7 puan
+
+DNS-AID kaydı (`_index._agents.soleach.com`, SVCB) **oluşturuldu ve çözümleniyor.**
+Tarayıcı kaydı buluyor; tek eksik cevabın DNSSEC ile imzalanmamış olması
+(`AD: false`).
+
+Panel: zone → **DNS** → **Settings** → **DNSSEC** → Enable. Cloudflare bir DS
+kaydı üretir; onu **registrar'da** (domaini aldığın yerde) eklemen gerekiyor.
+DS eklenene kadar durum "pending" kalır — bu aşamada hiçbir şey bozulmaz.
+
+⚠️ Bunu ben denedim, izin katmanı bloklandı — DS kaydı yanlış girilirse domain
+çözümlenemez hale gelebildiği için makul bir blok. Registrar adımı zaten sende.
+
+### 3. (Opsiyonel) AI Search + NLWeb → gerçek MCP ucu → +7 puan
+
+`npx wrangler ai-search create soleach --type web-crawler --source soleach.com`
+ardından panelden NLWeb Worker'ı açmak, siteye gerçek bir `/mcp` ve `/ask` ucu
+kazandırır. Sonrasında ben `server-card.json`'ı ve DNS-AID `_mcp._agents`
+kaydını yazarım.
+
+⚠️ **Bunu bilerek başlatmadım.** AI Search Workers AI üzerinde çalışır; hesap
+Free plan'de ve indeksleme neuron kotasını aşarsa ücret doğar. Sürekli gider
+doğuran bir karar, senin onayın olmadan tetiklemek doğru olmaz.
+
+Not: Skor için MCP Server Card yazıp gerçek bir uç koymamak mümkün — ama
+ajanları var olmayan bir adrese yönlendirmiş oluruz. Kart, ancak uç gerçekten
+varsa yazılmalı.
 
 ---
 
