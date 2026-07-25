@@ -3,17 +3,15 @@ import type { BlogPost } from "@/lib/blog";
 export const instagramReklamRehberi: BlogPost = {
   id: "instagram-reklam-rehberi",
   publishedAt: "2026-07-19",
-  updatedAt: "2026-07-20",
+  updatedAt: "2026-07-25",
   category: "ads",
   locales: {
     tr: {
       slug: "guzellik-markalari-icin-instagram-reklam-rehberi",
       title: "Güzellik markaları için Instagram reklamlarına başlangıç rehberi",
       metaTitle: "Güzellik Markaları için Instagram Reklam Rehberi | Soleach",
-      metaDescription:
-        "Kozmetik markası için Instagram reklamlarına nereden başlanır? Piksel kurulumu, huni yapısı, kreatif, bütçe ve Meta'nın kategori kuralları — kaynaklı rehber.",
-      excerpt:
-        "İlk reklamını yayınlamadan önce kurman gereken altyapı, güzellik kategorisinde işleyen huni yapısı ve yeni başlayanların en sık yaptığı hatalar. 'Gönderiyi öne çıkar' butonundan fazlasını isteyenler için.",
+      metaDescription: "Kozmetik markası için Instagram reklamlarına nereden başlanır? Piksel kurulumu, huni yapısı, kreatif, bütçe ve Meta'nın kategori kuralları — kaynaklı rehber.",
+      excerpt: "İlk reklamını yayınlamadan önce kurman gereken altyapı, güzellik kategorisinde işleyen huni yapısı ve yeni başlayanların en sık yaptığı hatalar. 'Gönderiyi öne çıkar' butonundan fazlasını isteyenler için.",
       intro: [
         "Güzellik, Instagram'ın en görsel ve en rekabetçi kategorilerinden biri. Bu, iki şeyi aynı anda doğuruyor: platform ürününü göstermek için biçilmiş kaftan, ama 'öylesine' atılan reklam bütçelerinin de en hızlı eridiği yerlerden biri.",
         "Bu rehber, reklamlara yeni başlayan ya da 'öne çıkar' butonundan öteye geçmek isteyen güzellik markaları için yazıldı. Amaç: ilk gerçek kampanyanı sağlam bir altyapı, mantıklı bir yapı ve gerçekçi beklentilerle kurman.",
@@ -37,6 +35,10 @@ export const instagramReklamRehberi: BlogPost = {
             },
             {
               type: "p",
+              text: "Pikseli kurmuş olmak tek başına yetmiyor: olayların değer taşıyıp taşımadığı, sunucu tarafı kapsamın ve deduplication kurulumun ölçümün doğruluğunu belirliyor. Kurulumun nerede sessizce kırıldığını [Meta pixel ölçüm hataları yazımızda](/tr/blog/meta-pixel-olcum-hatalari-satis-atfi) adım adım anlattık.",
+            },
+            {
+              type: "p",
               text: "Bu listenin görünmeyen maddesi, reklamın indiği yer. En iyi kurulmuş kampanya bile dönüşmeyen bir mağazayı kurtarmaz; ürün sayfası, sepet ve ödeme adımındaki kararların satışa etkisi için [kozmetik markası için Shopify mağaza kurulumu rehberine](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) bakabilirsin.",
             },
           ],
@@ -48,17 +50,26 @@ export const instagramReklamRehberi: BlogPost = {
               type: "p",
               text: "Kozmetikte satın alma kararı çoğu zaman tek dokunuşta olmaz: kullanıcı ürünü görür, birkaç kez daha karşılaşır, yorumlara bakar, sonra alır. Kampanya yapını da bu yolculuğa göre kurmak gerekir.",
             },
-            { type: "h3", text: "Soğuk kitle: tanıştır" },
+            {
+              type: "h3",
+              text: "Soğuk kitle: tanıştır",
+            },
             {
               type: "p",
               text: "Ürünü hiç bilmeyenlere; problemi ve sonucu gösteren, ilk üç saniyede yakalayan video içerikler. Burada amaç satıştan önce nitelikli trafik ve etkileşim üretmek.",
             },
-            { type: "h3", text: "Ilık kitle: ikna et" },
+            {
+              type: "h3",
+              text: "Ilık kitle: ikna et",
+            },
             {
               type: "p",
               text: "Videonu izleyen, profilini ziyaret eden, siteye gelen kişilere; sosyal kanıt, kullanım şekli, içerik/bileşen anlatımı gibi güven inşa eden içerikler.",
             },
-            { type: "h3", text: "Sıcak kitle: hatırlat ve kapat" },
+            {
+              type: "h3",
+              text: "Sıcak kitle: hatırlat ve kapat",
+            },
             {
               type: "p",
               text: "Sepete ekleyip almayanlara ve ürün sayfası gezenlere dinamik yeniden pazarlama. Burada kreatiften çok teklifin netliği çalışır: kargo, iade kolaylığı, set avantajı.",
@@ -154,8 +165,7 @@ export const instagramReklamRehberi: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Meta. Öğrenme aşaması hakkında (About the learning phase). Meta İşletme Yardım Merkezi.",
+          label: "Meta. Öğrenme aşaması hakkında (About the learning phase). Meta İşletme Yardım Merkezi.",
           url: "https://www.facebook.com/business/help/112167992830700",
           publisher: "Meta",
         },
@@ -170,28 +180,29 @@ export const instagramReklamRehberi: BlogPost = {
           publisher: "Meta",
         },
         {
-          label:
-            "Meta. Privacy Violations and Personal Attributes. Advertising Standards, Transparency Center.",
+          label: "Meta. Privacy Violations and Personal Attributes. Advertising Standards, Transparency Center.",
           url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/",
           publisher: "Meta Transparency Center",
         },
         {
-          label:
-            "Meta. Health and Wellness. Advertising Standards, Transparency Center.",
+          label: "Meta. Health and Wellness. Advertising Standards, Transparency Center.",
           url: "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/",
           publisher: "Meta Transparency Center",
         },
       ],
-      tags: ["Instagram Ads", "Performans pazarlama", "Meta", "Kozmetik"],
+      tags: [
+        "Instagram Ads",
+        "Performans pazarlama",
+        "Meta",
+        "Kozmetik",
+      ],
     },
     en: {
       slug: "instagram-ads-guide-for-beauty-brands",
       title: "A beauty brand's starter guide to Instagram advertising",
       metaTitle: "Instagram Ads Starter Guide for Beauty Brands | Soleach",
-      metaDescription:
-        "Where does a beauty brand start with Instagram ads? Pixel setup, funnel structure, creative, budget and Meta's category rules — a sourced starter guide.",
-      excerpt:
-        "The infrastructure to set up before your first ad, a funnel structure that fits the beauty category, and the most common beginner mistakes. For anyone who wants more than the 'Boost post' button.",
+      metaDescription: "Where does a beauty brand start with Instagram ads? Pixel setup, funnel structure, creative, budget and Meta's category rules — a sourced starter guide.",
+      excerpt: "The infrastructure to set up before your first ad, a funnel structure that fits the beauty category, and the most common beginner mistakes. For anyone who wants more than the 'Boost post' button.",
       intro: [
         "Beauty is one of Instagram's most visual — and most competitive — categories. That cuts both ways: the platform is tailor-made for showing your product, and it's also one of the fastest places for a casual ad budget to evaporate.",
         "This guide is written for beauty brands that are new to ads or ready to move past the 'Boost' button. The goal: launch your first real campaign on solid infrastructure, with a sensible structure and realistic expectations.",
@@ -215,6 +226,10 @@ export const instagramReklamRehberi: BlogPost = {
             },
             {
               type: "p",
+              text: "Having the Pixel installed isn't enough on its own: whether your events carry value, how much server-side coverage you have and whether deduplication is set up determine how accurate the measurement is. We walk through where a setup quietly breaks in our piece on [Meta Pixel measurement errors](/en/blog/meta-pixel-measurement-errors-attribution).",
+            },
+            {
+              type: "p",
               text: "The unlisted item here is where the ad lands. Even the best-built campaign can't rescue a store that doesn't convert; for how product page, cart and checkout decisions affect sales, see the [Shopify store setup guide for cosmetics brands](/en/blog/shopify-store-setup-for-cosmetics-brands).",
             },
           ],
@@ -226,17 +241,26 @@ export const instagramReklamRehberi: BlogPost = {
               type: "p",
               text: "In cosmetics, the purchase decision rarely happens in one touch: a user sees the product, meets it a few more times, checks reviews, then buys. Your campaign structure should mirror that journey.",
             },
-            { type: "h3", text: "Cold audience: introduce" },
+            {
+              type: "h3",
+              text: "Cold audience: introduce",
+            },
             {
               type: "p",
               text: "For people who've never heard of you: video that shows the problem and the result and hooks in the first three seconds. The goal here is qualified traffic and engagement before sales.",
             },
-            { type: "h3", text: "Warm audience: convince" },
+            {
+              type: "h3",
+              text: "Warm audience: convince",
+            },
             {
               type: "p",
               text: "For people who watched your video, visited your profile or landed on your site: trust-building content — social proof, how-to-use, ingredient stories.",
             },
-            { type: "h3", text: "Hot audience: remind and close" },
+            {
+              type: "h3",
+              text: "Hot audience: remind and close",
+            },
             {
               type: "p",
               text: "Dynamic retargeting for cart abandoners and product-page visitors. At this stage the clarity of the offer matters more than the creative: shipping, easy returns, bundle value.",
@@ -332,8 +356,7 @@ export const instagramReklamRehberi: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Meta. About the learning phase. Meta Business Help Center.",
+          label: "Meta. About the learning phase. Meta Business Help Center.",
           url: "https://www.facebook.com/business/help/112167992830700",
           publisher: "Meta",
         },
@@ -348,19 +371,22 @@ export const instagramReklamRehberi: BlogPost = {
           publisher: "Meta",
         },
         {
-          label:
-            "Meta. Privacy Violations and Personal Attributes. Advertising Standards, Transparency Center.",
+          label: "Meta. Privacy Violations and Personal Attributes. Advertising Standards, Transparency Center.",
           url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/",
           publisher: "Meta Transparency Center",
         },
         {
-          label:
-            "Meta. Health and Wellness. Advertising Standards, Transparency Center.",
+          label: "Meta. Health and Wellness. Advertising Standards, Transparency Center.",
           url: "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/",
           publisher: "Meta Transparency Center",
         },
       ],
-      tags: ["Instagram Ads", "Performance marketing", "Meta", "Cosmetics"],
+      tags: [
+        "Instagram Ads",
+        "Performance marketing",
+        "Meta",
+        "Cosmetics",
+      ],
     },
   },
 };

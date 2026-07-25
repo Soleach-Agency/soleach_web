@@ -6,6 +6,9 @@ import { ugcNedenDahaCokSatiyor } from "./ugc-neden-daha-cok-satiyor";
 import { studyoCekimineIhtiyacinizVarMi } from "./studyo-cekimine-ihtiyaciniz-var-mi";
 import { yapayZekaVideoReklamcilik } from "./yapay-zeka-video-reklamcilik";
 import { shopifyMagazaKurulumu } from "./shopify-magaza-kurulumu";
+import { metaPixelOlcumHatalari } from "./meta-pixel-olcum-hatalari";
+import { besHookTesti } from "./bes-hook-testi";
+import { ekrandaParfumSatmak } from "./ekranda-parfum-satmak";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -16,4 +19,7 @@ export const posts: BlogPost[] = [
   studyoCekimineIhtiyacinizVarMi,
   yapayZekaVideoReklamcilik,
   shopifyMagazaKurulumu,
+  metaPixelOlcumHatalari,
+  besHookTesti,
+  ekrandaParfumSatmak,
 ];
