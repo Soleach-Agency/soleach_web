@@ -41,11 +41,16 @@ function htmlPath(url) {
   return null;
 }
 
-/** Hash only the rendered markup — asset hashes change every build. */
+/**
+ * Hash only the rendered markup — asset hashes change every build, and Next
+ * embeds a build-unique marker comment that would otherwise flip every
+ * page's hash on every build.
+ */
 function contentHash(file) {
   const html = readFileSync(file, "utf8")
     .replace(/<script\b[\s\S]*?<\/script>/gi, "")
-    .replace(/<link\b[^>]*>/gi, "");
+    .replace(/<link\b[^>]*>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "");
   return createHash("sha256").update(html).digest("hex").slice(0, 16);
 }
 
