@@ -25,11 +25,7 @@ export function AnimatedCounter({
   const [value, setValue] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setValue(to);
-      return;
-    }
+    if (!inView || reduce) return;
     const controls = animate(0, to, {
       duration,
       ease: [0.22, 1, 0.36, 1],
@@ -38,10 +34,13 @@ export function AnimatedCounter({
     return () => controls.stop();
   }, [inView, to, duration, reduce]);
 
+  // Reduced motion: skip the tween and show the final value once in view.
+  const display = reduce && inView ? to : value;
+
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {value.toFixed(decimals)}
+      {display.toFixed(decimals)}
       {suffix}
     </span>
   );
