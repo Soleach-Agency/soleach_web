@@ -39,7 +39,19 @@ export function buildMetadata({
   return {
     title,
     description,
-    alternates: { canonical, languages },
+    alternates: {
+      canonical,
+      languages,
+      // RSS autodiscovery — feed readers find /{locale}/rss.xml from any page.
+      types: {
+        "application/rss+xml": [
+          {
+            url: localeUrl(locale, "rss.xml"),
+            title: `${siteConfig.name} Blog (${locale.toUpperCase()})`,
+          },
+        ],
+      },
+    },
     openGraph: {
       title,
       description,

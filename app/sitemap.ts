@@ -3,6 +3,7 @@ import { locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { localeUrl, siteUrl } from "@/lib/site";
 import { getPosts } from "@/lib/blog";
+import { staticPageUpdatedAt, blogIndexUpdatedAt } from "@/lib/page-dates";
 
 /** Logical pages, addressed by the route slug ("" = home). */
 const pages = ["", "services", "about", "contact", "blog"] as const;
@@ -37,7 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localeUrl(locale, path),
-        lastModified: new Date(),
+        lastModified: new Date(
+          page === "blog" ? blogIndexUpdatedAt() : staticPageUpdatedAt[page],
+        ),
         changeFrequency: page === "" || page === "blog" ? "weekly" : "monthly",
         priority: page === "" ? 1 : 0.8,
         alternates: { languages },
@@ -68,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Language-neutral link-in-bio hub.
   entries.push({
     url: `${siteUrl}/links`,
-    lastModified: new Date(),
+    lastModified: new Date(staticPageUpdatedAt.links),
     changeFrequency: "monthly",
     priority: 0.3,
   });

@@ -80,7 +80,13 @@ alanını doldur.
 Teknik olarak: `content/posts/geo-rehberi.ts` dosyasını kopyala, doldur,
 `content/posts/index.ts`'e ekle, build + deploy. Her yazı TR + EN birlikte
 yazılır (hreflang eşleri otomatik kurulur). Schema (BlogPosting + FAQPage +
-BreadcrumbList), sitemap ve meta etiketler **otomatik** üretilir.
+BreadcrumbList), sitemap, meta etiketler, RSS beslemeleri (`/tr/rss.xml`,
+`/en/rss.xml`) ve `llms.txt`'nin Pages/Blog bölümleri **otomatik** üretilir —
+hepsi `content/posts/`'tan beslenir, elle liste güncellenmez.
+
+Sabit sayfaların (ana sayfa, hizmetler, hakkında, iletişim, links) görünür
+metnini değiştirirsen `lib/page-dates.ts` içindeki tarihi güncelle — sitemap
+`lastmod` değerleri oradan gelir ve dürüst kalmaları gerekir.
 
 `npm run deploy` build + Pages deploy'dan sonra `scripts/indexnow.mjs`'i de
 çalıştırır: değişen sayfaları IndexNow'a (Bing, Yandex, Seznam, Naver, Yep)
