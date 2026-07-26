@@ -11,8 +11,9 @@ interface LogoProps {
 }
 
 /**
- * The Soleach brand mark — the real brush + gear icon (transparent PNG),
- * so it sits cleanly on both light and dark surfaces.
+ * The Soleach brand mark — the real brush + gear icon (transparent WebP,
+ * 768px master lives as soleach-logo.png), so it sits cleanly on both light
+ * and dark surfaces.
  */
 export function Logo({
   withWordmark = true,
@@ -23,7 +24,7 @@ export function Logo({
   return (
     <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
       <Image
-        src="/brand/soleach-logo.png"
+        src="/brand/soleach-logo.webp"
         alt="Soleach"
         width={64}
         height={64}
