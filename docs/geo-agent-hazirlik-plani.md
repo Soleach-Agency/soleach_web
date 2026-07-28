@@ -234,10 +234,18 @@ devralmıyor; dinamik segmentli bir sayfa tipinde matrisin tamamını
 
 ### AI Search yeniden indeksleme
 
-24 saatte bir otomatik. Elle tetiklemek için:
+24 saatte bir otomatik. Yeni sayfalar hemen indekslensin istiyorsan elle
+tetikle — kaynak `sitemap.xml`, yani sitemap'te olmayan sayfa indekslenmez:
+
+```bash
+npx wrangler ai-search jobs create soleach
+```
+
+Durumu izlemek için (`stats` yalnızca rapor verir, tetiklemez):
 
 ```bash
 npx wrangler ai-search stats soleach
+npx wrangler ai-search jobs logs soleach <job-id>
 ```
 
 ### Token kısıtı
