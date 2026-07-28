@@ -126,6 +126,16 @@ export function Footer({
                   Facebook
                 </a>
               </li>
+              <li>
+                <a
+                  href={siteConfig.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted transition-colors hover:text-accent"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
         </div>

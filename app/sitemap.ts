@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/lib/i18n";
+import { locales, localeHtmlLang } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { localeUrl, siteUrl } from "@/lib/site";
 import { getPosts } from "@/lib/blog";
@@ -33,7 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
           page === ""
             ? ""
             : altDict.routes[page as Exclude<(typeof pages)[number], "">];
-        languages[alt] = localeUrl(alt, altSlug);
+        // Same hreflang codes as the on-page <link> tags — conflicting
+        // codes across the two sources would water down both signals.
+        languages[localeHtmlLang[alt]] = localeUrl(alt, altSlug);
       }
 
       entries.push({
@@ -52,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const languages: Record<string, string> = {};
       for (const alt of locales) {
         const altDict = getDictionary(alt);
-        languages[alt] = localeUrl(
+        languages[localeHtmlLang[alt]] = localeUrl(
           alt,
           `${altDict.routes.blog}/${post.locales[alt].slug}`,
         );

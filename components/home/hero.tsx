@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { Aurora } from "@/components/motion/aurora";
 import { TextReveal } from "@/components/motion/text-reveal";
+import { Entrance } from "@/components/motion/entrance";
 import { Reveal } from "@/components/motion/reveal";
 import { Magnetic } from "@/components/motion/magnetic";
 import { Marquee } from "@/components/motion/marquee";
@@ -32,12 +33,12 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 pb-8 pt-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:pb-14 lg:pt-24 lg:px-8">
         {/* Copy */}
         <div className="max-w-xl">
-          <Reveal direction="none" duration={0.6}>
+          <Entrance>
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-background/60 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent backdrop-blur">
               <span className="h-1.5 w-1.5 animate-glow-pulse rounded-full bg-accent-2" />
               {hero.eyebrow}
             </span>
-          </Reveal>
+          </Entrance>
 
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-7xl">
             <TextReveal text={hero.title} className="block" delay={0.15} />
@@ -49,13 +50,13 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             />
           </h1>
 
-          <Reveal delay={0.7} className="mt-7">
+          <Entrance delay={0.45} className="mt-7">
             <p className="max-w-lg text-lg leading-relaxed text-muted">
               {hero.subtitle}
             </p>
-          </Reveal>
+          </Entrance>
 
-          <Reveal delay={0.85} className="mt-9">
+          <Entrance delay={0.6} className="mt-9">
             <div className="flex flex-wrap items-center gap-3">
               <Magnetic>
                 <Link
@@ -75,11 +76,11 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </svg>
               </Link>
             </div>
-          </Reveal>
+          </Entrance>
 
-          <Reveal delay={1} className="mt-5">
+          <Entrance delay={0.75} className="mt-5">
             <p className="text-sm text-muted">{hero.note}</p>
-          </Reveal>
+          </Entrance>
         </div>
 
         {/* Visual */}

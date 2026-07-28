@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { locales, type Locale, localeHtmlLang } from "./i18n";
-import { localeUrl, siteConfig } from "./site";
+import { localeUrl, siteConfig, siteUrl } from "./site";
+
+/** Brand Open Graph image, one per locale (1200×630, PNG for WhatsApp/X
+ *  compatibility). Generated into public/brand/ by scripts/og-image.mjs. */
+export function ogImageUrl(locale: Locale): string {
+  return `${siteUrl}/brand/og-${locale}.png`;
+}
 
 interface BuildMetadataArgs {
   locale: Locale;
@@ -59,11 +65,31 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: localeHtmlLang[locale],
       type: ogType,
+      images: [
+        {
+          url: ogImageUrl(locale),
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImageUrl(locale)],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
   };
 }

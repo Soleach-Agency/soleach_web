@@ -1,1 +1,12 @@
+# www → apex (takes effect once www.soleach.com is attached to the Pages
+# project as a custom domain).
+https://www.soleach.com/* https://soleach.com/:splat 301
+
+# Locale-less entry points → Turkish default (mirrors the root redirect).
+# People and AI engines routinely strip the locale segment from links.
 /  /tr  302
+/blog  /tr/blog  302
+/blog/*  /tr/blog/:splat  302
+/services  /tr/services  302
+/about  /tr/about  302
+/contact  /tr/contact  302

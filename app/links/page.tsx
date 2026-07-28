@@ -11,7 +11,7 @@ import { siteConfig, siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Soleach | Bağlantılar / Links",
   description:
-    "Soleach'in tüm kanalları tek yerde: web sitesi, YouTube, Instagram, TikTok, Facebook ve iletişim.",
+    "Soleach'in tüm kanalları tek yerde: web sitesi, YouTube, Instagram, TikTok, Facebook, LinkedIn ve iletişim.",
   alternates: { canonical: `${siteUrl}/links` },
 };
 
@@ -80,6 +80,17 @@ const links: LinkItem[] = [
     icon: (
       <svg className={iconClass} viewBox="0 0 24 24" fill="currentColor">
         <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.2-1.5 1.5-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    sub: "Soleach",
+    href: siteConfig.social.linkedin,
+    external: true,
+    icon: (
+      <svg className={iconClass} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.5 8.8H3.6V21h2.9V8.8zM5 7.4c1 0 1.8-.8 1.8-1.8S6 3.8 5 3.8s-1.8.8-1.8 1.8S4 7.4 5 7.4zM21 21h-2.9v-6.2c0-1.5-.5-2.5-1.9-2.5-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V21h-2.9V8.8h2.9v1.3c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1V21z" />
       </svg>
     ),
   },

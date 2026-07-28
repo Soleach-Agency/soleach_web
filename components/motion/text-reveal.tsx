@@ -1,14 +1,15 @@
-"use client";
-
-import { motion, useReducedMotion } from "motion/react";
-
-const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+import type { CSSProperties } from "react";
 
 /**
  * Reveals text word-by-word, each word rising from behind a clip mask.
  * Plays on mount (for above-the-fold headlines). `className` styles the block;
  * `wordClassName` styles each word directly (use this for gradient text — a
  * clip on an ancestor won't paint through the per-word clip masks).
+ *
+ * Animation is pure CSS (.animate-word-rise), not Motion: the headline is the
+ * hero's above-the-fold content, and a JS-gated entrance would hold LCP
+ * hostage to hydration. Reduced motion is handled by the global
+ * prefers-reduced-motion override in globals.css.
  */
 export function TextReveal({
   text,
@@ -23,16 +24,7 @@ export function TextReveal({
   delay?: number;
   stagger?: number;
 }) {
-  const reduce = useReducedMotion();
   const words = text.split(" ");
-
-  if (reduce) {
-    return (
-      <span className={className}>
-        <span className={wordClassName}>{text}</span>
-      </span>
-    );
-  }
 
   return (
     <span className={className}>
@@ -41,11 +33,11 @@ export function TextReveal({
           key={`${word}-${i}`}
           className="inline-block overflow-hidden align-bottom me-[0.26em]"
         >
-          <motion.span
-            className={`inline-block will-change-transform ${wordClassName ?? ""}`}
-            initial={{ y: "115%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.8, delay: delay + i * stagger, ease: EASE }}
+          <span
+            className={`animate-word-rise inline-block will-change-transform ${wordClassName ?? ""}`}
+            style={
+              { "--entrance-delay": `${delay + i * stagger}s` } as CSSProperties
+            }
           >
             {/* The trailing space keeps words separable for text extractors:
                 AI crawlers strip tags without re-inserting whitespace, so
@@ -55,7 +47,7 @@ export function TextReveal({
                 The last word keeps it too — headlines split across several
                 TextReveal blocks would otherwise glue at the seam. */}
             {`${word} `}
-          </motion.span>
+          </span>
         </span>
       ))}
     </span>

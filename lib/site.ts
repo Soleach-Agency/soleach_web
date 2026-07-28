@@ -16,6 +16,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/soleachagency/",
     tiktok: "https://www.tiktok.com/@soleach.digitalagency",
     facebook: "https://www.facebook.com/profile.php?id=61591831880038",
+    linkedin: "https://www.linkedin.com/company/soleach/",
   },
 } as const;
 

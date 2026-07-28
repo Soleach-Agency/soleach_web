@@ -152,6 +152,23 @@
     mix-blend-mode: soft-light;
   }
 
+  /* Paint-gated entrances: pure CSS so above-the-fold content shows up on
+     first paint instead of waiting for JS hydration (keeps LCP honest).
+     Delay comes from --entrance-delay so the stagger stays in the markup. */
+  .animate-entrance {
+    animation: entrance-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--entrance-delay, 0s);
+  }
+  .animate-word-rise {
+    animation: word-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--entrance-delay, 0s);
+  }
+  /* Page-level fade for template.tsx — no delay, quick ramp, so LCP fires
+     within a frame or two of first paint. */
+  .animate-page-enter {
+    animation: page-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   .animate-float {
     animation: float 7s ease-in-out infinite;
   }
@@ -174,6 +191,37 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes entrance-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes word-rise {
+  from {
+    transform: translateY(115%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -206,6 +254,9 @@
   .animate-float,
   .animate-glow-pulse,
   .animate-spin-slow,
+  .animate-entrance,
+  .animate-word-rise,
+  .animate-page-enter,
   .brand-gradient-text-animated {
     animation: none;
   }

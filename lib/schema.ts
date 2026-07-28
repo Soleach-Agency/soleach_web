@@ -2,6 +2,7 @@ import type { Locale } from "./i18n";
 import { localeHtmlLang } from "./i18n";
 import { getDictionary } from "./dictionaries";
 import { localeUrl, siteConfig, siteUrl } from "./site";
+import { ogImageUrl } from "./metadata";
 
 /** Organization schema — describes the agency for search + AI engines. */
 export function organizationSchema(locale: Locale) {
@@ -16,6 +17,7 @@ export function organizationSchema(locale: Locale) {
     email: siteConfig.email,
     description: dict.brandTagline,
     logo: `${siteUrl}/icon.svg`,
+    image: ogImageUrl(locale),
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.email,
@@ -27,6 +29,7 @@ export function organizationSchema(locale: Locale) {
       siteConfig.social.instagram,
       siteConfig.social.tiktok,
       siteConfig.social.facebook,
+      siteConfig.social.linkedin,
     ],
     areaServed: "TR",
     knowsAbout: [
@@ -146,6 +149,7 @@ export function blogPostingSchema(
     url,
     headline: args.title,
     description: args.description,
+    image: ogImageUrl(locale),
     datePublished: args.publishedAt,
     dateModified: args.updatedAt ?? args.publishedAt,
     inLanguage: localeHtmlLang[locale],
