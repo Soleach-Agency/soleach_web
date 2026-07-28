@@ -1,6 +1,7 @@
 import { locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { getPosts } from "@/lib/blog";
+import { getConcepts } from "@/lib/concepts";
 import { localeUrl, siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -53,6 +54,7 @@ const pageLabels = {
   about: "About",
   contact: "Contact",
   blog: "Blog",
+  concepts: "Concepts",
 } as const;
 
 export function GET() {
@@ -82,6 +84,24 @@ export function GET() {
       const loc = post.locales[locale];
       out.push(
         `- ${content.title} (${locale.toUpperCase()}, ${date}): ${localeUrl(locale, `${dict.routes.blog}/${loc.slug}`)}`,
+      );
+    }
+  }
+
+  out.push(
+    "",
+    "## Concepts",
+    "",
+    "A concept map (glossary) of beauty marketing: every term has a clear definition, related concepts and links to the articles that discuss it. All terms, both locales:",
+    "",
+  );
+
+  for (const { concept, content } of getConcepts("en")) {
+    for (const locale of locales) {
+      const dict = getDictionary(locale);
+      const loc = concept.locales[locale];
+      out.push(
+        `- ${content.name} (${locale.toUpperCase()}): ${localeUrl(locale, `${dict.routes.concepts}/${loc.slug}`)} — ${loc.shortDef}`,
       );
     }
   }

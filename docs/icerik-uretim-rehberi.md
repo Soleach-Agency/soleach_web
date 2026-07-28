@@ -176,3 +176,24 @@ bunlar alt kategori sorgularında niş görünürlük kazandırır.
 
 **Tempo:** Haftada 1 kaliteli yazı, ayda 4. 20 konu ≈ 5 aylık takvim. Nicelik
 değil süreklilik önemli; 3 ayda 12 iyi yazı, 1 haftada 12 vasat yazıdan iyidir.
+
+## 5. Kavram Haritası bakımı
+
+Blog'un yanında bir de kavram sözlüğü var: `/tr/kavramlar` ve `/en/concepts`.
+Veri `content/concepts/*.ts` dosyalarında elle tutulur (blog ile aynı kalıp);
+graph, sitemap, md ikizleri ve llms.txt otomatik türetilir.
+
+**Yeni yazı yayınlarken** (9 adıma ek, 1 dakikalık iş):
+
+1. Yazının işlediği kavramları belirle; ilgili kavram dosyalarının
+   `postIds` listesine yazının `id`'sini ekle.
+2. Yazı yeni bir kavramı derinlemesine işliyorsa `content/concepts/` altına
+   yeni dosya aç (mevcut bir dosyayı kopyala), `content/concepts/index.ts`
+   listesinin **SONUNA** ekle — sıra append-only, aksi halde graph düzeni ve
+   IndexNow hash'leri oynar.
+3. `npx tsx scripts/concepts-check.ts --suggest` çalıştır: yazıda geçen ama
+   bağlanmamış kavramları önerir. Bağlantılar elle kurulur; script asla
+   otomatik eklemez.
+
+Build (`npm run build`) her seferinde `concepts-check`'i çalıştırır: kırık
+id/slug referansları build'i düşürür, orphan node'lar uyarı verir.

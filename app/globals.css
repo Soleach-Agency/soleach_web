@@ -182,6 +182,93 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Concept graph (components/concepts/concept-graph.tsx) — server-rendered
+     SVG, animated with pure CSS so the markup needs no hydration.
+     Category → color via data-category; tokens flip with .dark for free. */
+  .concept-node[data-category="ads"] {
+    --concept-color: var(--color-accent);
+  }
+  .concept-node[data-category="creative"] {
+    --concept-color: var(--color-accent-2);
+  }
+  .concept-node[data-category="seo-geo"] {
+    --concept-color: var(--color-lilac);
+  }
+  .concept-node[data-category="web-ecommerce"] {
+    --concept-color: var(--color-muted);
+  }
+
+  .concept-node-dot {
+    fill: rgb(var(--concept-color) / 0.9);
+    stroke: rgb(var(--concept-color));
+    stroke-width: 1;
+    transition: filter 0.25s ease;
+  }
+  /* The node for the page you are already on — present, but not a target. */
+  .concept-node.is-current .concept-node-dot {
+    fill: rgb(var(--concept-color));
+    stroke: rgb(var(--color-background));
+    stroke-width: 2.5;
+  }
+  .concept-node.is-current .concept-node-label {
+    fill: rgb(var(--color-foreground));
+  }
+  .concept-node-halo {
+    fill: rgb(var(--concept-color) / 0.18);
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: concept-pulse 4.5s ease-in-out infinite;
+  }
+  .concept-node-label {
+    fill: rgb(var(--color-muted));
+    font-size: 11px;
+    font-weight: 600;
+    transition: fill 0.2s ease;
+  }
+  .concept-node:hover .concept-node-dot,
+  .concept-node:focus-visible .concept-node-dot {
+    filter: drop-shadow(0 0 10px rgb(var(--concept-color) / 0.8));
+  }
+  .concept-node:hover .concept-node-label,
+  .concept-node:focus-visible .concept-node-label {
+    fill: rgb(var(--color-foreground));
+  }
+  .concept-node:focus-visible {
+    outline: none;
+  }
+  .concept-edge {
+    stroke: rgb(var(--color-accent) / 0.16);
+    stroke-width: 1;
+  }
+  .concept-edge-particle {
+    fill: rgb(var(--color-accent-2) / 0.8);
+  }
+
+  /* Neighbour highlighting — classes toggled by <GraphInteractions>. Everything
+     outside the hovered node's neighbourhood recedes; nothing moves. */
+  .concept-node,
+  .concept-edge,
+  .concept-edge-particle {
+    transition: opacity 0.2s ease, stroke 0.2s ease;
+  }
+  .concept-graph.is-focused .concept-node:not(.is-lit) {
+    opacity: 0.2;
+  }
+  .concept-graph.is-focused .concept-edge:not(.is-lit) {
+    opacity: 0.2;
+  }
+  .concept-graph.is-focused .concept-edge.is-lit {
+    stroke: rgb(var(--color-accent) / 0.55);
+    stroke-width: 1.6;
+  }
+  /* Travelling particles read as noise once a neighbourhood is in focus. */
+  .concept-graph.is-focused .concept-edge-particle {
+    opacity: 0;
+  }
+  .concept-node.is-hovered .concept-node-label {
+    fill: rgb(var(--color-foreground));
+  }
 }
 
 @keyframes gradient-pan {
@@ -247,6 +334,18 @@
   }
 }
 
+@keyframes concept-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.18);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -257,7 +356,17 @@
   .animate-entrance,
   .animate-word-rise,
   .animate-page-enter,
+  .concept-node-halo,
   .brand-gradient-text-animated {
     animation: none;
+  }
+  /* SMIL (animateMotion) ignores `animation: none` — hide the particles. */
+  .concept-edge-particle {
+    display: none;
+  }
+  /* Neighbour highlighting still works; it just snaps instead of fading. */
+  .concept-node,
+  .concept-edge {
+    transition: none;
   }
 }

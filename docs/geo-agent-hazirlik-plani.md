@@ -219,6 +219,19 @@ yazıları hariç: onlar `[slug]/index.md` üzerinden otomatik.
 Middleware ikiz bulamazsa sessizce HTML'e düşüyor, yani unutmak bir şeyi
 bozmuyor — sadece o sayfa markdown vermiyor.
 
+Bölüm slug'ı iki dilde farklıysa (ilk örnek: `/tr/kavramlar` ↔ `/en/concepts`)
+literal klasör açma — `app/[lang]/kavramlar/` iki dilde de servis edilirdi.
+Bunun yerine `app/[lang]/[section]/` dinamik segmenti kullanılıyor:
+`generateStaticParams` yalnızca geçerli dil+slug çiftlerini üretiyor,
+`dynamicParams = false` ve sayfa içi `notFound()` guard'ı geri kalanı kapatıyor.
+Slug'ın tek kaynağı `lib/section-slugs.ts`; dil değiştiricinin `safeSwap`'ı da
+oradan okuyor. `app/[lang]/` altına asla `kavramlar/` ya da `concepts/` adında
+literal klasör ekleme — literal segment `[section]`'ı gölgeler.
+
+Route handler'lar (`index.md/route.ts`) layout'un `generateStaticParams`'ını
+devralmıyor; dinamik segmentli bir sayfa tipinde matrisin tamamını
+(dil × section × slug) handler'ın kendisi saymalı.
+
 ### AI Search yeniden indeksleme
 
 24 saatte bir otomatik. Elle tetiklemek için:

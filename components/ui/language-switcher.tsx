@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { locales, isLocale, type Locale } from "@/lib/i18n";
+import { conceptsSlug, conceptsSlugValues } from "@/lib/section-slugs";
 
 /** Swaps the leading locale segment of the current path (e.g. /tr/... <-> /en/...). */
 function swapLocale(pathname: string, target: Locale): string {
@@ -19,11 +20,18 @@ function swapLocale(pathname: string, target: Locale): string {
  * Blog post slugs are localized, so a plain prefix swap would 404. As a safe
  * static fallback, blog post paths point at the blog index instead.
  * (The "blog" segment is the same in both locales.)
+ *
+ * The concepts section goes further: the section slug itself is localized
+ * (/tr/kavramlar vs /en/concepts), so even the hub path must swap to the
+ * target locale's slug — and detail paths fall back to that hub.
  */
 function safeSwap(pathname: string, target: Locale): string {
   const segments = pathname.split("/").filter(Boolean);
   if (segments.length >= 3 && segments[1] === "blog") {
     return `/${target}/blog`;
+  }
+  if (segments.length >= 2 && conceptsSlugValues.includes(segments[1])) {
+    return `/${target}/${conceptsSlug[target]}`;
   }
   return swapLocale(pathname, target);
 }

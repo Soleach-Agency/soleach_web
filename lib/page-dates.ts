@@ -1,4 +1,5 @@
 import { getPosts } from "./blog";
+import { getConcepts } from "./concepts";
 
 /**
  * Last meaningful content change per static page — the sitemap's `lastmod`
@@ -24,6 +25,16 @@ export function blogIndexUpdatedAt(): string {
   let latest = "";
   for (const { post } of getPosts("tr")) {
     const date = post.updatedAt ?? post.publishedAt;
+    if (date > latest) latest = date;
+  }
+  return latest || staticPageUpdatedAt[""];
+}
+
+/** The concepts hub changes whenever a concept is published or updated. */
+export function conceptsIndexUpdatedAt(): string {
+  let latest = "";
+  for (const { concept } of getConcepts("tr")) {
+    const date = concept.updatedAt ?? concept.publishedAt;
     if (date > latest) latest = date;
   }
   return latest || staticPageUpdatedAt[""];

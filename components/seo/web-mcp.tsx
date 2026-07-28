@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { getPosts } from "@/lib/blog";
+import { getConcepts, relatedConcepts } from "@/lib/concepts";
 import { localeUrl, siteConfig } from "@/lib/site";
 
 /**
@@ -18,6 +19,13 @@ interface ToolCatalogue {
   locale: Locale;
   services: { title: string; summary: string; url: string }[];
   articles: { title: string; excerpt: string; url: string; tags: string[] }[];
+  concepts: {
+    name: string;
+    definition: string;
+    url: string;
+    related: string[];
+    tags: string[];
+  }[];
   contact: { email: string; briefForm: string; site: string };
 }
 
@@ -35,6 +43,13 @@ function buildCatalogue(locale: Locale): ToolCatalogue {
       excerpt: content.excerpt,
       url: localeUrl(locale, `${dict.routes.blog}/${content.slug}`),
       tags: content.tags,
+    })),
+    concepts: getConcepts(locale).map(({ concept, content }) => ({
+      name: content.name,
+      definition: content.shortDef,
+      url: localeUrl(locale, `${dict.routes.concepts}/${content.slug}`),
+      related: relatedConcepts(locale, concept).map((r) => r.content.name),
+      tags: content.tags ?? [],
     })),
     contact: {
       email: siteConfig.email,
@@ -92,6 +107,32 @@ const REGISTER = `
             return terms.some(function (t) { return hay.indexOf(t) !== -1; });
           });
           return ok({ query: q, count: results.length, results: results });
+        }
+      },
+      {
+        name: "lookup_soleach_concept",
+        description:
+          "Define a beauty-marketing or advertising term from Soleach's concept map (glossary) — ROAS, CPA, GEO, SEO, UGC, hook, Meta Pixel, Conversions API, retargeting, funnel, creative testing, Shopify, CRO, AI video. Returns a short definition, related terms and the canonical URL. Use when asked what one of these means, or to check a definition before answering.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            term: { type: "string", description: "The term to define, e.g. \\"ROAS\\". Omit to list every term." }
+          },
+          additionalProperties: false
+        },
+        execute: function (input) {
+          var q = String((input && input.term) || "").toLowerCase().trim();
+          if (!q) return ok({ count: data.concepts.length, concepts: data.concepts });
+          var results = data.concepts.filter(function (c) {
+            var hay = (c.name + " " + c.definition + " " + c.tags.join(" ")).toLowerCase();
+            return hay.indexOf(q) !== -1;
+          });
+          return ok({
+            term: q,
+            count: results.length,
+            results: results,
+            note: results.length ? undefined : "No match. Call with no argument to list every term."
+          });
         }
       },
       {

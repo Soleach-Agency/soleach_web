@@ -136,7 +136,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "Hayır. Doğru soru \"hangisi\" değil, \"hangisi nerede\". [Stüdyo çekimi](/tr/blog/studyo-cekimine-ihtiyaciniz-var-mi) markanın ne olduğunu bir karede kuran araçtır: ürün sayfası, kategori görselleri, marka kimliği, PR. UGC ise satın alma anındaki tereddüdü çözen araçtır: reklam kreatifi, ürün sayfasındaki sosyal kanıt bloğu, retargeting. Aynı bütçeyi tek bir formata yatırmak, iki farklı işi tek aletle yapmaya çalışmaktır.",
+              text: "Hayır. Doğru soru \"hangisi\" değil, \"hangisi nerede\". [Stüdyo çekimi](/tr/blog/studyo-cekimine-ihtiyaciniz-var-mi) markanın ne olduğunu bir karede kuran araçtır: ürün sayfası, kategori görselleri, marka kimliği, PR. UGC ise satın alma anındaki tereddüdü çözen araçtır: reklam kreatifi, ürün sayfasındaki sosyal kanıt bloğu, [retargeting](/tr/kavramlar/retargeting). Aynı bütçeyi tek bir formata yatırmak, iki farklı işi tek aletle yapmaya çalışmaktır.",
             },
             {
               type: "p",
@@ -364,7 +364,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "No. The right question isn't \"which one\" but \"which one where\". [Studio content](/en/blog/do-you-need-a-studio-photoshoot) establishes what the brand is in a single frame: product pages, category imagery, brand identity, PR. UGC resolves hesitation at the moment of purchase: ad creative, the social-proof block on the product page, retargeting. Putting the whole budget into one format is trying to do two jobs with one tool.",
+              text: "No. The right question isn't \"which one\" but \"which one where\". [Studio content](/en/blog/do-you-need-a-studio-photoshoot) establishes what the brand is in a single frame: product pages, category imagery, brand identity, PR. UGC resolves hesitation at the moment of purchase: ad creative, the social-proof block on the product page, [retargeting](/en/concepts/retargeting). Putting the whole budget into one format is trying to do two jobs with one tool.",
             },
             {
               type: "p",

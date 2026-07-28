@@ -13,7 +13,7 @@ export const reklamAjanslariNedenShopify: BlogPost = {
       excerpt: "Ajansların Shopify sevgisi estetikle ilgili değil, kurulum süresiyle. Meta pixel ve Conversions API'yi tema koduna dokunmadan açabiliyorsun. Ama o birkaç tıklamanın açtığı şeyi ve sandbox'ın neyi kapattığını bilmek gerekiyor.",
       intro: [
         "Bir ajansa \"hangi altyapıyı tercih edersiniz\" diye sor, cevabın içinde büyük ihtimalle Shopify geçer. Sebep genelde tasarım ya da tema değil — ölçüm kurulumunun ne kadar sürdüğü.",
-        "Özel yazılmış bir e-ticaret sitesinde Meta pixel'i ve sunucu taraflı Conversions API'yi doğru kurmak bir geliştirici işidir: haftalar, sprint'ler, test turları. Shopify'da aynı işin büyük kısmı yönetim panelinde birkaç adımda yapılıyor. Ajansın kazandığı şey \"kolaylık\" değil, kampanyanın ne zaman yayına girebileceği.",
+        "Özel yazılmış bir e-ticaret sitesinde [Meta pixel](/tr/kavramlar/meta-pixel)'i ve sunucu taraflı [Conversions API](/tr/kavramlar/conversion-api)'yi doğru kurmak bir geliştirici işidir: haftalar, sprint'ler, test turları. Shopify'da aynı işin büyük kısmı yönetim panelinde birkaç adımda yapılıyor. Ajansın kazandığı şey \"kolaylık\" değil, kampanyanın ne zaman yayına girebileceği.",
         "Bu yazıda o kurulumun tam olarak ne yaptığını, hangi olayları otomatik gönderdiğini, o birkaç tıklamayla hangi veriyi paylaşmayı kabul ettiğini ve Shopify'ın nerede yetmediğini Shopify'ın kendi dokümantasyonuna dayanarak anlatıyoruz.",
       ],
       sections: [
@@ -63,7 +63,7 @@ export const reklamAjanslariNedenShopify: BlogPost = {
             },
             {
               type: "p",
-              text: "Bu son cümle önemsiz görünüp ROAS raporunu doğrudan etkileyen ayrıntılardan biri: value alanında kargo, vergi ve indirim dâhil bir tutar gidiyorsa, hesapladığın getiri brüt sepet üzerinden hesaplanıyor demektir. Kâr marjından geriye doğru hesap yapıyorsan bu farkı bilmen gerekir.",
+              text: "Bu son cümle önemsiz görünüp [ROAS](/tr/kavramlar/roas) raporunu doğrudan etkileyen ayrıntılardan biri: value alanında kargo, vergi ve indirim dâhil bir tutar gidiyorsa, hesapladığın getiri brüt sepet üzerinden hesaplanıyor demektir. Kâr marjından geriye doğru hesap yapıyorsan bu farkı bilmen gerekir.",
             },
           ],
         },
@@ -255,7 +255,7 @@ export const reklamAjanslariNedenShopify: BlogPost = {
       excerpt: "Agencies' love for Shopify isn't about aesthetics, it's about setup time. You can enable the Meta pixel and the Conversions API without touching theme code. But you should know what those clicks turn on — and what the sandbox turns off.",
       intro: [
         "Ask an agency which platform they'd rather work on and Shopify will almost certainly come up. The reason usually isn't design or themes — it's how long the measurement setup takes.",
-        "On a custom-built store, wiring up the Meta pixel and the server-side Conversions API correctly is a developer project: weeks, sprints, rounds of testing. On Shopify, most of that same work happens in the admin in a handful of steps. What the agency gains isn't \"convenience\" — it's the date the campaign can go live.",
+        "On a custom-built store, wiring up the [Meta pixel](/en/concepts/meta-pixel) and the server-side [Conversions API](/en/concepts/conversions-api) correctly is a developer project: weeks, sprints, rounds of testing. On Shopify, most of that same work happens in the admin in a handful of steps. What the agency gains isn't \"convenience\" — it's the date the campaign can go live.",
         "This piece covers what that setup actually does, which events it sends automatically, what data you agree to share with those clicks, and where Shopify falls short — grounded in Shopify's own documentation.",
       ],
       sections: [
@@ -305,7 +305,7 @@ export const reklamAjanslariNedenShopify: BlogPost = {
             },
             {
               type: "p",
-              text: "That last sentence looks trivial and directly shapes your ROAS report: if the value field carries a total including shipping, tax and discounts, your return is being calculated on the gross basket. If you work backwards from margin, you need to know that difference.",
+              text: "That last sentence looks trivial and directly shapes your [ROAS](/en/concepts/roas) report: if the value field carries a total including shipping, tax and discounts, your return is being calculated on the gross basket. If you work backwards from margin, you need to know that difference.",
             },
           ],
         },

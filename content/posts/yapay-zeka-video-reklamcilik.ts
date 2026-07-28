@@ -199,7 +199,7 @@ export const yapayZekaVideoReklamcilik: BlogPost = {
             },
             {
               type: "p",
-              text: "Yani \"yapay zekâ ile bir müşteri yorumu videosu üretelim\" fikri, iki ayrı hukuk düzeninde de doğrudan yasak bölgede. Bu, güzellik markaları için en cazip ve en tehlikeli AI kullanımı; cazip çünkü UGC üretmenin en yorucu kısmını atlıyor, tehlikeli çünkü tam olarak yasaklanmış davranışın tarifi.",
+              text: "Yani \"yapay zekâ ile bir müşteri yorumu videosu üretelim\" fikri, iki ayrı hukuk düzeninde de doğrudan yasak bölgede. Bu, güzellik markaları için en cazip ve en tehlikeli AI kullanımı; cazip çünkü [UGC](/tr/kavramlar/ugc) üretmenin en yorucu kısmını atlıyor, tehlikeli çünkü tam olarak yasaklanmış davranışın tarifi.",
             },
           ],
         },

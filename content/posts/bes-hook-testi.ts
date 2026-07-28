@@ -30,7 +30,7 @@ export const besHookTesti: BlogPost = {
             },
             {
               type: "p",
-              text: "Yani reklamının \"görüldü\" sayılması için gereken süre iki saniye. Hook'un işi bu iki saniyeyi kazanmak değil, bu iki saniyeyi üçüncüye çevirmek. Bu yüzden hook testi bir estetik tercih meselesi değil, hunideki ilk kapının testidir.",
+              text: "Yani reklamının \"görüldü\" sayılması için gereken süre iki saniye. Hook'un işi bu iki saniyeyi kazanmak değil, bu iki saniyeyi üçüncüye çevirmek. Bu yüzden hook testi bir estetik tercih meselesi değil, [hunideki](/tr/kavramlar/funnel) ilk kapının testidir.",
             },
             {
               type: "h3",
@@ -235,7 +235,7 @@ export const besHookTesti: BlogPost = {
             },
             {
               type: "p",
-              text: "So two seconds is all it takes for your ad to be counted as seen. The hook's job isn't to win those two seconds — it's to turn them into a third. That's why hook testing isn't an aesthetic preference; it's a test of the first door in the funnel.",
+              text: "So two seconds is all it takes for your ad to be counted as seen. The hook's job isn't to win those two seconds — it's to turn them into a third. That's why hook testing isn't an aesthetic preference; it's a test of the first door in the [funnel](/en/concepts/funnel).",
             },
             {
               type: "h3",

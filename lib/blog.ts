@@ -83,6 +83,11 @@ export function getPostBySlug(locale: Locale, slug: string) {
   return post ? { post, content: post.locales[locale] } : null;
 }
 
+/** Look up a post by its stable id (used by concept → post relations). */
+export function getPostById(id: string): BlogPost | null {
+  return posts.find((p) => p.id === id) ?? null;
+}
+
 function blockText(b: BlogBlock): string {
   switch (b.type) {
     case "ul":

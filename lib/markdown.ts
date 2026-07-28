@@ -2,6 +2,12 @@ import type { Locale } from "./i18n";
 import { localeHtmlLang } from "./i18n";
 import { getDictionary } from "./dictionaries";
 import { getPosts, getPostBySlug, type BlogBlock } from "./blog";
+import {
+  getConceptBySlug,
+  getConceptPosts,
+  getConcepts,
+  relatedConcepts,
+} from "./concepts";
 import { localeUrl, siteConfig, siteUrl } from "./site";
 
 /**
@@ -282,6 +288,95 @@ export function blogIndexMarkdown(locale: Locale): string {
       content.excerpt,
       "",
     );
+  }
+
+  return out.join("\n");
+}
+
+/** Concepts hub — names, links and one-line glosses, grouped by pillar. */
+export function conceptsIndexMarkdown(locale: Locale): string {
+  const dict = getDictionary(locale);
+  const out: string[] = [
+    frontmatter({
+      title: dict.meta.concepts.title,
+      description: dict.meta.concepts.description,
+      lang: localeHtmlLang[locale],
+      canonical: localeUrl(locale, dict.routes.concepts),
+    }),
+    `# ${dict.conceptsPage.hero.title}`,
+    "",
+    dict.conceptsPage.hero.subtitle,
+    "",
+  ];
+
+  for (const service of dict.services) {
+    const group = getConcepts(locale).filter(
+      ({ concept }) => concept.category === service.key,
+    );
+    if (group.length === 0) continue;
+    out.push(`## ${service.title}`, "");
+    for (const { content } of group) {
+      const url = localeUrl(locale, `${dict.routes.concepts}/${content.slug}`);
+      out.push(`- [${content.name}](${url}) — ${content.shortDef}`);
+    }
+    out.push("");
+  }
+
+  return out.join("\n");
+}
+
+/** A single concept page. */
+export function conceptMarkdown(locale: Locale, slug: string): string | null {
+  const found = getConceptBySlug(locale, slug);
+  if (!found) return null;
+  const { concept, content } = found;
+  const dict = getDictionary(locale);
+
+  const out: string[] = [
+    frontmatter({
+      title: content.name,
+      description: content.metaDescription,
+      published: concept.publishedAt,
+      updated: concept.updatedAt,
+      lang: localeHtmlLang[locale],
+      canonical: localeUrl(locale, `${dict.routes.concepts}/${content.slug}`),
+      tags: content.tags?.join(", "),
+    }),
+    `# ${content.name}`,
+    "",
+    absolutise(content.shortDef),
+    "",
+  ];
+
+  for (const section of content.sections) {
+    out.push(`## ${absolutise(section.h2)}`, "");
+    for (const b of section.blocks) {
+      const rendered = block(b);
+      if (rendered) out.push(rendered, "");
+    }
+  }
+
+  if (content.faq) {
+    out.push(...faqSection(content.faq, dict.blogPage.faqTitle));
+  }
+
+  const neighbors = relatedConcepts(locale, concept);
+  if (neighbors.length > 0) {
+    out.push(`## ${dict.conceptsPage.relatedConceptsTitle}`, "");
+    for (const { content: c } of neighbors) {
+      const url = localeUrl(locale, `${dict.routes.concepts}/${c.slug}`);
+      out.push(`- [${c.name}](${url}) — ${c.shortDef}`);
+    }
+    out.push("");
+  }
+
+  const posts = getConceptPosts(locale, concept);
+  if (posts.length > 0) {
+    out.push(`## ${dict.conceptsPage.relatedPostsTitle}`, "");
+    for (const { content: p } of posts) {
+      out.push(`- [${p.title}](${localeUrl(locale, `${dict.routes.blog}/${p.slug}`)})`);
+    }
+    out.push("");
   }
 
   return out.join("\n");

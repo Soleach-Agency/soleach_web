@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run agent-assets && next build",
+    "build": "npm run agent-assets && npm run concepts-check && next build",
+    "concepts-check": "tsx scripts/concepts-check.ts",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
@@ -12,6 +13,7 @@
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
+    "d3-force": "^3.0.0",
     "motion": "^12.23.26",
     "next": "16.0.10",
     "next-themes": "^0.4.6",
@@ -20,12 +22,14 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/d3-force": "^3.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "tailwindcss": "^4",
+    "tsx": "^4.23.1",
     "typescript": "^5"
   }
 }

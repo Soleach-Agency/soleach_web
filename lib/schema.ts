@@ -3,6 +3,7 @@ import { localeHtmlLang } from "./i18n";
 import { getDictionary } from "./dictionaries";
 import { localeUrl, siteConfig, siteUrl } from "./site";
 import { ogImageUrl } from "./metadata";
+import { getConcepts } from "./concepts";
 
 /** Organization schema — describes the agency for search + AI engines. */
 export function organizationSchema(locale: Locale) {
@@ -165,6 +166,68 @@ export function blogPostingSchema(
             name: s.label,
             url: s.url,
             ...(s.publisher ? { publisher: s.publisher } : {}),
+          })),
+        }
+      : {}),
+  };
+}
+
+/** DefinedTermSet for the concepts hub — the glossary as one entity. */
+export function definedTermSetSchema(locale: Locale) {
+  const dict = getDictionary(locale);
+  const url = localeUrl(locale, dict.routes.concepts);
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "@id": `${url}#termset`,
+    url,
+    name: dict.meta.concepts.title,
+    description: dict.meta.concepts.description,
+    inLanguage: localeHtmlLang[locale],
+    publisher: { "@id": `${siteUrl}/#organization` },
+    hasDefinedTerm: getConcepts(locale).map(({ content }) => ({
+      "@type": "DefinedTerm",
+      "@id": `${localeUrl(locale, `${dict.routes.concepts}/${content.slug}`)}#term`,
+      name: content.name,
+      description: content.shortDef,
+      url: localeUrl(locale, `${dict.routes.concepts}/${content.slug}`),
+    })),
+  };
+}
+
+/** DefinedTerm for a single concept page. */
+export function definedTermSchema(
+  locale: Locale,
+  args: {
+    slug: string;
+    name: string;
+    shortDef: string;
+    tags?: string[];
+    /** Localized "blog/<slug>" paths — cross-refs to BlogPosting #article ids. */
+    relatedPostPaths?: string[];
+  },
+) {
+  const dict = getDictionary(locale);
+  const url = localeUrl(locale, `${dict.routes.concepts}/${args.slug}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": `${url}#term`,
+    mainEntityOfPage: url,
+    url,
+    name: args.name,
+    description: args.shortDef,
+    inLanguage: localeHtmlLang[locale],
+    inDefinedTermSet: {
+      "@id": `${localeUrl(locale, dict.routes.concepts)}#termset`,
+    },
+    ...(args.tags && args.tags.length > 0
+      ? { keywords: args.tags.join(", ") }
+      : {}),
+    ...(args.relatedPostPaths && args.relatedPostPaths.length > 0
+      ? {
+          subjectOf: args.relatedPostPaths.map((p) => ({
+            "@id": `${localeUrl(locale, p)}#article`,
           })),
         }
       : {}),

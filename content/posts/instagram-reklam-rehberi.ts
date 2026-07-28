@@ -91,7 +91,7 @@ export const instagramReklamRehberi: BlogPost = {
               type: "ul",
               items: [
                 "Gerçek kullanım görüntüsü: ürünün dokusu, sürülüşü, ışıltısı — stok görsel değil, ürünün kendisi.",
-                "UGC tarzı anlatım: kullanıcı diliyle, telefon çekimi hissiyatında, samimi anlatım. (Gerçek kullanıcı yoksa 'gerçek kullanıcı' gibi sunma; oyuncu/creator içeriği olduğu belli olsun.)",
+                "[UGC](/tr/kavramlar/ugc) tarzı anlatım: kullanıcı diliyle, telefon çekimi hissiyatında, samimi anlatım. (Gerçek kullanıcı yoksa 'gerçek kullanıcı' gibi sunma; oyuncu/creator içeriği olduğu belli olsun.)",
                 "Problem → çözüm kurgusu: 'gün içinde parlayan cilt' gibi gerçek bir dertle aç, ürünü çözüm olarak göster.",
                 "Kısa metin, tek mesaj: bir reklamda tek fayda anlat; beş faydayı sayan reklam hiçbirini anlatamaz.",
               ],
@@ -218,7 +218,7 @@ export const instagramReklamRehberi: BlogPost = {
             {
               type: "ul",
               items: [
-                "Install the Meta Pixel together with the server-side [Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/); test that product views, add-to-carts and purchases actually fire. Meta describes the Conversions API as a connection that sends marketing data from your server to its systems to optimize ad targeting, decrease cost per result and measure outcomes; server events link to the same dataset ID and are processed like Pixel events.",
+                "Install the [Meta Pixel](/en/concepts/meta-pixel) together with the server-side [Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/); test that product views, add-to-carts and purchases actually fire. Meta describes the Conversions API as a connection that sends marketing data from your server to its systems to optimize ad targeting, decrease cost per result and measure outcomes; server events link to the same dataset ID and are processed like Pixel events.",
                 "Switch your Instagram account to a professional account and organize it under a Business Manager / business portfolio; don't run ads off a personal profile.",
                 "If you sell online, connect your product catalog: Meta lists adding products to a catalog and connecting a data source (the Pixel or Conversions API) as prerequisites for [Advantage+ catalogue ads](https://www.facebook.com/business/ads/meta-advantage-plus/catalog-ads/). Retargeting is one of that format's two audience options.",
                 "Prepare your profile for ad traffic: your bio, highlights and recent posts are the first storefront a visitor from an ad will see.",

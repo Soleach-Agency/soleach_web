@@ -10,3 +10,12 @@ https://www.soleach.com/* https://soleach.com/:splat 301
 /services  /tr/services  302
 /about  /tr/about  302
 /contact  /tr/contact  302
+
+# Concepts — the section slug is localized, so each spelling maps to its own
+# locale. No cross-locale /* splats: detail slugs diverge and would 404.
+/kavramlar  /tr/kavramlar  302
+/kavramlar/*  /tr/kavramlar/:splat  302
+/concepts  /en/concepts  302
+/concepts/*  /en/concepts/:splat  302
+/tr/concepts  /tr/kavramlar  301
+/en/kavramlar  /en/concepts  301

@@ -1,4 +1,5 @@
 import type { Locale } from "./i18n";
+import { conceptsSlug } from "./section-slugs";
 
 /**
  * All site copy lives here, keyed by locale. Both dictionaries share the same
@@ -34,16 +35,24 @@ export interface Dictionary {
     services: string;
     about: string;
     blog: string;
+    concepts: string;
     contact: string;
     cta: string;
   };
-  routes: { services: string; about: string; contact: string; blog: string };
+  routes: {
+    services: string;
+    about: string;
+    contact: string;
+    blog: string;
+    concepts: string;
+  };
   meta: {
     home: { title: string; description: string };
     services: { title: string; description: string };
     about: { title: string; description: string };
     contact: { title: string; description: string };
     blog: { title: string; description: string };
+    concepts: { title: string; description: string };
   };
   home: {
     hero: {
@@ -107,6 +116,15 @@ export interface Dictionary {
     relatedServiceLabel: string;
     backToBlog: string;
   };
+  conceptsPage: {
+    hero: { eyebrow: string; title: string; subtitle: string };
+    graphAriaLabel: string;
+    graphHint: string;
+    listTitle: string;
+    relatedConceptsTitle: string;
+    relatedPostsTitle: string;
+    backToConcepts: string;
+  };
   footer: {
     tagline: string;
     servicesHeading: string;
@@ -123,10 +141,17 @@ const tr: Dictionary = {
     services: "Hizmetler",
     about: "Hakkımızda",
     blog: "Blog",
+    concepts: "Kavramlar",
     contact: "İletişim",
     cta: "Hadi tanışalım",
   },
-  routes: { services: "services", about: "about", contact: "contact", blog: "blog" },
+  routes: {
+    services: "services",
+    about: "about",
+    contact: "contact",
+    blog: "blog",
+    concepts: conceptsSlug.tr,
+  },
   meta: {
     home: {
       title: "Kozmetik & Güzellik Markaları için Dijital Reklam Ajansı | Soleach",
@@ -152,6 +177,11 @@ const tr: Dictionary = {
       title: "Blog | Kozmetik Markaları için Dijital Büyüme Rehberleri | Soleach",
       description:
         "Kozmetik ve güzellik markaları için reklam, içerik, e-ticaret, SEO ve GEO rehberleri. Uydurma formül yok; test edilebilir, dürüst ve uygulanabilir bilgi.",
+    },
+    concepts: {
+      title: "Kavram Haritası | Kozmetik Pazarlama Sözlüğü | Soleach",
+      description:
+        "Kozmetik pazarlamasının kavramları tek haritada: ROAS, GEO, UGC, hook, Meta Pixel ve daha fazlası. Her kavramın net tanımı, ilişkili kavramlar ve derinleşmek için rehber yazılar.",
     },
   },
   home: {
@@ -467,6 +497,22 @@ const tr: Dictionary = {
     relatedServiceLabel: "İlgili hizmetimiz",
     backToBlog: "Tüm yazılar",
   },
+  conceptsPage: {
+    hero: {
+      eyebrow: "Kavram Haritası",
+      title: "Kozmetik pazarlamanın kavram haritası",
+      subtitle:
+        "Reklam, kreatif, e-ticaret ve SEO & GEO dünyasının kavramları — birbirleriyle ve blog yazılarımızla bağlantılı, tek haritada. Bir kavrama tıkla; net tanımını, ilişkili kavramları ve derinleşmek için okuman gereken yazıları gör.",
+    },
+    graphAriaLabel:
+      "Kavram haritası: kavramlar arasındaki ilişkileri gösteren ağ grafiği",
+    graphHint:
+      "Haritadaki bir kavrama tıklayarak tanımına gidebilirsin. Çizgiler kavramlar arasındaki ilişkileri gösterir.",
+    listTitle: "Tüm kavramlar",
+    relatedConceptsTitle: "İlişkili kavramlar",
+    relatedPostsTitle: "Bu kavramı işleyen yazılar",
+    backToConcepts: "Tüm kavramlar",
+  },
   footer: {
     tagline:
       "Kozmetik, güzellik ve kadın ürünleri markaları için dijital reklam ajansı. Estetiği satışa çeviriyoruz.",
@@ -484,10 +530,17 @@ const en: Dictionary = {
     services: "Services",
     about: "About",
     blog: "Blog",
+    concepts: "Concepts",
     contact: "Contact",
     cta: "Let's talk",
   },
-  routes: { services: "services", about: "about", contact: "contact", blog: "blog" },
+  routes: {
+    services: "services",
+    about: "about",
+    contact: "contact",
+    blog: "blog",
+    concepts: conceptsSlug.en,
+  },
   meta: {
     home: {
       title: "Digital Advertising Agency for Cosmetics & Beauty Brands | Soleach",
@@ -513,6 +566,11 @@ const en: Dictionary = {
       title: "Blog | Digital Growth Guides for Cosmetics Brands | Soleach",
       description:
         "Guides on advertising, content, e-commerce, SEO and GEO for cosmetics and beauty brands. No made-up formulas — honest, testable, actionable knowledge.",
+    },
+    concepts: {
+      title: "Concept Map | Beauty Marketing Glossary | Soleach",
+      description:
+        "The concepts of beauty marketing on a single map: ROAS, GEO, UGC, hooks, Meta Pixel and more. Clear definitions, related concepts and guides to go deeper.",
     },
   },
   home: {
@@ -827,6 +885,22 @@ const en: Dictionary = {
     sourcesTitle: "Sources",
     relatedServiceLabel: "Related service",
     backToBlog: "All posts",
+  },
+  conceptsPage: {
+    hero: {
+      eyebrow: "Concept Map",
+      title: "The concept map of beauty marketing",
+      subtitle:
+        "The concepts of advertising, creative, e-commerce and SEO & GEO — connected to each other and to our blog, on a single map. Click a concept to see its definition, its neighbors and the guides worth reading next.",
+    },
+    graphAriaLabel:
+      "Concept map: a network graph showing how concepts relate to each other",
+    graphHint:
+      "Click any concept on the map to open its definition. Lines show how concepts relate.",
+    listTitle: "All concepts",
+    relatedConceptsTitle: "Related concepts",
+    relatedPostsTitle: "Articles covering this concept",
+    backToConcepts: "All concepts",
   },
   footer: {
     tagline:

@@ -1,6 +1,7 @@
 import { locales, type Locale, localeHtmlLang } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { getPosts, type BlogBlock, type BlogPostLocale } from "@/lib/blog";
+import { getConcepts } from "@/lib/concepts";
 import { localeUrl, siteConfig, siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -147,6 +148,34 @@ export function GET(): Response {
         "-".repeat(70),
         "",
       );
+    }
+
+    out.push("", "## Concepts (glossary)", "");
+
+    for (const { content } of getConcepts(locale)) {
+      out.push(
+        `### ${plain(content.name)}`,
+        "",
+        `URL: ${localeUrl(locale, `${dict.routes.concepts}/${content.slug}`)}`,
+        `Language: ${localeHtmlLang[locale]}`,
+        "",
+        plain(content.shortDef),
+        "",
+      );
+      for (const section of content.sections) {
+        out.push(`#### ${plain(section.h2)}`, "");
+        for (const block of section.blocks) {
+          const rendered = renderBlock(block);
+          if (rendered) out.push(rendered, "");
+        }
+      }
+      if (content.faq && content.faq.length > 0) {
+        out.push("#### FAQ", "");
+        for (const item of content.faq) {
+          out.push(`Q: ${plain(item.q)}`, `A: ${plain(item.a)}`, "");
+        }
+      }
+      out.push("-".repeat(70), "");
     }
   }
 

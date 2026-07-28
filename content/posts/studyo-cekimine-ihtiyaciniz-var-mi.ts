@@ -99,7 +99,7 @@ export const studyoCekimineIhtiyacinizVarMi: BlogPost = {
             {
               type: "ul",
               items: [
-                "Reklam kreatifi ve hook testleri: çeşitlilik prodüksiyon kalitesinden değerli.",
+                "Reklam kreatifi ve [hook](/tr/kavramlar/hook) testleri: çeşitlilik prodüksiyon kalitesinden değerli.",
                 "Sosyal feed ve Stories: mecranın kendi dili düşük prodüksiyon; fazla cilalı içerik akışta yabancı durur.",
                 "Yorum ve DM'lerden gelen soruları cevaplayan içerik: doğal olarak konuşma dili ister.",
                 "Ürün-pazar uyumu netleşmemişken: önce hangi vaadin tuttuğunu öğren, sonra o vaadi güzelce çek.",
@@ -348,7 +348,7 @@ export const studyoCekimineIhtiyacinizVarMi: BlogPost = {
             {
               type: "ul",
               items: [
-                "Ad creative and hook testing: variety is worth more than production value.",
+                "Ad creative and [hook](/en/concepts/hook) testing: variety is worth more than production value.",
                 "Social feed and Stories: the medium's native language is low production; over-polished content reads as foreign in the feed.",
                 "Content answering questions from comments and DMs: naturally wants conversational delivery.",
                 "Before product–market fit is clear: learn which promise lands first, then shoot that promise well.",
