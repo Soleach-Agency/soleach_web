@@ -10,6 +10,7 @@ import { metaPixelOlcumHatalari } from "./meta-pixel-olcum-hatalari";
 import { besHookTesti } from "./bes-hook-testi";
 import { ekrandaParfumSatmak } from "./ekranda-parfum-satmak";
 import { reklamAjanslariNedenShopify } from "./reklam-ajanslari-neden-shopify";
+import { kreatifYorgunluguFrekans } from "./kreatif-yorgunlugu-frekans";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -24,4 +25,5 @@ export const posts: BlogPost[] = [
   besHookTesti,
   ekrandaParfumSatmak,
   reklamAjanslariNedenShopify,
+  kreatifYorgunluguFrekans,
 ];

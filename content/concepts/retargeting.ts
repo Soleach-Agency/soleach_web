@@ -5,7 +5,7 @@ export const retargeting: Concept = {
   category: "ads",
   publishedAt: "2026-07-28",
   related: ["funnel"],
-  postIds: ["instagram-reklam-rehberi"],
+  postIds: ["instagram-reklam-rehberi", "kreatif-yorgunlugu-frekans"],
   locales: {
     tr: {
       slug: "retargeting",

@@ -5,7 +5,7 @@ export const creativeTesting: Concept = {
   category: "creative",
   publishedAt: "2026-07-28",
   related: ["ugc"],
-  postIds: ["bes-hook-testi", "instagram-reklam-rehberi"],
+  postIds: ["bes-hook-testi", "instagram-reklam-rehberi", "kreatif-yorgunlugu-frekans"],
   locales: {
     tr: {
       slug: "kreatif-testi",
