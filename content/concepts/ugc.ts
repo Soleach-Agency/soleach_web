@@ -31,7 +31,7 @@ export const ugc: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için UGC neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const ugc: Concept = {
                 "En iyi UGC senaryoları gerçek müşteri yorumlarından ve itirazlarından yazılır.",
                 "UGC reklamda kullanılacaksa üreticiyle hakların (kullanım süresi, mecra) baştan netleşmesi gerekir.",
               ],
+            },
+            {
+              type: "p",
+              text: "UGC'nin neden daha çok sattığını ve nerede işe yaramadığını [UGC yazımızda](/tr/blog/ugc-neden-studyo-cekiminden-cok-satiyor) kaynaklarıyla inceledik; stüdyo çekimiyle karşılaştırması için [bu yazıya](/tr/blog/studyo-cekimine-ihtiyaciniz-var-mi) bak.",
             },
           ],
         },
@@ -58,7 +62,7 @@ export const ugc: Concept = {
           a: "Hayır; işin doğru aracı hangisiyse o kazanır. Güven ve ilk temas katmanında UGC genelde güçlüdür; ürün detayı, doku ve marka estetiği gerektiren yerlerde stüdyo üstündür. Cevabı varsayım değil, kreatif testi verir.",
         },
       ],
-      tags: ["UGC", "İçerik üretimi", "Sosyal kanıt"],
+      tags: ["UGC", "Kullanıcı üretimi içerik", "UGC creator", "İçerik üretimi", "Sosyal kanıt"],
     },
     en: {
       slug: "ugc",
@@ -66,7 +70,7 @@ export const ugc: Concept = {
       graphLabel: "UGC",
       metaTitle: "What Is UGC? User-Generated Content | Soleach Concepts",
       metaDescription:
-        "UGC (user-generated content) explained: what it is, how it differs from studio production, and why it performs so well in ads.",
+        "UGC (user-generated content) explained: what it is, how it differs from studio production, why it performs in ads, and how creator rights work.",
       shortDef:
         "Content shot as if a real user is sharing their experience; the creative format that builds trust by not looking like an ad in the feed, instead of polished studio aesthetics.",
       sections: [
@@ -84,7 +88,7 @@ export const ugc: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why UGC matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -97,6 +101,10 @@ export const ugc: Concept = {
                 "The best UGC scripts are written from real customer reviews and objections.",
                 "If UGC will run as ads, usage rights (duration, channels) must be agreed with the creator upfront.",
               ],
+            },
+            {
+              type: "p",
+              text: "We look at why UGC outsells studio content — and where it stops working — with sources in our [UGC post](/en/blog/why-ugc-outsells-studio-content); for the studio comparison, see [this one](/en/blog/do-you-need-a-studio-photoshoot).",
             },
           ],
         },
@@ -111,7 +119,7 @@ export const ugc: Concept = {
           a: "No; whichever is the right tool for the job wins. UGC is usually strong for trust and first touch; studio wins where product detail, texture and brand aesthetics matter. Creative testing gives the answer, not assumptions.",
         },
       ],
-      tags: ["UGC", "Content production", "Social proof"],
+      tags: ["UGC", "User-generated content", "UGC creator", "Content production", "Social proof"],
     },
   },
 };

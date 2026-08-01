@@ -11,7 +11,7 @@ export const capi: Concept = {
       slug: "conversion-api",
       name: "Conversions API (CAPI)",
       graphLabel: "CAPI",
-      metaTitle: "Conversions API (CAPI) Nedir? | Soleach Kavramlar",
+      metaTitle: "Conversions API (CAPI) Nedir? Sunucu Taraflı Takip | Soleach",
       metaDescription:
         "Conversions API (CAPI) nedir? Dönüşüm verilerini tarayıcı yerine sunucudan Meta'ya ileten, pixel sinyal kaybını telafi eden altyapının tanımı.",
       shortDef:
@@ -31,7 +31,7 @@ export const capi: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için Conversions API neden önemli?",
           blocks: [
             {
               type: "p",
@@ -40,6 +40,10 @@ export const capi: Concept = {
             {
               type: "p",
               text: "Shopify gibi platformlarda CAPI hazır entegrasyonla açılabilir; kritik nokta pixel ile CAPI'nin aynı event'leri aynı event_id ile göndermesi ve tekilleştirmenin çalıştığının doğrulanmasıdır.",
+            },
+            {
+              type: "p",
+              text: "Pixel ile CAPI'nin birlikte nasıl kurulduğunu ve nerede yanlış gittiğini [ölçüm hataları yazımızda](/tr/blog/meta-pixel-olcum-hatalari-satis-atfi), Shopify tarafını ise [bu yazıda](/tr/blog/reklam-ajanslari-neden-shopify-seviyor) anlattık.",
             },
           ],
         },
@@ -54,13 +58,13 @@ export const capi: Concept = {
           a: "Her event'e iki kanalda da aynı event_id'yi göndererek. Tekilleştirmenin çalıştığını Meta Events Manager'daki event detaylarından doğrulayabilirsin; sipariş sayınla satın alma event sayısını düzenli karşılaştırmak en sağlam kontroldür.",
         },
       ],
-      tags: ["Conversions API", "CAPI", "Ölçüm"],
+      tags: ["Conversions API", "CAPI", "Sunucu taraflı takip", "Ölçümleme"],
     },
     en: {
       slug: "conversions-api",
       name: "Conversions API (CAPI)",
       graphLabel: "CAPI",
-      metaTitle: "What Is the Conversions API (CAPI)? | Soleach Concepts",
+      metaTitle: "What Is the Conversions API? Server-Side Tracking | Soleach",
       metaDescription:
         "The Conversions API (CAPI) explained: sending conversion data to Meta from your server instead of the browser, recovering the signal that pixels lose.",
       shortDef:
@@ -80,7 +84,7 @@ export const capi: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why the Conversions API matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -89,6 +93,10 @@ export const capi: Concept = {
             {
               type: "p",
               text: "On platforms like Shopify, CAPI can be enabled through the native integration; the critical part is that the pixel and CAPI send the same events with the same event_id, and that deduplication is verified to work.",
+            },
+            {
+              type: "p",
+              text: "We cover how the pixel and CAPI work together — and where it goes wrong — in our [measurement errors](/en/blog/meta-pixel-measurement-errors-attribution) post, and the Shopify side [here](/en/blog/why-ad-agencies-love-shopify).",
             },
           ],
         },
@@ -103,7 +111,7 @@ export const capi: Concept = {
           a: "By sending the same event_id on both channels for every event. You can verify deduplication in the event details in Meta Events Manager; regularly comparing your order count against purchase events is the most reliable check.",
         },
       ],
-      tags: ["Conversions API", "CAPI", "Measurement"],
+      tags: ["Conversions API", "CAPI", "Server-side tracking", "Measurement"],
     },
   },
 };

@@ -13,7 +13,7 @@ export const cpa: Concept = {
       graphLabel: "CPA",
       metaTitle: "CPA Nedir? Edinim Başına Maliyet | Soleach Kavramlar",
       metaDescription:
-        "CPA (Cost per Acquisition) nedir? Bir satış ya da hedeflenen eylemin reklam maliyetini gösteren metriğin tanımı ve ROAS ile ilişkisi.",
+        "CPA (edinim başına maliyet) nedir, nasıl hesaplanır? Bir satışın reklam maliyetini gösteren metriğin tanımı, ROAS ve müşteri edinme maliyetiyle ilişkisi.",
       shortDef:
         "Bir dönüşümün — genelde bir satışın — reklam tarafındaki maliyeti (harcama ÷ dönüşüm sayısı); ROAS'ın tersinden okunuşu ve bütçe planlamanın temel taşı.",
       sections: [
@@ -31,7 +31,7 @@ export const cpa: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için CPA neden önemli?",
           blocks: [
             {
               type: "p",
@@ -40,6 +40,10 @@ export const cpa: Concept = {
             {
               type: "p",
               text: "Kabul edilebilir CPA tavanını marj ve müşteri yaşam boyu değeri belirler; bu tavan netleşmeden bütçe artırma kararı körlemedir.",
+            },
+            {
+              type: "p",
+              text: "Bütçeyi CPA tavanına göre planlamayı [Instagram reklam rehberimizde](/tr/blog/guzellik-markalari-icin-instagram-reklam-rehberi) anlattık; hangi katmanın hangi maliyetle çalıştığı için [funnel](/tr/kavramlar/funnel) kavramına bak.",
             },
           ],
         },
@@ -54,7 +58,7 @@ export const cpa: Concept = {
           a: "Önce nedenine bak: kreatif yorgunluğu mu, kitlenin daralması mı, sezonluk rekabet mi, yoksa ölçüm hatası mı? CPA artışı çoğu zaman kampanyanın değil, kreatif rotasyonun ya da ölçüm altyapısının sinyalidir.",
         },
       ],
-      tags: ["CPA", "Reklam metrikleri", "Bütçe planlama"],
+      tags: ["CPA", "Edinim başına maliyet", "Müşteri edinme maliyeti", "Reklam metrikleri", "Bütçe planlama"],
     },
     en: {
       slug: "cpa",
@@ -62,7 +66,7 @@ export const cpa: Concept = {
       graphLabel: "CPA",
       metaTitle: "What Is CPA? Cost per Acquisition | Soleach Concepts",
       metaDescription:
-        "CPA (Cost per Acquisition) explained: the ad cost of a single sale or target action, and how it relates to ROAS and budget planning.",
+        "CPA (cost per acquisition) explained: the ad cost of a single sale, how it relates to ROAS and customer acquisition cost, and how to plan budget with it.",
       shortDef:
         "The ad-side cost of one conversion — usually a sale (spend ÷ conversions); ROAS read from the other direction, and the cornerstone of budget planning.",
       sections: [
@@ -80,7 +84,7 @@ export const cpa: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why CPA matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -89,6 +93,10 @@ export const cpa: Concept = {
             {
               type: "p",
               text: "Margin and customer lifetime value set the acceptable CPA ceiling; scaling budget before that ceiling is known is flying blind.",
+            },
+            {
+              type: "p",
+              text: "We cover planning budget against a CPA ceiling in our [Instagram ads starter guide](/en/blog/instagram-ads-guide-for-beauty-brands); for which layer carries which cost, see [funnel](/en/concepts/funnel).",
             },
           ],
         },
@@ -103,7 +111,7 @@ export const cpa: Concept = {
           a: "Diagnose first: is it creative fatigue, audience saturation, seasonal competition, or a measurement error? Rising CPA is more often a signal about creative rotation or measurement than about the campaign itself.",
         },
       ],
-      tags: ["CPA", "Ad metrics", "Budget planning"],
+      tags: ["CPA", "Cost per acquisition", "Customer acquisition cost", "Ad metrics", "Budget planning"],
     },
   },
 };

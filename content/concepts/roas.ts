@@ -13,7 +13,7 @@ export const roas: Concept = {
       graphLabel: "ROAS",
       metaTitle: "ROAS Nedir? Reklam Harcaması Getirisi | Soleach Kavramlar",
       metaDescription:
-        "ROAS (Return on Ad Spend) nedir, nasıl hesaplanır? Reklam harcamasının kaç katı ciro ürettiğini gösteren metriğin tanımı ve doğru okunması.",
+        "ROAS (reklam harcaması getirisi) nedir, nasıl hesaplanır? Reklam harcamasının kaç katı ciro ürettiğini gösteren metriğin tanımı ve doğru okunması.",
       shortDef:
         "Reklama harcanan her 1 liranın kaç lira ciro ürettiğini gösteren oran (ciro ÷ reklam harcaması); performans reklamcılığının en çok konuşulan — ve en çok yanlış okunan — metriği.",
       sections: [
@@ -31,7 +31,7 @@ export const roas: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için ROAS neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const roas: Concept = {
                 "Hedef ROAS, 'sektör ortalaması'ndan değil kendi marj yapından türetilmelidir.",
                 "Ölçek büyüdükçe ROAS'ın bir miktar düşmesi normaldir; önemli olan toplam kârın büyümesidir.",
               ],
+            },
+            {
+              type: "p",
+              text: "Hedef ROAS'ın doğruluğunu ölçüm belirler; nerede kırıldığını [Meta Pixel ölçüm hataları yazımızda](/tr/blog/meta-pixel-olcum-hatalari-satis-atfi) inceledik. Aynı matematiğin tersinden okunuşu için [CPA](/tr/kavramlar/cpa) kavramına bak.",
             },
           ],
         },
@@ -58,7 +62,7 @@ export const roas: Concept = {
           a: "Hayır. ROAS ciro bazlı bir orandır; ürün maliyetini, kargoyu, iadeleri ve operasyonu görmez. ROAS 4 olan bir kampanya, marjı düşük bir üründe pekâlâ zarar ediyor olabilir. Nihai karar metriği kâr olmalıdır.",
         },
       ],
-      tags: ["ROAS", "Performans pazarlama", "Reklam metrikleri"],
+      tags: ["ROAS", "Reklam harcaması getirisi", "Performans pazarlama", "Reklam metrikleri"],
     },
     en: {
       slug: "roas",
@@ -66,7 +70,7 @@ export const roas: Concept = {
       graphLabel: "ROAS",
       metaTitle: "What Is ROAS? Return on Ad Spend | Soleach Concepts",
       metaDescription:
-        "ROAS (Return on Ad Spend) explained: how the revenue-per-ad-dollar ratio is calculated, and how to read it without fooling yourself.",
+        "ROAS (return on ad spend) explained: how to calculate the revenue-per-ad-spend ratio, what a good ROAS is, and how to read it without fooling yourself.",
       shortDef:
         "The ratio showing how much revenue every unit of ad spend produces (revenue ÷ ad spend) — performance marketing's most discussed, and most misread, metric.",
       sections: [
@@ -84,7 +88,7 @@ export const roas: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why ROAS matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -97,6 +101,10 @@ export const roas: Concept = {
                 "Target ROAS should come from your own margin structure, not an 'industry average'.",
                 "Some ROAS decline while scaling is normal; what matters is total profit growing.",
               ],
+            },
+            {
+              type: "p",
+              text: "Your target ROAS is only as good as your measurement — we dig into where it breaks in our [Meta Pixel measurement errors](/en/blog/meta-pixel-measurement-errors-attribution) post. For the same math read from the other side, see [CPA](/en/concepts/cpa).",
             },
           ],
         },
@@ -111,7 +119,7 @@ export const roas: Concept = {
           a: "No. ROAS is a revenue-based ratio; it does not see product cost, shipping, returns or operations. A campaign at ROAS 4 can easily lose money on a low-margin product. The final decision metric should be profit.",
         },
       ],
-      tags: ["ROAS", "Performance marketing", "Ad metrics"],
+      tags: ["ROAS", "Return on ad spend", "Performance marketing", "Ad metrics"],
     },
   },
 };

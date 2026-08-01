@@ -13,6 +13,9 @@ import { aiVideo } from "./ai-video";
 import { shopify } from "./shopify";
 import { cro } from "./cro";
 import { funnel } from "./funnel";
+import { cta } from "./cta";
+import { frequency } from "./frequency";
+import { creativeFatigue } from "./creative-fatigue";
 
 /**
  * Register every concept here. APPEND-ONLY: the graph layout seeds node
@@ -34,4 +37,7 @@ export const concepts: Concept[] = [
   shopify,
   cro,
   funnel,
+  cta,
+  frequency,
+  creativeFatigue,
 ];

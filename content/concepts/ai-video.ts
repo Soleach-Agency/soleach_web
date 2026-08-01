@@ -13,7 +13,7 @@ export const aiVideo: Concept = {
       graphLabel: "AI Video",
       metaTitle: "Yapay Zekâ ile Video Üretimi Nedir? | Soleach Kavramlar",
       metaDescription:
-        "Yapay zekâ video üretimi nedir? Reklam kreatifinde üretken video araçlarının rolü, güçlü olduğu yerler ve sınırları.",
+        "Yapay zekâ ile video üretimi nedir? Üretken AI araçlarının reklam kreatifindeki rolü, kreatif test hacmini nasıl büyüttüğü ve pratikteki sınırları.",
       shortDef:
         "Üretken yapay zekâ araçlarıyla reklam videosu ve video varyasyonu üretme pratiği; kreatif test hacmini büyüten, ama marka gerçekliğinin yerine geçmeyen bir üretim katmanı.",
       sections: [
@@ -31,7 +31,7 @@ export const aiVideo: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için yapay zekâ videosu neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const aiVideo: Concept = {
                 "En verimli akış hibrittir: konsept ve varyasyon yapay zekâdan, kanıt ve doku gerçek çekimden.",
                 "Platformların yapay zekâ içerik etiketleme kuralları takip edilmelidir; şeffaflık güveni korur.",
               ],
+            },
+            {
+              type: "p",
+              text: "Maliyet, halüsinasyon ve etiketleme zorunluluğu dâhil bütün resmi [yapay zekâ videosu yazımızda](/tr/blog/yapay-zeka-ile-uretilen-videolar-reklamcilik) kaynaklarıyla inceledik; gerçek kullanıcı içeriğiyle karşılaştırması için [UGC](/tr/kavramlar/ugc) kavramına bak.",
             },
           ],
         },
@@ -58,15 +62,15 @@ export const aiVideo: Concept = {
           a: "En çok tekrar eden ihtiyaçtan: mevcut kazanan videolarının hook ve sahne varyasyonlarını yapay zekâyla çoğaltmak, sıfırdan yapay zekâ videosu üretmekten daha hızlı sonuç verir.",
         },
       ],
-      tags: ["Yapay zekâ", "Video üretimi", "Kreatif"],
+      tags: ["Yapay zekâ video", "AI video üretimi", "Video üretimi", "Kreatif"],
     },
     en: {
       slug: "ai-video",
       name: "AI Video Production",
       graphLabel: "AI Video",
-      metaTitle: "What Is AI Video Production? | Soleach Concepts",
+      metaTitle: "What Is AI Video Production? Generative Video | Soleach",
       metaDescription:
-        "AI video production explained: the role of generative video tools in ad creative, where they shine and where their limits are.",
+        "AI video production explained: what generative video tools do in ad creative, how they multiply testing volume, and where their limits still are.",
       shortDef:
         "The practice of producing ad videos and variations with generative AI tools; a production layer that multiplies creative testing volume without replacing brand authenticity.",
       sections: [
@@ -84,7 +88,7 @@ export const aiVideo: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why AI video matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -97,6 +101,10 @@ export const aiVideo: Concept = {
                 "The most productive workflow is hybrid: concepts and variations from AI, proof and texture from real shoots.",
                 "Platform rules on labeling AI content should be followed; transparency protects trust.",
               ],
+            },
+            {
+              type: "p",
+              text: "We cover the full picture — cost, hallucination and the labelling rules — with sources in our [AI video post](/en/blog/ai-generated-video-in-advertising); for the comparison with real customer content, see [UGC](/en/concepts/ugc).",
             },
           ],
         },
@@ -111,7 +119,7 @@ export const aiVideo: Concept = {
           a: "With your most repetitive need: using AI to multiply hook and scene variations of your existing winning videos pays off faster than generating videos from scratch.",
         },
       ],
-      tags: ["AI", "Video production", "Creative"],
+      tags: ["AI video", "AI video production", "Generative video", "Video production", "Creative"],
     },
   },
 };

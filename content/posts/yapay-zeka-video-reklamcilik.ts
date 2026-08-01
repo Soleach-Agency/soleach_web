@@ -10,7 +10,7 @@ export const yapayZekaVideoReklamcilik: BlogPost = {
       title: "Yapay zekâ ile üretilen videolar reklamda işe yarıyor mu?",
       metaTitle: "AI Videolar Reklamda İşe Yarıyor mu? | Soleach",
       metaDescription:
-        "AI video üretiminin gerçek maliyeti, hız kazancı, halüsinasyon sınırları, tüketici güveni ve Ağustos 2026'da yürürlüğe giren etiketleme zorunlulukları — kaynaklarıyla.",
+        "Yapay zekâ video üretiminin gerçek maliyeti, halüsinasyon sınırları, tüketici güveni ve 2026'da yürürlüğe giren etiketleme zorunlulukları — kaynaklarıyla.",
       excerpt:
         "Üretim maliyeti saniyesi sentlere düştü; asıl fatura seçim, doğrulama ve hukuki inceleme tarafında. Yapay zekâ videosunun nerede kazandırdığını, nerede risk ürettiğini kaynaklarla inceledik.",
       intro: [
@@ -362,7 +362,7 @@ export const yapayZekaVideoReklamcilik: BlogPost = {
         },
       ],
       tags: [
-        "Yapay zekâ",
+        "Yapay zekâ video",
         "Video üretimi",
         "Reklam mevzuatı",
         "Kreatif strateji",
@@ -374,7 +374,7 @@ export const yapayZekaVideoReklamcilik: BlogPost = {
       title: "Do AI-generated videos actually work in advertising?",
       metaTitle: "Does AI Video Work in Advertising? | Soleach",
       metaDescription:
-        "The real cost of AI video, where the time saving is illusory, what models still hallucinate, how consumers react, and the labelling rules landing in August 2026.",
+        "The real cost of AI video, where the time saving is illusory, what models still hallucinate, how consumers react, and the labelling rules landing in 2026.",
       excerpt:
         "Generation now costs cents per second; the real invoice lands in selection, verification and legal review. A sourced look at where AI video pays off and where it manufactures risk.",
       intro: [
@@ -726,7 +726,7 @@ export const yapayZekaVideoReklamcilik: BlogPost = {
         },
       ],
       tags: [
-        "Artificial intelligence",
+        "AI video",
         "Video production",
         "Advertising regulation",
         "Creative strategy",

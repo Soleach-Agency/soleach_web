@@ -11,7 +11,7 @@ export const funnel: Concept = {
       slug: "funnel",
       name: "Funnel (Pazarlama Hunisi)",
       graphLabel: "Funnel",
-      metaTitle: "Funnel Nedir? Pazarlama Hunisi | Soleach Kavramlar",
+      metaTitle: "Funnel Nedir? Pazarlama ve Satış Hunisi | Soleach",
       metaDescription:
         "Funnel (pazarlama hunisi) nedir? Müşterinin markayı keşfetmesinden satın almasına uzanan yolculuğun katmanlarının tanımı ve reklam planlamadaki rolü.",
       shortDef:
@@ -31,7 +31,7 @@ export const funnel: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için funnel neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const funnel: Concept = {
                 "Retargeting alt katmanın aracıdır; hammaddesini üst katman üretir.",
                 "Tekrar satın alma katmanı kozmetikte özellikle değerlidir: müşteri kazanma maliyeti, tekrar alımlarla amorti edilir.",
               ],
+            },
+            {
+              type: "p",
+              text: "Soğuk, ılık ve sıcak katmanlara bütçeyi nasıl böleceğini [Instagram reklam rehberimizde](/tr/blog/guzellik-markalari-icin-instagram-reklam-rehberi) anlattık; alt katmanın motoru için [retargeting](/tr/kavramlar/retargeting) kavramına bak.",
             },
           ],
         },
@@ -58,15 +62,15 @@ export const funnel: Concept = {
           a: "Evrensel bir oran yok; mevcut trafiğine ve marka bilinirliğine bağlı. Pratik ilke şu: alt funnel kitlelerin doygunsa büyüme üst katmandan gelir; site trafiğin zayıfsa retargeting'e ayrılan bütçe zaten çalışacak kitle bulamaz.",
         },
       ],
-      tags: ["Funnel", "Pazarlama hunisi", "Reklam stratejisi"],
+      tags: ["Funnel", "Pazarlama hunisi", "Satış hunisi", "Reklam stratejisi"],
     },
     en: {
       slug: "funnel",
       name: "Funnel (Marketing Funnel)",
       graphLabel: "Funnel",
-      metaTitle: "What Is a Marketing Funnel? | Soleach Concepts",
+      metaTitle: "What Is a Marketing Funnel? Sales Funnel Explained | Soleach",
       metaDescription:
-        "The marketing funnel explained: the layered model of the customer journey from discovery to purchase, and its role in ad planning.",
+        "The marketing funnel explained: the layered model of the customer journey from discovery to purchase, and its role in planning your ad budget.",
       shortDef:
         "The layered model of the customer journey from first discovery to purchase (and repurchase); the framework that decides which stage your ad budget and messages speak to.",
       sections: [
@@ -84,7 +88,7 @@ export const funnel: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why the funnel matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -97,6 +101,10 @@ export const funnel: Concept = {
                 "Retargeting is the bottom layer's tool; its raw material is produced by the top.",
                 "The repurchase layer is especially valuable in beauty: customer acquisition costs are amortized through repeat orders.",
               ],
+            },
+            {
+              type: "p",
+              text: "We cover how to split budget across cold, warm and hot layers in our [Instagram ads guide](/en/blog/instagram-ads-guide-for-beauty-brands); for the engine of the lower funnel, see [retargeting](/en/concepts/retargeting).",
             },
           ],
         },
@@ -111,7 +119,7 @@ export const funnel: Concept = {
           a: "There is no universal ratio; it depends on your current traffic and brand awareness. The practical principle: if your bottom-funnel audiences are saturated, growth comes from the top; if your site traffic is weak, a retargeting budget has no one to work on anyway.",
         },
       ],
-      tags: ["Funnel", "Marketing funnel", "Ad strategy"],
+      tags: ["Funnel", "Marketing funnel", "Sales funnel", "Ad strategy"],
     },
   },
 };

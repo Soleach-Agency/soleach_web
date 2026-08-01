@@ -259,7 +259,7 @@ export const studyoCekimineIhtiyacinizVarMi: BlogPost = {
       title: "Do you actually need a studio photoshoot?",
       metaTitle: "Do You Need a Studio Photoshoot? | Soleach",
       metaDescription:
-        "When is studio production non-negotiable for a beauty brand, and when is it wasted budget? A decision framework built on marketplace rules, regulation and ad research.",
+        "When is a studio photoshoot non-negotiable for a beauty brand, and when is it wasted budget? A framework built on marketplace rules and research.",
       excerpt:
         "In some places studio production isn't optional — a marketplace main image, for instance. In others it's the most expensive wrong investment you can make. Here's the line between them.",
       intro: [

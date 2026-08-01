@@ -219,7 +219,7 @@ export const shopifyMagazaKurulumu: BlogPost = {
         "Shopify",
         "E-ticaret",
         "Kozmetik pazarlaması",
-        "Dönüşüm optimizasyonu",
+        "Dönüşüm oranı optimizasyonu",
         "Ölçümleme",
       ],
     },
@@ -228,7 +228,7 @@ export const shopifyMagazaKurulumu: BlogPost = {
       title: "Setting up a Shopify store for a cosmetics brand",
       metaTitle: "Shopify Store Setup for Cosmetics Brands | Soleach",
       metaDescription:
-        "The decisions that determine sales when building a Shopify store for a cosmetics brand: product pages, health-claim limits, cart abandonment, speed and measurement.",
+        "The decisions that determine sales when building a Shopify store for a cosmetics brand: product pages, health-claim limits, speed and measurement.",
       excerpt:
         "The ads work, the clicks arrive, the sales don't. More often than not the problem isn't the ad — it's where the click lands. Here are the decisions that determine sales when you build a Shopify store for a cosmetics brand.",
       intro: [
@@ -437,7 +437,7 @@ export const shopifyMagazaKurulumu: BlogPost = {
         "Shopify",
         "E-commerce",
         "Cosmetics marketing",
-        "Conversion optimization",
+        "Conversion rate optimization",
         "Measurement",
       ],
     },

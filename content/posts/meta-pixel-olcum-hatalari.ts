@@ -10,7 +10,7 @@ export const metaPixelOlcumHatalari: BlogPost = {
       slug: "meta-pixel-olcum-hatalari-satis-atfi",
       title: "Meta hangi satışın senden geldiğini bilmiyor",
       metaTitle: "Meta Pixel Ölçüm Hataları: Satışlar Neden Eksik | Soleach",
-      metaDescription: "Meta Pixel kurulu ama satışlar raporda eksik mi? Olay eşleşmesi, deduplication ve Conversions API kapsamı — ölçümün nerede kırıldığını kaynaklarıyla anlatıyoruz.",
+      metaDescription: "Meta Pixel kurulu ama satışlar raporda eksik mi? Olay eşleşmesi, deduplication ve Conversions API kapsamı — ölçüm nerede kırılıyor, kaynaklarıyla anlattık.",
       excerpt: "Pixel'i kurdun, reklam dönüyor, satışlar geliyor — ama Meta hangi satışın kendisinden geldiğini bilmiyor. Yanlış ölçüm kurulumunun sessiz bütçe yakışı ve Meta'nın kendi dokümantasyonuna göre kontrol edilmesi gereken beş nokta.",
       intro: [
         "Bir kozmetik markasının reklam panelinde en sık gördüğümüz cümle şu: \"Sipariş geliyor ama Meta'da görünmüyor.\" Bunun tersi de olur — panelde 40 satış yazar, muhasebede 28 vardır.",
@@ -224,7 +224,7 @@ export const metaPixelOlcumHatalari: BlogPost = {
         "Meta Pixel",
         "Conversions API",
         "Ölçümleme",
-        "Kozmetik",
+        "Kozmetik pazarlaması",
       ],
     },
     en: {
@@ -445,7 +445,7 @@ export const metaPixelOlcumHatalari: BlogPost = {
         "Meta Pixel",
         "Conversions API",
         "Measurement",
-        "Cosmetics",
+        "Cosmetics marketing",
       ],
     },
   },

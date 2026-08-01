@@ -9,7 +9,7 @@ export const geoRehberi: BlogPost = {
     tr: {
       slug: "geo-nedir-yapay-zeka-gorunurlugu-rehberi",
       title: "GEO nedir? Kozmetik markaları için yapay zekâ görünürlüğü rehberi",
-      metaTitle: "GEO Nedir? Kozmetik Markaları için Yapay Zekâ Görünürlüğü | Soleach",
+      metaTitle: "GEO Nedir? Kozmetik Markalarına Yapay Zekâ Rehberi | Soleach",
       metaDescription:
         "GEO (Generative Engine Optimization) nedir, SEO'dan nasıl ayrılır ve kozmetik markan ChatGPT ile Perplexity'de nasıl görünür olur? Kaynaklı rehber.",
       excerpt:

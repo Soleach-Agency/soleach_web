@@ -193,8 +193,8 @@ export const instagramReklamRehberi: BlogPost = {
       tags: [
         "Instagram Ads",
         "Performans pazarlama",
-        "Meta",
-        "Kozmetik",
+        "Meta Ads",
+        "Kozmetik pazarlaması",
       ],
     },
     en: {
@@ -384,8 +384,8 @@ export const instagramReklamRehberi: BlogPost = {
       tags: [
         "Instagram Ads",
         "Performance marketing",
-        "Meta",
-        "Cosmetics",
+        "Meta Ads",
+        "Cosmetics marketing",
       ],
     },
   },

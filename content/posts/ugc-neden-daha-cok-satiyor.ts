@@ -10,7 +10,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
       title: "UGC neden stüdyo çekiminden daha çok satıyor?",
       metaTitle: "UGC Neden Stüdyo Çekiminden Çok Satar? | Soleach",
       metaDescription:
-        "Telefonla çekilmiş kullanıcı içeriği neden pahalı stüdyo çekimini geçiyor? Akademik araştırmalara dayanan güven psikolojisi, sınırları ve güzellik markaları için uygulama.",
+        "Telefonla çekilmiş kullanıcı içeriği (UGC) neden pahalı stüdyo çekimini geçiyor? Araştırmalara dayanan güven psikolojisi ve güzellik markaları için sınırları.",
       excerpt:
         "Cevap üretim kalitesinde değil, izleyicinin zihninde: reklam olarak tanınan içerik savunma refleksi tetikliyor. Araştırmaların gerçekte ne ölçtüğünü ve UGC'nin nerede işe yaramadığını inceledik.",
       intro: [
@@ -231,14 +231,14 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           publisher: "Meta",
         },
       ],
-      tags: ["UGC", "Kreatif strateji", "Güzellik markaları", "Sosyal kanıt"],
+      tags: ["UGC", "Kreatif strateji", "Kozmetik pazarlaması", "Sosyal kanıt"],
     },
     en: {
       slug: "why-ugc-outsells-studio-content",
       title: "Why does UGC outsell studio-produced content?",
       metaTitle: "Why UGC Outsells Studio Content | Soleach",
       metaDescription:
-        "Phone-shot customer content often beats expensive studio production. Here's the peer-reviewed explanation, the limits of the evidence, and what it means for beauty brands.",
+        "Phone-shot customer content (UGC) often beats expensive studio production. The peer-reviewed explanation, the limits of the evidence, and what it means.",
       excerpt:
         "The answer isn't production quality — it's what happens in the viewer's head when content gets recognised as advertising. What the research actually measures, and where UGC stops working.",
       intro: [
@@ -464,7 +464,7 @@ export const ugcNedenDahaCokSatiyor: BlogPost = {
           publisher: "Meta",
         },
       ],
-      tags: ["UGC", "Creative strategy", "Beauty brands", "Social proof"],
+      tags: ["UGC", "Creative strategy", "Cosmetics marketing", "Social proof"],
     },
   },
 };

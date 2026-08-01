@@ -13,7 +13,7 @@ export const cro: Concept = {
       graphLabel: "CRO",
       metaTitle: "CRO Nedir? Dönüşüm Oranı Optimizasyonu | Soleach Kavramlar",
       metaDescription:
-        "CRO (dönüşüm oranı optimizasyonu) nedir? Mevcut site trafiğinden daha çok satış çıkarma disiplininin tanımı ve reklam maliyetine etkisi.",
+        "CRO (dönüşüm oranı optimizasyonu) nedir? Mevcut site trafiğinden daha çok satış çıkarma disiplininin tanımı ve reklam maliyetine doğrudan etkisi.",
       shortDef:
         "Siteye zaten gelen ziyaretçilerin daha büyük bölümünü müşteriye çeviren sistemli iyileştirme çalışması; reklam bütçesini artırmadan satışı artırmanın yolu.",
       sections: [
@@ -31,7 +31,7 @@ export const cro: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için CRO neden önemli?",
           blocks: [
             {
               type: "p",
@@ -40,6 +40,10 @@ export const cro: Concept = {
             {
               type: "p",
               text: "Kozmetikte dönüşümün önündeki tipik engeller kategoriye özgüdür: 'cildime uyar mı' tereddüdü, içerik ve kullanım soruları, iade politikası endişesi. Bu itirazları ürün sayfasında cevaplayan markalar — net içerik bilgisi, gerçek yorumlar, kullanım rehberi — reklam trafiğini boşa akıtmaz.",
+            },
+            {
+              type: "p",
+              text: "Kozmetik ürün sayfasında dönüşümü belirleyen kararları [Shopify kurulum rehberimizde](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) tek tek ele aldık; trafiğin hangi katmandan geldiği için [funnel](/tr/kavramlar/funnel) kavramına bak.",
             },
           ],
         },
@@ -54,7 +58,7 @@ export const cro: Concept = {
           a: "Kategoriye, trafik kaynağına ve fiyat noktasına göre çok değişir; başkasının oranı senin hedefin olamaz. Sağlıklı yaklaşım, kendi mevcut oranını ölçüp onu istikrarlı şekilde yukarı taşımaktır.",
         },
       ],
-      tags: ["CRO", "Dönüşüm oranı", "E-ticaret"],
+      tags: ["CRO", "Dönüşüm oranı optimizasyonu", "Dönüşüm oranı", "E-ticaret"],
     },
     en: {
       slug: "conversion-rate-optimization",
@@ -80,7 +84,7 @@ export const cro: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why CRO matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -89,6 +93,10 @@ export const cro: Concept = {
             {
               type: "p",
               text: "In beauty, the barriers to conversion are category-specific: the 'will it suit my skin' hesitation, ingredient and usage questions, return-policy anxiety. Brands that answer those objections on the product page — clear ingredient information, genuine reviews, usage guidance — stop pouring ad traffic down the drain.",
+            },
+            {
+              type: "p",
+              text: "We work through the decisions that drive conversion on a cosmetics product page in our [Shopify setup guide](/en/blog/shopify-store-setup-for-cosmetics-brands); for where the traffic comes from, see [funnel](/en/concepts/funnel).",
             },
           ],
         },
@@ -103,7 +111,7 @@ export const cro: Concept = {
           a: "It varies enormously by category, traffic source and price point; someone else's rate cannot be your target. The healthy approach is measuring your own current rate and moving it up consistently.",
         },
       ],
-      tags: ["CRO", "Conversion rate", "E-commerce"],
+      tags: ["CRO", "Conversion rate optimization", "Conversion rate", "E-commerce"],
     },
   },
 };

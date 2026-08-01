@@ -10,9 +10,9 @@ export const creativeTesting: Concept = {
     tr: {
       slug: "kreatif-testi",
       name: "Kreatif Testi",
-      metaTitle: "Kreatif Testi Nedir? Reklamda Sistemli Deney | Soleach Kavramlar",
+      metaTitle: "Kreatif Testi Nedir? Reklamda A/B Testi | Soleach",
       metaDescription:
-        "Kreatif testi nedir? Reklam görselleri ve videolarını sistemli deneylerle yarıştırıp kazananı veriyle bulma pratiğinin tanımı.",
+        "Kreatif testi nedir, nasıl yapılır? Reklam görsel ve videolarını A/B testiyle yarıştırıp kazananı hisle değil veriyle seçme pratiğinin tanımı.",
       shortDef:
         "Reklam kreatiflerini — video, görsel, metin — kontrollü deneylerle birbirine karşı yarıştırıp kazananı hisle değil veriyle seçme pratiği; sürdürülebilir reklam performansının motoru.",
       sections: [
@@ -30,7 +30,7 @@ export const creativeTesting: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için kreatif testi neden önemli?",
           blocks: [
             {
               type: "p",
@@ -43,6 +43,10 @@ export const creativeTesting: Concept = {
                 "Kaybeden kreatif israf değildir; neyin çalışmadığı bilgisi bir sonraki üretimi yönlendirir.",
                 "Sonuçlara güvenmek için ölçüm altyapısının (pixel, CAPI) doğru olması ön koşuldur.",
               ],
+            },
+            {
+              type: "p",
+              text: "Testi yanlış okumanın en sık yollarını — erken bakma, yetersiz güç, yanlış pozitif — [beş hook testi yazımızda](/tr/blog/ayni-urun-5-farkli-hook-hangisi-durduruyor) inceledik; kreatifin ne zaman yenileneceği için [kreatif yorgunluğu yazımıza](/tr/blog/kreatif-yorgunlugu-reklam-frekansi) bak.",
             },
           ],
         },
@@ -57,14 +61,14 @@ export const creativeTesting: Concept = {
           a: "Bütçenin sağlıklı veri biriktirebileceği kadar: az bütçeye çok varyasyon bölmek hiçbirine yeterli sinyal bırakmaz. Az ama net hipotezli varyasyon, çok ama rastgele varyasyondan daha hızlı öğretir.",
         },
       ],
-      tags: ["Kreatif testi", "A/B testi", "Reklam optimizasyonu"],
+      tags: ["Kreatif testi", "A/B testi", "Reklam optimizasyonu", "Kreatif strateji"],
     },
     en: {
       slug: "creative-testing",
       name: "Creative Testing",
-      metaTitle: "What Is Creative Testing? | Soleach Concepts",
+      metaTitle: "What Is Creative Testing? Ad A/B Testing | Soleach Concepts",
       metaDescription:
-        "Creative testing explained: racing ad videos and visuals in controlled experiments and picking winners with data instead of taste.",
+        "Creative testing explained: racing ad videos and visuals against each other in controlled A/B tests, and picking winners with data instead of taste.",
       shortDef:
         "The practice of racing ad creatives — videos, visuals, copy — against each other in controlled experiments and picking winners with data rather than taste; the engine of sustainable ad performance.",
       sections: [
@@ -82,7 +86,7 @@ export const creativeTesting: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why creative testing matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -95,6 +99,10 @@ export const creativeTesting: Concept = {
                 "A losing creative is not waste; knowing what doesn't work steers the next production round.",
                 "Trusting results requires correct measurement infrastructure (pixel, CAPI) underneath.",
               ],
+            },
+            {
+              type: "p",
+              text: "We cover the most common ways a test gets misread — peeking, low power, false positives — in our [five hooks test](/en/blog/same-product-five-hooks-which-one-stops-the-scroll) post; for when to refresh instead, see [creative fatigue](/en/blog/creative-fatigue-ad-frequency-when-to-refresh).",
             },
           ],
         },
@@ -109,7 +117,7 @@ export const creativeTesting: Concept = {
           a: "As many as your budget can feed with healthy data: splitting a small budget across many variations leaves none with enough signal. Fewer variations with clear hypotheses teach faster than many random ones.",
         },
       ],
-      tags: ["Creative testing", "A/B testing", "Ad optimization"],
+      tags: ["Creative testing", "A/B testing", "Ad optimization", "Creative strategy"],
     },
   },
 };

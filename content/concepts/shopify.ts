@@ -12,7 +12,7 @@ export const shopify: Concept = {
       name: "Shopify",
       metaTitle: "Shopify Nedir? E-ticaret Altyapısı | Soleach Kavramlar",
       metaDescription:
-        "Shopify nedir? Kozmetik markalarının e-ticaret sitelerini kurduğu platformun tanımı, güçlü yanları ve reklam altyapısıyla ilişkisi.",
+        "Shopify nedir, nasıl çalışır? Kozmetik markalarının e-ticaret mağazasını kurduğu platformun tanımı, güçlü yanları ve reklam ölçümüyle ilişkisi.",
       shortDef:
         "Kendi e-ticaret siteni kod yazmadan kurup yönetmeni sağlayan abonelikli platform; hız, güvenlik ve reklam entegrasyonlarını hazır getirdiği için performans pazarlamasının en yaygın zemini.",
       sections: [
@@ -30,7 +30,7 @@ export const shopify: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için Shopify neden önemli?",
           blocks: [
             {
               type: "p",
@@ -43,6 +43,10 @@ export const shopify: Concept = {
                 "Ölçüm entegrasyonlarının 'açık' olması doğru çalıştığı anlamına gelmez; event doğrulaması yine gerekir.",
                 "Tema seçiminde estetik kadar performans (sayfa hızı) kriter olmalıdır.",
               ],
+            },
+            {
+              type: "p",
+              text: "Kozmetik markası için mağazayı kurarken satışı belirleyen kararları [Shopify kurulum rehberimizde](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu), ölçüm tarafını ise [bu yazıda](/tr/blog/reklam-ajanslari-neden-shopify-seviyor) anlattık.",
             },
           ],
         },
@@ -57,14 +61,14 @@ export const shopify: Concept = {
           a: "Dolaylı ama güçlü şekilde: sayfa hızı, ödeme akışının sürtünmesi ve ölçüm entegrasyonlarının doğruluğu reklamın dönüşüm maliyetine doğrudan yansır. İyi kurulmuş bir mağaza, aynı reklam bütçesinden daha çok satış çıkarır.",
         },
       ],
-      tags: ["Shopify", "E-ticaret", "Altyapı"],
+      tags: ["Shopify", "Shopify mağaza kurulumu", "E-ticaret", "Altyapı"],
     },
     en: {
       slug: "shopify",
       name: "Shopify",
-      metaTitle: "What Is Shopify? E-commerce Infrastructure | Soleach Concepts",
+      metaTitle: "What Is Shopify? E-commerce Infrastructure | Soleach",
       metaDescription:
-        "Shopify explained: the platform beauty brands build their stores on, its strengths, and how it connects to ad measurement infrastructure.",
+        "Shopify explained: the platform beauty brands build their online store on, its strengths, and how it connects to ad measurement infrastructure.",
       shortDef:
         "The subscription platform for building and running your own e-commerce store without writing code; the most common foundation for performance marketing thanks to built-in speed, security and ad integrations.",
       sections: [
@@ -82,7 +86,7 @@ export const shopify: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why Shopify matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -95,6 +99,10 @@ export const shopify: Concept = {
                 "Measurement integrations being 'on' doesn't mean they're correct; event verification is still required.",
                 "Theme selection should weigh performance (page speed) as much as aesthetics.",
               ],
+            },
+            {
+              type: "p",
+              text: "We cover the decisions that determine sales when building the store in our [Shopify setup guide](/en/blog/shopify-store-setup-for-cosmetics-brands), and the measurement side [here](/en/blog/why-ad-agencies-love-shopify).",
             },
           ],
         },
@@ -109,7 +117,7 @@ export const shopify: Concept = {
           a: "Indirectly but strongly: page speed, checkout friction and the accuracy of measurement integrations feed straight into your cost per conversion. A well-built store extracts more sales from the same ad budget.",
         },
       ],
-      tags: ["Shopify", "E-commerce", "Infrastructure"],
+      tags: ["Shopify", "Shopify store setup", "E-commerce", "Infrastructure"],
     },
   },
 };

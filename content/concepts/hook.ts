@@ -13,7 +13,7 @@ export const hook: Concept = {
       graphLabel: "Hook",
       metaTitle: "Hook Nedir? Video Reklamda İlk Saniyeler | Soleach Kavramlar",
       metaDescription:
-        "Hook nedir? Video reklamın ilk saniyelerinde izleyiciyi durduran açılışın tanımı, neden reklam performansının en büyük kaldıracı olduğu.",
+        "Hook (video açılışı) nedir? Video reklamın ilk 3 saniyesinde izleyiciyi durduran açılışın tanımı ve reklam performansındaki belirleyici rolü.",
       shortDef:
         "Video reklamın ilk birkaç saniyesinde izleyiciyi kaydırmaktan vazgeçiren açılış; aynı videonun performansını tek başına katlayabilen ya da sıfırlayabilen en kritik kreatif öğe.",
       sections: [
@@ -31,7 +31,7 @@ export const hook: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için hook neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const hook: Concept = {
                 "İzleyicinin problemiyle açılan hook'lar, ürünle açılanlardan genelde daha güçlüdür.",
                 "Hook'un başarısı histen değil metrikten okunur: 3 saniye izlenme oranı ve devam oranı.",
               ],
+            },
+            {
+              type: "p",
+              text: "Beş farklı hook'u yarıştırıp kazananı doğru seçmeyi [hook testi yazımızda](/tr/blog/ayni-urun-5-farkli-hook-hangisi-durduruyor) adım adım anlattık; testin yöntemi için [kreatif testi](/tr/kavramlar/kreatif-testi) kavramına bak.",
             },
           ],
         },
@@ -58,15 +62,15 @@ export const hook: Concept = {
           a: "Aynı video gövdesine farklı açılışlar ekleyip aynı kitle ve bütçeyle yarıştırarak. Karşılaştırma metriği izlenme başlangıcı değil; 3 saniye izlenme oranı, devam oranı ve nihayetinde dönüşüm maliyetidir.",
         },
       ],
-      tags: ["Hook", "Video reklam", "Kreatif"],
+      tags: ["Hook", "Video açılışı", "İlk 3 saniye", "Video reklam", "Kreatif"],
     },
     en: {
       slug: "hook",
       name: "Hook (Video Opening)",
       graphLabel: "Hook",
-      metaTitle: "What Is a Hook? The First Seconds of Video Ads | Soleach Concepts",
+      metaTitle: "What Is a Hook? The First Seconds of Video Ads | Soleach",
       metaDescription:
-        "The hook explained: the opening seconds that stop a viewer from scrolling, and why it is the single biggest lever in video ad performance.",
+        "The hook (video opening) explained: the first three seconds that stop a viewer scrolling, and why it is the biggest lever in video ad performance.",
       shortDef:
         "The opening seconds of a video ad that stop the viewer from scrolling past; the single creative element that can multiply — or zero out — the performance of the same video.",
       sections: [
@@ -84,7 +88,7 @@ export const hook: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why the hook matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -97,6 +101,10 @@ export const hook: Concept = {
                 "Hooks that open on the viewer's problem usually beat hooks that open on the product.",
                 "Hook success is read from metrics, not gut feel: 3-second view rate and hold rate.",
               ],
+            },
+            {
+              type: "p",
+              text: "We walk through racing five hooks and picking the winner correctly in our [hook testing](/en/blog/same-product-five-hooks-which-one-stops-the-scroll) post; for the method behind it, see [creative testing](/en/concepts/creative-testing).",
             },
           ],
         },
@@ -111,7 +119,7 @@ export const hook: Concept = {
           a: "Attach different openings to the same video body and race them on the same audience and budget. Compare on 3-second view rate, hold rate and ultimately cost per conversion — not on impressions.",
         },
       ],
-      tags: ["Hook", "Video ads", "Creative"],
+      tags: ["Hook", "Video opening", "First three seconds", "Video ads", "Creative"],
     },
   },
 };

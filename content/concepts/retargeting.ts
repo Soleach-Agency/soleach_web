@@ -31,7 +31,7 @@ export const retargeting: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için retargeting neden önemli?",
           blocks: [
             {
               type: "p",
@@ -44,6 +44,10 @@ export const retargeting: Concept = {
                 "Sıklık sınırı önemlidir; aynı kişiye aynı reklamı defalarca göstermek marka algısını yıpratır.",
                 "Sepet hatırlatmasından ibaret değildir: itiraz gideren içerik ve sosyal kanıt da bu katmanın işidir.",
               ],
+            },
+            {
+              type: "p",
+              text: "Retargeting kitlesi küçük olduğu için kreatif hızlı yorulur; frekans eşiklerini [kreatif yorgunluğu yazımızda](/tr/blog/kreatif-yorgunlugu-reklam-frekansi) inceledik. Katmanların bütünü için [funnel](/tr/kavramlar/funnel) kavramına bak.",
             },
           ],
         },
@@ -58,12 +62,12 @@ export const retargeting: Concept = {
           a: "Çünkü zaten satın almaya en yakın kişilere gösterim yapar; bir kısmı reklamsız da dönecekti. Bu yüzden retargeting performansını tek başına değil, toplam yeni müşteri maliyetiyle birlikte okumak gerekir.",
         },
       ],
-      tags: ["Retargeting", "Yeniden hedefleme", "Meta reklamları"],
+      tags: ["Retargeting", "Yeniden hedefleme", "Remarketing", "Meta Ads"],
     },
     en: {
       slug: "retargeting",
       name: "Retargeting",
-      metaTitle: "What Is Retargeting? | Soleach Concepts",
+      metaTitle: "What Is Retargeting? Remarketing Explained | Soleach",
       metaDescription:
         "Retargeting explained: showing ads again to people who visited your site but didn't buy — how it works and how to use it without fooling your reports.",
       shortDef:
@@ -83,7 +87,7 @@ export const retargeting: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why retargeting matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -96,6 +100,10 @@ export const retargeting: Concept = {
                 "Frequency caps matter; hammering the same person with the same ad erodes brand perception.",
                 "It is more than cart reminders: objection-handling content and social proof belong to this layer too.",
               ],
+            },
+            {
+              type: "p",
+              text: "Retargeting audiences are small, so creative fatigues fast — we cover the frequency thresholds in our [creative fatigue](/en/blog/creative-fatigue-ad-frequency-when-to-refresh) post. For how the layers fit together, see [funnel](/en/concepts/funnel).",
             },
           ],
         },
@@ -110,7 +118,7 @@ export const retargeting: Concept = {
           a: "Because it serves the people already closest to buying — some of whom would have converted without the ad. Read retargeting performance together with your blended new-customer cost, never on its own.",
         },
       ],
-      tags: ["Retargeting", "Remarketing", "Meta ads"],
+      tags: ["Retargeting", "Remarketing", "Meta Ads"],
     },
   },
 };

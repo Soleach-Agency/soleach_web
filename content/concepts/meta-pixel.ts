@@ -16,7 +16,7 @@ export const metaPixel: Concept = {
       name: "Meta Pixel",
       metaTitle: "Meta Pixel Nedir? Doğru Kurulum ve Ölçüm | Soleach Kavramlar",
       metaDescription:
-        "Meta Pixel nedir, ne işe yarar? Sitedeki ziyaretçi davranışını Meta reklam sistemine taşıyan ölçüm kodunun tanımı ve doğru kurulumun önemi.",
+        "Meta Pixel (Facebook pixel) nedir, ne işe yarar? Ziyaretçi davranışını Meta reklam sistemine taşıyan dönüşüm takibi kodunun tanımı ve doğru kurulumu.",
       shortDef:
         "Sitene eklenen ve ziyaretçilerin hangi sayfaları gezdiğini, neyi sepete attığını, neyi satın aldığını Meta'nın reklam sistemine bildiren ölçüm kodu; reklam optimizasyonunun veri kaynağı.",
       sections: [
@@ -34,7 +34,7 @@ export const metaPixel: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için Meta Pixel neden önemli?",
           blocks: [
             {
               type: "p",
@@ -47,6 +47,10 @@ export const metaPixel: Concept = {
                 "Event'lerin değer (value) parametresi doğru gönderilmezse ROAS hesabın gerçeği yansıtmaz.",
                 "Shopify gibi platformlarda hazır entegrasyon var, ama çift tetiklenme ve eksik event kontrolü yine de şart.",
               ],
+            },
+            {
+              type: "p",
+              text: "Pixel kuruluyken bile ölçümün nerede kırıldığını [Meta Pixel ölçüm hataları yazımızda](/tr/blog/meta-pixel-olcum-hatalari-satis-atfi) tek tek inceledik; sunucu tarafındaki tamamlayıcısı için [Conversions API](/tr/kavramlar/conversion-api) kavramına bak.",
             },
           ],
         },
@@ -61,12 +65,12 @@ export const metaPixel: Concept = {
           a: "Pixel tarayıcıda çalışır ve tarayıcı kısıtlamaları, çerez engelleri ya da reklam engelleyiciler sinyalin bir kısmını düşürür. Conversions API aynı event'leri sunucudan göndererek bu kaybı telafi eder; Meta ikisinin birlikte kullanılmasını önerir.",
         },
       ],
-      tags: ["Meta Pixel", "Ölçüm", "Meta reklamları"],
+      tags: ["Meta Pixel", "Facebook pixel", "Dönüşüm takibi", "Ölçümleme", "Meta Ads"],
     },
     en: {
       slug: "meta-pixel",
       name: "Meta Pixel",
-      metaTitle: "What Is the Meta Pixel? Setup and Measurement | Soleach Concepts",
+      metaTitle: "What Is the Meta Pixel? Setup and Measurement | Soleach",
       metaDescription:
         "The Meta Pixel explained: the measurement code that feeds visitor behavior into Meta's ad system, and why a correct setup decides how well your ads optimize.",
       shortDef:
@@ -86,7 +90,7 @@ export const metaPixel: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why the Meta Pixel matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -99,6 +103,10 @@ export const metaPixel: Concept = {
                 "If the event's value parameter is wrong, your ROAS math no longer reflects reality.",
                 "Platforms like Shopify ship a native integration, but double-firing and missing-event checks are still on you.",
               ],
+            },
+            {
+              type: "p",
+              text: "We break down exactly where measurement breaks even with the pixel installed in our [Meta Pixel measurement errors](/en/blog/meta-pixel-measurement-errors-attribution) post; for the server-side counterpart, see [Conversions API](/en/concepts/conversions-api).",
             },
           ],
         },
@@ -113,7 +121,7 @@ export const metaPixel: Concept = {
           a: "The pixel runs in the browser, and browser restrictions, cookie limits or ad blockers drop part of the signal. The Conversions API sends the same events from the server to recover that loss; Meta recommends running both together.",
         },
       ],
-      tags: ["Meta Pixel", "Measurement", "Meta ads"],
+      tags: ["Meta Pixel", "Facebook pixel", "Conversion tracking", "Measurement", "Meta Ads"],
     },
   },
 };

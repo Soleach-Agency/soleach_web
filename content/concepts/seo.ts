@@ -13,7 +13,7 @@ export const seo: Concept = {
       graphLabel: "SEO",
       metaTitle: "SEO Nedir? Arama Motoru Optimizasyonu | Soleach Kavramlar",
       metaDescription:
-        "SEO (arama motoru optimizasyonu) nedir? Kozmetik markaları için organik görünürlüğün temeli olan disiplinin tanımı ve GEO ile ilişkisi.",
+        "SEO (arama motoru optimizasyonu) nedir? Kozmetik markaları için organik trafiğin temeli olan teknik ve içerik çalışmasının tanımı, GEO ile ilişkisi.",
       shortDef:
         "Sitenin arama motorlarında taranabilir, anlaşılır ve üst sıralarda görünür olmasını sağlayan teknik ve içerik çalışmalarının bütünü; yapay zekâ görünürlüğünün de zemini.",
       sections: [
@@ -31,7 +31,7 @@ export const seo: Concept = {
           ],
         },
         {
-          h2: "Kozmetik markaları için neden önemli?",
+          h2: "Kozmetik markaları için SEO neden önemli?",
           blocks: [
             {
               type: "p",
@@ -40,6 +40,10 @@ export const seo: Concept = {
             {
               type: "p",
               text: "Ayrıca SEO artık yalnızca Google için değil: yapay zekâ motorları da cevaplarını taranabilir web içeriğinden kurar. Yani sağlam SEO, markanın yapay zekâ yanıtlarında anılmasının (GEO) ön koşuludur.",
+            },
+            {
+              type: "p",
+              text: "Kozmetik markaları için SEO'nun uygulamaya dönük hâlini [Shopify mağaza kurulumu rehberimizde](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu), yapay zekâ tarafını ise [GEO](/tr/kavramlar/geo) kavramında bulabilirsin.",
             },
           ],
         },
@@ -54,7 +58,7 @@ export const seo: Concept = {
           a: "Reklam, bütçeyle orantılı ve bütçe bitince duran bir trafik kaynağıdır. SEO ise zamanla ucuzlayan ve durmayan bir kanal kurar. İkisi rakip değil; sağlıklı bir karışımda birbirini besler.",
         },
       ],
-      tags: ["SEO", "Organik trafik", "İçerik stratejisi"],
+      tags: ["SEO", "Arama motoru optimizasyonu", "Organik trafik", "İçerik stratejisi"],
     },
     en: {
       slug: "seo",
@@ -80,7 +84,7 @@ export const seo: Concept = {
           ],
         },
         {
-          h2: "Why it matters for beauty brands",
+          h2: "Why SEO matters for beauty brands",
           blocks: [
             {
               type: "p",
@@ -89,6 +93,10 @@ export const seo: Concept = {
             {
               type: "p",
               text: "SEO is also no longer just for Google: AI engines build their answers from crawlable web content. Solid SEO is therefore the precondition for being mentioned in AI answers — the discipline known as GEO.",
+            },
+            {
+              type: "p",
+              text: "For the practical side, see our [Shopify store setup guide](/en/blog/shopify-store-setup-for-cosmetics-brands); for the AI layer built on top of it, see [GEO](/en/concepts/generative-engine-optimization).",
             },
           ],
         },
@@ -103,7 +111,7 @@ export const seo: Concept = {
           a: "Advertising is a traffic source proportional to budget that stops when the budget does. SEO builds a channel that gets cheaper over time and doesn't switch off. They are not rivals; in a healthy mix they feed each other.",
         },
       ],
-      tags: ["SEO", "Organic traffic", "Content strategy"],
+      tags: ["SEO", "Search engine optimization", "Organic traffic", "Content strategy"],
     },
   },
 };

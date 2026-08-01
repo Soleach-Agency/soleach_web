@@ -8,8 +8,8 @@ export const ekrandaParfumSatmak: BlogPost = {
     tr: {
       slug: "kokusu-duyulmayan-ekranda-parfum-nasil-satilir",
       title: "Kokusu duyulmayan ekranda parfüm nasıl satılır?",
-      metaTitle: "Ekranda Parfüm Nasıl Satılır? Duyusal Kreatif Rehberi | Soleach",
-      metaDescription: "Koku ekrandan geçmez — ama hayal edilebilir. Görsel, biçim ve sesin kokuyu nasıl taşıdığını ve bu taktiklerin nerede geri teptiğini hakemli kaynaklarla anlattık.",
+      metaTitle: "Ekranda Parfüm Nasıl Satılır? Duyusal Kreatif | Soleach",
+      metaDescription: "Koku ekrandan geçmez — ama hayal edilebilir. Görsel, biçim ve sesin kokuyu nasıl taşıdığını ve bu taktiklerin nerede geri teptiğini kaynaklarıyla anlattık.",
       excerpt: "Parfümün reklam problemi ürünün kendisinde değil, mecrada: ekran koku taşımıyor. Ama araştırmalar hayal edilen kokunun ürün değerlendirmesini değiştirdiğini gösteriyor — belirli koşullarda. O koşulları ve sınırlarını inceledik.",
       intro: [
         "Parfüm, güzellik kategorisinin en zor reklam problemidir. Bir ruju gösterebilirsin, bir serumun dokusunu çekebilirsin — ama kokuyu ekrandan geçiremezsin. Elinde yalnızca şişe, bir yüz ve birkaç sıfat kalır: \"ferah\", \"odunsu\", \"baştan çıkarıcı\". Bu sıfatların hiçbiri kimsenin burnunda bir şey uyandırmaz.",
@@ -212,13 +212,13 @@ export const ekrandaParfumSatmak: BlogPost = {
         "Parfüm",
         "Duyusal pazarlama",
         "Kreatif strateji",
-        "Kozmetik",
+        "Kozmetik pazarlaması",
       ],
     },
     en: {
       slug: "how-to-sell-perfume-on-a-screen-that-cannot-smell",
       title: "How do you sell perfume on a screen that can't smell?",
-      metaTitle: "Selling Perfume on Screen: A Sensory Creative Guide | Soleach",
+      metaTitle: "Selling Perfume on Screen: A Sensory Guide | Soleach",
       metaDescription: "Scent doesn't travel through a screen — but it can be imagined. How pictures, shapes and sound carry a scent, and where those tactics backfire, with sources.",
       excerpt: "Perfume's advertising problem isn't the product, it's the medium: screens carry no scent. Research shows imagined scent does move product evaluations — under specific conditions. Here are those conditions, and their limits.",
       intro: [
@@ -422,7 +422,7 @@ export const ekrandaParfumSatmak: BlogPost = {
         "Perfume",
         "Sensory marketing",
         "Creative strategy",
-        "Cosmetics",
+        "Cosmetics marketing",
       ],
     },
   },
