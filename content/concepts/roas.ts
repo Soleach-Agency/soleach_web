@@ -5,7 +5,11 @@ export const roas: Concept = {
   category: "ads",
   publishedAt: "2026-07-28",
   related: ["cpa", "retargeting", "cro", "creative-testing"],
-  postIds: ["instagram-reklam-rehberi", "meta-pixel-olcum-hatalari"],
+  postIds: [
+    "instagram-reklam-rehberi",
+    "meta-pixel-olcum-hatalari",
+    "sosyal-medya-analitik-araclari",
+  ],
   locales: {
     tr: {
       slug: "roas",

@@ -1,7 +1,7 @@
 import type { Locale } from "./i18n";
 import { localeHtmlLang } from "./i18n";
 import { getDictionary } from "./dictionaries";
-import { getPosts, getPostBySlug, type BlogBlock } from "./blog";
+import { getPosts, getPostBySlug, type BlogBlock, type BlogSection } from "./blog";
 import {
   getConceptBySlug,
   getConceptPosts,
@@ -60,6 +60,16 @@ function block(b: BlogBlock): string | null {
   }
 }
 
+/**
+ * An H2 line, carrying the section's anchor as `{#id}` when one is declared —
+ * the attribute syntax Pandoc/kramdown understand, so `[label](#id)` jump links
+ * inside the article resolve in the markdown twin exactly as they do in HTML.
+ */
+function sectionHeading(section: BlogSection): string {
+  const text = `## ${absolutise(section.h2)}`;
+  return section.id ? `${text} {#${section.id}}` : text;
+}
+
 function faqSection(items: { q: string; a: string }[], heading: string): string[] {
   if (items.length === 0) return [];
   const out = [`## ${heading}`, ""];
@@ -93,7 +103,7 @@ export function postMarkdown(locale: Locale, slug: string): string | null {
   ];
 
   for (const section of content.sections) {
-    out.push(`## ${absolutise(section.h2)}`, "");
+    out.push(sectionHeading(section), "");
     for (const b of section.blocks) {
       const rendered = block(b);
       if (rendered) out.push(rendered, "");
@@ -349,7 +359,7 @@ export function conceptMarkdown(locale: Locale, slug: string): string | null {
   ];
 
   for (const section of content.sections) {
-    out.push(`## ${absolutise(section.h2)}`, "");
+    out.push(sectionHeading(section), "");
     for (const b of section.blocks) {
       const rendered = block(b);
       if (rendered) out.push(rendered, "");

@@ -9,6 +9,7 @@ export const metaPixel: Concept = {
     "meta-pixel-olcum-hatalari",
     "shopify-magaza-kurulumu",
     "reklam-ajanslari-neden-shopify",
+    "sosyal-medya-analitik-araclari",
   ],
   locales: {
     tr: {

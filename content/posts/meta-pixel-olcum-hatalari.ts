@@ -170,7 +170,7 @@ export const metaPixelOlcumHatalari: BlogPost = {
             },
             {
               type: "p",
-              text: "Bu listenin çoğu, reklam bütçesi harcamadan önce halledilmesi gereken işler. Reklam tarafının bütününe bakmak istersen [güzellik markaları için Instagram reklamlarına başlangıç rehberimiz](/tr/blog/guzellik-markalari-icin-instagram-reklam-rehberi) bu kurulumu daha geniş bir çerçeveye oturtuyor; ölçümün yarısı mağaza tarafında kırıldığı için [kozmetik markası için Shopify mağaza kurulumu rehberine](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) ve [web & e-ticaret hizmetimize](/tr/services#web-ecommerce) de bakmanı öneririz.",
+              text: "Bu listenin çoğu, reklam bütçesi harcamadan önce halledilmesi gereken işler. Reklam tarafının bütününe bakmak istersen [güzellik markaları için Instagram reklamlarına başlangıç rehberimiz](/tr/blog/guzellik-markalari-icin-instagram-reklam-rehberi) bu kurulumu daha geniş bir çerçeveye oturtuyor; ölçümün yarısı mağaza tarafında kırıldığı için [kozmetik markası için Shopify mağaza kurulumu rehberine](/tr/blog/kozmetik-markasi-icin-shopify-magaza-kurulumu) ve [web & e-ticaret hizmetimize](/tr/services#web-ecommerce) de bakmanı öneririz. Pikselin ölçtüğü reklam tarafının yanında organik içeriğin hangi araçla ölçüleceğini ise [güzellik markaları için sosyal medya analitik araçları yazımızda](/tr/blog/guzellik-markalari-icin-sosyal-medya-analitik-araclari) karşılaştırdık.",
             },
           ],
         },
@@ -391,7 +391,7 @@ export const metaPixelOlcumHatalari: BlogPost = {
             },
             {
               type: "p",
-              text: "Most of this belongs before you spend on ads. For the wider picture on the ads side, our [starter guide to Instagram advertising for beauty brands](/en/blog/instagram-ads-guide-for-beauty-brands) puts this setup in context; and since half of measurement breaks on the store side, see the [Shopify store setup guide for cosmetics brands](/en/blog/shopify-store-setup-for-cosmetics-brands) and our [web & e-commerce service](/en/services#web-ecommerce).",
+              text: "Most of this belongs before you spend on ads. For the wider picture on the ads side, our [starter guide to Instagram advertising for beauty brands](/en/blog/instagram-ads-guide-for-beauty-brands) puts this setup in context; and since half of measurement breaks on the store side, see the [Shopify store setup guide for cosmetics brands](/en/blog/shopify-store-setup-for-cosmetics-brands) and our [web & e-commerce service](/en/services#web-ecommerce). The Pixel covers the paid side; which tool measures the organic side is compared in our piece on [social media analytics tools for beauty brands](/en/blog/social-media-analytics-tools-for-beauty-brands).",
             },
           ],
         },

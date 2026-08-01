@@ -93,6 +93,14 @@ doğal geçiş).
 | `ekranda-parfum-satmak` | parfüm online nasıl satılır | how to sell perfume online |
 | `reklam-ajanslari-neden-shopify` | Shopify Meta pixel kurulumu | Shopify Meta pixel setup |
 | `kreatif-yorgunlugu-frekans` | reklam frekansı kaç olmalı / kreatif yorgunluğu | ad frequency / creative fatigue |
+| `sosyal-medya-analitik-araclari` | sosyal medya analiz araçları / Instagram analiz aracı | social media analytics tools / Instagram analytics tools |
+
+**Varyantlar —** TR: sosyal medya analiz aracı · Instagram istatistik aracı ·
+TikTok analiz aracı · sosyal medya raporlama aracı · Instagram Insights ·
+rakip analizi aracı. EN: social media analytics tool · Instagram insights ·
+TikTok analytics · social media reporting tool · competitor benchmarking tool.
+Sahibi **blog** (§1: karşılaştırma niyeti). Kavram sayfası açılmadı — yazı
+araçları karşılaştırıyor, bir terim tanımlamıyor.
 
 ---
 
@@ -141,6 +149,7 @@ entity sinyalini böler. Kanonik biçim:
 | Kreatif testi | Kreatif test |
 | A/B testi | A/B test |
 | Ölçümleme | Ölçüm |
+| Sosyal medya analitiği | Sosyal medya analizi, Analitik |
 | Dönüşüm oranı optimizasyonu | Dönüşüm optimizasyonu |
 
 | Kanonik EN | Birleştirilen varyantlar |
@@ -150,6 +159,7 @@ entity sinyalini böler. Kanonik biçim:
 | Creative testing | Creative testing (post: "Hooks" → "Hook") |
 | A/B testing | — |
 | Measurement | — |
+| Social media analytics | Social analytics, Analytics |
 | Conversion rate optimization | Conversion optimization |
 
 ---

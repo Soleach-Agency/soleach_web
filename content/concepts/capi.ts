@@ -5,7 +5,11 @@ export const capi: Concept = {
   category: "ads",
   publishedAt: "2026-07-28",
   related: ["cpa"],
-  postIds: ["meta-pixel-olcum-hatalari", "reklam-ajanslari-neden-shopify"],
+  postIds: [
+    "meta-pixel-olcum-hatalari",
+    "reklam-ajanslari-neden-shopify",
+    "sosyal-medya-analitik-araclari",
+  ],
   locales: {
     tr: {
       slug: "conversion-api",

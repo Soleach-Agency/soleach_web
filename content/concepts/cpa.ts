@@ -5,7 +5,7 @@ export const cpa: Concept = {
   category: "ads",
   publishedAt: "2026-07-28",
   related: ["funnel"],
-  postIds: ["instagram-reklam-rehberi"],
+  postIds: ["instagram-reklam-rehberi", "sosyal-medya-analitik-araclari"],
   locales: {
     tr: {
       slug: "cpa",

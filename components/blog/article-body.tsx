@@ -2,13 +2,14 @@ import type { ReactNode } from "react";
 import type { BlogBlock, BlogSection } from "@/lib/blog";
 
 /**
- * Renders markdown-style inline markup: links — `[text](https://…)` for sources
- * and `[text](/tr/blog/…)` for internal links — plus `**bold**` emphasis.
- * Internal links stay in the same tab. Everything else stays plain text.
+ * Renders markdown-style inline markup: links — `[text](https://…)` for sources,
+ * `[text](/tr/blog/…)` for internal links and `[text](#section-id)` for jumps to
+ * a section on the same page — plus `**bold**` emphasis. Internal links and
+ * anchors stay in the same tab. Everything else stays plain text.
  */
 export function renderInline(text: string): ReactNode[] {
   const parts: ReactNode[] = [];
-  const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)|\*\*([^*]+)\*\*/g;
+  const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|[/#][^\s)]*)\)|\*\*([^*]+)\*\*/g;
   let last = 0;
   let match: RegExpExecArray | null;
   while ((match = re.exec(text)) !== null) {
@@ -152,7 +153,12 @@ export function ArticleBody({ sections }: { sections: BlogSection[] }) {
     <div className="space-y-12">
       {sections.map((section) => (
         <section key={section.h2}>
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          {/* `scroll-mt` keeps the heading clear of the sticky header when an
+              in-page `[label](#id)` link jumps here. */}
+          <h2
+            id={section.id}
+            className="scroll-mt-24 font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+          >
             {section.h2}
           </h2>
           <div className="mt-5 space-y-5">

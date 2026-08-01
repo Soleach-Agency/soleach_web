@@ -29,6 +29,14 @@ export type BlogBlock =
 
 export interface BlogSection {
   h2: string;
+  /**
+   * Stable anchor for this section — rendered as the `<h2>` id and emitted in
+   * the markdown twin as `## Heading {#id}`. Set it when the article links to
+   * its own sections (`[label](#id)`), e.g. a jump list at the top of a
+   * comparison post; keep it ASCII and independent of the heading text so
+   * editing the heading never breaks an inbound link.
+   */
+  id?: string;
   blocks: BlogBlock[];
 }
 
