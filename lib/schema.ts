@@ -138,10 +138,17 @@ export function blogPostingSchema(
     tags: string[];
     categoryTitle: string;
     sources?: { label: string; url: string; publisher?: string }[];
+    /** Site-root paths of the article's own images — screenshots beat the
+     * generic OG card as the representative image when the post has them. */
+    images?: string[];
   },
 ) {
   const dict = getDictionary(locale);
   const url = localeUrl(locale, `${dict.routes.blog}/${args.slug}`);
+  const image =
+    args.images && args.images.length > 0
+      ? args.images.map((src) => `${siteUrl}${src}`)
+      : ogImageUrl(locale);
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -150,7 +157,7 @@ export function blogPostingSchema(
     url,
     headline: args.title,
     description: args.description,
-    image: ogImageUrl(locale),
+    image,
     datePublished: args.publishedAt,
     dateModified: args.updatedAt ?? args.publishedAt,
     inLanguage: localeHtmlLang[locale],

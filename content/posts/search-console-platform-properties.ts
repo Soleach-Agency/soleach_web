@@ -3,20 +3,38 @@ import type { BlogPost } from "@/lib/blog";
 export const searchConsolePlatformProperties: BlogPost = {
   id: "search-console-platform-properties",
   publishedAt: "2026-08-01",
+  updatedAt: "2026-08-02",
   category: "seo-geo",
   locales: {
     tr: {
       slug: "search-console-platform-properties-instagram-tiktok-youtube",
-      title: "Instagram ve TikTok içeriğin Google'da hangi kelimeyle bulunuyor?",
-      metaTitle: "Search Console Platform Properties Nedir? | Soleach",
-      metaDescription: "Google Search Console artık Instagram, TikTok, X ve YouTube hesaplarını mülk olarak kabul ediyor. Ne veri veriyor, neyi vermiyor ve güzellik markaları için ne anlama geliyor?",
-      excerpt: "Bir Reels attın, birkaç gün sonra beklemediğin bir izlenme dalgası geldi. Instagram sana \"aramadan geldi\" diyor ama hangi kelimeden geldiğini söylemiyor. Temmuz 2026'da Google bu boşluğu kapattı: sosyal hesaplarını Search Console'a ekleyip, insanların postuna tıklamadan önce Google'a ne yazdığını görebiliyorsun.",
+      title: "Google Search Console'a artık Instagram, TikTok ve YouTube hesabı eklenebiliyor",
+      metaTitle: "Search Console Platform Mülkleri Nedir? (2026) | Soleach",
+      metaDescription: "Google Search Console artık Instagram, TikTok, X ve YouTube hesaplarını mülk olarak kabul ediyor; 29 Temmuz 2026'da herkese açıldı. Ne veri veriyor, neyi vermiyor?",
+      excerpt: "Google, 7 Temmuz 2026'da Search Console'a platform mülkleri adında yeni bir mülk tipi ekledi: Instagram, TikTok, X ve YouTube hesabını doğrulayıp içeriğinin Google Arama'daki performansını sorgu bazında görebiliyorsun. 29 Temmuz'da dünya genelinde herkese açıldı — takipçi eşiği yok, ücretsiz. Peki bu veri neyi gösteriyor, neyi göstermiyor?",
       intro: [
-        "Bir Reels ya da TikTok yayınladın. İlk iki gün normal seyretti, sonra beklemediğin bir izlenme dalgası geldi. Platformun analitik ekranı sana \"arama\" ya da \"keşfet\" diyor — ama hangi kelimenin bu dalgayı getirdiğini söylemiyor. Üstelik o trafiğin bir kısmı platformun kendi aramasından değil, doğrudan Google'dan geliyor olabilir; çünkü Google arama sonuçlarında kısa video karuselleri ve sosyal post modülleri gösteriyor.",
-        "7 Temmuz 2026'da Google bu ölçüm boşluğunu kapattı. Search Console'a \"platform properties\" (platform mülkleri) adında yeni bir mülk tipi eklendi: Instagram, TikTok, X ve YouTube hesabını doğrulayıp, içeriğinin Google Arama ve Discover'daki performansını sorgu bazında görebiliyorsun ([Search Engine Roundtable, 2026](https://www.seroundtable.com/google-search-console-social-content-performance-41636.html)). Özellik kademeli olarak dağıtıldı ve 29 Temmuz 2026 itibarıyla dünya genelinde herkese açıldı ([Search Engine Journal, 2026](https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/)).",
-        "Bu yazıda üç soruyu ayrı ayrı cevaplıyoruz: bu veri tam olarak neyi gösteriyor, neyi kesinlikle göstermiyor, ve bir güzellik markası bunu içerik planına nasıl çevirebilir? Baştan bir uyarı: bu özellik Instagram Insights'ın yerine geçmiyor, yanına ekleniyor.",
+        "Google, 7 Temmuz 2026'da Search Console'a **platform mülkleri** (platform properties) adında yeni bir mülk tipi ekledi: Instagram, TikTok, X ve YouTube hesabını doğrulayıp, içeriğinin Google Arama ve Discover'daki performansını sorgu bazında görebiliyorsun ([Search Engine Roundtable, 2026](https://www.seroundtable.com/google-search-console-social-content-performance-41636.html)). Özellik kademeli olarak dağıtıldı ve 29 Temmuz 2026 itibarıyla dünya genelinde herkese açıldı ([Search Engine Journal, 2026](https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/)). Takipçi eşiği yok, ücretsiz ve kendi web siten olmasa bile kullanabiliyorsun.",
+        "Bunun neyi çözdüğünü bir örnekle görmek kolay. Bir Reels ya da TikTok yayınlıyorsun; ilk iki gün normal seyrediyor, sonra beklemediğin bir izlenme dalgası geliyor. Platformun analitik ekranı sana \"arama\" ya da \"keşfet\" diyor — ama hangi kelimenin bu dalgayı getirdiğini söylemiyor. Üstelik o trafiğin bir kısmı platformun kendi aramasından değil, doğrudan Google'dan geliyor olabilir; çünkü Google arama sonuçlarında kısa video karuselleri ve sosyal post modülleri gösteriyor. Asıl soru şu: Instagram ve TikTok içeriğin Google'da hangi kelimeyle bulunuyor? Platform mülkleri tam olarak bunu cevaplıyor.",
+        "Bu yazıda üç soruyu ayrı ayrı cevaplıyoruz: bu veri tam olarak neyi gösteriyor, neyi kesinlikle göstermiyor, ve bir güzellik markası bunu içerik planına nasıl çevirebilir? Baştan bir uyarı: bu özellik Instagram Insights'ın yerine geçmiyor, yanına ekleniyor. Kurulumun ekran görüntülü anlatımını ayrı bir yazıya ayırdık: [Search Console'a Instagram hesabı nasıl eklenir](/tr/blog/search-console-instagram-hesabi-nasil-eklenir).",
       ],
       sections: [
+        {
+          h2: "30 saniyede: ne değişti?",
+          id: "ne-degisti",
+          blocks: [
+            {
+              type: "ul",
+              items: [
+                "**Ne oldu:** Search Console'a platform mülkleri adında yeni bir mülk tipi eklendi. Sosyal ve video hesaplarını doğrulayıp Google Arama performanslarını görebiliyorsun.",
+                "**Ne zaman:** 7 Temmuz 2026'da duyuruldu, 29 Temmuz 2026'da dünya genelinde herkese açıldı.",
+                "**Hangi platformlar:** Instagram, TikTok, X ve YouTube. Her hesap ayrı bir mülk olarak eklenir.",
+                "**Kimler kullanabilir:** Herkes. Takipçi eşiği yok, ücretsiz ve kendi web siten olması gerekmiyor.",
+                "**Ne veriyor:** Sorgu, gönderi, ülke ve cihaz kırılımında tıklama, gösterim, CTR ve ortalama pozisyon — Google Arama'nın yanı sıra Discover ve Haberler.",
+                "**Ne vermiyor:** Platform içi görüntülenmeleri. Videonun TikTok'ta kaç kez göründüğünü göstermez; geriye dönük veri de gelmez.",
+              ],
+            },
+          ],
+        },
         {
           h2: "Search Console'a Instagram veya TikTok hesabı eklemek ne demek?",
           blocks: [
@@ -155,7 +173,7 @@ export const searchConsolePlatformProperties: BlogPost = {
             {
               type: "ul",
               items: [
-                "Aktif olduğun her hesabı ayrı ayrı ekle. Markanın Instagram'ı, TikTok'u ve YouTube'u varsa üçü için de mülk aç — veri birikmesi zaman aldığı için erken başlamak tek başına bir avantaj.",
+                "Aktif olduğun her hesabı ayrı ayrı ekle. Markanın Instagram'ı, TikTok'u ve YouTube'u varsa üçü için de mülk aç — veri birikmesi zaman aldığı için erken başlamak tek başına bir avantaj. Adımları ekran görüntüleriyle [Instagram hesabı ekleme rehberimizde](/tr/blog/search-console-instagram-hesabi-nasil-eklenir) gösterdik.",
                 "İlk iki hafta hiçbir sonuç çıkarma. Veri toplanması birkaç gün sürüyor ve mülk yeniyse grafikler yalnızca toplama başladığı günden itibaren doluyor. Erken çıkarılan sonuç yanıltıcı olur.",
                 "İlk gerçek analizini sorgu grupları kartından yap. Hangi temaların yükseldiğine bak; bu, bir sonraki içerik döngün için elindeki en ucuz sinyal.",
                 "Format karşılaştırmasını takvimine al. Ayda bir `/p/` ve `/reels/` (ya da `/watch` ve `/shorts/`) kıyasını çalıştır; üretim dengeni buna göre ayarla.",
@@ -235,16 +253,33 @@ export const searchConsolePlatformProperties: BlogPost = {
     },
     en: {
       slug: "search-console-platform-properties-instagram-tiktok-youtube",
-      title: "What search terms bring people to your Instagram and TikTok posts?",
-      metaTitle: "Search Console Platform Properties Explained | Soleach",
-      metaDescription: "Google Search Console now accepts Instagram, TikTok, X and YouTube accounts as properties. What data you get, what you don't, and what it means for beauty brands.",
-      excerpt: "You post a Reel, and a few days later an unexpected wave of views arrives. Instagram tells you it came from search — but not which words. In July 2026 Google closed that gap: connect your social accounts to Search Console and see exactly what people typed into Google before clicking your post.",
+      title: "Google Search Console now accepts Instagram, TikTok and YouTube accounts",
+      metaTitle: "Search Console Platform Properties Explained (2026) | Soleach",
+      metaDescription: "Google Search Console now accepts Instagram, TikTok, X and YouTube accounts as properties, worldwide since 29 July 2026. What data you get and what you don't.",
+      excerpt: "On 7 July 2026 Google added a new Search Console property type called platform properties: verify an Instagram, TikTok, X or YouTube account and see how your content performs in Google Search, query by query. It opened to everyone worldwide on 29 July — no follower threshold, no cost. So what does this data show, and what doesn't it?",
       intro: [
-        "You publish a Reel or a TikTok. The first two days look normal, then an unexpected wave of views arrives. Your platform's analytics screen says \"search\" or \"explore\" — but it won't tell you which term caused it. And some of that traffic may not come from the platform's own search at all, but straight from Google, which now shows short-video carousels and social post modules in its results.",
-        "On 7 July 2026 Google closed that measurement gap. Search Console gained a new property type called platform properties: verify an Instagram, TikTok, X or YouTube account and see how your content performs in Google Search and Discover, query by query ([Search Engine Roundtable, 2026](https://www.seroundtable.com/google-search-console-social-content-performance-41636.html)). The feature rolled out gradually and became available to everyone worldwide on 29 July 2026 ([Search Engine Journal, 2026](https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/)).",
-        "This guide answers three questions separately: what this data actually shows, what it definitively does not show, and how a beauty brand turns it into a content plan. One warning up front — this feature doesn't replace Instagram Insights, it sits alongside it.",
+        "On 7 July 2026 Google added a new Search Console property type called **platform properties**: verify an Instagram, TikTok, X or YouTube account and see how your content performs in Google Search and Discover, query by query ([Search Engine Roundtable, 2026](https://www.seroundtable.com/google-search-console-social-content-performance-41636.html)). The feature rolled out gradually and became available to everyone worldwide on 29 July 2026 ([Search Engine Journal, 2026](https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/)). There is no follower threshold, it costs nothing, and you can use it without a website of your own.",
+        "An example makes the gap it closes obvious. You publish a Reel or a TikTok. The first two days look normal, then an unexpected wave of views arrives. Your platform's analytics screen says \"search\" or \"explore\" — but it won't tell you which term caused it. And some of that traffic may not come from the platform's own search at all, but straight from Google, which now shows short-video carousels and social post modules in its results. The real question is: what search terms bring people to your Instagram and TikTok posts? Platform properties answer exactly that.",
+        "This guide answers three questions separately: what this data actually shows, what it definitively does not show, and how a beauty brand turns it into a content plan. One warning up front — this feature doesn't replace Instagram Insights, it sits alongside it. The setup itself, screenshot by screenshot, lives in a separate guide: [how to add an Instagram account to Search Console](/en/blog/how-to-add-instagram-to-google-search-console).",
       ],
       sections: [
+        {
+          h2: "In 30 seconds: what changed?",
+          id: "what-changed",
+          blocks: [
+            {
+              type: "ul",
+              items: [
+                "**What happened:** Search Console gained a new property type called platform properties. Verify your social and video accounts and you can see how they perform in Google Search.",
+                "**When:** Announced 7 July 2026, opened to everyone worldwide on 29 July 2026.",
+                "**Which platforms:** Instagram, TikTok, X and YouTube. Each account is added as its own property.",
+                "**Who can use it:** Anyone. No follower threshold, no cost, and no website required.",
+                "**What you get:** Clicks, impressions, CTR and average position broken down by query, post, country and device — across Google Search plus Discover and News.",
+                "**What you don't get:** On-platform views. It won't show how many times your video appeared on TikTok, and no historical data arrives retroactively.",
+              ],
+            },
+          ],
+        },
         {
           h2: "What does adding an Instagram or TikTok account to Search Console mean?",
           blocks: [
@@ -383,7 +418,7 @@ export const searchConsolePlatformProperties: BlogPost = {
             {
               type: "ul",
               items: [
-                "Add every account you're active on, separately. If your brand runs Instagram, TikTok and YouTube, open a property for all three — since data takes time to accumulate, starting early is an advantage in itself.",
+                "Add every account you're active on, separately. If your brand runs Instagram, TikTok and YouTube, open a property for all three — since data takes time to accumulate, starting early is an advantage in itself. Our [step-by-step Instagram guide](/en/blog/how-to-add-instagram-to-google-search-console) walks through it with screenshots.",
                 "Draw no conclusions for the first two weeks. Collection takes a few days, and a new property only shows data from the day collection began. Early conclusions will mislead you.",
                 "Make the query groups card your first real analysis. See which themes are rising; it's the cheapest signal you have for your next content cycle.",
                 "Put format comparison on the calendar. Run the `/p/` versus `/reels/` (or `/watch` versus `/shorts/`) comparison monthly and adjust your production mix accordingly.",

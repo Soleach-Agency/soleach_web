@@ -84,6 +84,9 @@ export default async function BlogPostPage({
           tags: content.tags,
           categoryTitle: category?.title ?? dict.nav.services,
           sources: content.sources,
+          images: content.sections.flatMap((s) =>
+            s.blocks.filter((b) => b.type === "img").map((b) => b.src),
+          ),
         })}
       />
       <JsonLd data={faqSchemaFromItems(content.faq)} />
