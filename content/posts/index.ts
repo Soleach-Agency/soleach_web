@@ -15,9 +15,11 @@ import { sosyalMedyaAnalitikAraclari } from "./sosyal-medya-analitik-araclari";
 import { searchConsolePlatformProperties } from "./search-console-platform-properties";
 import { searchConsoleInstagramEkleme } from "./search-console-instagram-ekleme";
 import { cloudflareErisimYonetimi } from "./cloudflare-erisim-yonetimi";
+import { guzellikMarkalariWebTaramasi } from "./guzellik-markalari-web-taramasi";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
+  guzellikMarkalariWebTaramasi,
   geoRehberi,
   instagramReklamRehberi,
   capcutFontYuklemeHatasi,
