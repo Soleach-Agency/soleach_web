@@ -4,7 +4,7 @@ export const geo: Concept = {
   id: "geo",
   category: "seo-geo",
   publishedAt: "2026-07-28",
-  related: ["seo"],
+  related: ["seo", "llm", "ai-crawler"],
   postIds: ["geo-rehberi"],
   locales: {
     tr: {

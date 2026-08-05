@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Entrance } from "@/components/motion/entrance";
 import { ConceptGraph } from "@/components/concepts/concept-graph";
 import { GraphInteractions } from "@/components/concepts/graph-interactions";
+import { GraphZoom } from "@/components/concepts/graph-zoom";
 import { CtaBand } from "@/components/sections/cta-band";
 import { JsonLd } from "@/components/seo/json-ld";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
@@ -106,7 +107,7 @@ export default async function ConceptsHubPage({
       {/* The graph — server-rendered SVG; every node is a real link. */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Entrance delay={0.2}>
-          <div className="rounded-2xl border border-border bg-surface/40 p-2 sm:p-4">
+          <div className="relative rounded-2xl border border-border bg-surface/40 p-2 sm:p-4">
             <ConceptGraph
               locale={locale}
               dict={dict}
@@ -114,6 +115,14 @@ export default async function ConceptsHubPage({
               id="concept-graph"
             />
             <GraphInteractions targetId="concept-graph" />
+            <GraphZoom
+              targetId="concept-graph"
+              labels={{
+                zoomIn: dict.conceptsPage.graphZoomIn,
+                zoomOut: dict.conceptsPage.graphZoomOut,
+                reset: dict.conceptsPage.graphResetView,
+              }}
+            />
           </div>
           <p className="mt-3 text-center text-xs text-muted">
             {dict.conceptsPage.graphHint}

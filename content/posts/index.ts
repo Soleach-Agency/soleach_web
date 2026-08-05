@@ -14,6 +14,7 @@ import { kreatifYorgunluguFrekans } from "./kreatif-yorgunlugu-frekans";
 import { sosyalMedyaAnalitikAraclari } from "./sosyal-medya-analitik-araclari";
 import { searchConsolePlatformProperties } from "./search-console-platform-properties";
 import { searchConsoleInstagramEkleme } from "./search-console-instagram-ekleme";
+import { cloudflareErisimYonetimi } from "./cloudflare-erisim-yonetimi";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -32,4 +33,5 @@ export const posts: BlogPost[] = [
   sosyalMedyaAnalitikAraclari,
   searchConsolePlatformProperties,
   searchConsoleInstagramEkleme,
+  cloudflareErisimYonetimi,
 ];

@@ -120,6 +120,10 @@ export interface Dictionary {
     hero: { eyebrow: string; title: string; subtitle: string };
     graphAriaLabel: string;
     graphHint: string;
+    /** Zoom controls — rendered by <GraphZoom> only once it has hydrated. */
+    graphZoomIn: string;
+    graphZoomOut: string;
+    graphResetView: string;
     listTitle: string;
     relatedConceptsTitle: string;
     relatedPostsTitle: string;
@@ -507,7 +511,10 @@ const tr: Dictionary = {
     graphAriaLabel:
       "Kavram haritası: kavramlar arasındaki ilişkileri gösteren ağ grafiği",
     graphHint:
-      "Haritadaki bir kavrama tıklayarak tanımına gidebilirsin. Çizgiler kavramlar arasındaki ilişkileri gösterir.",
+      "Haritadaki bir kavrama tıklayarak tanımına gidebilirsin. Çizgiler kavramlar arasındaki ilişkileri gösterir. Yakınlaşmak için sağ üstteki düğmeleri ya da Ctrl + fare tekerleğini kullan; haritayı sürükleyerek gezebilirsin.",
+    graphZoomIn: "Yakınlaştır",
+    graphZoomOut: "Uzaklaştır",
+    graphResetView: "Görünümü sıfırla",
     listTitle: "Tüm kavramlar",
     relatedConceptsTitle: "İlişkili kavramlar",
     relatedPostsTitle: "Bu kavramı işleyen yazılar",
@@ -896,7 +903,10 @@ const en: Dictionary = {
     graphAriaLabel:
       "Concept map: a network graph showing how concepts relate to each other",
     graphHint:
-      "Click any concept on the map to open its definition. Lines show how concepts relate.",
+      "Click any concept on the map to open its definition. Lines show how concepts relate. Zoom with the buttons top right or Ctrl + scroll wheel, and drag to move around the map.",
+    graphZoomIn: "Zoom in",
+    graphZoomOut: "Zoom out",
+    graphResetView: "Reset view",
     listTitle: "All concepts",
     relatedConceptsTitle: "Related concepts",
     relatedPostsTitle: "Articles covering this concept",

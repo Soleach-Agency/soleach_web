@@ -17,7 +17,11 @@ export type BlogBlock =
   | { type: "p"; text: string }
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }
-  /** Image from /public (put files under public/blog/…). `alt` is mandatory. */
+  /**
+   * Image from /public. Put files under `public/blog-media/<post-id>/…`, never
+   * `public/blog/` — the `/blog/*` rule in public/_redirects would 302 them to
+   * `/tr/blog/…` and they'd 404. `alt` is mandatory.
+   */
   | { type: "img"; src: string; alt: string; caption?: string }
   /**
    * Social embed rendered as a plain iframe (no third-party JS).

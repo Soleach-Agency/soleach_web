@@ -23,12 +23,22 @@ import { conceptDegree, conceptEdges } from "./concepts";
  * Date.now.
  */
 
+/**
+ * Label level-of-detail band. 0 = hub (label survives longest when you zoom
+ * out), 2 = leaf (fades first). Assigned by degree *rank* rather than a fixed
+ * degree threshold, so the bands keep their proportions as the map grows from
+ * dozens of concepts to hundreds. The zoom levels each band fades at live in
+ * one place — <GraphZoom>'s LABEL_BANDS.
+ */
+export type LabelTier = 0 | 1 | 2;
+
 export interface LayoutNode {
   id: string;
   x: number;
   y: number;
   r: number;
   degree: number;
+  tier: LabelTier;
 }
 
 export interface LayoutEdge {
@@ -117,13 +127,21 @@ export function conceptGraphLayout(): ConceptGraphLayout {
   const offsetX = (WIDTH - (maxX - minX) * scale) / 2 - minX * scale;
   const offsetY = (HEIGHT - (maxY - minY) * scale) / 2 - minY * scale;
 
+  const tiers = labelTiers(nodes);
   const round = (v: number) => Math.round(v * 10) / 10;
   const positioned = new Map<string, { x: number; y: number }>();
   const layoutNodes: LayoutNode[] = nodes.map((n) => {
     const x = round(n.x! * scale + offsetX);
     const y = round(n.y! * scale + offsetY);
     positioned.set(n.id, { x, y });
-    return { id: n.id, x, y, r: round(n.r), degree: n.degree };
+    return {
+      id: n.id,
+      x,
+      y,
+      r: round(n.r),
+      degree: n.degree,
+      tier: tiers.get(n.id)!,
+    };
   });
 
   const layoutEdges: LayoutEdge[] = conceptEdges().map((e) => {
@@ -139,6 +157,24 @@ export function conceptGraphLayout(): ConceptGraphLayout {
     edges: layoutEdges,
   };
   return cached;
+}
+
+/**
+ * Split nodes into three label bands by degree rank: the best-connected
+ * quarter are hubs, the next third are mid, the rest leaves. Ties break on id
+ * so the assignment is byte-stable across builds.
+ */
+function labelTiers(nodes: { id: string; degree: number }[]) {
+  const ranked = [...nodes].sort(
+    (a, b) => b.degree - a.degree || a.id.localeCompare(b.id),
+  );
+  const hubCut = Math.max(1, Math.ceil(ranked.length * 0.25));
+  const midCut = Math.max(hubCut, Math.ceil(ranked.length * 0.6));
+  const tiers = new Map<string, LabelTier>();
+  ranked.forEach((n, i) => {
+    tiers.set(n.id, i < hubCut ? 0 : i < midCut ? 1 : 2);
+  });
+  return tiers;
 }
 
 const NEIGHBOURHOOD = { width: 560, height: 380, radius: 132 };
@@ -168,6 +204,8 @@ export function conceptNeighborhoodLayout(
   const positions = new Map<string, { x: number; y: number }>([
     [centerId, { x: cx, y: cy }],
   ]);
+  // The neighbourhood graph is never zoomed, so every node sits in the band
+  // whose labels are always drawn.
   const nodes: LayoutNode[] = [
     {
       id: centerId,
@@ -175,6 +213,7 @@ export function conceptNeighborhoodLayout(
       y: cy,
       r: 16,
       degree: neighbours.length,
+      tier: 0,
     },
   ];
 
@@ -190,6 +229,7 @@ export function conceptNeighborhoodLayout(
       y,
       r: round(Math.min(8 + 2 * Math.sqrt(degree), 14)),
       degree,
+      tier: 0,
     });
   });
 

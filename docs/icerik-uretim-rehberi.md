@@ -197,3 +197,15 @@ graph, sitemap, md ikizleri ve llms.txt otomatik türetilir.
 
 Build (`npm run build`) her seferinde `concepts-check`'i çalıştırır: kırık
 id/slug referansları build'i düşürür, orphan node'lar uyarı verir.
+
+**Haritanın yakınlaştırma ve etiket davranışı kavram başına bakım istemez.**
+Hub grafiğinde `<GraphZoom>` (client, sadece hidrasyondan sonra) yakınlaştırma
+düğmelerini basar; Ctrl + tekerlek, sürükleme ve dokunmatikte parmak hareketi
+de aynı yolu kullanır. Uzaklaştıkça etiketler kademeli silikleşir: her node
+build sırasında derece sıralamasına göre bir `data-tier` bandına düşer (en
+bağlantılı çeyrek hub, sonraki üçte bir orta, kalanı yaprak) ve her bant kendi
+zoom aralığında kaybolur. Yani kavram sayısı arttıkça bantların oranı korunur,
+elle bir şey ayarlamana gerek kalmaz. Etiket yoğunluğunu değiştirmek istersen
+tek yer var: `components/concepts/graph-zoom.tsx` içindeki `LABEL_BANDS`.
+JavaScript çalışmazsa harita eskisi gibi statik SVG olarak kalır — düğmeler
+HTML'e hiç girmez, node'lar yine gerçek `<a href>`'tir.

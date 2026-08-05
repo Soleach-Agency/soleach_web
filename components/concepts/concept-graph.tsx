@@ -13,6 +13,11 @@ import type { ConceptGraphLayout } from "@/lib/concept-graph";
  * `data-node-id` / `data-neighbors` / `data-source` / `data-target` carry the
  * adjacency so <GraphInteractions> can light up a neighbourhood on hover
  * without shipping the graph data twice.
+ *
+ * Everything drawable sits inside one `[data-graph-viewport]` group whose
+ * `transform` <GraphZoom> rewrites to pan and zoom. Untouched — i.e. when JS
+ * never runs — that group is the identity transform, so the exported HTML is
+ * exactly what it was before zooming existed.
  */
 
 /** Every third edge carries a travelling particle — enough motion to read as alive. */
@@ -64,91 +69,93 @@ export function ConceptGraph({
     >
       {!decorative && <title>{dict.conceptsPage.graphAriaLabel}</title>}
 
-      <g>
-        {layout.edges.map((e) => (
-          <line
-            key={`${e.source}-${e.target}`}
-            x1={e.x1}
-            y1={e.y1}
-            x2={e.x2}
-            y2={e.y2}
-            className="concept-edge"
-            data-source={e.source}
-            data-target={e.target}
-          />
-        ))}
-      </g>
-
-      {particles && (
+      <g data-graph-viewport>
         <g>
-          {layout.edges
-            .filter((_, i) => i % PARTICLE_EVERY === 0)
-            .map((e, i) => (
-              <circle
-                key={`p-${e.source}-${e.target}`}
-                r={2.5}
-                className="concept-edge-particle"
-              >
-                <animateMotion
-                  dur={`${4 + (i % 3) * 1.5}s`}
-                  begin={`${((i % 4) * 0.7).toFixed(1)}s`}
-                  repeatCount="indefinite"
-                  path={`M${e.x1} ${e.y1} L${e.x2} ${e.y2}`}
-                />
-              </circle>
-            ))}
+          {layout.edges.map((e) => (
+            <line
+              key={`${e.source}-${e.target}`}
+              x1={e.x1}
+              y1={e.y1}
+              x2={e.x2}
+              y2={e.y2}
+              className="concept-edge"
+              data-source={e.source}
+              data-target={e.target}
+            />
+          ))}
         </g>
-      )}
 
-      <g>
-        {layout.nodes.map((n, i) => {
-          const concept = getConceptById(n.id);
-          if (!concept) return null;
-          const content = concept.locales[locale];
-          const label = content.graphLabel ?? content.name;
-          const shared = {
-            className: `concept-node${n.id === activeId ? " is-current" : ""}`,
-            "data-category": concept.category,
-            "data-node-id": n.id,
-            "data-neighbors": (neighbours.get(n.id) ?? []).join(" "),
-          };
-          const body = (
-            <>
-              <circle
-                cx={n.x}
-                cy={n.y}
-                r={n.r + 6}
-                className="concept-node-halo"
-                style={{ animationDelay: `${((i % 6) * 0.4).toFixed(1)}s` }}
-              />
-              <circle cx={n.x} cy={n.y} r={n.r} className="concept-node-dot" />
-              <text
-                x={n.x}
-                y={Math.round((n.y + n.r + 16) * 10) / 10}
-                textAnchor="middle"
-                className="concept-node-label"
+        {particles && (
+          <g>
+            {layout.edges
+              .filter((_, i) => i % PARTICLE_EVERY === 0)
+              .map((e, i) => (
+                <circle
+                  key={`p-${e.source}-${e.target}`}
+                  r={2.5}
+                  className="concept-edge-particle"
+                >
+                  <animateMotion
+                    dur={`${4 + (i % 3) * 1.5}s`}
+                    begin={`${((i % 4) * 0.7).toFixed(1)}s`}
+                    repeatCount="indefinite"
+                    path={`M${e.x1} ${e.y1} L${e.x2} ${e.y2}`}
+                  />
+                </circle>
+              ))}
+          </g>
+        )}
+
+        <g>
+          {layout.nodes.map((n) => {
+            const concept = getConceptById(n.id);
+            if (!concept) return null;
+            const content = concept.locales[locale];
+            const label = content.graphLabel ?? content.name;
+            const shared = {
+              className: `concept-node${n.id === activeId ? " is-current" : ""}`,
+              "data-category": concept.category,
+              "data-node-id": n.id,
+              "data-tier": n.tier,
+              "data-neighbors": (neighbours.get(n.id) ?? []).join(" "),
+            };
+            const body = (
+              <>
+                <circle
+                  cx={n.x}
+                  cy={n.y}
+                  r={n.r + 6}
+                  className="concept-node-halo"
+                />
+                <circle cx={n.x} cy={n.y} r={n.r} className="concept-node-dot" />
+                <text
+                  x={n.x}
+                  y={Math.round((n.y + n.r + 16) * 10) / 10}
+                  textAnchor="middle"
+                  className="concept-node-label"
+                >
+                  {label}
+                </text>
+              </>
+            );
+
+            return n.id === activeId ? (
+              <g key={n.id} {...shared}>
+                {body}
+              </g>
+            ) : (
+              <a
+                key={n.id}
+                href={`/${locale}/${dict.routes.concepts}/${content.slug}`}
+                aria-label={content.name}
+                {...(decorative ? { tabIndex: -1 } : {})}
+                {...shared}
               >
-                {label}
-              </text>
-            </>
-          );
-
-          return n.id === activeId ? (
-            <g key={n.id} {...shared}>
-              {body}
-            </g>
-          ) : (
-            <a
-              key={n.id}
-              href={`/${locale}/${dict.routes.concepts}/${content.slug}`}
-              aria-label={content.name}
-              {...(decorative ? { tabIndex: -1 } : {})}
-              {...shared}
-            >
-              {body}
-            </a>
-          );
-        })}
+                {body}
+              </a>
+            );
+          })}
+        </g>
       </g>
     </svg>
   );

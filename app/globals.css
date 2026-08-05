@@ -199,6 +199,16 @@
     --concept-color: var(--color-muted);
   }
 
+  /* Text selection turns every drag-to-pan into a highlight; the labels are
+     links, so there is nothing to copy out of here anyway. */
+  .concept-graph {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .concept-graph.is-panning {
+    cursor: grabbing;
+  }
+
   .concept-node-dot {
     fill: rgb(var(--concept-color) / 0.9);
     stroke: rgb(var(--concept-color));
@@ -214,25 +224,40 @@
   .concept-node.is-current .concept-node-label {
     fill: rgb(var(--color-foreground));
   }
+  /* A static soft ring now that the beat belongs to the map as a whole. */
   .concept-node-halo {
-    fill: rgb(var(--concept-color) / 0.18);
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: concept-pulse 4.5s ease-in-out infinite;
+    fill: rgb(var(--concept-color) / 0.2);
   }
+
+  /* Label level of detail. <GraphZoom> writes --label-op-{0,1,2} from the
+     current zoom; each node's data-tier (degree rank, assigned at build time)
+     picks which one applies, so hubs outlive leaves as you zoom out. The
+     defaults keep every label visible when the script never runs. */
   .concept-node-label {
     fill: rgb(var(--color-muted));
     font-size: 11px;
     font-weight: 600;
     transition: fill 0.2s ease;
   }
+  .concept-node[data-tier="0"] .concept-node-label {
+    opacity: var(--label-op-0, 1);
+  }
+  .concept-node[data-tier="1"] .concept-node-label {
+    opacity: var(--label-op-1, 1);
+  }
+  .concept-node[data-tier="2"] .concept-node-label {
+    opacity: var(--label-op-2, 1);
+  }
   .concept-node:hover .concept-node-dot,
   .concept-node:focus-visible .concept-node-dot {
     filter: drop-shadow(0 0 10px rgb(var(--concept-color) / 0.8));
   }
+  /* A label you are pointing at is always worth reading, however far out the
+     zoom is — this wins over the tier rules because it comes after them. */
   .concept-node:hover .concept-node-label,
   .concept-node:focus-visible .concept-node-label {
     fill: rgb(var(--color-foreground));
+    opacity: 1;
   }
   .concept-node:focus-visible {
     outline: none;
@@ -240,6 +265,8 @@
   .concept-edge {
     stroke: rgb(var(--color-accent) / 0.16);
     stroke-width: 1;
+    /* Keeps edges hairline-thin instead of thickening with the zoom. */
+    vector-effect: non-scaling-stroke;
   }
   .concept-edge-particle {
     fill: rgb(var(--color-accent-2) / 0.8);
@@ -268,6 +295,7 @@
   }
   .concept-node.is-hovered .concept-node-label {
     fill: rgb(var(--color-foreground));
+    opacity: 1;
   }
 }
 
@@ -334,17 +362,6 @@
   }
 }
 
-@keyframes concept-pulse {
-  0%,
-  100% {
-    opacity: 0.35;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.75;
-    transform: scale(1.18);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -356,7 +373,6 @@
   .animate-entrance,
   .animate-word-rise,
   .animate-page-enter,
-  .concept-node-halo,
   .brand-gradient-text-animated {
     animation: none;
   }

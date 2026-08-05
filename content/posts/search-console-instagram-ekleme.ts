@@ -1,6 +1,8 @@
 import type { BlogPost } from "@/lib/blog";
 
-const IMG = "/blog/search-console-instagram-ekleme";
+// Not /blog/… — public/_redirects sends every /blog/* path to /tr/blog/:splat,
+// which would swallow the images before Pages ever serves them.
+const IMG = "/blog-media/search-console-instagram-ekleme";
 
 export const searchConsoleInstagramEkleme: BlogPost = {
   id: "search-console-instagram-ekleme",
