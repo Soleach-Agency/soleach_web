@@ -7,6 +7,14 @@ const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 type Direction = "up" | "down" | "left" | "right" | "none";
 
+/**
+ * A fractional `amount` is a share of the *element's* height, so a container
+ * taller than ~5x the viewport can never satisfy it and its children stay stuck
+ * at opacity 0 — visible on desktop grids, invisible on phones. Use "some" for
+ * anything whose height grows with content (lists, blog grids).
+ */
+type ViewAmount = number | "some" | "all";
+
 const offset: Record<Direction, { x?: number; y?: number }> = {
   up: { y: 28 },
   down: { y: -28 },
@@ -31,7 +39,7 @@ export function Reveal({
   direction?: Direction;
   duration?: number;
   once?: boolean;
-  amount?: number;
+  amount?: ViewAmount;
 }) {
   const reduce = useReducedMotion();
   if (reduce) return <div className={className}>{children}</div>;
@@ -56,14 +64,14 @@ export function Stagger({
   delay = 0,
   stagger = 0.1,
   once = true,
-  amount = 0.2,
+  amount = "some",
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
   stagger?: number;
   once?: boolean;
-  amount?: number;
+  amount?: ViewAmount;
 }) {
   const reduce = useReducedMotion();
   const container: Variants = {
