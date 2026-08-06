@@ -28,6 +28,11 @@
 /.well-known/mcp/server-card.json
   Content-Type: application/mcp-server-card+json
 
+# Chrome's Private Prefetch Proxy fetches this before it will prefetch anything
+# and treats a non-matching Content-Type exactly like a refusal.
+/.well-known/traffic-advice
+  Content-Type: application/trafficadvice+json
+
 # The Markdown twins are an implementation detail of content negotiation — the
 # canonical address of every page is its HTML URL. Keep them out of the index
 # so they never compete with it. functions/_middleware.js strips this header

@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run agent-assets && npm run concepts-check && next build",
+    "build": "npm run agent-assets && npm run concepts-check && next build && npm run route-aliases",
     "concepts-check": "tsx scripts/concepts-check.ts",
+    "route-aliases": "tsx scripts/route-aliases.ts",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
