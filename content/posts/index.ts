@@ -16,6 +16,7 @@ import { searchConsolePlatformProperties } from "./search-console-platform-prope
 import { searchConsoleInstagramEkleme } from "./search-console-instagram-ekleme";
 import { cloudflareErisimYonetimi } from "./cloudflare-erisim-yonetimi";
 import { guzellikMarkalariWebTaramasi } from "./guzellik-markalari-web-taramasi";
+import { googleSearchProfileHandleSwapping } from "./google-search-profile-handle-swapping";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -36,4 +37,5 @@ export const posts: BlogPost[] = [
   searchConsolePlatformProperties,
   searchConsoleInstagramEkleme,
   cloudflareErisimYonetimi,
+  googleSearchProfileHandleSwapping,
 ];
