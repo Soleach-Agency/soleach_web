@@ -17,6 +17,7 @@ import { searchConsoleInstagramEkleme } from "./search-console-instagram-ekleme"
 import { cloudflareErisimYonetimi } from "./cloudflare-erisim-yonetimi";
 import { guzellikMarkalariWebTaramasi } from "./guzellik-markalari-web-taramasi";
 import { googleSearchProfileHandleSwapping } from "./google-search-profile-handle-swapping";
+import { shopifyWebmcpAjanAraclari } from "./shopify-webmcp-ajan-araclari";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -38,4 +39,5 @@ export const posts: BlogPost[] = [
   searchConsoleInstagramEkleme,
   cloudflareErisimYonetimi,
   googleSearchProfileHandleSwapping,
+  shopifyWebmcpAjanAraclari,
 ];

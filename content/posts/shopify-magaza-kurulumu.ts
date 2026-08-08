@@ -3,16 +3,15 @@ import type { BlogPost } from "@/lib/blog";
 export const shopifyMagazaKurulumu: BlogPost = {
   id: "shopify-magaza-kurulumu",
   publishedAt: "2026-07-24",
+  updatedAt: "2026-08-08",
   category: "web-ecommerce",
   locales: {
     tr: {
       slug: "kozmetik-markasi-icin-shopify-magaza-kurulumu",
       title: "Kozmetik markası için Shopify mağaza kurulumu rehberi",
       metaTitle: "Kozmetik Markası için Shopify Mağaza Kurulumu | Soleach",
-      metaDescription:
-        "Kozmetik markası için Shopify mağazası kurarken satışı belirleyen kararlar: ürün sayfası, sağlık beyanı sınırı, sepet terki, hız ve ölçüm. Kaynaklı rehber.",
-      excerpt:
-        "Reklam çalışıyor, tıklama geliyor, satış gelmiyor. Çoğu zaman sorun reklamda değil, tıklamanın indiği yerde. Kozmetik markası için Shopify mağazası kurarken satışı belirleyen kararları ve sık yapılan hataları anlatıyoruz.",
+      metaDescription: "Kozmetik markası için Shopify mağazası kurarken satışı belirleyen kararlar: ürün sayfası, sağlık beyanı sınırı, sepet terki, hız ve ölçüm. Kaynaklı rehber.",
+      excerpt: "Reklam çalışıyor, tıklama geliyor, satış gelmiyor. Çoğu zaman sorun reklamda değil, tıklamanın indiği yerde. Kozmetik markası için Shopify mağazası kurarken satışı belirleyen kararları ve sık yapılan hataları anlatıyoruz.",
       intro: [
         "Kozmetik markaları için en sinir bozucu tablo şu: reklam hesabı iyi çalışıyor, maliyetler makul, trafik geliyor — ama satış rakamı bir türlü oturmuyor. Bu noktada refleks olarak reklama dokunulur; hedef kitle değiştirilir, kreatif yenilenir, bütçe artırılır. Oysa huninin kırıldığı yer çoğu zaman reklamın kendisi değil, tıklamanın indiği sayfadır.",
         "Kozmetikte bu özellikle geçerli. Alıcı, koklayamadığı ve deneyemediği bir ürünü satın almaya çalışıyor; cilt tipine uyup uymadığını, içinde ne olduğunu ve kullandığı diğer ürünlerle çakışıp çakışmadığını bilmek istiyor. Bu soruların cevabı mağazada yoksa, sepete ekleme değil, sekme kapatma oluyor.",
@@ -58,6 +57,10 @@ export const shopifyMagazaKurulumu: BlogPost = {
             {
               type: "p",
               text: "Bu bilgileri açılır-kapanır bloklara koymak sayfayı boğmadan derinlik sağlar; ama içeriğin kaynak HTML'de bulunması şart. Yalnızca tıklayınca JavaScript ile yüklenen içerik, hem arama motorları hem yapay zekâ motorları için görünmez olabilir — bu, [GEO tarafında da belirleyici bir ayrım](/tr/blog/geo-nedir-yapay-zeka-gorunurlugu-rehberi).",
+            },
+            {
+              type: "p",
+              text: "Ağustos 2026'dan itibaren bu veri yalnızca insan ve arama motoru için de değil. Shopify, tüm Liquid mağazalarında yapay zekâ ajanlarının doğrudan çağırabildiği araçları açtı; varyant eşleştirme ve stok durumu bu araçların içinde. Ne değiştiğini ve ton adlandırmasının neden birdenbire teknik bir karar hâline geldiğini [ayrı bir yazıda](/tr/blog/shopify-webmcp-yapay-zeka-ajanlari-kozmetik) anlattık.",
             },
           ],
         },
@@ -192,20 +195,17 @@ export const shopifyMagazaKurulumu: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Baymard Institute. 50 Cart Abandonment Rate Statistics (2006-2025 documented studies).",
+          label: "Baymard Institute. 50 Cart Abandonment Rate Statistics (2006-2025 documented studies).",
           url: "https://baymard.com/lists/cart-abandonment-rate",
           publisher: "Baymard Institute",
         },
         {
-          label:
-            "Google. Vodafone: A 31% improvement in LCP increased sales by 8%. web.dev case studies.",
+          label: "Google. Vodafone: A 31% improvement in LCP increased sales by 8%. web.dev case studies.",
           url: "https://web.dev/case-studies/vodafone",
           publisher: "web.dev (Google)",
         },
         {
-          label:
-            "Türkiye İlaç ve Tıbbi Cihaz Kurumu. Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik.",
+          label: "Türkiye İlaç ve Tıbbi Cihaz Kurumu. Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik.",
           url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
           publisher: "T.C. Sağlık Bakanlığı — TİTCK",
         },
@@ -227,10 +227,8 @@ export const shopifyMagazaKurulumu: BlogPost = {
       slug: "shopify-store-setup-for-cosmetics-brands",
       title: "Setting up a Shopify store for a cosmetics brand",
       metaTitle: "Shopify Store Setup for Cosmetics Brands | Soleach",
-      metaDescription:
-        "The decisions that determine sales when building a Shopify store for a cosmetics brand: product pages, health-claim limits, speed and measurement.",
-      excerpt:
-        "The ads work, the clicks arrive, the sales don't. More often than not the problem isn't the ad — it's where the click lands. Here are the decisions that determine sales when you build a Shopify store for a cosmetics brand.",
+      metaDescription: "The decisions that determine sales when building a Shopify store for a cosmetics brand: product pages, health-claim limits, speed and measurement.",
+      excerpt: "The ads work, the clicks arrive, the sales don't. More often than not the problem isn't the ad — it's where the click lands. Here are the decisions that determine sales when you build a Shopify store for a cosmetics brand.",
       intro: [
         "Here's the most frustrating picture for a cosmetics brand: the ad account is performing, costs are reasonable, traffic is coming — and the revenue number still won't settle. The reflex at this point is to touch the ads: change the audience, refresh the creative, raise the budget. But the place the funnel breaks is usually not the ad itself; it's the page the click lands on.",
         "That's especially true in cosmetics. Your buyer is trying to purchase something they can't smell or swatch; they want to know whether it suits their skin type, what's inside it, and whether it clashes with what they already use. If the store doesn't answer those questions, the result isn't an add-to-cart — it's a closed tab.",
@@ -276,6 +274,10 @@ export const shopifyMagazaKurulumu: BlogPost = {
             {
               type: "p",
               text: "Putting this into expandable blocks gives depth without drowning the page — but the content must exist in the source HTML. Content that only loads via JavaScript on click can be invisible to both search engines and AI engines, which is a decisive distinction [on the GEO side too](/en/blog/what-is-geo-generative-engine-optimization-guide).",
+            },
+            {
+              type: "p",
+              text: "As of August 2026 this data is no longer read only by humans and search engines. Shopify has turned on tools that AI agents can call directly across every Liquid storefront, and variant matching and stock status sit inside those tools. We covered what changed — and why shade naming suddenly became a technical decision — in [a separate piece](/en/blog/shopify-webmcp-ai-agents-beauty-brands).",
             },
           ],
         },
@@ -410,20 +412,17 @@ export const shopifyMagazaKurulumu: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Baymard Institute. 50 Cart Abandonment Rate Statistics (documented studies, 2006-2025).",
+          label: "Baymard Institute. 50 Cart Abandonment Rate Statistics (documented studies, 2006-2025).",
           url: "https://baymard.com/lists/cart-abandonment-rate",
           publisher: "Baymard Institute",
         },
         {
-          label:
-            "Google. Vodafone: A 31% improvement in LCP increased sales by 8%. web.dev case studies.",
+          label: "Google. Vodafone: A 31% improvement in LCP increased sales by 8%. web.dev case studies.",
           url: "https://web.dev/case-studies/vodafone",
           publisher: "web.dev (Google)",
         },
         {
-          label:
-            "Turkish Medicines and Medical Devices Agency. Regulation on Health Claims of Products Sold with Health Claims (Sağlık Beyanı).",
+          label: "Turkish Medicines and Medical Devices Agency. Regulation on Health Claims of Products Sold with Health Claims (Sağlık Beyanı).",
           url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
           publisher: "Republic of Türkiye Ministry of Health — TİTCK",
         },
