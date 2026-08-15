@@ -3,17 +3,15 @@ import type { BlogPost } from "@/lib/blog";
 export const geoRehberi: BlogPost = {
   id: "geo-rehberi",
   publishedAt: "2026-07-15",
-  updatedAt: "2026-07-24",
+  updatedAt: "2026-08-13",
   category: "seo-geo",
   locales: {
     tr: {
       slug: "geo-nedir-yapay-zeka-gorunurlugu-rehberi",
       title: "GEO nedir? Kozmetik markaları için yapay zekâ görünürlüğü rehberi",
       metaTitle: "GEO Nedir? Kozmetik Markalarına Yapay Zekâ Rehberi | Soleach",
-      metaDescription:
-        "GEO (Generative Engine Optimization) nedir, SEO'dan nasıl ayrılır ve kozmetik markan ChatGPT ile Perplexity'de nasıl görünür olur? Kaynaklı rehber.",
-      excerpt:
-        "Müşterin artık 'en iyi vegan fondöten hangisi' sorusunu Google'a değil, ChatGPT'ye de soruyor. GEO, kozmetik markanın bu yanıtların içinde — ve doğru bilgiyle — yer almasını sağlayan disiplin. Bu rehberde ne olduğunu ve nereden başlayacağını anlatıyoruz.",
+      metaDescription: "GEO (Generative Engine Optimization) nedir, SEO'dan nasıl ayrılır ve kozmetik markan ChatGPT ile Perplexity'de nasıl görünür olur? Kaynaklı rehber.",
+      excerpt: "Müşterin artık 'en iyi vegan fondöten hangisi' sorusunu Google'a değil, ChatGPT'ye de soruyor. GEO, kozmetik markanın bu yanıtların içinde — ve doğru bilgiyle — yer almasını sağlayan disiplin. Bu rehberde ne olduğunu ve nereden başlayacağını anlatıyoruz.",
       intro: [
         "Kozmetikte ürün araştırması değişiyor. İnsanlar 'hassas cilde uygun güneş kremi', 'niasinamid ile retinol birlikte kullanılır mı' ya da 'kalıcı ruj önerisi' gibi soruları yalnızca arama motorlarına değil; ChatGPT, Perplexity ve Google'ın yapay zekâ özetleri gibi araçlara da soruyor. Bu araçlar tek bir liste göstermek yerine doğrudan bir cevap yazıyor — ve o cevabın içinde hangi kozmetik markalarının anıldığı, yeni bir rekabet alanı.",
         "Bu kayma ölçülebilir hâle geldi. [Pew Research Center (2025)](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/), 900 ABD'li yetişkinin Mart 2025'teki gerçek tarayıcı verisini inceledi: yapay zekâ özeti çıkan aramalarda kullanıcılar geleneksel bir sonuca ziyaretlerin yalnızca %8'inde tıkladı; özet çıkmayan aramalarda bu oran %15'ti. Özetin içinde gösterilen kaynak bağlantılarına tıklama ise ziyaretlerin %1'inde kaldı. Veri ABD örneklemine ve tek bir aya ait; yine de yönü net: cevap kullanıcıya sayfaya hiç gitmeden ulaşıyor.",
@@ -95,7 +93,7 @@ export const geoRehberi: BlogPost = {
             },
             {
               type: "p",
-              text: "Markanın adı, ne yaptığı ve iletişim bilgileri; kendi siten, sosyal profillerin ve hakkında yazılan sayfalar arasında tutarlı olmalı. Başka sitelerin senden bahsetmesi (basın, listeler, dizinler, gerçek kullanıcı yorumları) bu resmi güçlendirir. Yapay zekâ motorları çelişkili bilgiyle karşılaştığında markayı ya yanlış tanıtır ya da hiç anmaz.",
+              text: "Markanın adı, ne yaptığı ve iletişim bilgileri; kendi siten, sosyal profillerin ve hakkında yazılan sayfalar arasında tutarlı olmalı. Başka sitelerin senden bahsetmesi (basın, listeler, dizinler, gerçek kullanıcı yorumları) bu resmi güçlendirir. Yapay zekâ motorları çelişkili bilgiyle karşılaştığında markayı ya yanlış tanıtır ya da hiç anmaz. Bu sinyalin ters de işleyebildiğini — kaynak gösterilip önerilmemeyi — [AI cevabındaki kaynak senin siten değil, o listicle](/tr/blog/ai-overview-kaynagi-senin-siten-degil-listicle) yazımızda ele aldık.",
             },
             {
               type: "h3",
@@ -186,20 +184,17 @@ export const geoRehberi: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). GEO: Generative Engine Optimization. KDD '24: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.",
+          label: "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). GEO: Generative Engine Optimization. KDD '24: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.",
           url: "https://arxiv.org/abs/2311.09735",
           publisher: "ACM SIGKDD / arXiv",
         },
         {
-          label:
-            "Pew Research Center. (2025, 22 Temmuz). Google users are less likely to click on links when an AI summary appears in the results.",
+          label: "Pew Research Center. (2025, 22 Temmuz). Google users are less likely to click on links when an AI summary appears in the results.",
           url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
           publisher: "Pew Research Center",
         },
         {
-          label:
-            "Google. Google's guide to optimizing for generative AI features on Google Search. Google Search Central.",
+          label: "Google. Google's guide to optimizing for generative AI features on Google Search. Google Search Central.",
           url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
           publisher: "Google Search Central",
         },
@@ -209,8 +204,7 @@ export const geoRehberi: BlogPost = {
           publisher: "Google Search Central",
         },
         {
-          label:
-            "Google. Intro to structured data markup in Google Search. Google Search Central.",
+          label: "Google. Intro to structured data markup in Google Search. Google Search Central.",
           url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
           publisher: "Google Search Central",
         },
@@ -220,8 +214,7 @@ export const geoRehberi: BlogPost = {
           publisher: "OpenAI",
         },
         {
-          label:
-            "Anthropic. Does Anthropic crawl data from the web, and how can site owners block the crawler? Claude Help Center.",
+          label: "Anthropic. Does Anthropic crawl data from the web, and how can site owners block the crawler? Claude Help Center.",
           url: "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
           publisher: "Anthropic",
         },
@@ -231,8 +224,7 @@ export const geoRehberi: BlogPost = {
           publisher: "Perplexity AI",
         },
         {
-          label:
-            "Türkiye İlaç ve Tıbbi Cihaz Kurumu. Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik.",
+          label: "Türkiye İlaç ve Tıbbi Cihaz Kurumu. Sağlık Beyanı ile Satışa Sunulan Ürünlerin Sağlık Beyanları Hakkında Yönetmelik.",
           url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
           publisher: "T.C. Sağlık Bakanlığı — TİTCK",
         },
@@ -249,10 +241,8 @@ export const geoRehberi: BlogPost = {
       slug: "what-is-geo-generative-engine-optimization-guide",
       title: "What is GEO? An AI-visibility guide for cosmetics brands",
       metaTitle: "What Is GEO? AI Visibility for Cosmetics Brands | Soleach",
-      metaDescription:
-        "What GEO (Generative Engine Optimization) is, how it differs from SEO, and how cosmetics brands become visible in ChatGPT and Perplexity. A sourced guide.",
-      excerpt:
-        "Your customer now asks 'what's the best vegan foundation' not only on Google but in ChatGPT too. GEO is the discipline of getting your cosmetics brand into those answers — with the right information. Here's what it is and where to start.",
+      metaDescription: "What GEO (Generative Engine Optimization) is, how it differs from SEO, and how cosmetics brands become visible in ChatGPT and Perplexity. A sourced guide.",
+      excerpt: "Your customer now asks 'what's the best vegan foundation' not only on Google but in ChatGPT too. GEO is the discipline of getting your cosmetics brand into those answers — with the right information. Here's what it is and where to start.",
       intro: [
         "Product research in cosmetics is changing. People ask questions like 'sunscreen for sensitive skin', 'can I use niacinamide and retinol together' or 'a long-wear lipstick recommendation' not only to search engines, but to ChatGPT, Perplexity and Google's AI summaries. Instead of showing a list of links, these tools write an answer — and which cosmetics brands appear inside that answer is a new competitive arena.",
         "That shift is now measurable. [Pew Research Center (2025)](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) analysed the real browsing data of 900 U.S. adults during March 2025: on searches that produced an AI summary, users clicked a traditional result on just 8% of visits, against 15% on searches without one. Clicks on the sources cited inside the summary occurred on 1% of visits. The data covers a U.S. sample and a single month, but the direction is clear: the answer reaches the user without a visit to your page.",
@@ -304,7 +294,10 @@ export const geoRehberi: BlogPost = {
               type: "p",
               text: "Nobody has the exact formula — these systems aren't public and they change often. Still, common principles emerge from their observable behavior and published documentation:",
             },
-            { type: "h3", text: "1. Crawlable, readable content" },
+            {
+              type: "h3",
+              text: "1. Crawlable, readable content",
+            },
             {
               type: "p",
               text: "Answer engines are fed by web crawlers, and those crawlers are publicly documented: OpenAI publishes [OAI-SearchBot and GPTBot](https://developers.openai.com/api/docs/bots), Anthropic publishes [ClaudeBot, Claude-User and Claude-SearchBot](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), and Perplexity publishes [PerplexityBot and Perplexity-User](https://docs.perplexity.ai/docs/resources/perplexity-crawlers).",
@@ -325,12 +318,18 @@ export const geoRehberi: BlogPost = {
               type: "p",
               text: "One common exaggeration needs correcting here: schema is not the key to the AI answer box. Google explicitly says structured data isn't required for generative AI search and that there's no special schema.org markup you need to add for these features — the same document notes that llms.txt files are ignored by Google Search ([Google Search Central](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). Google still recommends keeping structured data as part of overall SEO, because it makes you eligible for rich results. In short: schema is useful hygiene, not a magic GEO lever.",
             },
-            { type: "h3", text: "3. Consistency and third-party signals" },
+            {
+              type: "h3",
+              text: "3. Consistency and third-party signals",
+            },
             {
               type: "p",
-              text: "Your brand's name, what it does and its contact details should be consistent across your site, your social profiles and pages written about you. Mentions on other sites — press, lists, directories, genuine user reviews — reinforce the picture. When AI engines meet contradictory information, they either misrepresent the brand or skip it entirely.",
+              text: "Your brand's name, what it does and its contact details should be consistent across your site, your social profiles and pages written about you. Mentions on other sites — press, lists, directories, genuine user reviews — reinforce the picture. When AI engines meet contradictory information, they either misrepresent the brand or skip it entirely. We cover how that same signal can cut the other way — being cited without being recommended — in [The AI answer isn't citing your site — it's citing that listicle](/en/blog/ai-overviews-cite-listicles-not-your-site).",
             },
-            { type: "h3", text: "4. Content shaped like questions" },
+            {
+              type: "h3",
+              text: "4. Content shaped like questions",
+            },
             {
               type: "p",
               text: "People ask AI full-sentence questions. Content that uses real questions as headings — 'How do I choose a foundation for my skin type?' — followed immediately by a clear answer is the format these engines most like to cite. That's why FAQ blocks and guide articles are the load-bearing columns of GEO.",
@@ -416,20 +415,17 @@ export const geoRehberi: BlogPost = {
       ],
       sources: [
         {
-          label:
-            "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). GEO: Generative Engine Optimization. KDD '24: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.",
+          label: "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). GEO: Generative Engine Optimization. KDD '24: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.",
           url: "https://arxiv.org/abs/2311.09735",
           publisher: "ACM SIGKDD / arXiv",
         },
         {
-          label:
-            "Pew Research Center. (2025, July 22). Google users are less likely to click on links when an AI summary appears in the results.",
+          label: "Pew Research Center. (2025, July 22). Google users are less likely to click on links when an AI summary appears in the results.",
           url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
           publisher: "Pew Research Center",
         },
         {
-          label:
-            "Google. Google's guide to optimizing for generative AI features on Google Search. Google Search Central.",
+          label: "Google. Google's guide to optimizing for generative AI features on Google Search. Google Search Central.",
           url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
           publisher: "Google Search Central",
         },
@@ -439,8 +435,7 @@ export const geoRehberi: BlogPost = {
           publisher: "Google Search Central",
         },
         {
-          label:
-            "Google. Intro to structured data markup in Google Search. Google Search Central.",
+          label: "Google. Intro to structured data markup in Google Search. Google Search Central.",
           url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
           publisher: "Google Search Central",
         },
@@ -450,8 +445,7 @@ export const geoRehberi: BlogPost = {
           publisher: "OpenAI",
         },
         {
-          label:
-            "Anthropic. Does Anthropic crawl data from the web, and how can site owners block the crawler? Claude Help Center.",
+          label: "Anthropic. Does Anthropic crawl data from the web, and how can site owners block the crawler? Claude Help Center.",
           url: "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
           publisher: "Anthropic",
         },
@@ -461,8 +455,7 @@ export const geoRehberi: BlogPost = {
           publisher: "Perplexity AI",
         },
         {
-          label:
-            "Turkish Medicines and Medical Devices Agency. Regulation on Health Claims of Products Sold with Health Claims (Sağlık Beyanı).",
+          label: "Turkish Medicines and Medical Devices Agency. Regulation on Health Claims of Products Sold with Health Claims (Sağlık Beyanı).",
           url: "https://titck.gov.tr/faaliyetalanlari/denetim/saglik-beyani",
           publisher: "Republic of Türkiye Ministry of Health — TİTCK",
         },

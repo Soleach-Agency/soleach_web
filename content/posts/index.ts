@@ -19,6 +19,8 @@ import { guzellikMarkalariWebTaramasi } from "./guzellik-markalari-web-taramasi"
 import { googleSearchProfileHandleSwapping } from "./google-search-profile-handle-swapping";
 import { shopifyWebmcpAjanAraclari } from "./shopify-webmcp-ajan-araclari";
 import { googleAdsAiMaxOtomatikGecis } from "./google-ads-ai-max-otomatik-gecis";
+import { aiOverviewListicleKaynagi } from "./ai-overview-listicle-kaynagi";
+import { shopifyShopCampaignsShopifyql } from "./shopify-shop-campaigns-shopifyql";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -42,4 +44,6 @@ export const posts: BlogPost[] = [
   googleSearchProfileHandleSwapping,
   shopifyWebmcpAjanAraclari,
   googleAdsAiMaxOtomatikGecis,
+  aiOverviewListicleKaynagi,
+  shopifyShopCampaignsShopifyql,
 ];
