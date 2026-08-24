@@ -24,6 +24,7 @@ import { shopifyShopCampaignsShopifyql } from "./shopify-shop-campaigns-shopifyq
 import { chatgptKaynakGorunurlugu } from "./chatgpt-kaynak-gorunurlugu";
 import { aiOverviewTarifCizimleriDeneyi } from "./ai-overview-tarif-cizimleri-deneyi";
 import { googleAgustos2026SpamGuncellemesi } from "./google-agustos-2026-spam-guncellemesi";
+import { microsoftAdsAiMaxKureselAcilis } from "./microsoft-ads-ai-max-kuresel-acilis";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -52,4 +53,5 @@ export const posts: BlogPost[] = [
   chatgptKaynakGorunurlugu,
   aiOverviewTarifCizimleriDeneyi,
   googleAgustos2026SpamGuncellemesi,
+  microsoftAdsAiMaxKureselAcilis,
 ];
