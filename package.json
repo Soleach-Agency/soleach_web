@@ -9,9 +9,11 @@
     "route-aliases": "tsx scripts/route-aliases.ts",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
+    "deploy": "npm run build && npm run oauth-check:local && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run oauth-check:live && npm run indexnow",
     "agent-assets": "node scripts/agent-assets.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "oauth-check:local": "node scripts/oauth-surface-check.mjs local",
+    "oauth-check:live": "node scripts/oauth-surface-check.mjs live"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.112.4",
