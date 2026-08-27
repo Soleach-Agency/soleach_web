@@ -9,14 +9,17 @@
     "route-aliases": "tsx scripts/route-aliases.ts",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run indexnow",
+    "deploy": "npm run build && npm run oauth-check:local && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run oauth-check:live && npm run indexnow",
     "agent-assets": "node scripts/agent-assets.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "oauth-check:local": "node scripts/oauth-surface-check.mjs local",
+    "oauth-check:live": "node scripts/oauth-surface-check.mjs live"
   },
   "dependencies": {
+    "@supabase/supabase-js": "2.112.4",
     "d3-force": "^3.0.0",
     "motion": "^12.23.26",
-    "next": "16.0.10",
+    "next": "16.3.3",
     "next-themes": "^0.4.6",
     "react": "19.2.1",
     "react-dom": "19.2.1"
