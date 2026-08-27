@@ -20,7 +20,10 @@ type ViewState =
   | { kind: "consent"; details: OAuthAuthorizationDetails; member: TeamMember }
   | { kind: "error"; message: string };
 
-const AUTHORIZATION_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+// Supabase authorization request identifiers are opaque URL-safe values, not
+// UUIDs. Keep a strict alphabet and bounded length without assuming a format
+// that the authorization server does not guarantee.
+const AUTHORIZATION_ID = /^[A-Za-z0-9_-]{20,128}$/;
 
 const scopeLabels: Record<string, string> = {
   openid: "Kimliğinizi doğrulama",
