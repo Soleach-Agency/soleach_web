@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 
 const CONSENT_TITLE = "<title>Soleach MCP Yetkilendirme</title>";
@@ -9,15 +10,48 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function loadPublicConfig() {
+  const envFile = new URL("../.env.local", import.meta.url);
+  if (
+    (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY) &&
+    existsSync(envFile)
+  ) {
+    process.loadEnvFile(envFile);
+  }
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  assert(url === SUPABASE_ORIGIN, "NEXT_PUBLIC_SUPABASE_URL is missing or points to the wrong project.");
+  assert(
+    publishableKey?.startsWith("sb_publishable_") && publishableKey.length > "sb_publishable_".length,
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is missing or invalid.",
+  );
+  return { url, publishableKey };
+}
+
+async function readConsentScripts(consentHtml, readScript) {
+  const scriptSources = [...consentHtml.matchAll(/<script[^>]+src="([^"]+\.js(?:\?[^"]*)?)"/g)].map(
+    ([, source]) => source,
+  );
+  assert(scriptSources.length > 0, "OAuth consent page does not load any JavaScript chunks.");
+  return (await Promise.all(scriptSources.map(readScript))).join("\n");
+}
+
 async function checkLocalBuild() {
+  const config = loadPublicConfig();
   const [consentHtml, headers] = await Promise.all([
     readFile(new URL("../out/oauth/consent.html", import.meta.url), "utf8"),
     readFile(new URL("../out/_headers", import.meta.url), "utf8"),
   ]);
+  const scripts = await readConsentScripts(consentHtml, (source) =>
+    readFile(new URL(`../out${source.split("?")[0]}`, import.meta.url), "utf8"),
+  );
 
   assert(consentHtml.includes(CONSENT_TITLE), "OAuth consent page is missing from the static export.");
   assert(headers.includes("/oauth/*"), "OAuth no-store header rule is missing from the static export.");
   assert(headers.includes(SUPABASE_ORIGIN), "Supabase is missing from the exported Content-Security-Policy.");
+  assert(scripts.includes(config.url), "OAuth browser bundle is missing NEXT_PUBLIC_SUPABASE_URL.");
+  assert(scripts.includes(config.publishableKey), "OAuth browser bundle is missing the Supabase publishable key.");
   console.log("oauth-surface-check: local export OK");
 }
 
@@ -26,18 +60,26 @@ async function fetchWithTimeout(url, init = {}) {
 }
 
 async function checkLiveOnce() {
+  const config = loadPublicConfig();
   const marker = Date.now().toString(36).padEnd(32, "0");
   const consent = await fetchWithTimeout(
     `https://soleach.com/oauth/consent?authorization_id=${marker}`,
     { headers: { "cache-control": "no-cache" } },
   );
   const consentHtml = await consent.text();
+  const scripts = await readConsentScripts(consentHtml, async (source) => {
+    const response = await fetchWithTimeout(new URL(source, consent.url));
+    assert(response.ok, `Live OAuth JavaScript chunk returned HTTP ${response.status}.`);
+    return response.text();
+  });
   assert(consent.status === 200, `Live OAuth consent page returned HTTP ${consent.status}.`);
   assert(consentHtml.includes(CONSENT_TITLE), "Live OAuth consent page returned the wrong document.");
   assert(
     consent.headers.get("content-security-policy")?.includes(SUPABASE_ORIGIN),
     "Live OAuth consent page cannot connect to Supabase under its Content-Security-Policy.",
   );
+  assert(scripts.includes(config.url), "Live OAuth browser bundle is missing NEXT_PUBLIC_SUPABASE_URL.");
+  assert(scripts.includes(config.publishableKey), "Live OAuth browser bundle is missing the Supabase publishable key.");
 
   const metadata = await fetchWithTimeout(`${MCP_RESOURCE.replace(/\/mcp$/, "")}/.well-known/oauth-protected-resource/mcp`);
   assert(metadata.status === 200, `Protected-resource metadata returned HTTP ${metadata.status}.`);
