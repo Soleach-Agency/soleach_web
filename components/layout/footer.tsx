@@ -14,9 +14,9 @@ export function Footer({
   const base = `/${locale}`;
   const year = new Date().getFullYear();
 
-  const serviceLinks = dict.services.map((s) => ({
-    href: `${base}/${dict.routes.services}#${s.key}`,
-    label: s.title,
+  const serviceLinks = dict.serviceGroups.map((group) => ({
+    href: `${base}/${dict.routes.services}#${group.key}`,
+    label: group.title,
   }));
 
   const companyLinks = [

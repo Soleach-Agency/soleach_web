@@ -18,3 +18,9 @@ export const localeHtmlLang: Record<Locale, string> = {
   tr: "tr-TR",
   en: "en",
 };
+
+/** Open Graph locale values use language_TERRITORY rather than BCP-47. */
+export const localeOpenGraph: Record<Locale, string> = {
+  tr: "tr_TR",
+  en: "en_US",
+};

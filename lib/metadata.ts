@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { locales, type Locale, localeHtmlLang } from "./i18n";
+import {
+  locales,
+  type Locale,
+  localeHtmlLang,
+  localeOpenGraph,
+} from "./i18n";
 import { localeUrl, siteConfig, siteUrl } from "./site";
 
 /** Brand Open Graph image, one per locale (1200×630, PNG for WhatsApp/X
@@ -63,7 +68,7 @@ export function buildMetadata({
       description,
       url: canonical,
       siteName: siteConfig.name,
-      locale: localeHtmlLang[locale],
+      locale: localeOpenGraph[locale],
       type: ogType,
       images: [
         {

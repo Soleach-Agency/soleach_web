@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { siteConfig, siteUrl } from "@/lib/site";
+import { ogImageUrl } from "@/lib/metadata";
 
 /**
  * Link-in-bio hub — the single URL to put in every social profile
@@ -13,6 +14,23 @@ export const metadata: Metadata = {
   description:
     "Soleach'in tüm kanalları tek yerde: web sitesi, YouTube, Instagram, TikTok, Facebook, LinkedIn ve iletişim.",
   alternates: { canonical: `${siteUrl}/links` },
+  openGraph: {
+    title: "Soleach | Bağlantılar / Links",
+    description:
+      "Güzellik markalarına dijital büyüme, her sektörden şirkete yazılım ve yapay zekâ çözümleri.",
+    url: `${siteUrl}/links`,
+    siteName: siteConfig.name,
+    locale: "tr_TR",
+    type: "website",
+    images: [{ url: ogImageUrl("tr"), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Soleach | Bağlantılar / Links",
+    description:
+      "Güzellik markalarına dijital büyüme, her sektörden şirkete yazılım ve yapay zekâ çözümleri.",
+    images: [ogImageUrl("tr")],
+  },
 };
 
 interface LinkItem {
@@ -124,9 +142,9 @@ export default function LinksPage() {
             Soleach
           </h1>
           <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted">
-            Güzellik markaları için dijital reklam ajansı
+            Güzellik markalarına büyüme · Her sektöre yazılım
             <span className="block text-xs opacity-80">
-              Digital advertising agency for beauty brands
+              Beauty growth · Software for any industry
             </span>
           </p>
         </div>
@@ -177,7 +195,7 @@ export default function LinksPage() {
           href="/tr/contact"
           className="brand-gradient mt-6 block rounded-2xl px-5 py-4 text-center text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
         >
-          Markanı konuşalım → Ücretsiz tanışma görüşmesi
+          Projeni konuşalım → Ücretsiz tanışma görüşmesi
         </Link>
 
         <p className="mt-8 text-center text-xs text-muted">

@@ -153,10 +153,13 @@ export function homeMarkdown(locale: Locale): string {
     "",
   ];
 
-  for (const s of dict.services) {
-    out.push(`### ${s.title}`, "", `*${s.tagline}*`, "", s.summary, "");
-    for (const f of s.features) out.push(`- ${f}`);
-    out.push("", `**${dict.servicesPage.outcomeLabel}:** ${s.outcome}`, "");
+  for (const group of dict.serviceGroups) {
+    out.push(`### ${group.title}`, "", group.summary, "", `*${group.audience}*`, "");
+    for (const s of dict.services.filter((service) => service.group === group.key)) {
+      out.push(`#### ${s.title}`, "", `*${s.tagline}*`, "", s.summary, "");
+      for (const f of s.features) out.push(`- ${f}`);
+      out.push("", `**${dict.servicesPage.outcomeLabel}:** ${s.outcome}`, "");
+    }
   }
 
   out.push(`## ${process.title}`, "", process.subtitle, "");
@@ -194,11 +197,21 @@ export function servicesMarkdown(locale: Locale): string {
     "",
   ];
 
-  for (const s of dict.services) {
-    out.push(`## ${s.title}`, "", `*${s.tagline}*`, "", s.summary, "");
-    out.push(`**${dict.servicesPage.featuresLabel}:**`, "");
-    for (const f of s.features) out.push(`- ${f}`);
-    out.push("", `**${dict.servicesPage.outcomeLabel}:** ${s.outcome}`, "");
+  for (const group of dict.serviceGroups) {
+    out.push(
+      `## ${group.title} {#${group.key}}`,
+      "",
+      group.summary,
+      "",
+      `*${group.audience}*`,
+      "",
+    );
+    for (const s of dict.services.filter((service) => service.group === group.key)) {
+      out.push(`### ${s.title} {#${s.key}}`, "", `*${s.tagline}*`, "", s.summary, "");
+      out.push(`**${dict.servicesPage.featuresLabel}:**`, "");
+      for (const f of s.features) out.push(`- ${f}`);
+      out.push("", `**${dict.servicesPage.outcomeLabel}:** ${s.outcome}`, "");
+    }
   }
 
   return out.join("\n");

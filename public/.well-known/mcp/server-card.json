@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
   "name": "com.soleach/content-search",
   "title": "Soleach content search",
-  "description": "Search Soleach's guides and concept glossary on advertising, e-commerce and AI visibility for beauty brands.",
+  "description": "Search Soleach's service information, guides and concept glossary across beauty-brand growth, web systems and AI visibility.",
   "version": "1.0.0",
   "websiteUrl": "https://soleach.com",
   "remotes": [

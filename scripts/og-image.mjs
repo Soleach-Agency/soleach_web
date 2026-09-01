@@ -18,12 +18,12 @@ const LOGO = resolve("public/brand/soleach-logo.webp");
 // script stays dependency-free.
 const VARIANTS = {
   tr: {
-    tagline: "Kozmetik & Güzellik Markaları için Dijital Reklam Ajansı",
-    sub: "Performans reklamları · Kreatif üretim · Shopify · SEO & GEO",
+    tagline: "Güzellikte Büyüme · İşletmelere Özel Yazılım",
+    sub: "Reklam · Kreatif · SEO & GEO | Özel yazılım · MCP · Yapay zekâ",
   },
   en: {
-    tagline: "Digital Advertising Agency for Beauty Brands",
-    sub: "Performance ads · Creative production · Shopify · SEO & GEO",
+    tagline: "Beauty Growth · Custom Software for Business",
+    sub: "Ads · Creative · SEO & GEO | Custom software · MCP · AI",
   },
 };
 

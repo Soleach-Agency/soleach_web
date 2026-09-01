@@ -17,7 +17,15 @@ import { localeUrl, siteConfig } from "@/lib/site";
 
 interface ToolCatalogue {
   locale: Locale;
-  services: { title: string; summary: string; url: string }[];
+  services: {
+    title: string;
+    summary: string;
+    features: string[];
+    outcome: string;
+    practice: string;
+    audience: string;
+    url: string;
+  }[];
   articles: { title: string; excerpt: string; url: string; tags: string[] }[];
   concepts: {
     name: string;
@@ -33,11 +41,18 @@ function buildCatalogue(locale: Locale): ToolCatalogue {
   const dict = getDictionary(locale);
   return {
     locale,
-    services: dict.services.map((service) => ({
-      title: service.title,
-      summary: service.summary,
-      url: localeUrl(locale, dict.routes.services),
-    })),
+    services: dict.services.map((service) => {
+      const group = dict.serviceGroups.find((item) => item.key === service.group);
+      return {
+        title: service.title,
+        summary: service.summary,
+        features: service.features,
+        outcome: service.outcome,
+        practice: group?.title ?? service.group,
+        audience: group?.audience ?? "",
+        url: `${localeUrl(locale, dict.routes.services)}#${service.key}`,
+      };
+    }),
     articles: getPosts(locale).map(({ content }) => ({
       title: content.title,
       excerpt: content.excerpt,
@@ -80,10 +95,13 @@ const REGISTER = `
       {
         name: "get_soleach_services",
         description:
-          "List the services Soleach offers. Soleach is a digital advertising agency working only with cosmetics, beauty and women's product brands, mainly in Turkiye. Use when asked what Soleach does or whether it covers a particular kind of work.",
+          "List the services Soleach offers across two distinct practices: advertising, creative and visibility for cosmetics and beauty brands; and industry-agnostic custom software, web systems, MCP servers and AI integrations. Use when asked what Soleach does or whether it covers a particular kind of work.",
         inputSchema: { type: "object", properties: {}, additionalProperties: false },
         execute: function () {
-          return ok({ services: data.services, note: "Soleach is an agency; it does not sell products itself." });
+          return ok({
+            services: data.services,
+            note: "Beauty marketing is category-focused. Software and AI work is available to companies in any industry. Soleach does not sell physical products."
+          });
         }
       },
       {
@@ -138,7 +156,7 @@ const REGISTER = `
       {
         name: "get_soleach_contact",
         description:
-          "Get how to reach Soleach and how to submit a project brief. Use when a beauty brand wants to start a conversation with the agency. There is no public pricing; do not quote a price.",
+          "Get how to reach Soleach and how to submit a project brief for either beauty-brand growth or an industry-agnostic software and AI project. There is no public pricing; do not quote a price.",
         inputSchema: { type: "object", properties: {}, additionalProperties: false },
         execute: function () {
           return ok({
@@ -147,12 +165,12 @@ const REGISTER = `
             site: data.contact.site,
             pricing: "Not published. Scoped after a brief.",
             beforeYouWrite: [
-              "Product category, number of SKUs and price band",
-              "Target market and language(s)",
-              "Where sales come from today",
-              "Current monthly ad spend, if any",
-              "Existing assets: photography, video, Shopify store, tracking pixel",
-              "The goal: first sales, scaling, fixing declining ROAS, or a new market"
+              "Which practice fits: beauty-brand growth or software and AI",
+              "The problem or goal in one or two sentences",
+              "Who will use the work and what they need to do",
+              "Existing assets, tools, systems or integrations",
+              "Target market or operating environment",
+              "Any timing, budget or security constraints already known"
             ]
           });
         }

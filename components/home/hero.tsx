@@ -11,14 +11,14 @@ import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
 
 const chips = [
-  { label: "Instagram Ads", pos: "left-0 top-6", delay: "0s" },
-  { label: "Reels", pos: "right-2 top-16", delay: "0.8s" },
+  { label: "Meta Ads", pos: "left-0 top-6", delay: "0s" },
+  { label: "Creative", pos: "right-2 top-16", delay: "0.8s" },
   { label: "Shopify", pos: "left-1 top-[28%]", delay: "0.6s" },
-  { label: "TikTok", pos: "left-4 top-1/2", delay: "1.6s" },
-  { label: "UGC", pos: "right-0 top-[46%]", delay: "0.4s" },
-  { label: "ROAS", pos: "right-6 bottom-[28%]", delay: "1.4s" },
-  { label: "SEO", pos: "left-10 bottom-10", delay: "1.2s" },
-  { label: "GEO", pos: "right-8 bottom-6", delay: "2s" },
+  { label: "Custom Software", pos: "left-4 top-1/2", delay: "1.6s" },
+  { label: "MCP", pos: "right-0 top-[46%]", delay: "0.4s" },
+  { label: "AI Agents", pos: "right-6 bottom-[28%]", delay: "1.4s" },
+  { label: "SEO & GEO", pos: "left-10 bottom-10", delay: "1.2s" },
+  { label: "API", pos: "right-8 bottom-6", delay: "2s" },
 ];
 
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {

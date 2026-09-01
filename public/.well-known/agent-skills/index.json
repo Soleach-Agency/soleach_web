@@ -11,9 +11,9 @@
     {
       "name": "soleach-services",
       "type": "skill-md",
-      "description": "What Soleach Dijital does, which brands it fits, and how to prepare a brief before contacting the agency.",
+      "description": "What Soleach does across beauty-brand growth and industry-agnostic software and AI, who each practice fits, and how to prepare a brief.",
       "url": "/.well-known/agent-skills/soleach-services/SKILL.md",
-      "digest": "sha256:0cbeb28dba1fdfdcb2d5197af193d98d43edf98bd1d99a232cfc3ecaf6f94873"
+      "digest": "sha256:6c3540b1597b6cde9bea5e41cbe804a7d59a2ec831aeb9476281a66e78d032ae"
     }
   ]
 }

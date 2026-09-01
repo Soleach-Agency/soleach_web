@@ -9,11 +9,28 @@ import { conceptsSlug } from "./section-slugs";
  * corporate brochure. Turkish uses an intimate "sen".
  */
 
-export type ServiceKey = "ads" | "creative" | "seo-geo" | "web-ecommerce";
+export type ServiceKey =
+  | "ads"
+  | "creative"
+  | "seo-geo"
+  | "web-ecommerce"
+  | "custom-software"
+  | "mcp-ai";
+
+export type ServiceGroupKey = "beauty-growth" | "software-ai";
+
+export interface ServiceGroupContent {
+  key: ServiceGroupKey;
+  eyebrow: string;
+  title: string;
+  summary: string;
+  audience: string;
+}
 
 export interface ServiceContent {
   key: ServiceKey;
-  icon: "ads" | "creative" | "search" | "store";
+  group: ServiceGroupKey;
+  icon: "ads" | "creative" | "search" | "store" | "code" | "network";
   title: string;
   tagline: string;
   summary: string;
@@ -85,6 +102,7 @@ export interface Dictionary {
     faq: { eyebrow: string; title: string; items: { q: string; a: string }[] };
     ctaBand: { title: string; subtitle: string; button: string };
   };
+  serviceGroups: ServiceGroupContent[];
   services: ServiceContent[];
   servicesPage: {
     hero: { eyebrow: string; title: string; subtitle: string };
@@ -139,7 +157,8 @@ export interface Dictionary {
 }
 
 const tr: Dictionary = {
-  brandTagline: "Kozmetik ve güzellik markaları için dijital reklam ajansı",
+  brandTagline:
+    "Güzellik markaları için dijital büyüme; her sektörden şirket için yazılım ve yapay zekâ çözümleri",
   nav: {
     home: "Ana Sayfa",
     services: "Hizmetler",
@@ -158,24 +177,24 @@ const tr: Dictionary = {
   },
   meta: {
     home: {
-      title: "Kozmetik & Güzellik Markaları için Dijital Reklam Ajansı | Soleach",
+      title: "Güzellik Markalarına Reklam & Firmalara Özel Yazılım | Soleach",
       description:
-        "Kozmetik, makyaj ve cilt bakımı markalarına özel dijital reklam ajansı. Meta & TikTok performans reklamları, kreatif üretim, Shopify e-ticaret kurulumu ve SEO & GEO ile ROAS odaklı büyüme.",
+        "Güzellik markalarına performans reklamı, kreatif ve SEO & GEO; her sektörden şirkete özel yazılım, MCP sunucuları, yapay zekâ entegrasyonları ve web sistemleri.",
     },
     services: {
-      title: "Kozmetik Markaları için Dijital Ajans Hizmetleri | Soleach",
+      title: "Dijital Reklam, Yazılım & Yapay Zekâ Hizmetleri | Soleach",
       description:
-        "Performans reklamları, içerik & kreatif üretim, web sitesi & Shopify e-ticaret kurulumu ve SEO & GEO. Kozmetik markanı büyütmek için gereken her şey, tek ekipte.",
+        "Güzellik markalarına performans reklamı, kreatif ve SEO & GEO; her sektörden şirkete özel yazılım, MCP sunucuları, yapay zekâ entegrasyonları ve web/e-ticaret geliştirme.",
     },
     about: {
-      title: "Hakkımızda | Kozmetik Odaklı Dijital Reklam Ajansı | Soleach",
+      title: "Hakkımızda | Dijital Büyüme ve Yazılım Ekibi | Soleach",
       description:
-        "Biz her işi yapmayız — bir işi çok iyi yaparız. Soleach; kozmetik, makyaj, cilt bakımı ve kadın ürünleri markalarına adanmış bir dijital reklam ajansı.",
+        "Soleach, güzellik markaları için reklam ve kreatif; her sektörden şirket için özel yazılım, MCP ve yapay zekâ entegrasyonları geliştiren dijital ekip.",
     },
     contact: {
       title: "İletişim | Soleach",
       description:
-        "Markanı konuşalım. Formu doldur, 24 saat içinde sana özel bir büyüme planıyla dönelim. Taahhüt yok.",
+        "Marka büyümesi ya da yazılım ihtiyacını konuşalım. Formu doldur; projen için doğru başlangıç noktasını birlikte netleştirelim.",
     },
     blog: {
       title: "Blog | Kozmetik Markaları için Dijital Büyüme Rehberleri | Soleach",
@@ -190,114 +209,114 @@ const tr: Dictionary = {
   },
   home: {
     hero: {
-      eyebrow: "Kozmetik ve güzellik markaları için dijital reklam ajansı",
-      title: "Kozmetik markanı büyütmek",
-      titleAccent: "de bir sanat.",
+      eyebrow: "Güzellikte büyüme · Her sektöre yazılım",
+      title: "Markanı büyütmek,",
+      titleAccent: "işini hızlandırmak.",
       subtitle:
-        "Makyajdan cilt bakımına — markanı sadece güzel göstermiyoruz. İnsanların aklına kazıyor, sepetine koyuyoruz. Reklam, içerik, e-ticaret ve yapay zekâ görünürlüğü; hepsi tek ekipte.",
-      ctaPrimary: "Markanı konuşalım",
+        "Güzellik markaları için reklam, kreatif ve görünürlük; her sektörden şirket için özel yazılım, MCP ve yapay zekâ entegrasyonları. İki ayrı uzmanlık, işi sahiplenen tek ekip.",
+      ctaPrimary: "İhtiyacını konuşalım",
       ctaSecondary: "Neler yapıyoruz?",
       note: "24 saat içinde dönüyoruz · Taahhüt yok, sürpriz fatura yok",
       scrollCue: "Keşfet",
     },
     marquee: [
-      "Makyaj",
-      "Cilt Bakımı",
-      "Parfüm",
-      "Saç Bakımı",
-      "Kozmetik",
-      "Dermokozmetik",
-      "Ten Bakımı",
-      "Doğal Güzellik",
-      "Vegan Kozmetik",
-      "Güneş Bakımı",
+      "Performans Reklamları",
+      "Kreatif Üretim",
+      "SEO & GEO",
+      "Web Sistemleri",
+      "Özel Yazılım",
+      "MCP Sunucuları",
+      "Yapay Zekâ Ajanları",
+      "API Entegrasyonları",
+      "Shopify",
+      "Otomasyon",
     ],
     stats: [
-      { value: 100, prefix: "%", label: "Sadece kozmetik ve güzellik markaları. Başka hiçbir şey." },
-      { value: 3, suffix: "×", label: "Hedeflediğimiz ortalama reklam getirisi (ROAS)" },
+      { value: 2, label: "Net uzmanlık alanı: güzellik büyümesi ve yazılım" },
+      { value: 1, label: "İhtiyacın boyunca sorumluluğu üstlenen ekip" },
       { value: 24, suffix: " saat", label: "İçinde ilk yanıtımız sende olur" },
     ],
     manifesto: {
       eyebrow: "Kısaca",
-      big: "Her kozmetik markasının bir hikâyesi var. Biz onu satışa çeviriyoruz.",
-      body: "En güzel ürün bile, doğru insanlara ulaşmazsa rafta bekler. Biz markanın hikâyesini alır; kaydırılan bir ekranı durduran, tıklatan ve “bunu almam lazım” dedirten bir şeye dönüştürürüz. Sonra da o tıklamayı satışa çeviren bir mağazayla tamamlarız. Estetik ve performans, aynı masada.",
+      big: "Kategoriye gerektiği yerde odaklanır, teknolojide sektör sınırı koymayız.",
+      body: "Reklam, kreatif ve SEO & GEO işlerimizde güzellik kategorisinin diline, estetiğine ve alıcısına odaklanıyoruz. Yazılım tarafında ise sektör değil, çözülmesi gereken iş problemi belirleyici. İki alanı birbirine karıştırmadan aynı ilkeyle çalışıyoruz: işe yarayan, ölçülebilen ve geliştirilebilen işler.",
     },
     servicesIntro: {
       eyebrow: "Ne yapıyoruz",
-      title: "Kozmetik markanı büyüten dört güç",
+      title: "İki uzmanlık. Her biri kendi sınırları içinde.",
       subtitle:
-        "Reklamı sanata, sanatı da satışa çeviriyoruz. Reklamdan mağazaya kadar dördü bir arada; tek ekip, tek hedef: büyümen.",
+        "Güzellik markalarının büyüme ihtiyaçlarını kategori odağıyla; şirketlerin yazılım ihtiyaçlarını sektör sınırı koymadan çözüyoruz.",
     },
     process: {
       eyebrow: "Nasıl çalışıyoruz",
-      title: "Tahmin yok. Sadece net bir yol.",
+      title: "Fikirden çalışan sonuca, net bir yol.",
       subtitle:
-        "Her adımda ne yaptığımızı, neden yaptığımızı ve ne getirdiğini görürsün. Sürpriz sevmeyiz — iyi olanları hariç.",
+        "Reklam kampanyası da yazılım ürünü de önce doğru problemi anlamakla başlar. Her adımın kapsamını, kararını ve çıktısını görünür tutarız.",
       deliverablesLabel: "Bu adımda eline geçenler",
       steps: [
         {
           title: "Tanışma",
-          desc: "Markanı, ürünlerini ve kime seslendiğini dinliyoruz. Rakipleri ve pazarı okuyup fırsatları masaya koyuyoruz.",
+          desc: "Markanı ya da işini, kullanıcılarını ve bugün nerede zorlandığını dinliyoruz. Doğru problemi birlikte tarif ediyoruz.",
           deliverables: [
             "Ücretsiz tanışma görüşmesi (video ya da yüz yüze)",
-            "Mevcut hesapların ve sitenin ilk değerlendirmesi",
-            "Rakip ve pazar gözlemlerinin özeti",
+            "Mevcut hesap, site veya sistemlerin ilk değerlendirmesi",
+            "Fırsatların, kısıtların ve önceliklerin özeti",
           ],
         },
         {
-          title: "Strateji",
-          desc: "Bütçe, kanal ve mesaj planını birlikte kuruyoruz. Net hedefler, net bir yol haritası — havada laf yok.",
+          title: "Kapsam & Yol Haritası",
+          desc: "Kanal ve mesaj planını ya da ürün kapsamını netleştiriyoruz. Öncelikleri, başarı ölçüsünü ve çalışma sırasını baştan görünür kılıyoruz.",
           deliverables: [
-            "Yazılı büyüme yol haritası ve kanal planı",
-            "Bütçe dağılımı ve hedef metrikler (ROAS, CPA)",
-            "İçerik ve kampanya takvimi taslağı",
+            "Yazılı yol haritası ve net iş kapsamı",
+            "Hedefler, başarı ölçüleri ve kabul kriterleri",
+            "Takvim, bağımlılıklar ve öncelik sırası",
           ],
         },
         {
-          title: "Üretim & Yayın",
-          desc: "Durduran kreatifleri üretip kampanyaları yayına alıyoruz. Doğru kitleye, doğru anda, doğru sözle.",
+          title: "Üretim & Geliştirme",
+          desc: "Kreatifi, kampanyayı ya da yazılımı çalışır parçalar halinde üretiyoruz. Kritik kararları gösteriyor, geri bildirimi sürece katıyoruz.",
           deliverables: [
-            "Onayına sunulan kreatifler ve reklam metinleri",
-            "Piksel / ölçüm kurulumunun doğrulanması",
-            "Yayına alınan kampanyaların kurulum özeti",
+            "İncelenebilir tasarım, içerik veya çalışan sürümler",
+            "Gerekli ölçüm, entegrasyon ve kalite kontrolleri",
+            "Onaylanan işin canlıya alınması ve teslim özeti",
           ],
         },
         {
-          title: "Optimizasyon",
-          desc: "Veriyi sürekli izliyor, test ediyoruz. Bütçeyi en çok kazandıran yere yönlendirip büyümeyi ölçeğe taşıyoruz.",
+          title: "Ölçüm & İyileştirme",
+          desc: "Canlıdaki sonucu izliyor, öğreniyor ve geliştiriyoruz. Kampanyada veriyi, yazılımda kullanım ve sistem sağlığını kararın merkezinde tutuyoruz.",
           deliverables: [
-            "Düzenli, sade performans raporu",
-            "Yapılan testler ve sonuçlarının kaydı",
-            "Bir sonraki dönem için net öneri listesi",
+            "Anlaşılır performans veya sistem görünürlüğü",
+            "Yapılan testlerin ve değişikliklerin kaydı",
+            "Bir sonraki dönem için öncelikli geliştirme listesi",
           ],
         },
       ],
     },
     whyUs: {
       eyebrow: "Neden Soleach",
-      title: "Biz her işi yapmayız. Bir işi çok iyi yaparız.",
+      title: "Doğru işe, doğru uzmanlıkla yaklaşırız.",
       subtitle:
-        "Kozmetik, güzellik ve kadın ürünleri. Bu kategorinin dilini, estetiğini ve alıcısını ezbere biliyoruz — çünkü başka bir şeye bakmıyoruz.",
+        "Güzellik pazarlamasında kategori odağı; yazılımda iş problemi. İki çalışma alanını bilinçli biçimde ayrı tutuyoruz.",
       points: [
         {
-          title: "Kategoriye adanmışlık",
-          desc: "Cilt bakımından makyaja, dermokozmetikten parfüme; bu ürünlerin nasıl arzu edildiğini ve satın alındığını biliyoruz. Kreatifi de ona göre kuruyoruz.",
+          title: "Kategori odağı, yerinde",
+          desc: "Reklam, kreatif ve SEO & GEO’da cilt bakımından makyaja, dermokozmetikten parfüme güzellik alıcısını ve kategorinin dilini merkeze alıyoruz.",
+        },
+        {
+          title: "İşine göre yazılım",
+          desc: "Hazır bir paketi zorla uydurmak yerine süreci, kullanıcıyı ve entegrasyon ihtiyacını anlayıp doğru kapsamı kuruyoruz.",
         },
         {
           title: "Estetik + performans",
-          desc: "Sadece güzel görünen değil; güzel görünüp aynı anda satan işler. Marka imajın da büyür, cironun da.",
+          desc: "Görsel kaliteyi sonuçtan ayırmıyoruz. Kreatifte dönüşümü, dijital üründe kullanılabilirliği aynı özenle ele alıyoruz.",
         },
         {
-          title: "Reklamdan mağazaya tek zincir",
-          desc: "Reklamı biz kuruyoruz, tıklamanın indiği Shopify mağazasını da biz. Kimse “sorun diğer tarafta” diyemiyor; huninin tamamı tek ekipte.",
+          title: "Güvenli, sürdürülebilir sistemler",
+          desc: "Yetki sınırlarını, dokümantasyonu, test ve bakımı sonradan eklenecek işler değil; teslimin parçası kabul ediyoruz.",
         },
         {
-          title: "Sürpriz fatura yok",
-          desc: "Her kuruşun nereye gittiğini ve ne getirdiğini (ROAS, CPA, dönüşüm oranı) açık açık gösteririz. Şeffaflık lüks değil, standart.",
-        },
-        {
-          title: "Yarının aramasına hazır",
-          desc: "Markanı yalnızca Google’da değil; ChatGPT ve Perplexity gibi yapay zekâ motorlarında da görünür kılıyoruz.",
+          title: "Şeffaf çalışma",
+          desc: "Ne yaptığımızı, neden yaptığımızı ve sırada ne olduğunu açık tutuyoruz. Bütçe de kapsam da sürprize dönüşmüyor.",
         },
       ],
     },
@@ -307,23 +326,31 @@ const tr: Dictionary = {
       items: [
         {
           q: "Soleach tam olarak ne yapıyor?",
-          a: "Soleach, kozmetik ve güzellik markalarına adanmış bir dijital reklam ajansıdır. Sosyal medya ve performans reklamlarını yönetiriz, içerik & kreatif üretiriz, web sitesi ve Shopify e-ticaret altyapısını kurarız ve markaları hem arama motorlarında hem de yapay zekâ motorlarında (SEO & GEO) görünür kılarız.",
+          a: "Soleach’in iki ayrı çalışma alanı var. Kozmetik ve güzellik markaları için performans reklamları, kreatif üretim ve SEO & GEO yürütüyoruz. Özel iş yazılımları, MCP sunucuları, yapay zekâ entegrasyonları ile web ve e-ticaret sistemlerinde ise her sektörden şirketle çalışıyoruz.",
         },
         {
           q: "Kozmetik markaları için dijital reklam ajansı ne yapar?",
-          a: "Kozmetik ajansının işi, ürünü doğru alıcıyla buluşturup bunu ölçülebilir satışa çevirmektir. Pratikte bu dört parçadan oluşur: Meta ve TikTok'ta performans reklamı kurmak ve optimize etmek; kategorinin estetiğine uygun reklam kreatifi ve video üretmek; tıklamanın indiği e-ticaret mağazasını dönüşüm odaklı kurmak; ve markayı Google ile yapay zekâ motorlarında görünür kılmak. Genel bir ajanstan farkı, kozmetik alıcısının satın alma davranışını ve kategorinin reklam mevzuatını bilerek çalışmasıdır.",
+          a: "Kozmetik ajansının işi, ürünü doğru alıcıyla buluşturup bunu ölçülebilir satışa çevirmektir. Pratikte bu üç parçadan oluşur: Meta ve TikTok'ta performans reklamı kurmak ve optimize etmek; kategorinin estetiğine uygun reklam kreatifi ve video üretmek; markayı Google ile yapay zekâ motorlarında görünür kılmak. Genel bir ajanstan farkı, kozmetik alıcısının satın alma davranışını ve kategorinin reklam mevzuatını bilerek çalışmasıdır. Web ve e-ticaret geliştirme ise sektör bağımsız yazılım hizmetlerimiz arasındadır.",
         },
         {
           q: "Ürün mü satıyorsunuz?",
-          a: "Hayır. Biz ürün satmıyoruz; ürün satan kozmetik markalarının büyümesini yönetiyoruz. Reklam, içerik, e-ticaret ve görünürlük tarafında markanın büyüme ortağıyız.",
+          a: "Hayır. Biz ürün satmıyoruz. Kozmetik markalarının reklam, içerik ve görünürlük çalışmalarını yürütüyor; ayrıca şirketler için yazılım ve yapay zekâ sistemleri geliştiriyoruz.",
         },
         {
-          q: "Ne tür markalarla çalışıyorsunuz?",
-          a: "Makyaj, cilt bakımı, dermokozmetik, parfüm, saç bakımı ve kadın ürünleri kategorisindeki markalarla. Yeni doğmuş bir markadan büyümek isteyen yerleşik markalara kadar geniş bir yelpazeye hizmet veriyoruz.",
+          q: "Kimlerle çalışıyorsunuz?",
+          a: "Reklam, kreatif ve SEO & GEO çalışmalarında makyaj, cilt bakımı, dermokozmetik, parfüm, saç bakımı ve kadın ürünleri markalarına odaklanıyoruz. Özel yazılım, MCP, entegrasyon ve web geliştirme hizmetlerimizde ise sektör sınırı koymuyoruz.",
         },
         {
           q: "Web sitemi ve Shopify mağazamı da siz mi kuruyorsunuz?",
-          a: "Evet. Kozmetik markaları için Shopify e-ticaret mağazası kuruyor, temayı markanın kimliğine göre özelleştiriyor ve ürün-kategori sayfalarını dönüşüm odaklı tasarlıyoruz. Kurumsal web sitesi ihtiyacını da karşılıyoruz. Reklamı kuran ekiple mağazayı kuran ekip aynı olduğu için, trafiğin geldiği yer ile indiği yer birbiriyle uyumlu oluyor.",
+          a: "Evet. Her sektörden işletme için kurumsal web sitesi ve e-ticaret deneyimi geliştiriyor; Shopify kurulumu, tema özelleştirme, ödeme-kargo entegrasyonları, ölçüm ve yayın sonrası bakım sunuyoruz. Güzellik müşterilerinde reklam ve mağaza ekiplerinin aynı masada olması ayrıca uçtan uca tutarlılık sağlıyor.",
+        },
+        {
+          q: "Firmaya özel yazılım hizmeti neleri kapsıyor?",
+          a: "Hazır araçların karşılamadığı ihtiyaçlar için yönetim panelleri, müşteri portalları, iç araçlar, operasyon ve raporlama sistemleri geliştiriyoruz. İhtiyaç analizi, veri ve yetki modeli, mevcut sistem entegrasyonları, test, canlıya alma, dokümantasyon ve bakım kapsamın parçası olabilir.",
+        },
+        {
+          q: "MCP sunucusu nedir, sizin hizmetiniz neyi kapsıyor?",
+          a: "MCP sunucusu, yapay zekâ istemcilerinin onaylanan veri kaynaklarına ve işlemlere standart bir arayüzle erişmesini sağlar. Kullanım senaryosunu ve araçları tasarlıyor; özel MCP sunucusunu geliştirip kuruyor, API-veritabanı-doküman bağlantılarını, kimlik doğrulama ve yetki sınırlarını, test, loglama ve dokümantasyonu hazırlıyoruz.",
         },
         {
           q: "ROAS ve ROI arasındaki fark ne, hangisine bakmalıyım?",
@@ -335,24 +362,43 @@ const tr: Dictionary = {
         },
         {
           q: "Başarıyı nasıl ölçüyorsunuz?",
-          a: "Reklam getirisi (ROAS), edinme maliyeti, dönüşüm oranı ve marka görünürlüğü gibi net metriklerle. Her kampanyanın performansını düzenli, anlaşılır raporlarla paylaşıyoruz — grafik güzel olsun diye değil, karar verebilesin diye.",
+          a: "Ölçütü işe göre baştan belirliyoruz. Pazarlamada ROAS, edinme maliyeti, dönüşüm ve görünürlüğü; yazılımda kabul kriterleri, kullanım, performans, hata oranı ve sağlanan zaman tasarrufu gibi göstergeleri izliyoruz. Sonuçları düzenli ve anlaşılır biçimde paylaşıyoruz.",
         },
         {
           q: "Nasıl başlıyoruz?",
-          a: "Formu doldurman yeterli. Ücretsiz bir tanışma görüşmesi ayarlıyor, markanı dinliyor ve sana özel bir büyüme yol haritası sunuyoruz. Beğenirsen devam ederiz.",
+          a: "Formda reklam-büyüme ya da yazılım ihtiyacını kısaca anlatman yeterli. Ücretsiz tanışma görüşmesinde hedefi ve mevcut durumu dinliyor; uygun hizmeti, ilk kapsamı ve sonraki adımları birlikte netleştiriyoruz.",
         },
       ],
     },
     ctaBand: {
-      title: "Markanı büyütmeye hazır mısın?",
+      title: "Aklındaki işi konuşalım.",
       subtitle:
-        "Bir kahve kadar sürüyor. Formu doldur, markanı dinleyelim ve sana özel bir plan çıkaralım.",
-      button: "Hadi başlayalım",
+        "Marka büyümesi mi, yazılım mı? İhtiyacını kısaca anlat; doğru başlangıç noktasını birlikte netleştirelim.",
+      button: "Hadi konuşalım",
     },
   },
+  serviceGroups: [
+    {
+      key: "beauty-growth",
+      eyebrow: "Güzellik markalarına özel",
+      title: "Reklam, kreatif ve dijital büyüme",
+      summary:
+        "Kategori bilgisi ve güçlü bir estetik bakış isteyen büyüme işleri. Bu hattı kozmetik, güzellik ve kadın ürünleri markaları için yürütüyoruz.",
+      audience: "Kozmetik & güzellik markaları",
+    },
+    {
+      key: "software-ai",
+      eyebrow: "Sektörden bağımsız",
+      title: "Yazılım, yapay zekâ ve entegrasyon",
+      summary:
+        "İşletmenin gerçek akışına göre tasarlanan teknik çözümler. Bu hizmetler güzellik sektörüyle sınırlı değil; farklı sektörlerden şirketlerle çalışıyoruz.",
+      audience: "Her sektörden işletme",
+    },
+  ],
   services: [
     {
       key: "ads",
+      group: "beauty-growth",
       icon: "ads",
       title: "Sosyal Medya & Performans Reklamları",
       tagline: "Doğru insan, doğru an, doğru mesaj.",
@@ -369,11 +415,12 @@ const tr: Dictionary = {
     },
     {
       key: "creative",
+      group: "beauty-growth",
       icon: "creative",
       title: "İçerik & Kreatif Üretim",
       tagline: "Kaydırırken parmağı durduran görseller.",
       summary:
-        "Ürününü en iyi anlatan reklam kreatifleri, Reels ve kısa videolar üretiyoruz. Güzelliğin estetiğini performansla buluşturuyor; hem markanı yakışıklı gösteriyor hem satıyoruz.",
+        "Ürününü en iyi anlatan reklam kreatifleri, Reels ve kısa videolar üretiyoruz. Güzellik kategorisinin estetiğini performansla buluşturuyor; markanı hem güçlü gösteriyor hem de satışını destekliyoruz.",
       features: [
         "Ürün fotoğrafı ve reklam görseli konsepti",
         "Reels, TikTok ve kısa video üretimi",
@@ -384,24 +431,8 @@ const tr: Dictionary = {
       outcome: "İzleyeni durduran, tıklatan ve satın aldıran içerikler.",
     },
     {
-      key: "web-ecommerce",
-      icon: "store",
-      title: "Web Sitesi & Shopify E-Ticaret Kurulumu",
-      tagline: "Güzel görünen değil, satan bir mağaza.",
-      summary:
-        "Kozmetik markan için Shopify e-ticaret mağazasını ve kurumsal web siteni kuruyoruz. Reklamdan gelen tıklamanın boşa gitmediği, dönüşüm için tasarlanmış bir mağaza — markanın estetiğiyle, satışın matematiğiyle birlikte.",
-      features: [
-        "Shopify mağaza kurulumu ve tema özelleştirme",
-        "Dönüşüm odaklı ürün ve kategori sayfası tasarımı",
-        "Marka kimliğine sadık kurumsal web sitesi",
-        "Ödeme, kargo ve entegrasyon kurulumu",
-        "Piksel, ölçüm ve e-ticaret takibi kurulumu",
-        "Mobil hız ve teknik SEO temeli",
-      ],
-      outcome: "Reklamdan gelen trafiği satışa çeviren bir mağaza.",
-    },
-    {
       key: "seo-geo",
+      group: "beauty-growth",
       icon: "search",
       title: "SEO & GEO — Yapay Zekâ Görünürlüğü",
       tagline: "Google’da da, yapay zekâda da seni bulsunlar.",
@@ -416,13 +447,67 @@ const tr: Dictionary = {
       ],
       outcome: "Müşterin ararken de, yapay zekâya sorarken de seni bulur.",
     },
+    {
+      key: "web-ecommerce",
+      group: "software-ai",
+      icon: "store",
+      title: "Web Sitesi & E-Ticaret Sistemleri",
+      tagline: "Markanı anlatan, işini taşıyan dijital temel.",
+      summary:
+        "Kurumsal web siteleri ve e-ticaret deneyimleri tasarlayıp geliştiriyoruz. Shopify kurulumundan özel arayüzlere, ödeme ve operasyon entegrasyonlarından bakım sürecine kadar sistemin tamamını işine göre kuruyoruz.",
+      features: [
+        "Kurumsal, ürün ve hizmet odaklı web siteleri",
+        "Shopify mağaza kurulumu ve tema özelleştirme",
+        "Dönüşüm odaklı ürün ve kategori sayfaları",
+        "Ödeme, kargo, CRM ve üçüncü taraf entegrasyonları",
+        "Analitik, ölçüm ve e-ticaret takibi kurulumu",
+        "Mobil performans, erişilebilirlik, bakım ve iyileştirme",
+      ],
+      outcome: "Hızlı, ölçülebilir ve işin büyüdükçe geliştirilebilen bir dijital altyapı.",
+    },
+    {
+      key: "custom-software",
+      group: "software-ai",
+      icon: "code",
+      title: "Firmaya Özel Yazılım Geliştirme",
+      tagline: "Hazır kalıba değil, iş akışına uyan sistemler.",
+      summary:
+        "Excel, e-posta ve birbirinden kopuk araçlar arasında kalan süreçleri tek bir sisteme dönüştürüyoruz. Şirketine özel paneller, portallar, iç araçlar ve iş akışları geliştiriyor; keşiften yayına ve bakıma kadar aynı ekipte ilerliyoruz.",
+      features: [
+        "İhtiyaç analizi ve teknik yol haritası",
+        "Yönetim paneli, müşteri portalı ve iç araç geliştirme",
+        "Rol, yetki, veri modeli ve iş akışı tasarımı",
+        "Mevcut sistem ve API entegrasyonları",
+        "Test, dokümantasyon ve canlıya alma",
+        "Bakım, izleme ve yeni özellik geliştirme",
+      ],
+      outcome: "Daha az manuel iş, daha az hata ve görünür bir operasyon.",
+    },
+    {
+      key: "mcp-ai",
+      group: "software-ai",
+      icon: "network",
+      title: "MCP Sunucusu & Yapay Zekâ Entegrasyonları",
+      tagline: "Araçların, verilerin ve yapay zekâ ajanların aynı dili konuşsun.",
+      summary:
+        "Model Context Protocol (MCP) sunucuları tasarlıyor, geliştiriyor ve kuruyoruz. Şirket içi sistemlerini, API’lerini, dokümanlarını ve veritabanlarını kontrollü araçlar olarak yapay zekâ ajanlarına bağlıyoruz.",
+      features: [
+        "MCP kullanım senaryosu ve araç tasarımı",
+        "Özel MCP sunucusu geliştirme ve kurulum",
+        "API, veritabanı ve doküman kaynağı bağlantıları",
+        "Kimlik doğrulama, yetki ve güvenlik sınırları",
+        "Yapay zekâ ajanları ve iş akışı otomasyonları",
+        "Test, loglama, dokümantasyon ve bakım",
+      ],
+      outcome: "Şirket verisi ve araçlarıyla kontrollü, tekrarlanabilir yapay zekâ kullanımı için tasarlanan altyapı.",
+    },
   ],
   servicesPage: {
     hero: {
       eyebrow: "Hizmetler",
-      title: "Kozmetik markanı büyüten her şey, tek ekipte.",
+      title: "İki uzmanlık alanı. Sınırları net, sorumluluğu tek ekipte.",
       subtitle:
-        "Reklamdan içeriğe, Shopify e-ticaret kurulumundan yapay zekâ görünürlüğüne. Parçalı ajanslarla uğraşma — hepsi burada.",
+        "Güzellik markaları için reklam, kreatif ve görünürlük; her sektörden şirket için özel yazılım, web sistemleri ve MCP entegrasyonları.",
     },
     featuresLabel: "Neler dahil",
     outcomeLabel: "Sonuç",
@@ -430,44 +515,44 @@ const tr: Dictionary = {
   aboutPage: {
     hero: {
       eyebrow: "Hakkımızda",
-      title: "Kozmetik markalarının büyüme ortağı.",
+      title: "İki uzmanlığı bilinçli biçimde ayıran dijital ekip.",
       subtitle:
-        "Estetiği ve performansı aynı masaya oturtuyoruz. Çünkü kozmetik markası büyütmek, ikisini birden ister.",
+        "Güzellik markalarında kategori odağını; yazılım projelerinde sektör bağımsız problem çözmeyi aynı çalışma disipliniyle buluşturuyoruz.",
     },
     story: {
       title: "Hikâyemiz",
       paragraphs: [
         "Soleach, kozmetik ve güzellik markalarının dijitalde hak ettiği yeri alması için doğdu. Bu kategorinin başka hiçbir şeye benzemediğini biliyoruz: burada estetik kadar güven, görsel kadar sonuç önemli.",
-        "Biz her sektöre koşan genel bir ajans değiliz. Yalnızca makyaj, cilt bakımı, dermokozmetik, parfüm ve kadın ürünleri markalarıyla çalışıyoruz. Bu odak, kategorinin dilini, alıcısını ve satın alma yolculuğunu ezbere bilmemizi sağlıyor.",
-        "Reklamı sanata, sanatı da satışa çeviriyoruz. Reklamı kurarız, kreatifi üretiriz, tıklamanın indiği e-ticaret mağazasını kurarız ve markanı arama motorlarında görünür kılarız. Amacımız markanı sadece güzel göstermek değil; sürdürülebilir, ölçülebilir bir büyüme yaratmak. Kısacası: senin kazanman, bizim işimiz.",
+        "Çalışma alanlarımızı bilinçli biçimde ayırıyoruz. Reklam, kreatif ve SEO & GEO’da odağımız kozmetik ve güzellik. Özel yazılım, MCP, yapay zekâ entegrasyonları ve web sistemlerinde ise sektör sınırı koymuyor; çözülmesi gereken iş problemine bakıyoruz.",
+        "Bir kampanyada da bir yazılım ürününde de amacımız aynı: iyi görünen bir fikirden fazlasını, çalışan ve geliştirilebilen bir sonuç üretmek. Kapsamı netleştiriyor, işi görünür adımlarla ilerletiyor ve yayından sonra da ölçüp iyileştiriyoruz.",
       ],
     },
     mission: {
       title: "Misyonumuz",
-      body: "Kozmetik markalarını, doğru kitleyle buluşturan ve gerçekten satışa dönüşen dijital kampanyalarla büyütmek.",
+      body: "Güzellik markalarını doğru kitleyle buluşturan dijital çalışmalar ve şirketlerin gerçek iş problemlerini çözen sürdürülebilir yazılımlar üretmek.",
     },
     vision: {
       title: "Vizyonumuz",
-      body: "Kozmetik ve güzellik kategorisinde akla ilk gelen büyüme ortağı olmak; markaları hem klasik aramada hem de yapay zekâ çağında bir adım öne taşımak.",
+      body: "Güzellik kategorisinde güvenilen büyüme ortağı, özel yazılım ve yapay zekâ entegrasyonlarında ise sektörler arası güvenilen teknik ekip olmak.",
     },
     values: {
       title: "Değerlerimiz",
       items: [
         {
           title: "Odak",
-          desc: "Tek bir kategoriye adanıyoruz ve orada en iyisi olmak için çalışıyoruz.",
+          desc: "Pazarlamada kategoriye, yazılımda çözülmesi gereken probleme odaklanıyoruz.",
         },
         {
           title: "Şeffaflık",
-          desc: "Her bütçenin nereye gittiğini ve ne getirdiğini saklamadan gösteririz.",
+          desc: "Kapsamı, bütçeyi, kararları ve ilerlemeyi görünür tutar; sürprizleri azaltırız.",
         },
         {
-          title: "Estetik + veri",
-          desc: "Güzel görüneni değil; güzel görünüp aynı zamanda satanı üretiriz.",
+          title: "Estetik + işlev",
+          desc: "Kreatifte dönüşümü, dijital ürünlerde kullanılabilirliği gözetir; görsel kaliteyi sonuçtan ayırmayız.",
         },
         {
           title: "Meraklıyız",
-          desc: "Aramanın ve tüketici davranışının nasıl değiştiğini takip eder, markanı öne taşırız.",
+          desc: "İnsan davranışının ve teknolojinin nasıl değiştiğini takip eder, öğrendiklerimizi işe uygularız.",
         },
       ],
     },
@@ -475,16 +560,16 @@ const tr: Dictionary = {
   contactPage: {
     hero: {
       eyebrow: "İletişim",
-      title: "Markanı birlikte büyütelim.",
+      title: "Markanı ya da yazılım ihtiyacını konuşalım.",
       subtitle:
-        "Aşağıdaki formu doldur, markanı dinleyelim ve sana özel bir büyüme yol haritası çıkaralım. 24 saat içinde dönüyoruz.",
+        "Aşağıdaki formda ihtiyacını kısaca anlat. Doğru başlangıç noktasını birlikte netleştirmek için 24 saat içinde dönüyoruz.",
     },
     formTitle: "Ücretsiz tanışma görüşmesi",
     formSubtitle:
-      "Markan hakkında birkaç soruya yanıt ver; sana en uygun planla geri dönelim.",
+      "Markan, iş akışın ya da geliştirmek istediğin sistem hakkında birkaç bilgi ver; sana uygun sonraki adımla geri dönelim.",
     formButton: "Formu yeni sekmede aç",
     emailTitle: "E-posta",
-    emailDesc: "Form yerine doğrudan yazmak istersen, kapımız açık.",
+    emailDesc: "Form yerine doğrudan yazmayı tercih edersen, kapımız açık.",
     orLabel: "veya",
   },
   blogPage: {
@@ -522,7 +607,7 @@ const tr: Dictionary = {
   },
   footer: {
     tagline:
-      "Kozmetik, güzellik ve kadın ürünleri markaları için dijital reklam ajansı. Estetiği satışa çeviriyoruz.",
+      "Reklam, kreatif ve SEO & GEO’da güzellik odaklı; web, yazılım, MCP ve yapay zekâda sektör bağımsız.",
     servicesHeading: "Hizmetler",
     companyHeading: "Kurumsal",
     followHeading: "Takip et",
@@ -531,7 +616,8 @@ const tr: Dictionary = {
 };
 
 const en: Dictionary = {
-  brandTagline: "Digital advertising agency for cosmetics and beauty brands",
+  brandTagline:
+    "Digital growth for beauty brands; software and AI solutions for companies in any industry",
   nav: {
     home: "Home",
     services: "Services",
@@ -550,24 +636,24 @@ const en: Dictionary = {
   },
   meta: {
     home: {
-      title: "Digital Advertising Agency for Cosmetics & Beauty Brands | Soleach",
+      title: "Beauty Brand Advertising & Custom Software | Soleach",
       description:
-        "A digital advertising agency built for cosmetics, makeup and skincare brands. Meta & TikTok performance ads, creative production, Shopify e-commerce setup and SEO & GEO — all measured on ROAS.",
+        "Performance advertising, creative and SEO & GEO for beauty brands; custom software, MCP servers, AI integrations and web systems for companies in any industry.",
     },
     services: {
-      title: "Digital Agency Services for Cosmetics Brands | Soleach",
+      title: "Digital Advertising, Software & AI Services | Soleach",
       description:
-        "Performance advertising, content & creative production, website & Shopify e-commerce setup, and SEO & GEO. Everything it takes to grow your cosmetics brand, in one team.",
+        "Performance advertising, creative and SEO & GEO for beauty brands; custom software, MCP servers, AI integrations, and web and e-commerce development for any industry.",
     },
     about: {
-      title: "About | Cosmetics-Focused Digital Advertising Agency | Soleach",
+      title: "About | Digital Growth & Software Team | Soleach",
       description:
-        "We don't do everything — we do one thing exceptionally well. Soleach is a digital advertising agency devoted to cosmetics, makeup, skincare and women's product brands.",
+        "Soleach provides advertising and creative for beauty brands, and builds custom software, MCP servers and AI integrations for companies in any industry.",
     },
     contact: {
       title: "Contact | Soleach",
       description:
-        "Let's talk about your brand. Fill out the form and we'll come back within 24 hours with a plan made for you. No commitment.",
+        "Let's talk about brand growth or the software you need. Share the project and we'll clarify the right place to start together.",
     },
     blog: {
       title: "Blog | Digital Growth Guides for Cosmetics Brands | Soleach",
@@ -582,114 +668,114 @@ const en: Dictionary = {
   },
   home: {
     hero: {
-      eyebrow: "Digital advertising agency for cosmetics and beauty brands",
-      title: "Growing your cosmetics brand",
-      titleAccent: "is an art.",
+      eyebrow: "Beauty growth · Software for any industry",
+      title: "Grow your brand,",
+      titleAccent: "move your business faster.",
       subtitle:
-        "From makeup to skincare — we don't just make your brand look good. We make it unforgettable, and we put it in the cart. Advertising, content, e-commerce and AI visibility, all in one team.",
-      ctaPrimary: "Let's talk about your brand",
+        "Advertising, creative and visibility for beauty brands; custom software, MCP and AI integrations for companies in any industry. Two distinct practices, one accountable team.",
+      ctaPrimary: "Let's talk about your project",
       ctaSecondary: "What we do",
       note: "We reply within 24 hours · No commitment, no surprise invoices",
       scrollCue: "Explore",
     },
     marquee: [
-      "Makeup",
-      "Skincare",
-      "Fragrance",
-      "Haircare",
-      "Cosmetics",
-      "Dermocosmetics",
-      "Complexion",
-      "Clean Beauty",
-      "Vegan Cosmetics",
-      "Sun Care",
+      "Performance Ads",
+      "Creative Production",
+      "SEO & GEO",
+      "Web Systems",
+      "Custom Software",
+      "MCP Servers",
+      "AI Agents",
+      "API Integrations",
+      "Shopify",
+      "Automation",
     ],
     stats: [
-      { value: 100, prefix: "", suffix: "%", label: "Cosmetics and beauty brands only. Nothing else." },
-      { value: 3, suffix: "×", label: "Average return on ad spend (ROAS) we aim for" },
+      { value: 2, label: "Clear practices: beauty growth and software" },
+      { value: 1, label: "Accountable team from first question to delivery" },
       { value: 24, suffix: "h", label: "Until our first reply lands in your inbox" },
     ],
     manifesto: {
       eyebrow: "In short",
-      big: "Every cosmetics brand has a story. We turn yours into sales.",
-      body: "Even the most beautiful product waits on the shelf if it never reaches the right people. We take your story and turn it into something that stops a scrolling thumb, earns the click and says \"I need this.\" Then we finish the job with a store that turns that click into a sale. Aesthetics and performance, at the same table.",
+      big: "We focus by category where it matters and keep technology industry-agnostic.",
+      body: "In advertising, creative and SEO & GEO, we focus on the language, aesthetics and buyer of the beauty category. In software, the business problem — not the industry — defines the work. We keep those practices distinct and hold both to the same standard: useful, measurable work that can keep evolving.",
     },
     servicesIntro: {
       eyebrow: "What we do",
-      title: "Four forces that grow your cosmetics brand",
+      title: "Two areas of expertise, each with clear boundaries.",
       subtitle:
-        "We turn advertising into art, and art into sales. From the ad to the store, four in one — one team, one goal: your growth.",
+        "We solve beauty brands' growth needs with category focus, and companies' software needs without an industry boundary.",
     },
     process: {
       eyebrow: "How we work",
-      title: "No guesswork. Just a clear path.",
+      title: "A clear path from idea to working result.",
       subtitle:
-        "At every step you see what we do, why we do it and what it returns. We don't like surprises — except the good ones.",
+        "An advertising campaign and a software product both begin with understanding the right problem. We keep the scope, decisions and output visible at every step.",
       deliverablesLabel: "What you get at this step",
       steps: [
         {
-          title: "Get to know you",
-          desc: "We listen to your brand, your products and who you speak to, then read the market and competitors to put opportunities on the table.",
+          title: "Discovery",
+          desc: "We listen to your brand or business, its users and where the work gets stuck today. Together, we define the right problem.",
           deliverables: [
             "A free intro call (video or in person)",
-            "A first review of your accounts and website",
-            "A summary of competitor and market observations",
+            "A first review of current accounts, website or systems",
+            "A summary of opportunities, constraints and priorities",
           ],
         },
         {
-          title: "Strategy",
-          desc: "We build the budget, channel and messaging plan together. Clear goals, a clear roadmap — no fluff.",
+          title: "Scope & Roadmap",
+          desc: "We define the channel and message plan or the product scope. Priorities, success measures and the order of work are clear before production begins.",
           deliverables: [
-            "A written growth roadmap and channel plan",
-            "Budget allocation and target metrics (ROAS, CPA)",
-            "A draft content and campaign calendar",
+            "A written roadmap and clear scope of work",
+            "Goals, success measures and acceptance criteria",
+            "Timeline, dependencies and priority order",
           ],
         },
         {
-          title: "Production & Launch",
-          desc: "We produce scroll-stopping creative and launch the campaigns — right audience, right moment, right words.",
+          title: "Production & Development",
+          desc: "We produce the creative, campaign or software in working pieces. Critical decisions stay visible and feedback enters the work early.",
           deliverables: [
-            "Creatives and ad copy submitted for your approval",
-            "Verified pixel / measurement setup",
-            "A setup summary of every campaign that goes live",
+            "Reviewable design, content or working releases",
+            "Required measurement, integration and quality checks",
+            "Production launch and a clear delivery summary",
           ],
         },
         {
-          title: "Optimization",
-          desc: "We track and test relentlessly, steering budget to what earns most and taking your growth to scale.",
+          title: "Measure & Improve",
+          desc: "We watch what happens in production, learn and improve. Campaign data, product usage and system health stay at the center of decisions.",
           deliverables: [
-            "A regular, readable performance report",
-            "A log of the tests we ran and what they showed",
-            "A clear list of recommendations for the next period",
+            "Readable performance or system visibility",
+            "A log of tests and changes",
+            "A prioritized improvement list for the next period",
           ],
         },
       ],
     },
     whyUs: {
       eyebrow: "Why Soleach",
-      title: "We don't do everything. We do one thing brilliantly.",
+      title: "The right expertise for the right kind of work.",
       subtitle:
-        "Cosmetics, beauty and women's products. We know this category's language, aesthetics and buyer by heart — because we look at nothing else.",
+        "Category focus in beauty marketing; business-problem focus in software. We deliberately keep the two practices distinct.",
       points: [
         {
-          title: "Devoted to the category",
-          desc: "From skincare to makeup, dermocosmetics to fragrance, we understand how these products are desired and bought — and we build the creative around it.",
+          title: "Category focus, where it belongs",
+          desc: "In advertising, creative and SEO & GEO, we center the beauty buyer and the category's language — from skincare and makeup to dermocosmetics and fragrance.",
+        },
+        {
+          title: "Software shaped around the work",
+          desc: "We understand the process, users and integrations before defining the scope, instead of forcing the business into a ready-made package.",
         },
         {
           title: "Aesthetics + performance",
-          desc: "Not just work that looks good, but work that looks good and sells. Your brand image grows, and so does revenue.",
+          desc: "We do not separate visual quality from outcomes: conversion in creative work, usability in digital products.",
         },
         {
-          title: "One chain from ad to store",
-          desc: "We build the ad and the Shopify store the click lands on. Nobody gets to say \"that's the other team's problem\" — the whole funnel sits with one team.",
+          title: "Secure, maintainable systems",
+          desc: "Permission boundaries, documentation, testing and maintenance are part of the delivery, not problems left for later.",
         },
         {
-          title: "No surprise invoices",
-          desc: "We show exactly where every cent goes and what it returns — ROAS, CPA, conversion rate. Transparency isn't a luxury; it's the standard.",
-        },
-        {
-          title: "Ready for tomorrow's search",
-          desc: "We make your brand visible not only on Google, but on AI engines like ChatGPT and Perplexity too.",
+          title: "Transparent work",
+          desc: "What we are doing, why it matters and what comes next stay clear. Neither budget nor scope turns into a surprise.",
         },
       ],
     },
@@ -699,23 +785,31 @@ const en: Dictionary = {
       items: [
         {
           q: "What exactly does Soleach do?",
-          a: "Soleach is a digital advertising agency devoted to cosmetics and beauty brands. We manage social and performance advertising, produce content & creative, build websites and Shopify e-commerce stores, and make brands visible on both search engines and AI engines (SEO & GEO).",
+          a: "Soleach has two distinct practices. We provide performance advertising, creative production and SEO & GEO for cosmetics and beauty brands. For custom business software, MCP servers, AI integrations, and web and e-commerce systems, we work with companies in any industry.",
         },
         {
           q: "What does a digital advertising agency for cosmetics brands actually do?",
-          a: "A cosmetics agency's job is to put the product in front of the right buyer and turn that into measurable sales. In practice that's four parts: building and optimizing performance campaigns on Meta and TikTok; producing ad creative and video that match the category's aesthetics; building the e-commerce store the click lands on, designed for conversion; and making the brand visible on Google and AI engines. What separates it from a generalist agency is knowing how the cosmetics buyer decides and what the category's ad regulations allow.",
+          a: "A cosmetics agency's job is to put the product in front of the right buyer and turn that into measurable sales. In practice that's three parts: building and optimizing performance campaigns on Meta and TikTok; producing ad creative and video that match the category's aesthetics; and making the brand visible on Google and AI engines. What separates it from a generalist agency is knowing how the cosmetics buyer decides and what the category's ad regulations allow. Web and e-commerce development sit within our industry-agnostic software practice.",
         },
         {
           q: "Do you sell products?",
-          a: "No. We don't sell products; we grow the cosmetics brands that do. Across advertising, content, e-commerce and visibility, we're your growth partner.",
+          a: "No. We do not sell products. We run advertising, content and visibility work for cosmetics brands, and we also build software and AI systems for companies.",
         },
         {
-          q: "What kind of brands do you work with?",
-          a: "Brands in makeup, skincare, dermocosmetics, fragrance, haircare and women's products — from newly launched brands to established ones ready to scale.",
+          q: "Who do you work with?",
+          a: "For advertising, creative and SEO & GEO, we focus on makeup, skincare, dermocosmetics, fragrance, haircare and women's product brands. Our custom software, MCP, integration and web development services are open to companies in any industry.",
         },
         {
           q: "Do you build my website and Shopify store too?",
-          a: "Yes. We set up Shopify e-commerce stores for cosmetics brands, customize the theme to the brand's identity, and design product and collection pages for conversion. We also build corporate websites. Because the same team builds the ads and the store, where the traffic comes from and where it lands actually match.",
+          a: "Yes. We build corporate websites and e-commerce experiences for businesses in any industry, including Shopify setup, theme customization, payment and shipping integrations, measurement and post-launch maintenance. For beauty clients, having advertising and the store at the same table also creates end-to-end consistency.",
+        },
+        {
+          q: "What does custom software development cover?",
+          a: "When off-the-shelf tools fall short, we build admin dashboards, customer portals, internal tools, operations and reporting systems. Requirements discovery, data and permission models, existing-system integrations, testing, production launch, documentation and maintenance can all be part of the scope.",
+        },
+        {
+          q: "What is an MCP server, and what does your service cover?",
+          a: "An MCP server gives AI clients a standard way to access approved data sources and actions. We design the use case and tools, build and set up the custom MCP server, connect APIs, databases and documents, and handle authentication, permission boundaries, testing, logging and documentation.",
         },
         {
           q: "What's the difference between ROAS and ROI, and which should I watch?",
@@ -727,24 +821,43 @@ const en: Dictionary = {
         },
         {
           q: "How do you measure success?",
-          a: "With clear metrics: return on ad spend (ROAS), cost per acquisition, conversion rate and brand visibility. We share every campaign's performance in regular, readable reports — not to look pretty, but so you can decide.",
+          a: "We agree on the measures before the work begins. In marketing, we track ROAS, acquisition cost, conversion and visibility; in software, we use acceptance criteria, adoption, performance, error rates and time saved. We report the results regularly and clearly.",
         },
         {
           q: "How do we start?",
-          a: "Just fill out the form. We'll set up a free intro call, listen to your brand, and present a growth roadmap made for you. If you like it, we keep going.",
+          a: "Use the form to briefly describe your advertising-growth or software need. On a free intro call, we learn the goal and current state, then clarify the right service, an initial scope and the next steps together.",
         },
       ],
     },
     ctaBand: {
-      title: "Ready to grow your brand?",
+      title: "Let's talk about the work you have in mind.",
       subtitle:
-        "It takes about as long as a coffee. Fill out the form, let us listen to your brand and build a plan made just for you.",
-      button: "Let's get started",
+        "Brand growth or software? Tell us what you need, and we'll clarify the right place to start together.",
+      button: "Let's talk",
     },
   },
+  serviceGroups: [
+    {
+      key: "beauty-growth",
+      eyebrow: "Built for beauty brands",
+      title: "Advertising, creative and digital growth",
+      summary:
+        "Growth work that calls for category knowledge and a strong aesthetic eye. We run this practice for cosmetics, beauty and women's product brands.",
+      audience: "Cosmetics & beauty brands",
+    },
+    {
+      key: "software-ai",
+      eyebrow: "Industry-agnostic",
+      title: "Software, AI and integrations",
+      summary:
+        "Technical systems designed around how the business actually works. This practice is not limited to beauty; we work with companies across industries.",
+      audience: "Businesses in any industry",
+    },
+  ],
   services: [
     {
       key: "ads",
+      group: "beauty-growth",
       icon: "ads",
       title: "Social & Performance Advertising",
       tagline: "Right person, right moment, right message.",
@@ -761,6 +874,7 @@ const en: Dictionary = {
     },
     {
       key: "creative",
+      group: "beauty-growth",
       icon: "creative",
       title: "Content & Creative Production",
       tagline: "Visuals that stop the thumb.",
@@ -776,24 +890,8 @@ const en: Dictionary = {
       outcome: "Content that stops, clicks and converts.",
     },
     {
-      key: "web-ecommerce",
-      icon: "store",
-      title: "Website & Shopify Store Setup",
-      tagline: "A store that sells — not just one that looks good.",
-      summary:
-        "We build the Shopify store and the website your cosmetics brand runs on. A store designed for conversion, where the click you paid for doesn't go to waste — your brand's aesthetics and the math of selling, in the same build.",
-      features: [
-        "Shopify store setup and theme customization",
-        "Conversion-focused product and collection pages",
-        "A corporate website true to your brand identity",
-        "Payment, shipping and integration setup",
-        "Pixel, measurement and e-commerce tracking setup",
-        "Mobile speed and a technical SEO foundation",
-      ],
-      outcome: "A store that turns the traffic you pay for into sales.",
-    },
-    {
       key: "seo-geo",
+      group: "beauty-growth",
       icon: "search",
       title: "SEO & GEO — AI Visibility",
       tagline: "Be found on Google and in AI.",
@@ -808,13 +906,67 @@ const en: Dictionary = {
       ],
       outcome: "Customers find you when they search and when they ask AI.",
     },
+    {
+      key: "web-ecommerce",
+      group: "software-ai",
+      icon: "store",
+      title: "Websites & E-Commerce Systems",
+      tagline: "A digital foundation that presents your brand and carries the work.",
+      summary:
+        "We design and build corporate websites and e-commerce experiences. From Shopify setup and custom interfaces to payment and operational integrations, maintenance and iteration, we shape the whole system around the business.",
+      features: [
+        "Corporate, product and service websites",
+        "Shopify store setup and theme customization",
+        "Conversion-focused product and collection pages",
+        "Payment, shipping, CRM and third-party integrations",
+        "Analytics, measurement and e-commerce tracking",
+        "Mobile performance, accessibility, maintenance and iteration",
+      ],
+      outcome: "A fast, measurable digital platform that can evolve with the business.",
+    },
+    {
+      key: "custom-software",
+      group: "software-ai",
+      icon: "code",
+      title: "Custom Software Development",
+      tagline: "Systems shaped around the workflow, not a ready-made template.",
+      summary:
+        "We turn processes scattered across spreadsheets, email and disconnected tools into one coherent system. We build custom dashboards, portals, internal tools and workflows, carrying the work from discovery through launch and maintenance.",
+      features: [
+        "Requirements discovery and a technical roadmap",
+        "Admin dashboards, customer portals and internal tools",
+        "Roles, permissions, data models and workflow design",
+        "Existing system and API integrations",
+        "Testing, documentation and production launch",
+        "Maintenance, monitoring and feature development",
+      ],
+      outcome: "Less manual work, fewer errors and a clearer operation.",
+    },
+    {
+      key: "mcp-ai",
+      group: "software-ai",
+      icon: "network",
+      title: "MCP Servers & AI Integrations",
+      tagline: "Let your tools, data and AI agents speak the same language.",
+      summary:
+        "We design, build and set up Model Context Protocol (MCP) servers. We connect internal systems, APIs, documents and databases to AI agents as controlled, purpose-built tools.",
+      features: [
+        "MCP use-case and tool design",
+        "Custom MCP server development and setup",
+        "API, database and document-source connections",
+        "Authentication, permissions and security boundaries",
+        "AI agents and workflow automation",
+        "Testing, logging, documentation and maintenance",
+      ],
+      outcome: "Infrastructure designed for controlled, repeatable AI use of company data and tools.",
+    },
   ],
   servicesPage: {
     hero: {
       eyebrow: "Services",
-      title: "Everything that grows your cosmetics brand, in one team.",
+      title: "Two areas of expertise. Clear boundaries, one accountable team.",
       subtitle:
-        "From advertising to content, from Shopify e-commerce setup to AI visibility. Stop juggling scattered agencies — it's all here.",
+        "Advertising, creative and visibility for beauty brands; custom software, web systems and MCP integrations for companies in any industry.",
     },
     featuresLabel: "What's included",
     outcomeLabel: "Outcome",
@@ -822,44 +974,44 @@ const en: Dictionary = {
   aboutPage: {
     hero: {
       eyebrow: "About",
-      title: "The growth partner for cosmetics brands.",
+      title: "A digital team that keeps two disciplines deliberately distinct.",
       subtitle:
-        "We sit aesthetics and performance at the same table — because growing a cosmetics brand takes both.",
+        "Category focus for beauty brands, industry-agnostic problem-solving for software projects — held to the same working discipline.",
     },
     story: {
       title: "Our story",
       paragraphs: [
         "Soleach was born to help cosmetics and beauty brands claim the place they deserve online. We know this category is like no other: here, trust matters as much as aesthetics, and results matter as much as visuals.",
-        "We're not a generic agency chasing every industry. We work only with makeup, skincare, dermocosmetics, fragrance and women's product brands. That focus lets us know the category's language, its buyer and its purchase journey by heart.",
-        "We turn advertising into art, and art into sales. We build the campaigns, produce the creative, build the e-commerce store the click lands on, and make your brand visible in search. Our goal isn't just to make your brand look beautiful — it's to create sustainable, measurable growth. Put simply: your winning is our job.",
+        "We keep our practices deliberately distinct. In advertising, creative and SEO & GEO, our focus is cosmetics and beauty. In custom software, MCP, AI integrations and web systems, the industry is not the constraint — the business problem is what matters.",
+        "Whether it is a campaign or a software product, our goal is the same: more than a good-looking idea, a working result that can keep improving. We clarify the scope, move in visible steps, then measure and iterate after launch.",
       ],
     },
     mission: {
       title: "Our mission",
-      body: "To grow cosmetics brands with digital campaigns that connect them to the right audience and truly convert into sales.",
+      body: "To produce digital work that connects beauty brands with the right audience, and sustainable software that solves real business problems.",
     },
     vision: {
       title: "Our vision",
-      body: "To be the first name that comes to mind for growth in cosmetics and beauty — moving brands a step ahead in both classic search and the AI era.",
+      body: "To be a trusted growth partner in beauty and a trusted cross-industry technical team for custom software and AI integrations.",
     },
     values: {
       title: "Our values",
       items: [
         {
           title: "Focus",
-          desc: "We devote ourselves to a single category and work to be the best at it.",
+          desc: "In marketing we focus on the category; in software, on the problem that needs solving.",
         },
         {
           title: "Transparency",
-          desc: "We show, without hiding, where every budget goes and what it returns.",
+          desc: "We keep scope, budget, decisions and progress visible, reducing surprises along the way.",
         },
         {
-          title: "Aesthetics + data",
-          desc: "We don't produce what merely looks good, but what looks good and sells.",
+          title: "Aesthetics + function",
+          desc: "We care about conversion in creative work and usability in digital products, without separating visual quality from outcomes.",
         },
         {
           title: "Curious",
-          desc: "We track how search and consumer behavior change, and push your brand ahead.",
+          desc: "We track how human behavior and technology change, then put what we learn to work.",
         },
       ],
     },
@@ -867,16 +1019,16 @@ const en: Dictionary = {
   contactPage: {
     hero: {
       eyebrow: "Contact",
-      title: "Let's grow your brand together.",
+      title: "Let's talk about your brand or software need.",
       subtitle:
-        "Fill out the form below, let us listen to your brand, and we'll build a growth roadmap made for you. We reply within 24 hours.",
+        "Tell us briefly what you need in the form below. We'll reply within 24 hours to clarify the right place to start together.",
     },
     formTitle: "Free intro call",
     formSubtitle:
-      "Answer a few questions about your brand and we'll come back with the plan that fits you best.",
+      "Share a few details about your brand, workflow or the system you want to build, and we'll come back with the right next step.",
     formButton: "Open form in a new tab",
     emailTitle: "Email",
-    emailDesc: "Prefer writing directly instead of the form? Our door is open.",
+    emailDesc: "Prefer writing directly instead of using the form? Our inbox is open.",
     orLabel: "or",
   },
   blogPage: {
@@ -914,7 +1066,7 @@ const en: Dictionary = {
   },
   footer: {
     tagline:
-      "A digital advertising agency for cosmetics, beauty and women's product brands. We turn aesthetics into sales.",
+      "Beauty-focused in advertising, creative and SEO & GEO; industry-agnostic in web, software, MCP and AI.",
     servicesHeading: "Services",
     companyHeading: "Company",
     followHeading: "Follow",

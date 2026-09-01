@@ -1,7 +1,7 @@
-# Soleach — Digital Advertising Agency Website
+# Soleach — Digital Growth & Software Website
 
-Bilingual (TR/EN) marketing website for **Soleach**, a digital advertising
-agency focused on beauty, cosmetics and women's product brands. Built with
+Bilingual (TR/EN) marketing website for **Soleach**, with beauty-focused
+digital growth services and industry-agnostic software and AI solutions. Built with
 Next.js 16, TypeScript and Tailwind CSS 4, statically exported for Cloudflare
 Pages.
 

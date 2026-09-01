@@ -95,7 +95,7 @@ export function GET(): Response {
   const out: string[] = [
     "# Soleach — full content corpus",
     "",
-    "Every page and article on soleach.com as plain text, in both languages.",
+    "Core service information, FAQs, articles and concepts from soleach.com, in both languages.",
     "For the short structured summary instead, fetch /llms.txt.",
     "",
     `Site: ${siteUrl}`,
@@ -124,8 +124,19 @@ export function GET(): Response {
       "",
     );
 
-    for (const service of dict.services) {
-      out.push(`### ${plain(service.title)}`, "", plain(service.summary), "");
+    for (const group of dict.serviceGroups) {
+      out.push(
+        `### ${plain(group.title)}`,
+        "",
+        plain(group.summary),
+        `${locale === "tr" ? "Hedef kitle" : "Audience"}: ${plain(group.audience)}`,
+        "",
+      );
+      for (const service of dict.services.filter(
+        (item) => item.group === group.key,
+      )) {
+        out.push(`#### ${plain(service.title)}`, "", plain(service.summary), "");
+      }
     }
 
     if (dict.home.faq.items.length > 0) {

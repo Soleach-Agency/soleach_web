@@ -33,6 +33,23 @@ const paths: Record<ServiceContent["icon"], React.ReactNode> = {
       <path d="M9.5 20.2v-5.4h5v5.4" />
     </>
   ),
+  // Code window / custom software
+  code: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2.5" />
+      <path d="M3 8h18" />
+      <path d="m10 12-2 2 2 2M14 12l2 2-2 2" />
+    </>
+  ),
+  // Connected tools / MCP and AI integrations
+  network: (
+    <>
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="6" r="2.5" />
+      <circle cx="18" cy="18" r="2.5" />
+      <path d="m8.3 10.9 7.4-3.8M8.3 13.1l7.4 3.8" />
+    </>
+  ),
 };
 
 export function ServiceIcon({

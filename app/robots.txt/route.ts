@@ -58,7 +58,7 @@ function group(userAgent: string): string {
 
 export function GET(): Response {
   const body = [
-    "# Soleach — kozmetik ve güzellik markaları için dijital reklam ajansı.",
+    "# Soleach — güzellik markaları için dijital büyüme; şirketler için yazılım ve yapay zekâ.",
     "# Structured summary for agents: /llms.txt · Full corpus: /llms-full.txt",
     "# Agent skills: /.well-known/agent-skills/index.json",
     "#",

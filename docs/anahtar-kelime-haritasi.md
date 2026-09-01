@@ -12,7 +12,7 @@ kapsam haritası**: hangi sayfa hangi kavramı sahiplenmeli, hangi eş
 anlamlıları taşımalı, nerede boşluk var. Gerçek hacim verisi geldiğinde
 (Search Console kurulunca) öncelik sırası bu haritanın üzerine yazılır.
 
-Tarih: 2026-08-01 · Kapsam: 13 blog yazısı + 15 kavram × (TR + EN)
+Tarih: 2026-09-01 · Kapsam: güzellik büyümesi içerikleri + sektör bağımsız yazılım hizmetleri
 
 ---
 
@@ -23,7 +23,7 @@ birbiriyle yarışır (keyword cannibalization).
 
 | Niyet | Sorgu tipi | Sahibi |
 |---|---|---|
-| Ticari | "kozmetik reklam ajansı", "beauty marketing agency" | Ana sayfa + `/hizmetler` |
+| Ticari | "kozmetik reklam ajansı", "firmaya özel yazılım", "MCP sunucusu kurulumu" | Ana sayfa + `/services` |
 | Tanımsal | "ROAS nedir", "what is UGC" | **Kavramlar** (`/tr/kavramlar/*`) |
 | Nasıl yapılır | "Meta pixel nasıl kurulur", "hook nasıl yazılır" | **Blog** |
 | Karşılaştırma | "UGC mi stüdyo mu", "Shopify mi özel yazılım mı" | **Blog** |
@@ -40,14 +40,32 @@ o zaman blog yazısıyla çakışır. Kavram tanımlar, blog uygular, hizmet sat
 Blog ve kavramlar bu terimleri **doğrudan hedeflemez**, ama metin içinde
 doğal geçtiği yerde hizmet sayfasına bağlanır.
 
+### Güzellik markaları için büyüme
+
 **TR:** kozmetik reklam ajansı · güzellik markası reklam ajansı · kozmetik
 dijital pazarlama ajansı · kozmetik sosyal medya ajansı · güzellik markaları
 için performans pazarlama · kozmetik markası Instagram reklamı · kozmetik
-e-ticaret ajansı · Shopify kurulum ajansı · kozmetik SEO ajansı
+SEO ajansı
 
 **EN:** beauty marketing agency · cosmetics ad agency · beauty brand
-performance marketing · skincare marketing agency · cosmetics ecommerce
-agency · Shopify agency for beauty brands · beauty brand SEO agency
+performance marketing · skincare marketing agency · beauty brand creative
+agency · beauty brand SEO agency
+
+### Her sektörden şirket için yazılım ve yapay zekâ
+
+**TR:** firmaya özel yazılım · özel iş yazılımı · yönetim paneli geliştirme ·
+müşteri portalı geliştirme · iç araç geliştirme · MCP sunucusu geliştirme · MCP
+kurulumu · yapay zekâ entegrasyonu · API entegrasyonu · kurumsal web sitesi ·
+Shopify kurulumu ve bakımı
+
+**EN:** custom business software · custom software development · admin dashboard
+development · customer portal development · internal tool development · MCP
+server development · MCP setup · AI integration · API integration · corporate
+website development · Shopify setup and maintenance
+
+**Konumlandırma kuralı:** Reklam, kreatif ve SEO & GEO sorguları güzellik
+kategorisine bağlı kalır. Yazılım, MCP, entegrasyon ve web geliştirme sorguları
+sektör modifiye edicisine bağlanmaz; burada asıl belirleyici iş problemidir.
 
 ---
 
@@ -106,9 +124,10 @@ araçları karşılaştırıyor, bir terim tanımlamıyor.
 
 ## 5. Kategori modifiye edicileri
 
-Soleach yalnızca güzellik kategorisinde çalışıyor; niş görünürlük bu
-modifiye edicilerden gelir. Şu an içerikte **"kozmetik" ve "güzellik"
-baskın, alt kategoriler zayıf.**
+Soleach'in reklam, kreatif ve SEO & GEO hattı yalnızca güzellik kategorisinde
+çalışıyor; bu hattın niş görünürlüğü aşağıdaki modifiye edicilerden gelir.
+Yazılım ve yapay zekâ hattı bu kategori sınırına tabi değildir. Şu an güzellik
+içeriklerinde **"kozmetik" ve "güzellik" baskın, alt kategoriler zayıf.**
 
 | Alt kategori | TR | EN | Mevcut durum |
 |---|---|---|---|

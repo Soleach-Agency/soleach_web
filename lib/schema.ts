@@ -46,6 +46,12 @@ export function organizationSchema(locale: Locale) {
       "E-commerce",
       "Shopify store setup",
       "Web design",
+      "Web application development",
+      "Custom business software",
+      "Model Context Protocol (MCP)",
+      "AI agents",
+      "Workflow automation",
+      "API integration",
       "SEO",
       "Generative Engine Optimization",
     ],
@@ -67,7 +73,7 @@ export function websiteSchema(locale: Locale) {
   };
 }
 
-/** ProfessionalService + itemList of the three service pillars. */
+/** ProfessionalService + itemList of every service across both practices. */
 export function servicesSchema(locale: Locale) {
   const dict = getDictionary(locale);
   return {
@@ -80,14 +86,21 @@ export function servicesSchema(locale: Locale) {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: dict.nav.services,
-      itemListElement: dict.services.map((s) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: s.title,
-          description: s.summary,
-        },
-      })),
+      itemListElement: dict.services.map((s) => {
+        const group = dict.serviceGroups.find((item) => item.key === s.group);
+        return {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: s.title,
+            description: s.summary,
+            category: group?.title,
+            audience: group
+              ? { "@type": "Audience", audienceType: group.audience }
+              : undefined,
+          },
+        };
+      }),
     },
   };
 }

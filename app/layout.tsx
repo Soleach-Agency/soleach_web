@@ -18,7 +18,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Soleach | Güzellik Markaları için Dijital Reklam Ajansı",
+  title: "Soleach | Dijital Büyüme, Yazılım & Yapay Zekâ",
 };
 
 export default function RootLayout({

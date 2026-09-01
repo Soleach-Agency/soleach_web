@@ -13,11 +13,11 @@ import { getConcepts } from "./concepts";
  * updatedAt, and the blog index derives from the newest post.
  */
 export const staticPageUpdatedAt = {
-  "": "2026-07-11",
-  services: "2026-07-11",
-  about: "2026-07-11",
-  contact: "2026-07-11",
-  links: "2026-07-20",
+  "": "2026-09-01",
+  services: "2026-09-01",
+  about: "2026-09-01",
+  contact: "2026-09-01",
+  links: "2026-09-01",
 } as const;
 
 /** The blog index changes whenever a post is published or updated. */

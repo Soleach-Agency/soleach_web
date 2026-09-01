@@ -7,7 +7,7 @@ export const siteConfig = {
   name: "Soleach",
   legalName: "Soleach Dijital Ajans",
   email: "hello@soleach.com",
-  /** Welcome / brief form collected from prospective brands. */
+  /** Welcome / brief form collected from prospective clients. */
   formUrl: "https://forms.gle/UoVu24YimCn4U5AD7",
   formEmbedUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLScIJpH84oZPedMOseIgi1gm4v8p4iDTZ1gmn7vViyx1juENnQ/viewform?embedded=true",
