@@ -27,6 +27,7 @@ import { googleAgustos2026SpamGuncellemesi } from "./google-agustos-2026-spam-gu
 import { microsoftAdsAiMaxKureselAcilis } from "./microsoft-ads-ai-max-kuresel-acilis";
 import { googleGotoSeoOlcumleme } from "./google-goto-seo-olcumleme";
 import { microsoftAdvertisingYeniTasarim } from "./microsoft-advertising-yeni-tasarim";
+import { googleSearchConsoleAiPerformansRaporu } from "./google-search-console-ai-performans-raporu";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -58,4 +59,5 @@ export const posts: BlogPost[] = [
   microsoftAdsAiMaxKureselAcilis,
   googleGotoSeoOlcumleme,
   microsoftAdvertisingYeniTasarim,
+  googleSearchConsoleAiPerformansRaporu,
 ];
