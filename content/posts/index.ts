@@ -28,6 +28,7 @@ import { microsoftAdsAiMaxKureselAcilis } from "./microsoft-ads-ai-max-kuresel-a
 import { googleGotoSeoOlcumleme } from "./google-goto-seo-olcumleme";
 import { microsoftAdvertisingYeniTasarim } from "./microsoft-advertising-yeni-tasarim";
 import { googleSearchConsoleAiPerformansRaporu } from "./google-search-console-ai-performans-raporu";
+import { googleTrendsKategoriFiltresiKozmetik } from "./google-trends-kategori-filtresi-kozmetik";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -60,4 +61,5 @@ export const posts: BlogPost[] = [
   googleGotoSeoOlcumleme,
   microsoftAdvertisingYeniTasarim,
   googleSearchConsoleAiPerformansRaporu,
+  googleTrendsKategoriFiltresiKozmetik,
 ];
