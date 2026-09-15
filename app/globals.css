@@ -35,6 +35,30 @@
     --color-accent-2: 240 149 206;
     --color-lilac: 173 152 235;
   }
+
+  /* The LIVE feature contrasts with its surrounding page in either theme.
+     Local tokens keep every nested label, button and surface in sync. */
+  .live-panel {
+    --color-background: 24 18 33;
+    --color-foreground: 246 241 250;
+    --color-surface: 33 24 46;
+    --color-surface-2: 40 26 48;
+    --color-border: 72 53 88;
+    --color-muted: 206 190 221;
+    --color-accent: 210 174 246;
+    --color-accent-2: 240 149 206;
+  }
+
+  .dark .live-panel {
+    --color-background: 255 253 255;
+    --color-foreground: 44 26 61;
+    --color-surface: 249 243 252;
+    --color-surface-2: 252 235 247;
+    --color-border: 220 199 235;
+    --color-muted: 110 94 126;
+    --color-accent: 125 51 195;
+    --color-accent-2: 190 63 135;
+  }
 }
 
 @layer base {

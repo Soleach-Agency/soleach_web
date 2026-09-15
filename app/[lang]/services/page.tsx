@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
 import { ServiceIcon } from "@/components/ui/service-icon";
+import { LiveServicePanel } from "@/components/sections/live-service-panel";
 import { Reveal } from "@/components/motion/reveal";
 import { JsonLd } from "@/components/seo/json-ld";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -54,9 +55,33 @@ export default async function ServicesPage({
         subtitle={hero.subtitle}
       />
 
+      <nav aria-label={dict.servicesPage.branchesLabel} className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <ol className="grid gap-4 md:grid-cols-3">
+          {dict.servicesPage.branches.map((branch, index) => (
+            <li key={branch.key}>
+              <a href={`#${branch.key}`} className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent/50 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                <span className="flex items-center justify-between text-sm font-semibold text-accent">
+                  <span className="font-mono">0{index + 1}</span>
+                  <span aria-hidden className="transition-transform group-hover:translate-y-1">↓</span>
+                </span>
+                <span className="mt-4 text-xl font-semibold text-foreground">{branch.title}</span>
+                <span className="mt-3 text-sm leading-relaxed text-muted">{branch.body}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
       {/* Detailed services, split by audience and expertise */}
       <div className="mx-auto max-w-7xl space-y-16 px-4 pb-8 pt-4 sm:px-6 lg:px-8">
         {dict.serviceGroups.map((group) => {
+          if (group.key === "creator-live") {
+            return (
+              <div key={group.key} id={group.key} className="scroll-mt-24">
+                <LiveServicePanel locale={locale} dict={dict} expanded />
+              </div>
+            );
+          }
           const services = dict.services.filter((s) => s.group === group.key);
 
           return (

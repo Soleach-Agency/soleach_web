@@ -195,6 +195,16 @@ export function servicesMarkdown(locale: Locale): string {
     "",
     dict.servicesPage.hero.subtitle,
     "",
+    dict.live.partnerLabel,
+    "",
+    `**${dict.live.feeTitle}** ${dict.live.feeBody}`,
+    "",
+    `### ${dict.live.contactTitle}`,
+    "",
+    `[${dict.live.cta}](mailto:${siteConfig.email}?subject=${encodeURIComponent(dict.live.emailSubject)}) — ${dict.live.contactHint}`,
+    "",
+    `[${dict.live.tiktokCta}](${siteConfig.social.tiktok}) — ${dict.live.tiktokHint}`,
+    "",
   ];
 
   for (const group of dict.serviceGroups) {

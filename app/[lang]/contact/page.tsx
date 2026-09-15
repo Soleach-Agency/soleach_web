@@ -55,6 +55,16 @@ export default async function ContactPage({
 
       <section className="bg-background pb-24 pt-4">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 rounded-2xl border border-accent/25 bg-accent/5 p-6 sm:p-8">
+            <h2 className="text-xl font-semibold text-foreground">{dict.live.contactTitle}</h2>
+            <p className="mt-2 text-base leading-relaxed text-muted">{dict.live.contactHint}</p>
+            <a
+              href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(dict.live.emailSubject)}`}
+              className="mt-4 inline-flex min-h-11 items-center text-base font-semibold text-accent underline underline-offset-4"
+            >
+              {siteConfig.email}
+            </a>
+          </div>
           {/* Form card */}
           <Reveal className="overflow-hidden rounded-3xl border border-border bg-surface" amount={0.1}>
             <div className="flex flex-col gap-4 border-b border-border p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">

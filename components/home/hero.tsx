@@ -9,11 +9,12 @@ import { Marquee } from "@/components/motion/marquee";
 import { AnimatedCounter } from "@/components/motion/counter";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
+import { ServiceIcon } from "@/components/ui/service-icon";
 
 const chips = [
   { label: "Meta Ads", pos: "left-0 top-6", delay: "0s" },
   { label: "Creative", pos: "right-2 top-16", delay: "0.8s" },
-  { label: "Shopify", pos: "left-1 top-[28%]", delay: "0.6s" },
+  { label: "TikTok LIVE", pos: "left-1 top-[28%]", delay: "0.6s" },
   { label: "Custom Software", pos: "left-4 top-1/2", delay: "1.6s" },
   { label: "MCP", pos: "right-0 top-[46%]", delay: "0.4s" },
   { label: "AI Agents", pos: "right-6 bottom-[28%]", delay: "1.4s" },
@@ -80,6 +81,16 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
           <Entrance delay={0.75} className="mt-5">
             <p className="text-sm text-muted">{hero.note}</p>
+          </Entrance>
+          <Entrance delay={0.85} className="mt-6">
+            <Link
+              href={`${base}/${dict.routes.services}#tiktok-live`}
+              className="inline-flex max-w-full items-center gap-2.5 rounded-xl border border-accent/25 bg-accent/5 px-4 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-accent/10"
+            >
+              <ServiceIcon icon="live" className="h-5 w-5 shrink-0 text-accent" />
+              {dict.live.partnerLabel}
+              <span aria-hidden className="ml-1 shrink-0 text-accent">↗</span>
+            </Link>
           </Entrance>
         </div>
 

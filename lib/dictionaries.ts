@@ -15,9 +15,10 @@ export type ServiceKey =
   | "seo-geo"
   | "web-ecommerce"
   | "custom-software"
-  | "mcp-ai";
+  | "mcp-ai"
+  | "tiktok-live";
 
-export type ServiceGroupKey = "beauty-growth" | "software-ai";
+export type ServiceGroupKey = "beauty-growth" | "software-ai" | "creator-live";
 
 export interface ServiceGroupContent {
   key: ServiceGroupKey;
@@ -30,7 +31,7 @@ export interface ServiceGroupContent {
 export interface ServiceContent {
   key: ServiceKey;
   group: ServiceGroupKey;
-  icon: "ads" | "creative" | "search" | "store" | "code" | "network";
+  icon: "ads" | "creative" | "search" | "store" | "code" | "network" | "live";
   title: string;
   tagline: string;
   summary: string;
@@ -47,6 +48,27 @@ export interface Stat {
 
 export interface Dictionary {
   brandTagline: string;
+  live: {
+    partnerLabel: string;
+    title: string;
+    summary: string;
+    contactTitle: string;
+    cta: string;
+    details: string;
+    tiktokCta: string;
+    emailLabel: string;
+    tiktokLabel: string;
+    orLabel: string;
+    tiktokHint: string;
+    feeTitle: string;
+    feeBody: string;
+    audienceTitle: string;
+    audienceBody: string;
+    supportTitle: string;
+    contactHint: string;
+    emailSubject: string;
+    steps: { title: string; body: string }[];
+  };
   nav: {
     home: string;
     services: string;
@@ -106,6 +128,8 @@ export interface Dictionary {
   services: ServiceContent[];
   servicesPage: {
     hero: { eyebrow: string; title: string; subtitle: string };
+    branchesLabel: string;
+    branches: { key: ServiceGroupKey; title: string; body: string }[];
     featuresLabel: string;
     outcomeLabel: string;
   };
@@ -158,7 +182,32 @@ export interface Dictionary {
 
 const tr: Dictionary = {
   brandTagline:
-    "Güzellik markaları için dijital büyüme; her sektörden şirket için yazılım ve yapay zekâ çözümleri",
+    "TikTok LIVE yayıncı desteği, güzellik markaları için dijital büyüme ve şirketlere yazılım çözümleri",
+  live: {
+    partnerLabel: "Resmî TikTok LIVE Partner Ajansı",
+    title: "Yayının sana ait. Gelişimi birlikte planlayalım.",
+    summary: "Türkiye’de TikTok LIVE yayıncılarıyla çalışıyoruz. İlk yayın hazırlığından düzenli bir takvime, içerik fikirlerinden yayın sonrası değerlendirmeye kadar yanında oluyoruz.",
+    contactTitle: "Yayın hedefini konuşalım",
+    cta: "Mail at",
+    details: "LIVE desteğini ayrıntılı incele",
+    tiktokCta: "TikTok’tan ulaş",
+    emailLabel: "E-posta",
+    tiktokLabel: "TikTok",
+    orLabel: "VEYA",
+    tiktokHint: "TikTok profilimizden mesaj gönder; nasıl yayınlar yapmak istediğini anlat. Sohbete TikTok üzerinden devam edelim.",
+    feeTitle: "Yayıncı desteğimiz ücretsiz.",
+    feeBody: "TikTok LIVE partner programı kapsamında çalışıyoruz. Yayıncılardan katılım veya hizmet ücreti talep etmiyor, kazançlarından ajans komisyonu almıyoruz.",
+    audienceTitle: "Kimler için?",
+    audienceBody: "Türkiye’de LIVE’a başlamak isteyen veya mevcut yayınlarını geliştirmeyi hedefleyen içerik üreticileri için. Yayın deneyimini, beklentilerini ve hesabının katılım uygunluğunu birlikte değerlendiriyoruz.",
+    supportTitle: "Birlikte neler üzerinde çalışıyoruz?",
+    contactHint: "E-postana TikTok kullanıcı adını ve yayın hedefini ekle. Sana e-posta üzerinden dönüş yapalım.",
+    emailSubject: "TikTok LIVE — yayıncı görüşmesi",
+    steps: [
+      { title: "Tanışalım", body: "Hesabını, yayın hedefini ve ajansa katılım uygunluğunu birlikte değerlendirelim." },
+      { title: "Planlayalım", body: "Tarzına ve günlük hayatına uyan yayın günlerini ve içerik fikirlerini belirleyelim." },
+      { title: "Geliştirelim", body: "Yayınlarından öğrenip bir sonraki yayında deneyebileceğin somut adımları seçelim." },
+    ],
+  },
   nav: {
     home: "Ana Sayfa",
     services: "Hizmetler",
@@ -177,24 +226,24 @@ const tr: Dictionary = {
   },
   meta: {
     home: {
-      title: "Güzellik Markalarına Reklam & Firmalara Özel Yazılım | Soleach",
+      title: "TikTok LIVE Ajansı, Dijital Büyüme & Yazılım | Soleach",
       description:
-        "Güzellik markalarına performans reklamı, kreatif ve SEO & GEO; her sektörden şirkete özel yazılım, MCP sunucuları, yapay zekâ entegrasyonları ve web sistemleri.",
+        "Resmî TikTok LIVE partner ajansı Soleach: Türkiye’de yayıncı desteği, güzellik markalarına dijital büyüme ve şirketlere özel yazılım.",
     },
     services: {
-      title: "Dijital Reklam, Yazılım & Yapay Zekâ Hizmetleri | Soleach",
+      title: "TikTok LIVE, Dijital Reklam & Yazılım Hizmetleri | Soleach",
       description:
-        "Güzellik markalarına performans reklamı, kreatif ve SEO & GEO; her sektörden şirkete özel yazılım, MCP sunucuları, yapay zekâ entegrasyonları ve web/e-ticaret geliştirme.",
+        "TikTok LIVE yayıncılarına katılım, yayın planı ve gelişim desteği; güzellik markalarına reklam ve kreatif; şirketlere yazılım ve yapay zekâ çözümleri.",
     },
     about: {
       title: "Hakkımızda | Dijital Büyüme ve Yazılım Ekibi | Soleach",
       description:
-        "Soleach, güzellik markaları için reklam ve kreatif; her sektörden şirket için özel yazılım, MCP ve yapay zekâ entegrasyonları geliştiren dijital ekip.",
+        "Soleach, Türkiye’de resmî TikTok LIVE partner ajansı. Yayıncı desteği, güzellik markalarına dijital büyüme ve şirketlere yazılım çözümleri.",
     },
     contact: {
       title: "İletişim | Soleach",
       description:
-        "Marka büyümesi ya da yazılım ihtiyacını konuşalım. Formu doldur; projen için doğru başlangıç noktasını birlikte netleştirelim.",
+        "TikTok LIVE yayın hedefini, marka büyümesi ya da yazılım ihtiyacını konuşalım. E-postayla yaz veya tanışma formunu doldur.",
     },
     blog: {
       title: "Blog | Kozmetik Markaları için Dijital Büyüme Rehberleri | Soleach",
@@ -209,17 +258,18 @@ const tr: Dictionary = {
   },
   home: {
     hero: {
-      eyebrow: "Güzellikte büyüme · Her sektöre yazılım",
+      eyebrow: "TikTok LIVE · Dijital büyüme · Yazılım",
       title: "Markanı büyütmek,",
       titleAccent: "işini hızlandırmak.",
       subtitle:
-        "Güzellik markaları için reklam, kreatif ve görünürlük; her sektörden şirket için özel yazılım, MCP ve yapay zekâ entegrasyonları. İki ayrı uzmanlık, işi sahiplenen tek ekip.",
+        "TikTok LIVE yayıncıları için gelişim desteği, güzellik markaları için dijital büyüme, şirketler için özel yazılım ve yapay zekâ çözümleri. Hedefine uygun bir planla başlayalım.",
       ctaPrimary: "İhtiyacını konuşalım",
       ctaSecondary: "Neler yapıyoruz?",
       note: "24 saat içinde dönüyoruz · Taahhüt yok, sürpriz fatura yok",
       scrollCue: "Keşfet",
     },
     marquee: [
+      "TikTok LIVE",
       "Performans Reklamları",
       "Kreatif Üretim",
       "SEO & GEO",
@@ -232,20 +282,20 @@ const tr: Dictionary = {
       "Otomasyon",
     ],
     stats: [
-      { value: 2, label: "Net uzmanlık alanı: güzellik büyümesi ve yazılım" },
+      { value: 3, label: "Hizmet alanı: LIVE, dijital büyüme ve yazılım" },
       { value: 1, label: "İhtiyacın boyunca sorumluluğu üstlenen ekip" },
       { value: 24, suffix: " saat", label: "İçinde ilk yanıtımız sende olur" },
     ],
     manifesto: {
       eyebrow: "Kısaca",
       big: "Kategoriye gerektiği yerde odaklanır, teknolojide sektör sınırı koymayız.",
-      body: "Reklam, kreatif ve SEO & GEO işlerimizde güzellik kategorisinin diline, estetiğine ve alıcısına odaklanıyoruz. Yazılım tarafında ise sektör değil, çözülmesi gereken iş problemi belirleyici. İki alanı birbirine karıştırmadan aynı ilkeyle çalışıyoruz: işe yarayan, ölçülebilen ve geliştirilebilen işler.",
+      body: "TikTok LIVE’da yayıncıların düzenini ve içerik gelişimini destekliyoruz. Reklam, kreatif ve SEO & GEO’da güzellik kategorisine odaklanıyoruz. Yazılımda ise her sektörden şirketin iş problemini ele alıyoruz. Her hizmetin kapsamını ve sonraki adımlarını birlikte netleştiriyoruz.",
     },
     servicesIntro: {
       eyebrow: "Ne yapıyoruz",
-      title: "İki uzmanlık. Her biri kendi sınırları içinde.",
+      title: "Yayıncılar, markalar ve işletmeler için.",
       subtitle:
-        "Güzellik markalarının büyüme ihtiyaçlarını kategori odağıyla; şirketlerin yazılım ihtiyaçlarını sektör sınırı koymadan çözüyoruz.",
+        "TikTok LIVE’da yayınını geliştirmek, markanı büyütmek veya işine uygun yazılım üretmek için ihtiyacına göre çalışıyoruz.",
     },
     process: {
       eyebrow: "Nasıl çalışıyoruz",
@@ -296,7 +346,7 @@ const tr: Dictionary = {
       eyebrow: "Neden Soleach",
       title: "Doğru işe, doğru uzmanlıkla yaklaşırız.",
       subtitle:
-        "Güzellik pazarlamasında kategori odağı; yazılımda iş problemi. İki çalışma alanını bilinçli biçimde ayrı tutuyoruz.",
+        "LIVE’da yayıncının hedefi, güzellik pazarlamasında kategori, yazılımda iş problemi: her hizmeti kendi ihtiyacına göre planlıyoruz.",
       points: [
         {
           title: "Kategori odağı, yerinde",
@@ -326,7 +376,19 @@ const tr: Dictionary = {
       items: [
         {
           q: "Soleach tam olarak ne yapıyor?",
-          a: "Soleach’in iki ayrı çalışma alanı var. Kozmetik ve güzellik markaları için performans reklamları, kreatif üretim ve SEO & GEO yürütüyoruz. Özel iş yazılımları, MCP sunucuları, yapay zekâ entegrasyonları ile web ve e-ticaret sistemlerinde ise her sektörden şirketle çalışıyoruz.",
+          a: "Soleach, resmî TikTok LIVE partner ajansı olarak Türkiye’de yayıncıların katılım, yayın planı ve gelişim süreçlerini destekler. Ayrıca güzellik markaları için reklam, kreatif ve SEO & GEO; her sektörden şirket için yazılım, MCP, yapay zekâ ve web çözümleri sunar.",
+        },
+        {
+          q: "TikTok LIVE ajansına nasıl katılabilirim?",
+          a: "TikTok kullanıcı adını ve yayın hedefini bize e-postayla ilet. Hesabının katılım uygunluğunu ve beklentilerini birlikte değerlendirip uygun olduğunda TikTok üzerinden davet sürecini başlatırız. Katılım öncesinde çalışma koşullarını birlikte netleştiririz.",
+        },
+        {
+          q: "TikTok LIVE yayıncı desteği ücretli mi?",
+          a: "Hayır. TikTok LIVE partner programı kapsamında sunduğumuz yayıncı desteği için katılım veya hizmet ücreti talep etmiyor, yayıncı kazancından ajans komisyonu almıyoruz.",
+        },
+        {
+          q: "LIVE desteğinde neler var?",
+          a: "Yayın hazırlığı, uygulanabilir bir yayın takvimi, içerik fikirleri ve yayın sonrası geri bildirim sunuyoruz. Mevcut platform imkânlarını hesabının uygunluğuna göre değerlendiririz. Belirli bir gelir, izleyici sayısı veya trafik desteği taahhüt etmiyoruz.",
         },
         {
           q: "Kozmetik markaları için dijital reklam ajansı ne yapar?",
@@ -366,36 +428,61 @@ const tr: Dictionary = {
         },
         {
           q: "Nasıl başlıyoruz?",
-          a: "Formda reklam-büyüme ya da yazılım ihtiyacını kısaca anlatman yeterli. Ücretsiz tanışma görüşmesinde hedefi ve mevcut durumu dinliyor; uygun hizmeti, ilk kapsamı ve sonraki adımları birlikte netleştiriyoruz.",
+          a: "LIVE için kullanıcı adını ve yayın hedefini e-postayla gönderebilirsin. Marka veya yazılım çalışmaları için tanışma formunu doldurman yeterli. Hedefi ve mevcut durumu dinleyip sonraki adımları birlikte netleştiriyoruz.",
         },
       ],
     },
     ctaBand: {
       title: "Aklındaki işi konuşalım.",
       subtitle:
-        "Marka büyümesi mi, yazılım mı? İhtiyacını kısaca anlat; doğru başlangıç noktasını birlikte netleştirelim.",
+        "Yayın hedefini, marka büyümesi ya da yazılım ihtiyacını anlat; doğru başlangıç noktasını birlikte netleştirelim.",
       button: "Hadi konuşalım",
     },
   },
   serviceGroups: [
     {
+      key: "creator-live",
+      eyebrow: "Türkiye’de LIVE yayıncıları için",
+      title: "TikTok LIVE partner ajansı",
+      summary: "TikTok LIVE partner programı kapsamında Türkiye’de yayıncıların hazırlık, düzenli yayın ve içerik gelişimini destekliyoruz. Yayıncılardan bu destek için ücret veya ajans komisyonu almıyoruz.",
+      audience: "LIVE yapan veya başlamak isteyen içerik üreticileri",
+    },
+    {
       key: "beauty-growth",
       eyebrow: "Güzellik markalarına özel",
-      title: "Reklam, kreatif ve dijital büyüme",
+      title: "Reklam yönetimi ve kreatif tasarım",
       summary:
-        "Kategori bilgisi ve güçlü bir estetik bakış isteyen büyüme işleri. Bu hattı kozmetik, güzellik ve kadın ürünleri markaları için yürütüyoruz.",
+        "Kozmetik ve güzellik markaları için reklam stratejisi, kampanya yönetimi ve kreatif üretimi birlikte ele alıyoruz. Reklam görselleri, kısa videolar ve SEO & GEO çalışmalarıyla markanın dijital görünürlüğünü destekliyoruz.",
       audience: "Kozmetik & güzellik markaları",
     },
     {
       key: "software-ai",
       eyebrow: "Sektörden bağımsız",
-      title: "Yazılım, yapay zekâ ve entegrasyon",
+      title: "Yazılım ve yapay zekâ",
       summary:
-        "İşletmenin gerçek akışına göre tasarlanan teknik çözümler. Bu hizmetler güzellik sektörüyle sınırlı değil; farklı sektörlerden şirketlerle çalışıyoruz.",
+        "Her sektörden işletme için web ve e-ticaret sistemleri, özel yazılım ve yapay zekâ entegrasyonları geliştiriyoruz. İhtiyaç analizinden kuruluma ve bakıma kadar, sistemi işletmenin gerçek iş akışına göre tasarlıyoruz.",
       audience: "Her sektörden işletme",
     },
   ],
   services: [
+    {
+      key: "tiktok-live",
+      group: "creator-live",
+      icon: "live",
+      title: "TikTok LIVE Ajans Hizmeti",
+      tagline: "Kendi tarzınla yayın yap. Sonraki adımı birlikte bulalım.",
+      summary: "Soleach, Türkiye’de resmî TikTok LIVE partner ajansıdır. Yayına başlamak veya düzenli yayın alışkanlığı kurmak isteyen içerik üreticilerine kişisel planlama ve geri bildirim desteği sunar.",
+      features: [
+        "Hesap uygunluğu değerlendirmesi ve ajansa katılım rehberliği",
+        "İlk yayın hazırlığı ve kişiye uygun yayın takvimi",
+        "İçerik, yayın akışı ve izleyici etkileşimi üzerine fikirler",
+        "Yayın sonrası performans değerlendirmesi ve uygulanabilir geri bildirim",
+        "PK yayınları için uygun rakip bulma ve eşleşme desteği",
+        "Platform kuralları ve mevcut destek imkânları konusunda yönlendirme",
+        "Karmaşık sorunlarda, gerektiğinde ajans destek kanalları üzerinden TikTok ekibiyle iletişim ve süreç takibi",
+      ],
+      outcome: "Uygulayabileceğin bir yayın düzeni ve gelişimini takip edebileceğin somut adımlar.",
+    },
     {
       key: "ads",
       group: "beauty-growth",
@@ -505,23 +592,30 @@ const tr: Dictionary = {
   servicesPage: {
     hero: {
       eyebrow: "Hizmetler",
-      title: "İki uzmanlık alanı. Sınırları net, sorumluluğu tek ekipte.",
+      title: "Reklam. Yazılım. TikTok LIVE.",
       subtitle:
-        "Güzellik markaları için reklam, kreatif ve görünürlük; her sektörden şirket için özel yazılım, web sistemleri ve MCP entegrasyonları.",
+        "Üç hizmet kolumuz var: güzellik markaları için reklam yönetimi ve kreatif tasarım, işletmeler için yazılım ve yapay zekâ, içerik üreticileri için TikTok LIVE partner desteği.",
     },
+    branchesLabel: "Üç hizmet kolumuz",
+    branches: [
+      { key: "beauty-growth", title: "Reklam ve kreatif", body: "Güzellik markaları için kampanya yönetimi, kreatif tasarım ve dijital görünürlük." },
+      { key: "software-ai", title: "Yazılım ve yapay zekâ", body: "İşletmeler için web sistemleri, özel yazılım ve yapay zekâ entegrasyonları." },
+      { key: "creator-live", title: "TikTok LIVE partner", body: "Yayıncılar için ücretsiz katılım rehberliği, yayın planı ve gelişim desteği." },
+    ],
     featuresLabel: "Neler dahil",
     outcomeLabel: "Sonuç",
   },
   aboutPage: {
     hero: {
       eyebrow: "Hakkımızda",
-      title: "İki uzmanlığı bilinçli biçimde ayıran dijital ekip.",
+      title: "Yayıncılara, markalara ve işletmelere eşlik ediyoruz.",
       subtitle:
-        "Güzellik markalarında kategori odağını; yazılım projelerinde sektör bağımsız problem çözmeyi aynı çalışma disipliniyle buluşturuyoruz.",
+        "Türkiye’de TikTok LIVE yayıncıları, güzellik markaları ve farklı sektörlerden işletmeler için hedefe uygun planlar geliştiriyoruz.",
     },
     story: {
       title: "Hikâyemiz",
       paragraphs: [
+        "Soleach, resmî TikTok LIVE partner ajansı olarak Türkiye’de içerik üreticilerinin yayın hazırlığını, düzenini ve gelişimini destekler.",
         "Soleach, kozmetik ve güzellik markalarının dijitalde hak ettiği yeri alması için doğdu. Bu kategorinin başka hiçbir şeye benzemediğini biliyoruz: burada estetik kadar güven, görsel kadar sonuç önemli.",
         "Çalışma alanlarımızı bilinçli biçimde ayırıyoruz. Reklam, kreatif ve SEO & GEO’da odağımız kozmetik ve güzellik. Özel yazılım, MCP, yapay zekâ entegrasyonları ve web sistemlerinde ise sektör sınırı koymuyor; çözülmesi gereken iş problemine bakıyoruz.",
         "Bir kampanyada da bir yazılım ürününde de amacımız aynı: iyi görünen bir fikirden fazlasını, çalışan ve geliştirilebilen bir sonuç üretmek. Kapsamı netleştiriyor, işi görünür adımlarla ilerletiyor ve yayından sonra da ölçüp iyileştiriyoruz.",
@@ -560,7 +654,7 @@ const tr: Dictionary = {
   contactPage: {
     hero: {
       eyebrow: "İletişim",
-      title: "Markanı ya da yazılım ihtiyacını konuşalım.",
+      title: "Yayınını, markanı ya da yazılım ihtiyacını konuşalım.",
       subtitle:
         "Aşağıdaki formda ihtiyacını kısaca anlat. Doğru başlangıç noktasını birlikte netleştirmek için 24 saat içinde dönüyoruz.",
     },
@@ -607,7 +701,7 @@ const tr: Dictionary = {
   },
   footer: {
     tagline:
-      "Reklam, kreatif ve SEO & GEO’da güzellik odaklı; web, yazılım, MCP ve yapay zekâda sektör bağımsız.",
+      "TikTok LIVE yayıncı desteği, güzellik markalarına dijital büyüme ve işletmelere yazılım çözümleri.",
     servicesHeading: "Hizmetler",
     companyHeading: "Kurumsal",
     followHeading: "Takip et",
@@ -617,7 +711,32 @@ const tr: Dictionary = {
 
 const en: Dictionary = {
   brandTagline:
-    "Digital growth for beauty brands; software and AI solutions for companies in any industry",
+    "TikTok LIVE creator support, digital growth for beauty brands, and software solutions for businesses",
+  live: {
+    partnerLabel: "Official TikTok LIVE Partner Agency",
+    title: "Your LIVE, your style. Let’s plan your next step.",
+    summary: "We work with TikTok LIVE creators in Türkiye. From preparing your first broadcast to building a regular schedule, we help with content ideas and performance feedback.",
+    contactTitle: "Let’s talk about your LIVE goals",
+    cta: "Send an email",
+    details: "Explore our LIVE support",
+    tiktokCta: "Contact us on TikTok",
+    emailLabel: "Email",
+    tiktokLabel: "TikTok",
+    orLabel: "OR",
+    tiktokHint: "Send a message from our TikTok profile and tell us what kind of broadcasts you want to create. Let’s continue the conversation on TikTok.",
+    feeTitle: "Our creator support is free.",
+    feeBody: "We work through the TikTok LIVE partner program. We charge creators no joining or service fees and take no agency commission from their earnings.",
+    audienceTitle: "Who is it for?",
+    audienceBody: "Creators in Türkiye who want to start broadcasting on LIVE or develop their existing broadcasts. We review your experience, expectations and account eligibility together.",
+    supportTitle: "What do we work on together?",
+    contactHint: "Include your TikTok username and LIVE goals in your email. We’ll reply by email.",
+    emailSubject: "TikTok LIVE — creator enquiry",
+    steps: [
+      { title: "Meet", body: "Let’s review your account, your goals and your eligibility to join the agency." },
+      { title: "Plan", body: "Choose broadcast days and content ideas that fit your style and everyday life." },
+      { title: "Improve", body: "Learn from your broadcasts and pick practical changes to try next time." },
+    ],
+  },
   nav: {
     home: "Home",
     services: "Services",
@@ -636,24 +755,24 @@ const en: Dictionary = {
   },
   meta: {
     home: {
-      title: "Beauty Brand Advertising & Custom Software | Soleach",
+      title: "TikTok LIVE Agency, Digital Growth & Software | Soleach",
       description:
-        "Performance advertising, creative and SEO & GEO for beauty brands; custom software, MCP servers, AI integrations and web systems for companies in any industry.",
+        "Official TikTok LIVE partner agency Soleach: creator support in Türkiye, digital growth for beauty brands, and custom software.",
     },
     services: {
-      title: "Digital Advertising, Software & AI Services | Soleach",
+      title: "TikTok LIVE, Digital Advertising & Software Services | Soleach",
       description:
-        "Performance advertising, creative and SEO & GEO for beauty brands; custom software, MCP servers, AI integrations, and web and e-commerce development for any industry.",
+        "TikTok LIVE onboarding, broadcast planning and feedback; advertising and creative for beauty brands; software and AI solutions for businesses.",
     },
     about: {
       title: "About | Digital Growth & Software Team | Soleach",
       description:
-        "Soleach provides advertising and creative for beauty brands, and builds custom software, MCP servers and AI integrations for companies in any industry.",
+        "Soleach is an official TikTok LIVE partner agency in Türkiye, offering creator support, beauty-brand growth and business software solutions.",
     },
     contact: {
       title: "Contact | Soleach",
       description:
-        "Let's talk about brand growth or the software you need. Share the project and we'll clarify the right place to start together.",
+        "Let’s talk about your TikTok LIVE goals, brand growth or software needs. Send an email or use our intro form.",
     },
     blog: {
       title: "Blog | Digital Growth Guides for Cosmetics Brands | Soleach",
@@ -668,17 +787,18 @@ const en: Dictionary = {
   },
   home: {
     hero: {
-      eyebrow: "Beauty growth · Software for any industry",
+      eyebrow: "TikTok LIVE · Digital growth · Software",
       title: "Grow your brand,",
       titleAccent: "move your business faster.",
       subtitle:
-        "Advertising, creative and visibility for beauty brands; custom software, MCP and AI integrations for companies in any industry. Two distinct practices, one accountable team.",
+        "Support for TikTok LIVE creators, digital growth for beauty brands, and custom software and AI solutions for businesses. Let’s build a plan around your goals.",
       ctaPrimary: "Let's talk about your project",
       ctaSecondary: "What we do",
       note: "We reply within 24 hours · No commitment, no surprise invoices",
       scrollCue: "Explore",
     },
     marquee: [
+      "TikTok LIVE",
       "Performance Ads",
       "Creative Production",
       "SEO & GEO",
@@ -691,20 +811,20 @@ const en: Dictionary = {
       "Automation",
     ],
     stats: [
-      { value: 2, label: "Clear practices: beauty growth and software" },
+      { value: 3, label: "Service areas: LIVE, digital growth and software" },
       { value: 1, label: "Accountable team from first question to delivery" },
       { value: 24, suffix: "h", label: "Until our first reply lands in your inbox" },
     ],
     manifesto: {
       eyebrow: "In short",
       big: "We focus by category where it matters and keep technology industry-agnostic.",
-      body: "In advertising, creative and SEO & GEO, we focus on the language, aesthetics and buyer of the beauty category. In software, the business problem — not the industry — defines the work. We keep those practices distinct and hold both to the same standard: useful, measurable work that can keep evolving.",
+      body: "We support creators with their TikTok LIVE routine and content development. In advertising, creative and SEO & GEO, we focus on beauty brands. In software, we work on business problems across industries. We clarify the scope and next steps together.",
     },
     servicesIntro: {
       eyebrow: "What we do",
-      title: "Two areas of expertise, each with clear boundaries.",
+      title: "For creators, brands and businesses.",
       subtitle:
-        "We solve beauty brands' growth needs with category focus, and companies' software needs without an industry boundary.",
+        "We help you develop your TikTok LIVE broadcasts, grow your brand or build software around the way your business works.",
     },
     process: {
       eyebrow: "How we work",
@@ -755,7 +875,7 @@ const en: Dictionary = {
       eyebrow: "Why Soleach",
       title: "The right expertise for the right kind of work.",
       subtitle:
-        "Category focus in beauty marketing; business-problem focus in software. We deliberately keep the two practices distinct.",
+        "A creator’s goals on LIVE, a brand’s category in marketing, a business problem in software: we build each service around its needs.",
       points: [
         {
           title: "Category focus, where it belongs",
@@ -784,8 +904,20 @@ const en: Dictionary = {
       title: "Good to know",
       items: [
         {
+          q: "How can I join the TikTok LIVE agency?",
+          a: "Email us your TikTok username and your LIVE goals. We’ll review your eligibility and expectations together, then start the invitation process through TikTok if it’s a fit. We clarify the working terms with you before you join.",
+        },
+        {
+          q: "Do creators pay for TikTok LIVE support?",
+          a: "No. We charge creators no joining or service fees for support through the TikTok LIVE partner program, and take no agency commission from their earnings.",
+        },
+        {
+          q: "What does LIVE support include?",
+          a: "We help with broadcast preparation, a practical schedule, content ideas and performance feedback. Available platform support depends on your account’s eligibility. We do not promise a specific income, viewer count or traffic allocation.",
+        },
+        {
           q: "What exactly does Soleach do?",
-          a: "Soleach has two distinct practices. We provide performance advertising, creative production and SEO & GEO for cosmetics and beauty brands. For custom business software, MCP servers, AI integrations, and web and e-commerce systems, we work with companies in any industry.",
+          a: "As an official TikTok LIVE partner agency, Soleach supports creators in Türkiye with onboarding, broadcast planning and development. We also offer advertising, creative and SEO & GEO for beauty brands, plus software, MCP, AI and web solutions for businesses in any industry.",
         },
         {
           q: "What does a digital advertising agency for cosmetics brands actually do?",
@@ -832,29 +964,54 @@ const en: Dictionary = {
     ctaBand: {
       title: "Let's talk about the work you have in mind.",
       subtitle:
-        "Brand growth or software? Tell us what you need, and we'll clarify the right place to start together.",
+        "Tell us about your LIVE goals, brand growth or software needs, and we’ll clarify the right place to start.",
       button: "Let's talk",
     },
   },
   serviceGroups: [
     {
+      key: "creator-live",
+      eyebrow: "For LIVE creators in Türkiye",
+      title: "TikTok LIVE partner agency",
+      summary: "Through the TikTok LIVE partner program, we help creators in Türkiye prepare, broadcast consistently and develop their content. We charge creators no fees or agency commission for this support.",
+      audience: "Creators broadcasting on LIVE or looking to start",
+    },
+    {
       key: "beauty-growth",
       eyebrow: "Built for beauty brands",
-      title: "Advertising, creative and digital growth",
+      title: "Advertising management and creative design",
       summary:
-        "Growth work that calls for category knowledge and a strong aesthetic eye. We run this practice for cosmetics, beauty and women's product brands.",
+        "We bring advertising strategy, campaign management and creative production together for cosmetics and beauty brands. Ad visuals, short videos and SEO & GEO work support your brand’s digital visibility.",
       audience: "Cosmetics & beauty brands",
     },
     {
       key: "software-ai",
       eyebrow: "Industry-agnostic",
-      title: "Software, AI and integrations",
+      title: "Software and AI",
       summary:
-        "Technical systems designed around how the business actually works. This practice is not limited to beauty; we work with companies across industries.",
+        "We develop websites, e-commerce systems, custom software and AI integrations for businesses in any industry. From discovery to setup and maintenance, each system is designed around how your business works.",
       audience: "Businesses in any industry",
     },
   ],
   services: [
+    {
+      key: "tiktok-live",
+      group: "creator-live",
+      icon: "live",
+      title: "TikTok LIVE Agency Services",
+      tagline: "Broadcast in your own style. Let’s find your next step.",
+      summary: "Soleach is an official TikTok LIVE partner agency in Türkiye. We offer personal planning and feedback for creators preparing to start broadcasting or build a consistent LIVE routine.",
+      features: [
+        "Account eligibility review and agency onboarding guidance",
+        "First-broadcast preparation and a personal LIVE schedule",
+        "Ideas for content, broadcast structure and viewer engagement",
+        "Performance reviews and practical feedback",
+        "Support finding suitable creators for PK matches",
+        "Guidance on platform rules and available support opportunities",
+        "Contacting TikTok’s team through agency support channels and following up on complex issues when needed",
+      ],
+      outcome: "A broadcast routine you can follow and practical steps to track your progress.",
+    },
     {
       key: "ads",
       group: "beauty-growth",
@@ -964,23 +1121,30 @@ const en: Dictionary = {
   servicesPage: {
     hero: {
       eyebrow: "Services",
-      title: "Two areas of expertise. Clear boundaries, one accountable team.",
+      title: "Advertising. Software. TikTok LIVE.",
       subtitle:
-        "Advertising, creative and visibility for beauty brands; custom software, web systems and MCP integrations for companies in any industry.",
+        "Three service areas: advertising management and creative design for beauty brands, software and AI for businesses, and TikTok LIVE partner support for creators.",
     },
+    branchesLabel: "Our three service areas",
+    branches: [
+      { key: "beauty-growth", title: "Advertising and creative", body: "Campaign management, creative design and digital visibility for beauty brands." },
+      { key: "software-ai", title: "Software and AI", body: "Web systems, custom software and AI integrations for businesses." },
+      { key: "creator-live", title: "TikTok LIVE partner", body: "Free onboarding guidance, broadcast planning and development support for creators." },
+    ],
     featuresLabel: "What's included",
     outcomeLabel: "Outcome",
   },
   aboutPage: {
     hero: {
       eyebrow: "About",
-      title: "A digital team that keeps two disciplines deliberately distinct.",
+      title: "Working alongside creators, brands and businesses.",
       subtitle:
-        "Category focus for beauty brands, industry-agnostic problem-solving for software projects — held to the same working discipline.",
+        "We build practical plans for TikTok LIVE creators in Türkiye, beauty brands and businesses across industries.",
     },
     story: {
       title: "Our story",
       paragraphs: [
+        "Soleach is an official TikTok LIVE partner agency supporting creators in Türkiye with broadcast preparation, consistency and development.",
         "Soleach was born to help cosmetics and beauty brands claim the place they deserve online. We know this category is like no other: here, trust matters as much as aesthetics, and results matter as much as visuals.",
         "We keep our practices deliberately distinct. In advertising, creative and SEO & GEO, our focus is cosmetics and beauty. In custom software, MCP, AI integrations and web systems, the industry is not the constraint — the business problem is what matters.",
         "Whether it is a campaign or a software product, our goal is the same: more than a good-looking idea, a working result that can keep improving. We clarify the scope, move in visible steps, then measure and iterate after launch.",
@@ -1019,7 +1183,7 @@ const en: Dictionary = {
   contactPage: {
     hero: {
       eyebrow: "Contact",
-      title: "Let's talk about your brand or software need.",
+      title: "Let’s talk about your LIVE, brand or software needs.",
       subtitle:
         "Tell us briefly what you need in the form below. We'll reply within 24 hours to clarify the right place to start together.",
     },
@@ -1066,7 +1230,7 @@ const en: Dictionary = {
   },
   footer: {
     tagline:
-      "Beauty-focused in advertising, creative and SEO & GEO; industry-agnostic in web, software, MCP and AI.",
+      "TikTok LIVE creator support, digital growth for beauty brands, and software solutions for businesses.",
     servicesHeading: "Services",
     companyHeading: "Company",
     followHeading: "Follow",

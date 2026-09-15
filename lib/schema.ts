@@ -34,6 +34,8 @@ export function organizationSchema(locale: Locale) {
     ],
     areaServed: "TR",
     knowsAbout: [
+      "TikTok LIVE creator support",
+      "LIVE broadcast planning",
       "Cosmetics marketing",
       "Cosmetics advertising",
       "Beauty marketing",
@@ -73,7 +75,7 @@ export function websiteSchema(locale: Locale) {
   };
 }
 
-/** ProfessionalService + itemList of every service across both practices. */
+/** ProfessionalService + itemList of every service. */
 export function servicesSchema(locale: Locale) {
   const dict = getDictionary(locale);
   return {

@@ -1,6 +1,13 @@
 import type { ServiceContent } from "@/lib/dictionaries";
 
 const paths: Record<ServiceContent["icon"], React.ReactNode> = {
+  live: (
+    <>
+      <circle cx="12" cy="12" r="2" />
+      <path d="M8 8a5.7 5.7 0 0 0 0 8M16 8a5.7 5.7 0 0 1 0 8" />
+      <path d="M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14" />
+    </>
+  ),
   // Megaphone / performance ads
   ads: (
     <>

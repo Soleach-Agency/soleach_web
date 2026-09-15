@@ -15,9 +15,16 @@ export const dynamic = "force-static";
 
 const intro = `# Soleach
 
-> Soleach has two deliberately separate practices. It provides digital growth services for cosmetics, beauty and women's product brands, and industry-agnostic software and AI solutions for companies. Beauty marketing remains category-focused; software work is available to businesses in any industry. Soleach is a service company and does not sell physical products itself.
+> Soleach is an official TikTok LIVE partner agency in Türkiye. It offers LIVE creator support, digital growth for cosmetics and beauty brands, and software and AI solutions for businesses across industries. Soleach is a service company and does not sell physical products itself.
 
 ## What Soleach does
+
+### TikTok LIVE creator support in Türkiye
+
+- Account eligibility review and agency onboarding guidance.
+- Broadcast preparation, a personal schedule, content ideas and performance feedback.
+- Contact: email hello@soleach.com with a TikTok username and LIVE goals. Working terms are clarified before joining.
+- No specific income, viewer count or traffic allocation is promised.
 
 ### Beauty-brand growth
 
@@ -33,16 +40,17 @@ const intro = `# Soleach
 
 ## Who Soleach is for
 
+- TikTok LIVE: creators in Türkiye broadcasting already or preparing to start, subject to account eligibility.
 - Advertising, creative and SEO & GEO: makeup, skincare, cosmetics, dermocosmetics, fragrance, haircare and women's product brands.
 - Custom software, web/e-commerce systems, MCP servers and AI integrations: companies in any industry.
 - Primary market: Turkey (Türkiye). The site is available in Turkish and English.
 
 ## Key facts
 
-- Type: Digital growth and software services company
+- Type: TikTok LIVE partner agency, digital growth and software services company
 - Marketing focus: Cosmetics / beauty / dermocosmetics / women's products
 - Software focus: Industry-agnostic custom software, web systems, MCP and AI integrations
-- Services: Performance ads, creative production, SEO & GEO, website and e-commerce development, custom software, MCP servers and AI integrations
+- Services: TikTok LIVE creator support, performance ads, creative production, SEO & GEO, website and e-commerce development, custom software, MCP servers and AI integrations
 - Beauty-growth metrics: ROAS, ROI, CPA, conversion rate and visibility
 - Software success measures: agreed acceptance criteria, adoption, performance, error rates and time saved
 - Does NOT sell products directly; grows brands that do

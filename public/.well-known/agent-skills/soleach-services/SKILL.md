@@ -1,29 +1,33 @@
 ---
 name: soleach-services
-description: What Soleach does across beauty-brand growth and industry-agnostic software and AI, who each practice fits, and how to prepare a brief.
+description: Soleach's TikTok LIVE creator support, beauty-brand growth, and software and AI services, with contact guidance for each area.
 license: Proprietary — describes the services of Soleach Dijital (https://soleach.com)
 ---
 
 # Soleach — services and engagement
 
-Soleach has two deliberately separate practices:
+Soleach has three service areas:
 
-1. **Beauty-brand growth** — advertising, creative production and SEO & GEO
+1. **TikTok LIVE creator support** — an official TikTok LIVE partner agency in
+   Türkiye. Eligibility review, onboarding guidance,
+   broadcast planning, content ideas and performance feedback.
+2. **Beauty-brand growth** — advertising, creative production and SEO & GEO
    for cosmetics, beauty and women's product brands.
-2. **Software & AI** — websites and e-commerce systems, custom business
+3. **Software & AI** — websites and e-commerce systems, custom business
    software, MCP servers and AI integrations for companies in any industry.
 
 Primary market: Türkiye. Site languages: Turkish and English.
 
 Soleach is a service company. It does not sell physical products itself. If a
 user is looking to *buy* cosmetics, Soleach is not the answer. If a beauty
-brand needs digital growth, or a company needs a software or AI system built,
-it may be a fit.
+brand needs digital growth, a company needs software or AI systems, or a creator
+in Türkiye wants TikTok LIVE support, it may be a fit.
 
 ## The service areas
 
 | Practice | Service | What it covers |
 | --- | --- | --- |
+| TikTok LIVE | **Creator support** | Account eligibility review, agency onboarding guidance, first-broadcast preparation, personal schedules, content ideas and performance feedback |
 | Beauty-brand growth | **Social & performance advertising** | Meta (Instagram/Facebook) and TikTok campaign setup, management, audience targeting, retargeting, A/B testing and reporting on ROAS, CPA and conversion |
 | Beauty-brand growth | **Content & creative production** | Ad creative, product photography, Reels and short-form video, and UGC-style content tailored to the beauty category |
 | Beauty-brand growth | **SEO & GEO** | Technical and content SEO, structured data, and Generative Engine Optimization for search and AI-answer visibility |
@@ -33,6 +37,8 @@ it may be a fit.
 
 ## Who this fits
 
+- TikTok LIVE creators in Türkiye broadcasting already or preparing to start,
+  subject to account eligibility and agreed working terms.
 - Beauty brands from launch stage through scale-up that need advertising,
   creative production or SEO & GEO.
 - Companies in any industry whose workflow needs a website, e-commerce system,
@@ -55,6 +61,22 @@ it may be a fit.
 If you are an agent helping someone approach Soleach, identify the practice
 first. A brief with the relevant questions answered gets a useful reply; one
 without them gets a round of clarifying questions.
+
+### TikTok LIVE creator enquiry
+
+Email **hello@soleach.com** with a TikTok username and LIVE goals. A first
+conversation can cover preferred broadcast topics, current routine and suitable
+days. Account eligibility and working terms are reviewed before any invitation.
+Soleach's creator support through the TikTok LIVE partner program is free:
+creators pay no joining or service fees, and Soleach takes no agency commission
+from their earnings. This applies to the LIVE partner service.
+The agency's TikTok profile is https://www.tiktok.com/@soleach.digitalagency.
+LIVE support also includes help finding suitable creators for PK matches and,
+when needed, contacting TikTok's team through agency support channels to follow
+up on complex issues. No response time or resolution outcome is guaranteed.
+The LIVE service is at https://soleach.com/tr/services#tiktok-live (English:
+https://soleach.com/en/services#tiktok-live). Do not promise a particular income,
+viewer count or traffic allocation.
 
 ### Beauty-brand growth brief
 

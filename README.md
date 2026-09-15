@@ -1,9 +1,13 @@
 # Soleach — Digital Growth & Software Website
 
-Bilingual (TR/EN) marketing website for **Soleach**, with beauty-focused
-digital growth services and industry-agnostic software and AI solutions. Built with
+Bilingual (TR/EN) marketing website for **Soleach**, with TikTok LIVE creator
+support in Türkiye, beauty-focused digital growth services, and software and AI solutions. Built with
 Next.js 16, TypeScript and Tailwind CSS 4, statically exported for Cloudflare
 Pages.
+
+The LIVE service appears on the homepage and at `/tr/services#tiktok-live`
+(also available in English), with a Soleach-created service wordmark. Creator enquiries use the existing email address. The wordmark is
+Soleach artwork, not a TikTok-issued certification asset.
 
 ## Highlights
 

@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceIcon } from "@/components/ui/service-icon";
 import { Stagger, StaggerItem } from "@/components/motion/reveal";
 import { TiltCard } from "@/components/motion/tilt";
+import { LiveServicePanel } from "@/components/sections/live-service-panel";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
 
@@ -27,6 +28,9 @@ export function ServicesOverview({
 
         <div className="mt-14 space-y-14">
           {dict.serviceGroups.map((group) => {
+            if (group.key === "creator-live") {
+              return <LiveServicePanel key={group.key} locale={locale} dict={dict} showDetails />;
+            }
             const services = dict.services.filter((s) => s.group === group.key);
 
             return (

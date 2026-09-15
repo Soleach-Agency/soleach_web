@@ -9,7 +9,7 @@
     "route-aliases": "tsx scripts/route-aliases.ts",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run oauth-check:live && npm run indexnow",
+    "deploy": "node scripts/deploy-preflight.mjs && npm run build && node scripts/deploy-preflight.mjs && npx wrangler pages deploy out --project-name soleach-web --branch main && npm run oauth-check:live && npm run indexnow",
     "agent-assets": "node scripts/agent-assets.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "oauth-check:local": "node scripts/oauth-surface-check.mjs local",
