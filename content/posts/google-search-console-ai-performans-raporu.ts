@@ -10,7 +10,7 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
       title: "Google Search Console AI performans raporu nasıl okunur?",
       metaTitle: "Search Console AI Performans Raporu | Soleach",
       metaDescription: "Google Search Console AI performans raporu ve AI kontrolü artık küresel. Kozmetik markan görünürlüğü nasıl ölçmeli, veriyi nasıl yorumlamalı?",
-      excerpt: "Search Console artık AI Overviews, AI Mode ve Discover'daki üretken yapay zekâ görünürlüğünü ayrı raporluyor; aynı panel, markana bu görünürlüğü açıp kapatma kontrolü de veriyor. Kozmetik markası için asıl iş, gösterimi satış sanmadan sayfa bazlı bir karar düzeni kurmak.",
+      excerpt: "Search Console AI raporu üretken arama görünürlüğünü gösteriyor; ancak modern sonuç bloklarında klasik 1–10 pozisyonu tek başına net bir sıralama anlatmıyor. Kozmetik markası için doğru okuma, gösterim ve sayfa eğilimini içerik kararlarıyla birlikte değerlendirmek.",
       intro: [
         "Google, Search Console'daki üretken yapay zekâ performans içgörülerini 31 Ağustos 2026 itibarıyla dünya çapındaki tüm sitelere açtığını belirtiyor ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). Aynı tarihli güncelleme, sitenin AI Overviews, AI Mode ve Discover'ın üretken yapay zekâ özelliklerine dahil edilmesini yöneten kontrolün de küresel olduğunu söylüyor ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16908024?hl=en)).",
         "Bu iki araç aynı sorunun iki yarısı: rapor nerede göründüğünü, kontrol ise görünmeye uygun olup olmadığını yönetiyor. Fakat rapor bir satış veya talep raporu değil; mevcut sürümün odağı gösterim, sayfa, ülke, cihaz ve tarihtir.",
@@ -47,6 +47,23 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
             {
               type: "p",
               text: "Bunun pratik anlamı net: gösterim, görünürlük sinyalidir; satış, tıklama veya marka tercihi değildir. Bir serum rehberinin gösterimi artıyorsa o sayfanın üretken arama yüzeylerinde daha sık göründüğünü söyleyebilirsin. Neden arttığını veya ticari sonuç üretip üretmediğini tek başına bu rapordan çıkaramazsın.",
+            },
+          ],
+        },
+        {
+          h2: "Google Search Console AI pozisyonu neden 1–10 sırasına indirgenemez?",
+          blocks: [
+            {
+              type: "p",
+              text: "Google Search Console AI pozisyonu, modern arama yüzeylerindeki bağlantıları klasik bir 1–10 sırasına güvenle indirgeyemez. Google'dan John Mueller, sonuç sayfalarındaki etkileşim biçimleri çoğaldığı için eski 1–10 konumunun site sahipleri açısından eşlenmesinin ve kullanışlı hale getirilmesinin zor olduğunu belirtti; üretken AI sonuçlarının pozisyonu bir blok olarak izleniyor ve üretken AI performans raporunda ayrı bir konum kırılımı sunulmuyor ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-position-1-10-hard-map-42053.html)).",
+            },
+            {
+              type: "p",
+              text: "Google'ın genel Search Console belgesi de pozisyonu, bir bağlantının sayfadaki diğer sonuçlara göre yaklaşık yerini gösterme girişimi olarak tanımlıyor. AI Overview tek bir pozisyon kaplıyor ve içindeki bütün bağlantılar aynı pozisyona atanıyor; bu nedenle aynı bloktaki farklı kaynakları yalnızca sıra numarasıyla birbirinden ayırmak mümkün değil ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/7042828?hl=en)).",
+            },
+            {
+              type: "p",
+              text: "Kozmetik markası için sonuç şu: “ortalama pozisyon yükseldi” cümlesini tek başına AI görünürlüğü başarısı sayma. Serum rehberi, ürün sayfası ve kategori sayfası kümelerinde gösterim yönünü izle; hangi URL'lerin görünürlük kazandığını kontrol et ve değişimi tarih, ülke ve cihaz kırılımlarıyla birlikte oku. Pozisyonu bağlam sağlayan ikincil bir sinyal olarak kullan, klasik mavi bağlantı sıralamasının bire bir karşılığı gibi sunma.",
             },
           ],
         },
@@ -151,6 +168,10 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
           q: "Search Console AI kontrolü Google'ın model eğitimini durdurur mu?",
           a: "Hayır. Google'ın yardım belgesi, Search generative AI kontrolünün AI eğitimini etkilemediğini açıkça söylüyor ve eğitim kullanımını sınırlamak için Google-Extended'ı ayrı seçenek olarak gösteriyor ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16908024?hl=en)). AI yüzeylerinde görünmek, genel indekslenme ve model eğitimi aynı kontrol değildir; bu ayrımı karar kaydında açık tut.",
         },
+        {
+          q: "Search Console AI raporunda ortalama pozisyon 1–10 sırası mıdır?",
+          a: "Hayır. Google, pozisyon metriğini sayfadaki göreli yeri yaklaşık gösteren bir ölçüm olarak tanımlıyor; AI Overview içindeki bütün bağlantılar aynı blok pozisyonunu alıyor ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/7042828?hl=en)). Bu yüzden kozmetik markası pozisyonu tek başına sıralama kanıtı değil, gösterim ve sayfa eğilimlerini tamamlayan ikincil bir sinyal olarak okumalı.",
+        },
       ],
       sources: [
         {
@@ -178,6 +199,16 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
           url: "https://www.seroundtable.com/google-search-console-generative-ai-tools-live-41984.html",
           publisher: "Search Engine Roundtable",
         },
+        {
+          label: "Google Search Console Help. (2026). What are impressions, position, and clicks?",
+          url: "https://support.google.com/webmasters/answer/7042828?hl=en",
+          publisher: "Google",
+        },
+        {
+          label: "Schwartz, B. (2026, 10 Eylül). Google: The Old Position 1-10 Is Hard To Map For Site Owners.",
+          url: "https://www.seroundtable.com/google-position-1-10-hard-map-42053.html",
+          publisher: "Search Engine Roundtable",
+        },
       ],
       tags: [
         "Google Search Console",
@@ -193,7 +224,7 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
       title: "How should beauty brands read the Search Console AI report?",
       metaTitle: "Search Console AI Performance Report | Soleach",
       metaDescription: "Google Search Console's AI performance report and control are now global. Learn how beauty brands should measure visibility and interpret the data.",
-      excerpt: "Search Console now separates generative AI visibility across AI Overviews, AI Mode and Discover, while a control in the same product lets site owners include or exclude their content. For beauty brands, the job is to build a page-level decision process without mistaking impressions for sales.",
+      excerpt: "The Search Console AI report shows generative Search visibility, but a classic 1–10 position no longer maps neatly onto modern result blocks. Beauty brands should read impression and page trends alongside content decisions rather than as a simple rank.",
       intro: [
         "Google says Search Console's generative AI performance insights were rolled out to all websites worldwide as of August 31, 2026 ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). An update dated the same day says the control governing inclusion in AI Overviews, AI Mode and generative AI features in Discover is also global ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16908024?hl=en)).",
         "These tools cover two halves of one question: the report shows where a site appears, while the control governs whether it is eligible to appear. But this is not a sales or demand report; the current view focuses on impressions, pages, countries, devices and dates.",
@@ -230,6 +261,23 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
             {
               type: "p",
               text: "The practical distinction is simple: an impression is a visibility signal, not a sale, click or preference measure. If impressions rise for a serum guide, you can say that page appeared more often in generative Search surfaces. This report alone cannot establish why it rose or whether it produced commercial value.",
+            },
+          ],
+        },
+        {
+          h2: "Why can’t Google Search Console AI position be reduced to ranks 1–10?",
+          blocks: [
+            {
+              type: "p",
+              text: "Google Search Console AI position cannot be reliably reduced to a classic 1–10 ranking across modern Search surfaces. Google's John Mueller said the old 1–10 position is hard to map or make useful because result pages now offer many ways to interact; generative AI position is tracked as a block and is not separated in the generative AI performance report ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-position-1-10-hard-map-42053.html)).",
+            },
+            {
+              type: "p",
+              text: "Google's general Search Console documentation also defines position as an attempt to show approximately where a link appeared relative to other results. An AI Overview occupies one position and every link inside it receives that same position, so a rank number cannot distinguish sources within the block ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/7042828?hl=en)).",
+            },
+            {
+              type: "p",
+              text: "For a beauty brand, the practical rule is not to treat “average position improved” as proof of AI visibility success on its own. Track impression direction across serum guides, product pages and category pages; inspect which URLs gained visibility; then read the change alongside date, country and device dimensions. Use position as a secondary contextual signal, not as a one-to-one equivalent of classic blue-link rank.",
             },
           ],
         },
@@ -334,6 +382,10 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
           q: "Does the Search Console AI control stop Google model training?",
           a: "No. Google's help document explicitly says the Search generative AI control does not affect AI training and points to Google-Extended as the separate option for limiting training use ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16908024?hl=en)). Appearing in AI Search surfaces, general indexing and model training are not the same control.",
         },
+        {
+          q: "Is average position in the Search Console AI report a 1–10 rank?",
+          a: "No. Google defines position as an approximate measure of relative placement, and every link inside an AI Overview receives the same block position ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/7042828?hl=en)). A beauty brand should therefore treat position as a secondary signal that adds context to page and impression trends, not as standalone proof of a classic 1–10 ranking.",
+        },
       ],
       sources: [
         {
@@ -359,6 +411,16 @@ export const googleSearchConsoleAiPerformansRaporu: BlogPost = {
         {
           label: "Schwartz, B. (2026, September 1). Global: Google Search Console AI Performance Report & AI Control.",
           url: "https://www.seroundtable.com/google-search-console-generative-ai-tools-live-41984.html",
+          publisher: "Search Engine Roundtable",
+        },
+        {
+          label: "Google Search Console Help. (2026). What are impressions, position, and clicks?",
+          url: "https://support.google.com/webmasters/answer/7042828?hl=en",
+          publisher: "Google",
+        },
+        {
+          label: "Schwartz, B. (2026, September 10). Google: The Old Position 1-10 Is Hard To Map For Site Owners.",
+          url: "https://www.seroundtable.com/google-position-1-10-hard-map-42053.html",
           publisher: "Search Engine Roundtable",
         },
       ],
