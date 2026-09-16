@@ -30,6 +30,7 @@ import { microsoftAdvertisingYeniTasarim } from "./microsoft-advertising-yeni-ta
 import { googleSearchConsoleAiPerformansRaporu } from "./google-search-console-ai-performans-raporu";
 import { googleTrendsKategoriFiltresiKozmetik } from "./google-trends-kategori-filtresi-kozmetik";
 import { googleMerchantCenterAiPerformansKozmetik } from "./google-merchant-center-ai-performans-kozmetik";
+import { shopifyCatalogApiMedyaFiltresiKozmetik } from "./shopify-catalog-api-medya-filtresi-kozmetik";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -64,4 +65,5 @@ export const posts: BlogPost[] = [
   googleSearchConsoleAiPerformansRaporu,
   googleTrendsKategoriFiltresiKozmetik,
   googleMerchantCenterAiPerformansKozmetik,
+  shopifyCatalogApiMedyaFiltresiKozmetik,
 ];
