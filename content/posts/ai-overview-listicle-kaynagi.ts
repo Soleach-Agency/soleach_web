@@ -7,14 +7,14 @@ export const aiOverviewListicleKaynagi: BlogPost = {
   locales: {
     tr: {
       slug: "ai-overview-kaynagi-senin-siten-degil-listicle",
-      title: "AI Overview, AI Mode'a açılırken markan görünür mü?",
-      metaTitle: "AI Overview ve AI Mode Görünürlüğü | Soleach",
-      metaDescription: "Google AI Overview bazı sorgularda AI Mode akışına genişliyor. Kozmetik markaları kaynak görünürlüğünü ve Search Console verisini nasıl okumalı?",
-      excerpt: "Google bazı sorgularda AI Overview'ı daha dolu bir yanıta ve AI Mode takip kutusuna genişletiyor. Kozmetik markaları için mesele artık yalnızca sıralama değil; hangi kaynakla, hangi yüzeyde ve hangi dilde göründüğünü ölçmek.",
+      title: "Yerel bilgi panelin AI Overview'a dönüşürse ne olur?",
+      metaTitle: "Yerel AI Overview ve Business Profile | Soleach",
+      metaDescription: "Google bir yerel bilgi panelini AI Overview olarak gösterdi. Kozmetik markaları Business Profile doğruluğunu ve yerel AI görünürlüğünü nasıl ölçmeli?",
+      excerpt: "Google, gözlemlenen bir yerel bilgi panelini AI Overview etiketi ve AI Mode takip akışıyla gösterdi. Kozmetik markaları artık profil doğruluğunu, kaynakları ve takip yanıtlarını birlikte izlemeli.",
       intro: [
-        "Google'ın AI Overview yüzeyi, bazı sorgularda kısa bir özet olmaktan çıkıp AI Mode'a açılan daha uzun bir cevap hâline geliyor. 28 Ağustos 2026 tarihli bir gözlemde tam yanıtın ve “Ask anything” takip kutusunun varsayılan olarak açıldığı, klasik organik sonuçların sayfada aşağı itildiği görüldü; Google bunun bazı sorgularda dinamik olarak genişleyen bir test olduğunu söyledi ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-ai-overviews-push-ai-mode-responses-41974.html)).",
-        "Bu gelişme, bu yazının ilk sorusunu ortadan kaldırmıyor; büyütüyor. AI cevabında kaynak senin siten yerine üçüncü taraf bir listicle olabilir, kaynak gösterildiğin hâlde önerilmeyebilirsin ve kullanıcı takip sorusuna geçtiğinde yeni bir kaynak kümesiyle karşılaşabilir.",
-        "Bu güncellemede yerel AI Overview ve listicle bulgularını koruyor; yeni AI Overview–AI Mode geçişini, Search Console'daki üretken yapay zekâ raporunu ve kozmetik markalarının hangi görünürlük sinyallerini birlikte izlemesi gerektiğini ekliyoruz.",
+        "Google, 17 Eylül 2026 tarihli bir gözlemde yerel bilgi panelini — işletmenin Google Business Profile yüzeyini — “AI Overview” etiketiyle gösterdi. Paneldeki “Show more” düğmesi, kullanıcıyı AI Mode tarzı takip sohbetine taşıdı ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)).",
+        "Bu tekil gözlem, tüm yerel paneller için ilan edilmiş bir dağıtım değil. Yine de kozmetik markaları için somut bir uyarı veriyor: çalışma saati, kategori ve hizmet bilgisi artık yalnızca statik bir kartta değil, üretken bir özet ve devam eden soru akışında da yorumlanabilir.",
+        "Bu güncelleme yazının önceki AI Overview, listicle ve ölçüm bulgularını koruyor; yerel bilgi panelinden AI Mode takip akışına geçişi ve kozmetik markalarının profil doğruluğunu nasıl denetlemesi gerektiğini ekliyor.",
       ],
       sections: [
         {
@@ -39,7 +39,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "Google, yerel aramalarda zaman zaman AI Overview gösteriyor ve gösterdiğinde işletmeler için yapay zekâ üretimi özetler ekleyebiliyor. Gözlemlenen sorun, bu özetlerin işletmenin kendi sitesi yerine düşük kaliteli ve kendini öven listicle içeriklerini kaynak gösterebilmesi ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-ai-overview-local-results-listicles-41854.html)).",
+              text: "Google, 17 Eylül 2026 tarihli bir gözlemde yerel bilgi panelini ve onun Google Business Profile bilgilerini “AI Overview” etiketi altında sundu. Panelin üstündeki “Show more” düğmesi, AI Mode tarzı takip sohbetini açtı ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)).",
+            },
+            {
+              type: "p",
+              text: "Gözlemdeki özet büyük ölçüde doğruydu; ancak işletmenin niş çözümlerine ilişkin bölüm eskiydi. Sayfa sahibi bunun kurumsal sitesindeki içeriğin de güncel olmamasından kaynaklanabileceğini belirtti ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)). Bu örnek bir sıralama faktörü kanıtlamaz; profil ve site bilgisinin birlikte güncel tutulması için denetlenebilir bir risk gösterir.",
             },
             {
               type: "quote",
@@ -58,11 +62,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "Hayır. Lily Ray, Nisan-Haziran 2026 arasında üç tarihte 100 adet B2B “en iyi [kategori] yazılımı” sorgusunu inceledi. AI Overview oluşturan 80 sorguda markaların kendi kendini öven listicle'ları 323 kez kaynak gösterildi ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)).",
+              text: "Hayır. Lily Ray, Nisan-Haziran 2026 arasında üç tarihte 100 adet B2B “en iyi [kategori] yazılımı” sorgusunu inceledi. AI Overview oluşturan 80 sorguda markaların kendi kendini öven listicle'ları 323 kez kaynak gösterildi ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)).",
             },
             {
               type: "p",
-              text: "Bu 323 vakanın 224'ünde — %69'unda — Google markanın sayfasını kaynak gösterdi ama markayı önermedi. “Kurs satmak için en iyi LMS” sorgusunda Oasis LMS'in yazısı kaynak olurken öneriler Kajabi, Thinkific, LearnWorlds ve Teachable oldu; bunların tümü Oasis'in yazısında anılıyordu ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)).",
+              text: "Bu 323 vakanın 224'ünde — %69'unda — Google markanın sayfasını kaynak gösterdi ama markayı önermedi ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)). Sonuç, kaynak gösterilme ile önerilmenin aynı metrik olmadığını gösteriyor.",
             },
             {
               type: "p",
@@ -113,7 +117,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
             },
             {
               type: "p",
-              text: "Rapor hâlâ yalnızca belirli site sahiplerine kademeli olarak açılıyor. Yardım dokümanına göre erişim yoksa neden, mülkün henüz dağıtıma alınmaması veya yeterli üretken yapay zekâ gösterimi almaması olabilir; desteklenen yüzeyler AI Overview ve AI Mode'dur ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)).",
+              text: "Google’ın yardım sayfasındaki en güncel nota göre Üretken Yapay Zekâ Performans raporu 31 Ağustos 2026 itibarıyla dünya çapındaki tüm sitelere açıldı. Rapor AI Overview ve AI Mode gösterimlerini kapsıyor; görünmüyorsa sitenin henüz yeterli üretken yapay zekâ gösterimi almamış olması mümkün ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)).",
             },
             {
               type: "ul",
@@ -137,6 +141,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
               type: "ul",
               items: [
                 "Ürün karşılaştırmalarında seçim ölçütünü açıkla; içerik gerçekten deneyime dayanıyorsa yöntemi, test koşulunu ve sınırlamayı göster. Kendini otomatik olarak birinci sıraya koyan şablon listeler üretme.",
+                "Google Business Profile ile konum sayfasındaki kategori, adres, çalışma saati ve hizmet açıklamalarını karşılaştır; çelişki varsa önce gerçek işletme bilgisini düzelt, sonra paneli yeniden kontrol et.",
                 "Google Business Profile ve Merchant Center verilerini güncel tut. Google, yerel işletme ve ürün bilgilerinin üretken AI yanıtlarında kullanılabildiğini belirtiyor ([Google Search Central (2026)](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en)).",
                 "Bağımsız editoryal görünürlük için gerçek ürün gönderimleri, uzman görüşleri ve doğrulanabilir kullanıcı deneyimleri geliştir; ücretli veya yönlendirilmiş ilişkileri gizleme.",
                 "Türkçe ve İngilizce görünürlüğü ayrı izle. [GEO rehberimiz](/tr/blog/geo-nedir-yapay-zeka-gorunurlugu-rehberi) marka bilgisinin üretken motorlar için nasıl düzenleneceğini adım adım anlatıyor.",
@@ -157,7 +162,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         },
         {
           q: "AI Overview ve AI Mode verisini Search Console'da görebilir miyim?",
-          a: "Kademeli olarak. Google'ın Üretken Yapay Zekâ Performans raporu AI Overview ve AI Mode gösterimlerini; sayfa, ülke, cihaz ve tarih kırılımlarını sunuyor, ancak yalnızca belirli site sahiplerine açılmış durumda ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). Rapor yokluğu tek başına sıfır görünürlük anlamına gelmez.",
+          a: "Evet. Google’ın yardım sayfasındaki en güncel nota göre Üretken Yapay Zekâ Performans raporu 31 Ağustos 2026 itibarıyla dünya çapındaki tüm sitelere açıldı. Rapor AI Overview ve AI Mode gösterimlerini sayfa, ülke, cihaz ve tarih kırılımlarında sunuyor ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). Rapor görünmüyorsa yeterli üretken yapay zekâ gösterimi oluşmamış olabilir.",
         },
         {
           q: "Kendi blogumda 'en iyi biz' listesi yazmayı tamamen bırakmalı mıyım?",
@@ -165,7 +170,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         },
         {
           q: "Kaynak gösterilmek ile önerilmek aynı şey mi?",
-          a: "Hayır. Lily Ray'in 100 B2B yazılım sorgusunu kapsayan çalışmasında marka sayfaları 323 kez kaynak gösterildi; 224 vakada marka önerilmedi ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)). Bu oran kozmetiğe genellenemez, fakat raporlamada citation ve recommendation'ı ayrı tutma gereğini gösterir.",
+          a: "Hayır. Lily Ray'in 100 B2B yazılım sorgusunu kapsayan çalışmasında marka sayfaları 323 kez kaynak gösterildi; 224 vakada marka önerilmedi ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)). Bu oran kozmetiğe genellenemez, fakat raporlamada citation ve recommendation'ı ayrı tutma gereğini gösterir.",
         },
         {
           q: "İngilizce içerikte görünüyorsam Türkçe için ayrıca çalışmalı mıyım?",
@@ -178,6 +183,10 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         {
           q: "AI görünürlüğünde ne kadar sürede sonuç alırım?",
           a: "Garanti yok. İndeksleme, içerik kalitesi, üçüncü taraf yayınlar ve sorgunun AI Overview üretip üretmemesi birlikte etkili olur. Başarıyı tek bir anlık sorguyla değil; sabit bir Türkçe/İngilizce örneklemde kaynak, öneri, gösterim ve site içi dönüşüm eğilimleriyle değerlendirmek gerekir.",
+        },
+        {
+          q: "Google yerel bilgi panellerinin tamamını AI Overview yaptı mı?",
+          a: "Hayır. 17 Eylül 2026 tarihli haber, bir yerel bilgi panelinin “AI Overview” etiketi ve AI Mode tarzı takip akışıyla görüldüğünü belgeliyor ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)). Google’ın tüm işletmeler veya ülkeler için genel dağıtım duyurusu yok; bu nedenle davranışı sorgu ve konum bazında izle.",
         },
       ],
       sources: [
@@ -202,9 +211,9 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           publisher: "Search Engine Roundtable",
         },
         {
-          label: "Goodwin, D. (2026, 18 Haziran). Google AI Overviews cite self-serving listicles, but recommend competitors 69% of the time. Search Engine Land.",
-          url: "https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573",
-          publisher: "Search Engine Land",
+          label: "Ray, L. (2026, 17 Haziran). Why Calling Yourself the 'Best' Could Be Helping Your Competitors Win in AI Search.",
+          url: "https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could",
+          publisher: "Lily Ray (Substack)",
         },
         {
           label: "Ray, L. (2026, 3 Şubat). Is Google Finally Cracking Down on Self-Promotional Listicles?",
@@ -231,6 +240,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en",
           publisher: "Google",
         },
+        {
+          label: "Schwartz, B. (2026, 17 Eylül). Google Local Knowledge Panel As An AI Overview. Search Engine Roundtable.",
+          url: "https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html",
+          publisher: "Search Engine Roundtable",
+        },
       ],
       tags: [
         "GEO",
@@ -244,14 +258,14 @@ export const aiOverviewListicleKaynagi: BlogPost = {
     },
     en: {
       slug: "ai-overviews-cite-listicles-not-your-site",
-      title: "Will your brand stay visible as AI Overviews expand?",
-      metaTitle: "AI Overview and AI Mode Visibility | Soleach",
-      metaDescription: "Google AI Overviews can expand into AI Mode for some queries. Learn how beauty brands should track sources, impressions and organic search visibility.",
-      excerpt: "Google is expanding some AI Overviews into fuller answers with an open AI Mode follow-up box. For beauty brands, the question is no longer just rank: it is which source appears, on which surface, and in which language.",
+      title: "What if your local panel becomes an AI Overview?",
+      metaTitle: "Local AI Overviews and Business Profiles | Soleach",
+      metaDescription: "Google displayed a local panel as an AI Overview. Learn how beauty brands should keep Business Profile data accurate and measure local AI visibility.",
+      excerpt: "Google displayed an observed local knowledge panel as an AI Overview with an AI Mode follow-up path. Beauty brands should now audit profile accuracy, sources, and follow-up answers together.",
       intro: [
-        "Google's AI Overview surface is shifting from a short summary toward a fuller answer that can flow into AI Mode for some queries. In an observation published on August 28, 2026, the full response and “Ask anything” box appeared by default and pushed classic organic results further down the page; Google said this was a dynamic test for some queries ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-ai-overviews-push-ai-mode-responses-41974.html)).",
-        "That change does not replace this article's original question; it makes it larger. The source in an AI answer can be a third-party listicle instead of your site, your page can be cited without your brand being recommended, and a follow-up in AI Mode can introduce a new source set.",
-        "This update preserves the local AI Overview and listicle findings, then adds the AI Overview-to-AI Mode transition, Search Console's generative AI report, and a practical measurement model for beauty brands.",
+        "In an observation published on September 17, 2026, Google displayed a local knowledge panel — the business's Google Business Profile surface — under an “AI Overview” label. Its “Show more” control opened an AI Mode-style follow-up conversation ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)).",
+        "This single observation is not an announced rollout to every local panel. It still gives beauty brands a concrete warning: hours, category, and service details may be interpreted not only in a static card but also in a generated summary and continuing question flow.",
+        "This update preserves the article’s earlier AI Overview, listicle, and measurement findings while adding the local-panel-to-AI-Mode path and an accuracy audit for beauty brands.",
       ],
       sections: [
         {
@@ -276,7 +290,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "Google sometimes shows AI Overviews in local results and can add AI-generated summaries for listed businesses. The observed problem is that those summaries can cite low-quality, self-promotional listicles instead of the businesses' own sites ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-ai-overview-local-results-listicles-41854.html)).",
+              text: "In an observation published on September 17, 2026, Google presented a local knowledge panel and its Google Business Profile information under an “AI Overview” label. A “Show more” control at the top opened an AI Mode-style follow-up conversation ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)).",
+            },
+            {
+              type: "p",
+              text: "Most of the observed summary was correct, but its description of the business's niche solutions was outdated. The page owner noted that the relevant content on his corporate site was also old ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)). This does not prove a ranking factor; it identifies an auditable risk that argues for keeping profile and site information aligned.",
             },
             {
               type: "quote",
@@ -295,11 +313,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           blocks: [
             {
               type: "p",
-              text: "No. Lily Ray examined 100 B2B “best [category] software” queries on three dates between April and June 2026. Across the 80 queries that triggered an AI Overview, brands' self-promotional listicles were cited 323 times ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)).",
+              text: "No. Lily Ray examined 100 B2B “best [category] software” queries on three dates between April and June 2026. Across the 80 queries that triggered an AI Overview, brands' self-promotional listicles were cited 323 times ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)).",
             },
             {
               type: "p",
-              text: "In 224 of those 323 cases — 69% — Google cited the brand's page but did not recommend the brand. For “best LMS for selling courses,” Oasis LMS was cited while Kajabi, Thinkific, LearnWorlds, and Teachable were recommended; all were named in Oasis's article ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)).",
+              text: "In 224 of those 323 cases — 69% — Google cited the brand's page but did not recommend the brand ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)). The result shows why citation and recommendation must be measured separately.",
             },
             {
               type: "p",
@@ -350,7 +368,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
             },
             {
               type: "p",
-              text: "The report is still rolling out to a subset of site owners. Google's help documentation says absence can mean that a property does not yet have access or has not received enough generative AI impressions; the supported Search surfaces are AI Overviews and AI Mode ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)).",
+              text: "The latest note on Google's help page says the Generative AI performance report had rolled out to all websites worldwide by August 31, 2026. It covers AI Overview and AI Mode impressions; if it does not appear, the site may not yet have enough generative AI impressions ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)).",
             },
             {
               type: "ul",
@@ -374,6 +392,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
               type: "ul",
               items: [
                 "Explain selection criteria in product comparisons; when content rests on real experience, show the method, test conditions, and limitations. Do not mass-produce templates that automatically rank your own product first.",
+                "Compare category, address, hours, and service descriptions between Google Business Profile and each location page. Correct the real business information first, then check the panel again.",
                 "Keep Google Business Profile and Merchant Center data current. Google says local business and product information can appear in generative AI responses and other Search results ([Google Search Central (2026)](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en)).",
                 "Build independent editorial visibility through genuine product seeding, expert input, and verifiable user experience; disclose paid or directed relationships.",
                 "Track Turkish and English separately. Our [GEO guide](/en/blog/what-is-geo-generative-engine-optimization-guide) explains how to structure brand information for generative engines.",
@@ -394,7 +413,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         },
         {
           q: "Can I see AI Overview and AI Mode data in Search Console?",
-          a: "Gradually. Google's Generative AI performance report covers AI Overview and AI Mode impressions with page, country, device, and date dimensions, but it is available only to a subset of site owners during rollout ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). Absence of the report does not by itself mean zero visibility.",
+          a: "Yes. The latest note on Google's help page says the Generative AI performance report had rolled out to all websites worldwide by August 31, 2026. It provides AI Overview and AI Mode impressions by page, country, device, and date ([Google Search Console Help (2026)](https://support.google.com/webmasters/answer/16984139?hl=en)). If it is absent, the site may not yet have enough generative AI impressions.",
         },
         {
           q: "Should I stop publishing 'we're the best' lists entirely?",
@@ -402,7 +421,7 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         },
         {
           q: "Are being cited and being recommended the same outcome?",
-          a: "No. In Lily Ray's study of 100 B2B software queries, brand pages were cited 323 times and the brand was not recommended in 224 cases ([Lily Ray, Search Engine Land (2026)](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573)). That rate cannot be generalized to cosmetics, but it shows why citation and recommendation belong in separate report fields.",
+          a: "No. In Lily Ray's study of 100 B2B software queries, brand pages were cited 323 times and the brand was not recommended in 224 cases ([Lily Ray (2026)](https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could)). That rate cannot be generalized to cosmetics, but it shows why citation and recommendation belong in separate report fields.",
         },
         {
           q: "If I am visible in English, should I still work on Turkish?",
@@ -415,6 +434,10 @@ export const aiOverviewListicleKaynagi: BlogPost = {
         {
           q: "How quickly will AI visibility work produce results?",
           a: "There is no guarantee. Indexing, content quality, third-party publication, and whether a query triggers an AI Overview all interact. Judge progress across a fixed Turkish and English sample using citation, recommendation, impression, and on-site conversion trends rather than one spot check.",
+        },
+        {
+          q: "Has Google turned every local knowledge panel into an AI Overview?",
+          a: "No. The September 17, 2026 report documents one local knowledge panel shown with an “AI Overview” label and an AI Mode-style follow-up path ([Search Engine Roundtable (2026)](https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html)). Google has not announced a universal rollout across businesses or countries, so monitor the behavior by query and location.",
         },
       ],
       sources: [
@@ -439,9 +462,9 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           publisher: "Search Engine Roundtable",
         },
         {
-          label: "Goodwin, D. (2026, June 18). Google AI Overviews cite self-serving listicles, but recommend competitors 69% of the time. Search Engine Land.",
-          url: "https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573",
-          publisher: "Search Engine Land",
+          label: "Ray, L. (2026, June 17). Why Calling Yourself the 'Best' Could Be Helping Your Competitors Win in AI Search.",
+          url: "https://lilyraynyc.substack.com/p/why-calling-yourself-the-best-could",
+          publisher: "Lily Ray (Substack)",
         },
         {
           label: "Ray, L. (2026, February 3). Is Google Finally Cracking Down on Self-Promotional Listicles?",
@@ -467,6 +490,11 @@ export const aiOverviewListicleKaynagi: BlogPost = {
           label: "Google Search Central. (2026, July 10). Optimizing your website for generative AI features on Google Search.",
           url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=en",
           publisher: "Google",
+        },
+        {
+          label: "Schwartz, B. (2026, September 17). Google Local Knowledge Panel As An AI Overview. Search Engine Roundtable.",
+          url: "https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html",
+          publisher: "Search Engine Roundtable",
         },
       ],
       tags: [
