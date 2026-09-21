@@ -32,6 +32,7 @@ import { googleTrendsKategoriFiltresiKozmetik } from "./google-trends-kategori-f
 import { googleMerchantCenterAiPerformansKozmetik } from "./google-merchant-center-ai-performans-kozmetik";
 import { shopifyCatalogApiMedyaFiltresiKozmetik } from "./shopify-catalog-api-medya-filtresi-kozmetik";
 import { chatgptSponsoredAgentsKozmetik } from "./chatgpt-sponsored-agents-kozmetik";
+import { googleWebGuideClassicSearchHatasi } from "./google-web-guide-classic-search-hatasi";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -68,4 +69,5 @@ export const posts: BlogPost[] = [
   googleMerchantCenterAiPerformansKozmetik,
   shopifyCatalogApiMedyaFiltresiKozmetik,
   chatgptSponsoredAgentsKozmetik,
+  googleWebGuideClassicSearchHatasi,
 ];
