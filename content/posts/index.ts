@@ -35,6 +35,7 @@ import { chatgptSponsoredAgentsKozmetik } from "./chatgpt-sponsored-agents-kozme
 import { googleWebGuideClassicSearchHatasi } from "./google-web-guide-classic-search-hatasi";
 import { shopifyOzelPlanSinirsizHedefMagaza } from "./shopify-ozel-plan-sinirsiz-hedef-magaza";
 import { googleMerchantCenterNativeCheckoutKozmetik } from "./google-merchant-center-native-checkout-kozmetik";
+import { googleSearchConsoleMultimodalAramaRaporu } from "./google-search-console-multimodal-arama-raporu";
 
 /** Register every post here; lib/blog.ts sorts by date. */
 export const posts: BlogPost[] = [
@@ -74,4 +75,5 @@ export const posts: BlogPost[] = [
   googleWebGuideClassicSearchHatasi,
   shopifyOzelPlanSinirsizHedefMagaza,
   googleMerchantCenterNativeCheckoutKozmetik,
+  googleSearchConsoleMultimodalAramaRaporu,
 ];
